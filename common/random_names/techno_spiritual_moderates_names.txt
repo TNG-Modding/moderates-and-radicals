@@ -1,7 +1,7 @@
 pop_faction_name_parts_list = {
 	key = "techno_spiritual_moderates_names"
 	parts = {
-		"Techno-Spiritual Moderates" = 1
+		"Techno-Spiritual Policy Moderates" = 1
 	}
 }
 
