@@ -1,0 +1,8 @@
+﻿l_english:
+
+ pft_imperial_pacifist_moderate:0 "Military Policy Moderate Faction"
+ pft_imperial_pacifist_moderate_desc:0 "The Military Policy Moderate Faction is the catch-all for those willing to compromise their military principles to gain political power."
+
+ # Faction Appearance
+ factions.1.desc.imperial_pacifist_moderate:0 "Their members condone justify violence using convoluted arguments and expect the benefits of peace.\n\n"
+ 

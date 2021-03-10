@@ -1,0 +1,22 @@
+
+pop_moderate_factions = {
+	parent = country
+	generate_mult_modifiers = {
+		produces
+	}
+
+	generate_add_modifiers = {
+		produces
+	}
+}
+
+pop_radical_factions = {
+	parent = country
+	generate_mult_modifiers = {
+		produces
+	}
+
+	generate_add_modifiers = {
+		produces
+	}
+}

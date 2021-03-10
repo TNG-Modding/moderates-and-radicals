@@ -1,0 +1,17 @@
+pop_faction_name_parts_list = {
+	key = "total_prog_moderates_names"
+	parts = {
+		"Government Policy Moderates" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "total_prog_moderate"
+		}
+	}
+	format = "<total_prog_moderates_names>"
+}
