@@ -32,40 +32,6 @@ pop_faction_event = {
 				is_pop_faction_type = total_prog_moderate
 			}
 
-			# Radicals
-			success_text = {
-				text = factions.1.desc.imperialist_radicals
-				is_pop_faction_type = imperialist_radicals
-			}
-			success_text = {
-				text = factions.1.desc.prosperity_radicals
-				is_pop_faction_type = prosperity_radicals
-			}
-			success_text = {
-				text = factions.1.desc.supremacist_radicals
-				is_pop_faction_type = supremacist_radicals
-			}
-			success_text = {
-				text = factions.1.desc.xenoist_radicals
-				is_pop_faction_type = xenoist_radicals
-			}
-			success_text = {
-				text = factions.1.desc.technologist_radicals
-				is_pop_faction_type = technologist_radicals
-			}
-			success_text = {
-				text = factions.1.desc.traditionalist_radicals
-				is_pop_faction_type = traditionalist_radicals
-			}
-			success_text = {
-				text = factions.1.desc.totalitarian_radicals
-				is_pop_faction_type = totalitarian_radicals
-			}
-			success_text = {
-				text = factions.1.desc.progressive_radicals
-				is_pop_faction_type = progressive_radicals
-			}
-
 			# Standard
 			success_text = {
 				text = factions.1.desc.imperialist
