@@ -1,7 +1,7 @@
 guiTypes = {
 	containerWindowType = {
 		name = "topbar_factions_view"
-		size = { width = 1272 height = 640 } 
+		size = { width = 1352 height = 640 } 
 		
 		position = { x = -1270 y = 40 }
 		show_position = { x = 35 y = 40 }
@@ -271,17 +271,17 @@ guiTypes = {
 		buttonType = {
 			name = "sort_effects"
 			#size = { x = 298 y = 35 }
-			position = { x = 1126 y = 45 }
-			spriteType = "GFX_button_116_24"
+			position = { x = 1126 y = 52 }
+			spriteType = "GFX_standard_button_200_24"
 			buttonFont = "cg_16b"
 			text = "POP_FACTIONS_COLUMN_SUPPORT_EFFECTS"
 			font = "cg_16b"
 			orientation = UPPER_LEFT
-		}		
+		}			
 		
 		containerWindowType = {
 			name = "list_background"
-			size = { width = 933 height = 544 }
+			size = { width = 1015 height = 544 }
 			position = { x = 328 y = 85 }
 	       
 			background = {
@@ -373,7 +373,7 @@ guiTypes = {
 		smoothListboxType = {
 			name = "pop_faction_list"
 			position = { x = 333 y = 90 }
-			size = { x = 905 y = 530 }
+			size = { x = 995 y = 530 }
 			scrollbartype = "standardlistbox_slider"
 			spacing = 0
 			autohide_scrollbar = no				
@@ -594,7 +594,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "pop_faction_list_entry"
-		size = { width = 905 height = 48 }
+		size = { width = 995 height = 48 }
 
 		background = {
 			name = "background"
@@ -607,7 +607,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "selected_box"
-			size = { width = 907 height = 50 }
+			size = { width = 997 height = 50 }
 			position = { x = -1 y = -1 }
 			
 				background = {
@@ -619,7 +619,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "selection_box"
-			size = { width = 905 height = 48 }
+			size = { width = 1015 height = 48 }
 			position = { x = 0 y = 0 }
 			
 				background = {
@@ -767,13 +767,13 @@ guiTypes = {
 			
 		instantTextBoxType={
 			name = "influence_label"
-			position = { x = 835 y = 15 }
+			position = { x = 810 y = 15 }
 			orientation = "UPPER_LEFT"
 			font = "cg_16b"
 			text = "INFLUENCE_GAIN_FROM_FACTION"
-			maxWidth = 200
+			maxWidth = 300
 			maxHeight = 30		
-		}		
+		}
 		
 		gridBoxType = {
 			name = "demands_list"
