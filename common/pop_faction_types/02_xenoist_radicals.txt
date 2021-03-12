@@ -12,8 +12,8 @@ xenoist_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			influence = -2
-			food = -12
+			influence = -6
+			unity = -6
 		}
 	}
 
@@ -104,47 +104,14 @@ xenoist_radicals = {
 			is_event_leader = yes
 		}
 	}
+	
+	demand = {
+		title = "RADICAL_XENOIST_GALVANIZE_RULER_SAME_SPECIES"
+		unfulfilled_title = "RADICAL_XENOIST_GALVANIZE_RULER_NOT_SAME_SPECIES"
+		desc = "RADICAL_XENOIST_GALVANIZE_RULER_NOT_SAME_SPECIES_DESC"
 
-	demand = { # "XENOIST_NO_SLAVES"
-		title = "XENOIST_NO_SLAVES"
-		unfulfilled_title = "XENOIST_SLAVES"
-		desc = "XENOIST_NO_SLAVES_DESC"
-
-		unfulfilled_effect = -25
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				any_owned_pop = {
-					NOR = {
-						is_same_species = root.owner
-						is_robot_pop = yes
-						is_sapient = no
-					}
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				NOT = {
-					#has_policy_flag = slavery_allowed
-					any_owned_pop = {
-						has_citizenship_type = { country = prev type = citizenship_slavery }
-					}
-				}
-			}
-		}
-	}
-
-	demand = { # "XENOIST_NO_PURGE"
-		title = "XENOIST_NO_PURGE"
-		unfulfilled_title = "XENOIST_PURGE"
-		desc = "XENOIST_NO_PURGE_DESC"
-
-		unfulfilled_effect = -25
-		fulfilled_effect = 0.001
+		fulfilled_effect = 0
+		unfulfilled_effect = -50
 
 		potential = {
 			exists = owner
@@ -152,11 +119,10 @@ xenoist_radicals = {
 
 		trigger = {
 			owner = {
-				NOR = {
-					has_policy_flag = purge_displacement_only
-					has_policy_flag = purge_allowed
-				}
+				exists = ruler
+				ruler = { is_same_species = owner_species }
 			}
 		}
 	}
+	
 }

@@ -12,8 +12,8 @@ imperialist_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			consumer_goods = -12
-			influence = -2
+			influence = -6
+			unity = -6
 		}
 	}
 

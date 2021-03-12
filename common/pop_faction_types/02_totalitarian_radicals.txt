@@ -12,8 +12,8 @@ totalitarian_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			influence = -2
-			minerals = -30
+			influence = -6
+			minerals = -6
 		}
 	}
 

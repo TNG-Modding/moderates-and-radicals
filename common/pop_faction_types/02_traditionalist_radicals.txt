@@ -12,10 +12,8 @@ traditionalist_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			influence = -2
-			society_research = -3
-			physics_research = -3
-			engineering_research = -3
+			influence = -6
+			unity = -6
 		}
 	}
 
