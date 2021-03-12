@@ -19,7 +19,11 @@ imperial_pacifist_moderate = {
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOR = { 
+			has_ethic = ethic_gestalt_consciousness 
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_fanatic_pacifist
+		}
 		count_owned_pops = {
 			count >= 2
 			limit = {
