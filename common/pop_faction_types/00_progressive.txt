@@ -19,7 +19,11 @@ progressive = {
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOT = { has_authority = auth_hive_mind }
+		NOR = { 
+			has_ethic = ethic_gestalt_consciousness 
+			has_ethic = ethic_fanatic_authoritarian
+			has_ethic = ethic_authoritarian
+		}
 		count_owned_pops = {
 			count >= 5
 			limit = {

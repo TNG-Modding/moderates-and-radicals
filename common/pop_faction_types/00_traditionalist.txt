@@ -19,7 +19,11 @@ traditionalist = {
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOR = { 
+			has_ethic = ethic_gestalt_consciousness 
+			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_materialist
+		}
 		count_owned_pops = {
 			count >= 5
 			limit = {
