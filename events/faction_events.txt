@@ -32,6 +32,41 @@ pop_faction_event = {
 				is_pop_faction_type = total_prog_moderate
 			}
 
+			# Radicals
+			success_text = {
+				text = factions.1.desc.imperialist_radicals
+				is_pop_faction_type = imperialist_radicals
+			}
+			success_text = {
+				text = factions.1.desc.prosperity_radicals
+				is_pop_faction_type = prosperity_radicals
+			}
+			success_text = {
+				text = factions.1.desc.supremacist_radicals
+				is_pop_faction_type = supremacist_radicals
+			}
+			success_text = {
+				text = factions.1.desc.xenoist_radicals
+				is_pop_faction_type = xenoist_radicals
+			}
+			success_text = {
+				text = factions.1.desc.technologist_radicals
+				is_pop_faction_type = technologist_radicals
+			}
+			success_text = {
+				text = factions.1.desc.traditionalist_radicals
+				is_pop_faction_type = traditionalist_radicals
+			}
+			success_text = {
+				text = factions.1.desc.totalitarian_radicals
+				is_pop_faction_type = totalitarian_radicals
+			}
+			success_text = {
+				text = factions.1.desc.progressive_radicals
+				is_pop_faction_type = progressive_radicals
+			}
+
+			# Standard
 			success_text = {
 				text = factions.1.desc.imperialist
 				is_pop_faction_type = imperialist
@@ -92,6 +127,71 @@ pop_faction_event = {
 
 	option = {
 		name = OK
+		hidden_effect = {
+			owner = {
+				every_owned_planet = {
+					every_owned_pop = {
+						force_faction_evaluation = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+pop_faction_event = {
+	id = factions.9990
+	title = factions.9990.title
+	desc = {
+		trigger = {
+			text = factions.9990.desc.start
+			text = newline
+
+			success_text = {
+				text = factions.9990.desc.imperialist_radicals
+				is_pop_faction_type = imperialist_radicals
+			}
+			success_text = {
+				text = factions.9990.desc.prosperity_radicals
+				is_pop_faction_type = prosperity_radicals
+			}
+			success_text = {
+				text = factions.9990.desc.supremacist_radicals
+				is_pop_faction_type = supremacist_radicals
+			}
+			success_text = {
+				text = factions.9990.desc.xenoist_radicals
+				is_pop_faction_type = xenoist_radicals
+			}
+			success_text = {
+				text = factions.9990.desc.technologist_radicals
+				is_pop_faction_type = technologist_radicals
+			}
+			success_text = {
+				text = factions.9990.desc.traditionalist_radicals
+				is_pop_faction_type = traditionalist_radicals
+			}
+			success_text = {
+				text = factions.9990.desc.totalitarian_radicals
+				is_pop_faction_type = totalitarian_radicals
+			}
+			success_text = {
+				text = factions.9990.desc.progressive_radicals
+				is_pop_faction_type = progressive_radicals
+			}
+			success_text = {
+				text = factions.9990.desc.finisher
+			}
+		}
+	}
+
+	picture = GFX_evt_archaeologists_escaping
+	show_sound = event_super_explosion
+
+	is_triggered_only = yes
+
+	option = {
+		name = factions.9990.a
 		hidden_effect = {
 			owner = {
 				every_owned_planet = {

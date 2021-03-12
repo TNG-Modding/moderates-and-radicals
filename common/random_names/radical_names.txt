@@ -1,0 +1,143 @@
+pop_faction_name_parts_list = {
+	key = "xenoist_radical_names"
+	parts = {
+		"Xenoist Radicals" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "xenoist_radicals"
+		}
+	}
+	format = "<xenoist_radical_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "supremacist_radical_names"
+	parts = {
+		"Supremacist Radicals" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "supremacist_radicals"
+		}
+	}
+	format = "<supremacist_radical_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "totalitarian_radical_names"
+	parts = {
+		"Totalitarian Radicals" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "totalitarian_radicals"
+		}
+	}
+	format = "<totalitarian_radical_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "progressive_radical_names"
+	parts = {
+		"Progressive Radicals" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "progressive_radicals"
+		}
+	}
+	format = "<progressive_radical_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "imperialist_radical_names"
+	parts = {
+		"Imperialist Radicals" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "imperialist_radicals"
+		}
+	}
+	format = "<imperialist_radical_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "propserity_radical_names"
+	parts = {
+		"Pacifist Radicals" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "prosperity_radicals"
+		}
+	}
+	format = "<propserity_radical_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "technologist_radical_names"
+	parts = {
+		"Technologist Radicals" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "technologist_radicals"
+		}
+	}
+	format = "<technologist_radical_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "traditionalist_radical_names"
+	parts = {
+		"Traditionalist Radicals" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "traditionalist_radicals"
+		}
+	}
+	format = "<traditionalist_radical_names>"
+}

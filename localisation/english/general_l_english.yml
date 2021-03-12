@@ -2,3 +2,8 @@
 
  pop_moderate_factions:0 "Moderate Factions"
  pop_radical_factions:0 "Radical Factions"
+
+ factions.9990.title:0 "Radical Faction Founded"
+ factions.9990.desc.start:0 "The §H[Root.GetName]§! led by §H[Root.Leader.GetTitle] [Root.Leader.GetName]§! have taken root in the political periphery of the [Root.Owner.GetName]. Their methods are subversive, destructive, and destabilizing. The mind struggles to comprehend their beliefs, and the heart retaliates against all empathy."
+ factions.9990.desc.finisher:0 "Radical factions pose an existential threat to our government, and must be dealt with..."
+ factions.9990.a:0 "They have no place in our government."

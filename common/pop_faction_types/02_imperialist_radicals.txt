@@ -1,0 +1,122 @@
+##############################
+# Imperialist_radicals Faction
+##############################
+
+imperialist_radicals = {
+	election_header = "GFX_faction_header_yellow"
+	guiding_ethic = ethic_militarist
+
+	unique = yes
+	support_multiplier = 1
+
+	resources = {
+		category = pop_radical_factions
+		produces = {
+			consumer_goods = -12
+			influence = -2
+		}
+	}
+
+	is_potential = {
+		years_passed > 11
+		owner = { has_country_flag = first_faction } 
+		has_encountered_other_species = yes
+		OR = { 
+			has_ethic = ethic_fanatic_pacifist
+			has_ethic = ethic_pacifist
+		}
+		count_owned_pops = {
+			count >= 5
+			limit = {
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+
+	on_create = {
+		pop_faction_event = { id = factions.9990 }
+	}
+
+	can_join_pre_triggers = {
+		is_enslaved = no
+		is_being_purged = no
+	}
+
+	can_join_faction = {
+		is_shackled_robot = no
+		NOT = { has_trait = trait_nerve_stapled }
+		OR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	attraction = {
+		base = 100
+
+		modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				exists = leader
+				leader = { leader_class = ruler }
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			exists = from
+			from = {
+				NOT = { exists = leader }
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			has_citizenship_rights = yes
+		}
+	}
+
+	leader = {
+		base = 100
+
+		modifier = {
+			factor = 0.0
+			is_event_leader = yes
+		}
+	}
+	demand = {
+		title = "RADICAL_IMPERIALIST_CONQUEST"
+		unfulfilled_title = "RADICAL_IMPERIALIST_NO_CONQUEST"
+		desc = "RADICAL_IMPERIALIST_CONQUEST_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				any_relation = {
+					has_communications = root.owner
+					is_country_type = default
+					NOT = { exists = overlord }
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_country_flag = imperialist_conquest_timed_flag
+			}
+		}
+	}
+}

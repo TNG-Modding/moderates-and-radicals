@@ -1,0 +1,130 @@
+##############################
+# Totalitarian_radicals Faction
+##############################
+
+totalitarian_radicals = {
+	election_header = "GFX_faction_header_yellow"
+	guiding_ethic = ethic_authoritarian
+
+	unique = yes
+	support_multiplier = 1
+
+	resources = {
+		category = pop_radical_factions
+		produces = {
+			influence = -2
+			minerals = -30
+		}
+	}
+
+	is_potential = {
+		years_passed > 11
+		has_encountered_other_species = yes
+		owner = { has_country_flag = first_faction } 
+		OR = { 
+			has_ethic = ethic_fanatic_egalitarian
+			has_ethic = ethic_egalitarian
+		}
+		count_owned_pops = {
+			count >= 5
+			limit = {
+				has_ethic = ethic_authoritarian
+			}
+		}
+	}
+
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+
+	on_create = {
+		pop_faction_event = { id = factions.9990 }
+	}
+
+	can_join_faction = {
+		is_enslaved = no
+		is_shackled_robot = no
+		is_being_purged = no
+		NOT = { has_trait = trait_nerve_stapled }
+		OR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+
+	attraction = {
+		base = 150
+
+		modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				exists = leader
+				leader = { leader_class = ruler }
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			exists = from
+			from = {
+				NOT = { exists = leader }
+			}
+		}
+
+		# Should really check for citizenship instead
+		modifier = {
+			factor = 0.25
+			NOT = { is_same_species = owner_species }
+		}
+	}
+
+	leader = {
+		base = 100
+
+		modifier = {
+			factor = 0.0
+			is_event_leader = yes
+		}
+	}
+
+	demand = {
+		title = "TOTALITARIAN_STRATIFICATION"
+		unfulfilled_title = "TOTALITARIAN_NO_STRATIFICATION"
+		desc = "TOTALITARIAN_STRATIFICATION_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -20
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					NOT = {
+						any_owned_pop = {
+							NOR = {
+								has_living_standard = { type = living_standard_stratified }
+								has_living_standard = { type = living_standard_academic_privilege }
+							}
+						}
+					}
+					any_owned_species = {
+						OR = {
+							has_citizenship_type = { type = citizenship_slavery country = prev }
+							has_citizenship_type = { type = citizenship_purge country = prev }
+							has_citizenship_type = { type = citizenship_robot_servitude country = prev }
+						}
+					}
+				}
+			}
+		}
+	}
+}

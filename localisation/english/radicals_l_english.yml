@@ -1,0 +1,36 @@
+﻿l_english:
+
+ pft_imperialist_radicals:0 "Radical Imperialists"
+ pft_imperialist_radicals_desc:0 "The Radical Imperialist Faction is a subversive group of dissidents who spit on the pacifist ideals that are the foundation of our government."
+ factions.9990.desc.imperialist_radicals:0 "Their members spit on our pacifist ideals while pushing for brutish jingoism.\n\n"
+
+ RADICAL_IMPERIALIST_CONQUEST:0 "Recent Planet Capture"
+ RADICAL_IMPERIALIST_NO_CONQUEST:0 "Capture a Planet!"
+ RADICAL_IMPERIALIST_CONQUEST_DESC:0 "Caputring a planet will appease the [Root.GetName] for a time."
+ pft_prosperity_radicals:0 "Radical Pacifists"
+ pft_prosperity_radicals_desc:0 "The Radical Pacifist Faction is a subversive group of dissidents who spit on the militarist ideals that are the foundation of our government."
+ factions.9990.desc.prosperity_radicals:0 "Their members spit on our militarist ideals while pushing for inaction and weakness.\n\n"
+
+ pft_supremacist_radicals:0 "Radical Supremacists"
+ pft_supremacist_radicals_desc:0 "The Radical Supremacist Faction is a subversive group of dissidents who spit on the xenophilic ideals that are the foundation of our government."
+ factions.9990.desc.supremacist_radicals:0 "Their members spit on our xenoist ideals while pushing a detestable xenophobic agenda.\n\n"
+
+ pft_xenoist_radicals:0 "Radical Xenoists"
+ pft_xenoist_radicals_desc:0 "The Radical Xenoist Faction is a subversive group of dissidents who spit on the xenophobic ideals that are the foundation of our government."
+ factions.9990.desc.xenoist_radicals:0 "Their members spit on our supremacist ideals while pushing for the dissolution of our people and its culture.\n\n"
+
+ pft_progressive_radicals:0 "Radical Progressives"
+ pft_progressive_radicals_desc:0 "The Radical Progressive Faction is a subversive group of dissidents who spit on the authoritarian ideals that are the foundation of our government."
+ factions.9990.desc.progressive_radicals:0 "Their members spit on our authoritarian ideals while pushing for mob rule and disorder.\n\n"
+
+ pft_totalitarian_radicals:0 "Radical Totalitarians"
+ pft_totalitarian_radicals_desc:0 "The Radical Totalitarian Faction is a subversive group of dissidents who spit on the egalitarian ideals that are the foundation of our government."
+ factions.9990.desc.totalitarian_radicals:0 "Their members spit on our egalitarian ideals while pushing for cronyism and tyranny.\n\n"
+
+ pft_technologist_radicals:0 "Radical Technologists"
+ pft_technologist_radicals_desc:0 "The Radical Technologist Faction is a subversive group of dissidents who spit on the spiritualist ideals that are the foundation of our government."
+ factions.9990.desc.technologist_radicals:0 "Their members spit on our spiritual ideals while pushing a simpleminded approach to Being.\n\n"
+
+ pft_traditionalist_radicals:0 "Radical Traditionalists"
+ pft_traditionalist_radicals_desc:0 "The Radical Traditionalist Faction is a subversive group of dissidents who spit on the materialist ideals that are the foundation of our government."
+ factions.9990.desc.traditionalist_radicals:0 "Their members spit on our materialist ideals while pushing unsubtantiated, unverifiable beliefs.\n\n"

@@ -1,0 +1,127 @@
+##############################
+# Progressive_radicals Faction
+##############################
+
+progressive_radicals = {
+	election_header = "GFX_faction_header_yellow"
+	guiding_ethic = ethic_egalitarian
+
+	unique = yes
+	support_multiplier = 1
+
+	resources = {
+		category = pop_radical_factions
+		produces = {
+			influence = 2
+			minerals = -30
+		}
+	}
+
+	is_potential = {
+		years_passed > 11
+		has_encountered_other_species = yes
+		owner = { has_country_flag = first_faction } 
+		OR = { 
+			has_ethic = ethic_fanatic_authoritarian
+			has_ethic = ethic_authoritarian
+		}
+		count_owned_pops = {
+			count >= 5
+			limit = {
+				has_ethic = ethic_egalitarian
+			}
+		}
+	}
+
+	on_create = {
+		pop_faction_event = { id = factions.9990 }
+	}
+
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+
+	can_join_pre_triggers = {
+		is_enslaved = no
+		is_being_purged = no
+	}
+
+	can_join_faction = {
+		is_shackled_robot = no
+		NOT = { has_trait = trait_nerve_stapled }
+		OR = {
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+
+	attraction = {
+		base = 150
+
+		modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				exists = leader
+				leader = { leader_class = ruler }
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			exists = from
+			from = {
+				NOT = { exists = leader }
+			}
+		}
+
+		# Should really check for citizenship instead
+		modifier = {
+			factor = 0.25
+			NOT = { is_same_species = owner_species }
+		}
+	}
+
+	leader = {
+		base = 100
+
+		modifier = {
+			factor = 0
+			leader_class = ruler
+			owner = { has_authority = auth_imperial }
+		}
+
+		modifier = {
+			factor = 0.0
+			is_event_leader = yes
+		}
+	}
+
+	demand = {
+		title = "PROGRESSIVE_NO_STRATIFIED"
+		unfulfilled_title = "PROGRESSIVE_STRATIFIED"
+		desc = "PROGRESSIVE_NO_STRATIFIED_DESC"
+
+		unfulfilled_effect = -25
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				NOT = {
+					any_owned_pop = {
+						has_living_standard = { type = living_standard_stratified }
+					}
+				}
+			}
+		}
+	}
+}
