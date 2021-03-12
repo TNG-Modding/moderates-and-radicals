@@ -46,7 +46,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_faction_icon_technologist_radicals"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icon_technologist_radicals_red.dds"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_technologist_radicals_red.dds"
 		noOfFrames = 1
 	}
 }
