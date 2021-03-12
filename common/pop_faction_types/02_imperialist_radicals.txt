@@ -95,9 +95,9 @@ imperialist_radicals = {
 		}
 	}
 	demand = {
-		title = "RADICAL_IMPERIALIST_CONQUEST"
-		unfulfilled_title = "RADICAL_IMPERIALIST_NO_CONQUEST"
-		desc = "RADICAL_IMPERIALIST_CONQUEST_DESC"
+		title = "IMPERIALIST_CONQUEST"
+		unfulfilled_title = "IMPERIALIST_NO_CONQUEST"
+		desc = "IMPERIALIST_CONQUEST_DESC"
 
 		fulfilled_effect = 10
 		unfulfilled_effect = -0.001
