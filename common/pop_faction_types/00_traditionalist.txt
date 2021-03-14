@@ -13,6 +13,7 @@ traditionalist = {
 		category = pop_factions
 		produces = {
 			influence = 1.5
+			diversity_of_discussion = 1
 		}
 	}
 

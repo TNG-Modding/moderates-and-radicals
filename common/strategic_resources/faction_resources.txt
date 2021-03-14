@@ -1,0 +1,19 @@
+idealogical_purity = {
+	max = 100
+	tooltip_decimals = 3
+	fixed_max_amount = yes
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+diversity_of_discussion = {
+	max = 100
+	tooltip_decimals = 3
+	fixed_max_amount = yes
+	
+	ai_weight = {
+		weight = 1
+	}
+}

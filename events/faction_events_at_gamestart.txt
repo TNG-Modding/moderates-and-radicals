@@ -1,0 +1,13 @@
+namespace = faction_start
+
+
+country_event = {
+	id = faction_start.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_resource = { idealogical_purity = 50	}
+		add_resource = { diversity_of_discussion = 50	}
+	}
+}

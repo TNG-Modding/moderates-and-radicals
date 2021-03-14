@@ -13,6 +13,7 @@ total_prog_moderate = {
 		category = pop_moderate_factions
 		produces = {
 			influence = 1
+			diversity_of_discussion = 1
 		}
 	}
 

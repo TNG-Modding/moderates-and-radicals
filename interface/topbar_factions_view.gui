@@ -18,7 +18,7 @@ guiTypes = {
 			name = "background"
 			spriteType = "GFX_tile_outliner_bg"
 		}
-		
+
 		containerWindowType = {
 			name = "leader_portrait"
 			size = { width = 300 height = 300 }
@@ -42,7 +42,7 @@ guiTypes = {
 		
 		iconType = {
 			name = "factions_header_line"
-			quadTextureSprite = "GFX_line_long"
+			quadTextureSprite = "GFX_line_short"
 			position = { x = 5 y = 21 }
 			alwaystransparent = yes
 		}
@@ -386,7 +386,78 @@ guiTypes = {
 			max_slots_vertical = 1
 			format = "LOWER_LEFT"
 			add_horizontal = yes
-		}	
+		}
+
+		containerWindowType = {
+			name = "background_idealogical_purity"
+			position = { x = 405 y = 5 }
+			size = { width = 70 height = 48 }
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+		}
+
+		containerWindowType = {
+			name = "tb_idealogical_purity_group"
+			position = { x = 400 y = 10 }
+			size = { width = 74 height = 35 }
+	
+			iconType = {
+				name = "icon"
+				spriteType = "GFX_resource_idealogical_purity"
+				position = { x = 30 y = 2 }
+				tooltip_mode_enabled = yes
+				alwaysTransparent = yes
+			}
+	
+			instantTextBoxType={
+				name = "amount"
+				font = "cg_16b"
+				position = { x = 4 y = 20 }
+				maxWidth = 70
+				maxHeight = 16
+				text = "0 / 0"
+				format = center
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "background_diversity_of_discussion"
+			position = { x = 480 y = 5 }
+			size = { width = 70 height = 48 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+		}
+
+		containerWindowType = {
+			name = "tb_diversity_of_discussion_group"
+			position = { x = 475 y = 10 }
+			size = { width = 74 height = 35 }
+	
+			iconType = {
+				name = "icon"
+				spriteType = "GFX_resource_diversity_of_discussion"
+				position = { x = 30 y = 2 }
+				tooltip_mode_enabled = yes
+				alwaysTransparent = yes
+			}
+	
+			instantTextBoxType={
+				name = "amount"
+				font = "cg_16b"
+				position = { x = 4 y = 20 }
+				maxWidth = 70
+				maxHeight = 16
+				text = "0 / 0"
+				format = center
+				alwaysTransparent = yes
+			}
+		}
 
 		### ACTIONS
 
@@ -820,4 +891,6 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 	}
+
+	
 }

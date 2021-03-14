@@ -1,0 +1,13 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_resource_idealogical_purity"
+		texturefile = "gfx/interface/icons/resources/idealogical_purity.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_resource_diversity_of_discussion"
+		texturefile = "gfx/interface/icons/resources/diversity_of_discussion.dds"
+	}
+}
