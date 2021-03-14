@@ -1,10 +1,10 @@
 ##############################
-# Progressive Faction
+# Peaceful Prosperity Faction
 ##############################
 
-progressive = {
+gov_prosperity = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_egalitarian
+	guiding_ethic = ethic_pacifist
 
 	unique = yes
 	support_multiplier = 1
@@ -13,23 +13,21 @@ progressive = {
 		category = pop_factions
 		produces = {
 			influence = 1.5
+			idealogical_purity = 1
 		}
 	}
 
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOR = { 
-			has_ethic = ethic_gestalt_consciousness 
-			has_ethic = ethic_fanatic_authoritarian
-			has_ethic = ethic_authoritarian
-			has_ethic = ethic_egalitarian
-			has_ethic = ethic_fanatic_egalitarian
+		OR = { 
+			has_ethic = ethic_fanatic_pacifist
+			has_ethic = ethic_pacifist
 		}
 		count_owned_pops = {
 			count >= 5
 			limit = {
-				has_ethic = ethic_egalitarian
+				has_ethic = ethic_pacifist
 			}
 		}
 	}
@@ -43,6 +41,8 @@ progressive = {
 		}
 	}
 
+	
+
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
@@ -51,14 +51,11 @@ progressive = {
 	can_join_faction = {
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
-		OR = {
-			has_ethic = ethic_egalitarian
-			has_ethic = ethic_fanatic_egalitarian
-		}
+		has_ethic = ethic_pacifist
 	}
 
 	attraction = {
-		base = 150
+		base = 100
 
 		modifier = {
 			factor = 1.25
@@ -77,9 +74,18 @@ progressive = {
 			}
 		}
 
+		modifier = {
+			factor = 1.5
+
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+
 		# Should really check for citizenship instead
 		modifier = {
-			factor = 0.25
+			factor = 1.25
 			NOT = { is_same_species = owner_species }
 		}
 	}
@@ -88,9 +94,11 @@ progressive = {
 		base = 100
 
 		modifier = {
-			factor = 0
-			leader_class = ruler
-			owner = { has_authority = auth_imperial }
+			factor = 0.0
+			OR = {
+				leader_class = admiral
+				leader_class = general
+			}
 		}
 
 		modifier = {
@@ -110,143 +118,123 @@ progressive = {
 		potential = {
 			exists = owner
 			owner = {
-				has_country_flag = faction_egalitarian_outraged_gc
+				has_country_flag = faction_pacifist_outraged_gc
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_country_flag = faction_egalitarian_outraged_gc
+				has_country_flag = faction_pacifist_outraged_gc
 			}
 		}
 	}
 
 	demand = {
-		title = "PROGRESSIVE_NO_AUTO"
-		unfulfilled_title = "PROGRESSIVE_AUTO"
-		desc = "PROGRESSIVE_DEMOCRATIC_GOVERNMENT_DESC"
+		title = "PROSPERITY_LIQUIDITY"
+		unfulfilled_title = "PROSPERITY_NO_LIQUIDITY"
+		desc = "PROSPERITY_LIQUIDITY_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = -15
+		unfulfilled_effect = -0.001
 
-		potential = {
+		potential = { # TODO get a reasonable trigger for counting colonies?
 			exists = owner
-		}
-
-		trigger = {
 			owner = {
-				NOR = {
-					has_authority = auth_imperial
-					has_authority = auth_dictatorial
+				any_owned_planet = {
+					NOT = { is_same_value = root.capital_scope }
+					root = {
+						owner = {
+							any_owned_planet = {
+								NOR = {
+									is_same_value = prevprevprev
+									is_same_value = root.owner.capital_scope
+								}
+							}
+						}
+					}
 				}
 			}
 		}
+
+		trigger = {
+			owner = { resource_stockpile_compare = { resource = energy value >= 5000 } }
+		}
 	}
 
 	demand = {
-		title = "PROGRESSIVE_FREE_MOVEMENT"
-		unfulfilled_title = "PROGRESSIVE_NO_FREE_MOVEMENT"
-		desc = "PROGRESSIVE_FREE_MOVEMENT_DESC"
+		title = "PROSPERITY_PHILOSOPHY"
+		unfulfilled_title = "PROSPERITY_NO_PHILOSOPHY"
+		desc = "PROSPERITY_PHILOSOPHY_DESC"
 
 		fulfilled_effect = 10
 		unfulfilled_effect = -10
 
 		potential = {
 			exists = owner
-			owner = { has_encountered_other_species = yes }
+			owner = {
+				any_relation = {
+					has_communications = root.owner
+					is_country_type = default
+					NOT = { exists = overlord }
+				}
+			}
 		}
 
 		trigger = {
 			owner = {
-				NOR = {
-					any_owned_pop = {
-						has_migration_control = yes
-						is_sapient = yes
-						is_enslaved = no
-						is_being_purged = no
-						is_shackled_robot = no
-						is_robot_pop = no
-					}
-					has_policy_flag = resettlement_allowed
-				}
+				has_policy_flag = no_wars
 			}
 		}
 	}
 
 	demand = {
-		title = "PROGRESSIVE_REPRODUCTIVE_FREEDOM"
-		unfulfilled_title = "PROGRESSIVE_NO_REPRODUCTIVE_FREEDOM"
-		desc = "PROGRESSIVE_REPRODUCTIVE_FREEDOM_DESC"
+		title = "PROSPERITY_PEACE"
+		unfulfilled_title = "PROSPERITY_NO_PEACE"
+		desc = "PROSPERITY_PEACE_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = -20
+		unfulfilled_effect = -10
 
 		potential = {
 			exists = owner
 		}
 
 		trigger = {
-			NOT = {
-				owner = { has_policy_flag = population_controls_allowed }
+			owner = {
+				is_at_war = no
 			}
 		}
 	}
 
 	demand = {
-		title = "PROGRESSIVE_NO_STRATIFIED"
-		unfulfilled_title = "PROGRESSIVE_STRATIFIED"
-		desc = "PROGRESSIVE_NO_STRATIFIED_DESC"
+		title = "PROSPERITY_NOT_AGGRESSOR"
+		unfulfilled_title = "PROSPERITY_AGGRESSOR"
+		desc = "PROSPERITY_NOT_AGGRESSOR_DESC"
 
-		unfulfilled_effect = -25
+		unfulfilled_effect = -30
 		fulfilled_effect = 0.001
 
 		potential = {
 			exists = owner
-		}
-
-		trigger = {
 			owner = {
-				NOT = {
-					any_owned_pop = {
-						has_living_standard = { type = living_standard_stratified }
-					}
-				}
-			}
-		}
-	}
-
-	demand = {
-		title = "PROGRESSIVE_NO_ELITISM"
-		unfulfilled_title = "PROGRESSIVE_ELITISM"
-		desc = "PROGRESSIVE_NO_ELITISM_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -5
-
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					has_technology = tech_selected_lineages
-					has_technology = tech_capacity_boosters
-				}
+				num_communications > 2
 			}
 		}
 
 		trigger = {
 			owner = {
 				NOR = {
-					has_policy_flag = leader_enhancement_selected_lineages
-					has_policy_flag = leader_enhancement_capacity_boosters
+					has_country_flag = entered_war_as_attacker
+					any_war = { is_war_participant = { who = prev side = attackers } }
 				}
 			}
 		}
 	}
 
 	demand = {
-		title = "COOPERATIVE_DIPLO_STANCE"
-		unfulfilled_title = "COOPERATIVE_DIPLO_STANCE"
-		desc = "COOPERATIVE_DIPLO_STANCE_DESC"
+		title = "PROSPERITY_PEACEFUL_APPLICATIONS"
+		unfulfilled_title = "PROSPERITY_NO_PEACEFUL_APPLICATIONS_APPLICATIONS"
+		desc = "PROSPERITY_PEACEFUL_APPLICATIONS_DESC"
 
 		fulfilled_effect = 5
 		unfulfilled_effect = -0.001
@@ -254,15 +242,111 @@ progressive = {
 		potential = {
 			exists = owner
 			owner = {
-				is_homicidal = no
-				is_country_type = default
-				has_policy_flag = diplo_stance_cooperative
+				host_has_dlc = "Ancient Relics Story Pack"
+				has_technology = tech_arcane_deciphering
+				OR = {
+					has_modifier = artifact_find_peaceful_application_happy_bios
+					has_modifier = artifact_find_peaceful_application_consumer_goods
+					has_modifier = artifact_find_peaceful_application_amenities
+					has_modifier = artifact_find_peaceful_application_leader_improvement
+				}
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_policy_flag = diplo_stance_cooperative
+				OR = {
+					has_modifier = artifact_find_peaceful_application_happy_bios
+					has_modifier = artifact_find_peaceful_application_consumer_goods
+					has_modifier = artifact_find_peaceful_application_amenities
+					has_modifier = artifact_find_peaceful_application_leader_improvement
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "PROSPERITY_MILITARY_APPLICATIONS"
+		unfulfilled_title = "PROSPERITY_NO_MILITARY_APPLICATIONS"
+		desc = "PROSPERITY_MILITARY_APPLICATIONS_DESC"
+
+		unfulfilled_effect = -5
+		fulfilled_effect = +0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				host_has_dlc = "Ancient Relics Story Pack"
+				has_technology = tech_arcane_deciphering
+				OR = {
+					has_modifier = artifact_find_military_application_army
+					has_modifier = artifact_find_military_application_shield_damage
+					has_modifier = artifact_find_military_application_armor_damage
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOR = {
+					has_modifier = artifact_find_military_application_army
+					has_modifier = artifact_find_military_application_shield_damage
+					has_modifier = artifact_find_military_application_armor_damage
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "MERCANTILE_DIPLO_STANCE"
+		unfulfilled_title = "MERCANTILE_DIPLO_STANCE"
+		desc = "MERCANTILE_DIPLO_STANCE_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				is_homicidal = no
+				is_country_type = default
+				has_policy_flag = diplo_stance_mercantile
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_policy_flag = diplo_stance_mercantile
+			}
+		}
+	}
+
+	demand = {
+		title = "AGGRESSIVE_DIPLO_STANCE"
+		unfulfilled_title = "AGGRESSIVE_DIPLO_STANCE"
+		desc = "AGGRESSIVE_DIPLO_STANCE_DESC"
+
+		fulfilled_effect = 0.001
+		unfulfilled_effect = -10
+
+		potential = {
+			exists = owner
+			owner = {
+				is_homicidal = no
+				is_country_type = default
+				OR = {
+					has_policy_flag = diplo_stance_belligerent
+					has_policy_flag = diplo_stance_supremacist
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOR = {
+					has_policy_flag = diplo_stance_belligerent
+					has_policy_flag = diplo_stance_supremacist
+				}
 			}
 		}
 	}
@@ -274,15 +358,15 @@ progressive = {
 	on_destroy = {
 		if = {
 			limit = {
-				has_modifier = promoted_egalitarian
+				has_modifier = promoted_pacifist
 			}
-			remove_modifier = promoted_egalitarian
+			remove_modifier = promoted_pacifist
 		}
 		if = {
 			limit = {
-				has_modifier = suppressed_egalitarian
+				has_modifier = suppressed_pacifist
 			}
-			remove_modifier = suppressed_egalitarian
+			remove_modifier = suppressed_pacifist
 		}
 	}
 
@@ -314,14 +398,14 @@ progressive = {
 				}
 				support > 0.20
 				parameter:empire = {
-					NOT = { has_ethic = "ethic_fanatic_egalitarian" }
+					NOT = { has_ethic = "ethic_fanatic_pacifist" }
 				}
 			}
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
 				parameter:empire = {
-					shift_ethic = ethic_egalitarian
+					shift_ethic = ethic_pacifist
 					hidden_effect = {
 						add_modifier = { modifier = embraced_faction_timer days = 3600 }
 						every_pop_faction = {
@@ -351,7 +435,7 @@ progressive = {
 					factor = 0
 					support < 0.50
 					owner = {
-						has_ethic = ethic_egalitarian
+						has_ethic = ethic_pacifist
 					}
 				}
 				modifier = {
@@ -364,7 +448,7 @@ progressive = {
 						owner = {
 							exists = ruler
 							ruler = {
-								leader_of_faction = progressive
+								leader_of_faction = prosperity
 							}
 						}
 					}
@@ -387,15 +471,15 @@ progressive = {
 				exists = owner
 				parameter:empire = {
 					NOR = {
-						has_modifier = suppressed_egalitarian
-						has_modifier = promoted_egalitarian
+						has_modifier = suppressed_pacifist
+						has_modifier = promoted_pacifist
 					}
 				}
 			}
 
 			effect = {
 				parameter:empire = {
-					add_modifier = { modifier = promoted_egalitarian days = -1 }
+					add_modifier = { modifier = promoted_pacifist days = -1 }
 				}
 			}
 
@@ -410,13 +494,13 @@ progressive = {
 			potential = {
 				exists = owner
 				parameter:empire = {
-					has_modifier = promoted_egalitarian
+					has_modifier = promoted_pacifist
 				}
 			}
 
 			effect = {
 				parameter:empire = {
-					remove_modifier = promoted_egalitarian
+					remove_modifier = promoted_pacifist
 				}
 			}
 
@@ -432,8 +516,8 @@ progressive = {
 				exists = owner
 				parameter:empire = {
 					NOR = {
-						has_modifier = suppressed_egalitarian
-						has_modifier = promoted_egalitarian
+						has_modifier = suppressed_pacifist
+						has_modifier = promoted_pacifist
 					}
 				}
 			}
@@ -441,7 +525,7 @@ progressive = {
 			effect = {
 				add_modifier = { modifier = suppressed_faction days = -1 }
 				parameter:empire = {
-					add_modifier = { modifier = suppressed_egalitarian days = -1 }
+					add_modifier = { modifier = suppressed_pacifist days = -1 }
 				}
 			}
 
@@ -456,14 +540,14 @@ progressive = {
 			potential = {
 				exists = owner
 				parameter:empire = {
-					has_modifier = suppressed_egalitarian
+					has_modifier = suppressed_pacifist
 				}
 			}
 
 			effect = {
 				remove_modifier = suppressed_faction
 				parameter:empire = {
-					remove_modifier = suppressed_egalitarian
+					remove_modifier = suppressed_pacifist
 				}
 			}
 

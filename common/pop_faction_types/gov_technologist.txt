@@ -2,7 +2,7 @@
 # Technologist Faction
 ##############################
 
-technologist = {
+gov_technologist = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_materialist
 
@@ -13,18 +13,16 @@ technologist = {
 		category = pop_factions
 		produces = {
 			influence = 1.5
+			idealogical_purity = 1
 		}
 	}
 
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOR = { 
-			has_ethic = ethic_gestalt_consciousness 
-			has_ethic = ethic_fanatic_spiritualist
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_materialist
+		OR = {  
 			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_materialist
 		}
 		count_owned_pops = {
 			count >= 5

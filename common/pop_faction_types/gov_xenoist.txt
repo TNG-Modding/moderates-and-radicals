@@ -2,7 +2,7 @@
 # Xenoist Faction
 ##############################
 
-xenoist = {
+gov_xenoist = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_xenophile
 
@@ -13,18 +13,16 @@ xenoist = {
 		category = pop_factions
 		produces = {
 			influence = 1.5
+			idealogical_purity = 1
 		}
 	}
 
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOR = { 
-			has_ethic = ethic_gestalt_consciousness 
-			has_ethic = ethic_fanatic_xenophobe
-			has_ethic = ethic_xenophobe
-			has_ethic = ethic_xenophile
+		OR = { 
 			has_ethic = ethic_fanatic_xenophile
+			has_ethic = ethic_xenophile
 		}
 		count_owned_pops = {
 			count >= 5

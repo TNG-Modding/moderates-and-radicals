@@ -2,7 +2,7 @@
 # Totalitarian Faction
 ##############################
 
-totalitarian = {
+gov_totalitarian = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_authoritarian
 
@@ -13,18 +13,16 @@ totalitarian = {
 		category = pop_factions
 		produces = {
 			influence = 1.5
+			idealogical_purity = 1
 		}
 	}
 
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOR = { 
-			has_ethic = ethic_gestalt_consciousness 
-			has_ethic = ethic_fanatic_egalitarian
-			has_ethic = ethic_egalitarian
-			has_ethic = ethic_authoritarian
+		OR = { 
 			has_ethic = ethic_fanatic_authoritarian
+			has_ethic = ethic_authoritarian
 		}
 		count_owned_pops = {
 			count >= 5

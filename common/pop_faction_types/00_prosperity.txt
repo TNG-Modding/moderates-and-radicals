@@ -16,6 +16,8 @@ prosperity = {
 			has_ethic = ethic_gestalt_consciousness 
 			has_ethic = ethic_fanatic_militarist
 			has_ethic = ethic_militarist
+			has_ethic = ethic_pacifist
+			has_ethic = ethic_fanatic_pacifist
 		}
 		count_owned_pops = {
 			count >= 5

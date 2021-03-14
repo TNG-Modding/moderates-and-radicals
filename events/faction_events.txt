@@ -32,6 +32,44 @@ pop_faction_event = {
 				is_pop_faction_type = total_prog_moderate
 			}
 
+			# Government
+			success_text = {
+				text = factions.1.desc.gov_imperialist
+				is_pop_faction_type = gov_imperialist
+			}
+			success_text = {
+				text = factions.1.desc.gov_progressive
+				is_pop_faction_type = gov_progressive
+			}
+			success_text = {
+				text = factions.1.desc.gov_prosperity
+				is_pop_faction_type = gov_prosperity
+			}
+			success_text = {
+				text = factions.1.desc.gov_supremacist
+				is_pop_faction_type = gov_supremacist
+			}
+			success_text = {
+				text = factions.1.desc.gov_technologist
+				is_pop_faction_type = gov_technologist
+			}
+			success_text = {
+				text = factions.1.desc.gov_totalitarian
+				is_pop_faction_type = gov_totalitarian
+			}
+			success_text = {
+				text = factions.1.desc.gov_traditionalist
+				is_pop_faction_type = gov_traditionalist
+			}
+			success_text = {
+				text = factions.1.desc.gov_xenoist
+				is_pop_faction_type = gov_xenoist
+			}
+			success_text = {
+				hidden:owner = { NOT = { has_country_flag = first_faction } }
+				text = factions.1.desc.firstfinisher
+			}
+
 			# Standard
 			success_text = {
 				text = factions.1.desc.imperialist

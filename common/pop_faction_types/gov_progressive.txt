@@ -1,10 +1,10 @@
 ##############################
-# Totalitarian Faction
+# Progressive Faction
 ##############################
 
-totalitarian = {
+gov_progressive = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_authoritarian
+	guiding_ethic = ethic_egalitarian
 
 	unique = yes
 	support_multiplier = 1
@@ -13,23 +13,21 @@ totalitarian = {
 		category = pop_factions
 		produces = {
 			influence = 1.5
+			idealogical_purity = 1
 		}
 	}
 
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOR = { 
-			has_ethic = ethic_gestalt_consciousness 
+		OR = { 
 			has_ethic = ethic_fanatic_egalitarian
 			has_ethic = ethic_egalitarian
-			has_ethic = ethic_authoritarian
-			has_ethic = ethic_fanatic_authoritarian
 		}
 		count_owned_pops = {
 			count >= 5
 			limit = {
-				has_ethic = ethic_authoritarian
+				has_ethic = ethic_egalitarian
 			}
 		}
 	}
@@ -43,14 +41,17 @@ totalitarian = {
 		}
 	}
 
-	can_join_faction = {
+	can_join_pre_triggers = {
 		is_enslaved = no
-		is_shackled_robot = no
 		is_being_purged = no
+	}
+
+	can_join_faction = {
+		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
-			has_ethic = ethic_authoritarian
-			has_ethic = ethic_fanatic_authoritarian
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
 		}
 	}
 
@@ -85,6 +86,12 @@ totalitarian = {
 		base = 100
 
 		modifier = {
+			factor = 0
+			leader_class = ruler
+			owner = { has_authority = auth_imperial }
+		}
+
+		modifier = {
 			factor = 0.0
 			is_event_leader = yes
 		}
@@ -101,52 +108,30 @@ totalitarian = {
 		potential = {
 			exists = owner
 			owner = {
-				has_country_flag = faction_authoritarian_outraged_gc
+				has_country_flag = faction_egalitarian_outraged_gc
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_country_flag = faction_authoritarian_outraged_gc
+				has_country_flag = faction_egalitarian_outraged_gc
 			}
 		}
 	}
 
 	demand = {
-		title = "TOTALITARIAN_AUTOCRACY"
-		unfulfilled_title = "TOTALITARIAN_NO_AUTOCRACY"
-		desc = "TOTALITARIAN_AUTOCRACY_DESC"
+		title = "PROGRESSIVE_NO_AUTO"
+		unfulfilled_title = "PROGRESSIVE_AUTO"
+		desc = "PROGRESSIVE_DEMOCRATIC_GOVERNMENT_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
+		unfulfilled_effect = -15
 
 		potential = {
 			exists = owner
-			owner = {
-				NOT = { has_authority = auth_democratic }
-			}
 		}
 
 		trigger = {
-			owner = {
-				OR = {
-					has_authority = auth_imperial
-					has_authority = auth_dictatorial
-				}
-			}
-		}
-	}
-
-	demand = {
-		title = "TOTALITARIAN_DEMOCRACY"
-		unfulfilled_title = "TOTALITARIAN_NO_DEMOCRACY"
-		desc = "TOTALITARIAN_DEMOCRACY_DESC"
-
-		unfulfilled_effect = -25
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
 			owner = {
 				NOR = {
 					has_authority = auth_imperial
@@ -154,20 +139,44 @@ totalitarian = {
 				}
 			}
 		}
+	}
+
+	demand = {
+		title = "PROGRESSIVE_FREE_MOVEMENT"
+		unfulfilled_title = "PROGRESSIVE_NO_FREE_MOVEMENT"
+		desc = "PROGRESSIVE_FREE_MOVEMENT_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -10
+
+		potential = {
+			exists = owner
+			owner = { has_encountered_other_species = yes }
+		}
 
 		trigger = {
 			owner = {
-				NOT = { has_authority = auth_democratic }
+				NOR = {
+					any_owned_pop = {
+						has_migration_control = yes
+						is_sapient = yes
+						is_enslaved = no
+						is_being_purged = no
+						is_shackled_robot = no
+						is_robot_pop = no
+					}
+					has_policy_flag = resettlement_allowed
+				}
 			}
 		}
 	}
 
 	demand = {
-		title = "TOTALITARIAN_STRATIFICATION"
-		unfulfilled_title = "TOTALITARIAN_NO_STRATIFICATION"
-		desc = "TOTALITARIAN_STRATIFICATION_DESC"
+		title = "PROGRESSIVE_REPRODUCTIVE_FREEDOM"
+		unfulfilled_title = "PROGRESSIVE_NO_REPRODUCTIVE_FREEDOM"
+		desc = "PROGRESSIVE_REPRODUCTIVE_FREEDOM_DESC"
 
-		fulfilled_effect = 10
+		fulfilled_effect = 5
 		unfulfilled_effect = -20
 
 		potential = {
@@ -175,22 +184,29 @@ totalitarian = {
 		}
 
 		trigger = {
+			NOT = {
+				owner = { has_policy_flag = population_controls_allowed }
+			}
+		}
+	}
+
+	demand = {
+		title = "PROGRESSIVE_NO_STRATIFIED"
+		unfulfilled_title = "PROGRESSIVE_STRATIFIED"
+		desc = "PROGRESSIVE_NO_STRATIFIED_DESC"
+
+		unfulfilled_effect = -25
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
 			owner = {
-				OR = {
-					NOT = {
-						any_owned_pop = {
-							NOR = {
-								has_living_standard = { type = living_standard_stratified }
-								has_living_standard = { type = living_standard_academic_privilege }
-							}
-						}
-					}
-					any_owned_species = {
-						OR = {
-							has_citizenship_type = { type = citizenship_slavery country = prev }
-							has_citizenship_type = { type = citizenship_purge country = prev }
-							has_citizenship_type = { type = citizenship_robot_servitude country = prev }
-						}
+				NOT = {
+					any_owned_pop = {
+						has_living_standard = { type = living_standard_stratified }
 					}
 				}
 			}
@@ -198,9 +214,9 @@ totalitarian = {
 	}
 
 	demand = {
-		title = "TOTALITARIAN_ELITISM"
-		unfulfilled_title = "TOTALITARIAN_NO_ELITISM"
-		desc = "TOTALITARIAN_ELITISM_DESC"
+		title = "PROGRESSIVE_NO_ELITISM"
+		unfulfilled_title = "PROGRESSIVE_ELITISM"
+		desc = "PROGRESSIVE_NO_ELITISM_DESC"
 
 		fulfilled_effect = 5
 		unfulfilled_effect = -5
@@ -217,7 +233,7 @@ totalitarian = {
 
 		trigger = {
 			owner = {
-				OR = {
+				NOR = {
 					has_policy_flag = leader_enhancement_selected_lineages
 					has_policy_flag = leader_enhancement_capacity_boosters
 				}
@@ -226,45 +242,25 @@ totalitarian = {
 	}
 
 	demand = {
-		title = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY"
-		unfulfilled_title = "TOTALITARIAN_NO_EXTRANATIONAL_AUTHORITY"
-		desc = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY_DESC"
+		title = "COOPERATIVE_DIPLO_STANCE"
+		unfulfilled_title = "COOPERATIVE_DIPLO_STANCE"
+		desc = "COOPERATIVE_DIPLO_STANCE_DESC"
 
-		fulfilled_effect = 10
+		fulfilled_effect = 5
 		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
 			owner = {
-				num_communications > 2
+				is_homicidal = no
+				is_country_type = default
+				has_policy_flag = diplo_stance_cooperative
 			}
 		}
 
 		trigger = {
 			owner = {
-				is_overlord = yes
-			}
-		}
-	}
-
-	demand = {
-		title = "TOTALITARIAN_UNDERLING"
-		unfulfilled_title = "TOTALITARIAN_NOT_UNDERLING"
-		desc = "TOTALITARIAN_UNDERLING_DESC"
-
-		unfulfilled_effect = -10
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				is_subject = yes
-			}
-		}
-
-		trigger = {
-			owner = {
-				is_subject = yes
+				has_policy_flag = diplo_stance_cooperative
 			}
 		}
 	}
@@ -276,15 +272,15 @@ totalitarian = {
 	on_destroy = {
 		if = {
 			limit = {
-				has_modifier = promoted_authoritarian
+				has_modifier = promoted_egalitarian
 			}
-			remove_modifier = promoted_authoritarian
+			remove_modifier = promoted_egalitarian
 		}
 		if = {
 			limit = {
-				has_modifier = suppressed_authoritarian
+				has_modifier = suppressed_egalitarian
 			}
-			remove_modifier = suppressed_authoritarian
+			remove_modifier = suppressed_egalitarian
 		}
 	}
 
@@ -316,14 +312,14 @@ totalitarian = {
 				}
 				support > 0.20
 				parameter:empire = {
-					NOT = { has_ethic = "ethic_fanatic_authoritarian" }
+					NOT = { has_ethic = "ethic_fanatic_egalitarian" }
 				}
 			}
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
 				parameter:empire = {
-					shift_ethic = ethic_authoritarian
+					shift_ethic = ethic_egalitarian
 					hidden_effect = {
 						add_modifier = { modifier = embraced_faction_timer days = 3600 }
 						every_pop_faction = {
@@ -353,7 +349,7 @@ totalitarian = {
 					factor = 0
 					support < 0.50
 					owner = {
-						has_ethic = ethic_authoritarian
+						has_ethic = ethic_egalitarian
 					}
 				}
 				modifier = {
@@ -366,7 +362,7 @@ totalitarian = {
 						owner = {
 							exists = ruler
 							ruler = {
-								leader_of_faction = totalitarian
+								leader_of_faction = progressive
 							}
 						}
 					}
@@ -389,15 +385,15 @@ totalitarian = {
 				exists = owner
 				parameter:empire = {
 					NOR = {
-						has_modifier = suppressed_authoritarian
-						has_modifier = promoted_authoritarian
+						has_modifier = suppressed_egalitarian
+						has_modifier = promoted_egalitarian
 					}
 				}
 			}
 
 			effect = {
 				parameter:empire = {
-					add_modifier = { modifier = promoted_authoritarian days = -1 }
+					add_modifier = { modifier = promoted_egalitarian days = -1 }
 				}
 			}
 
@@ -412,13 +408,13 @@ totalitarian = {
 			potential = {
 				exists = owner
 				parameter:empire = {
-					has_modifier = promoted_authoritarian
+					has_modifier = promoted_egalitarian
 				}
 			}
 
 			effect = {
 				parameter:empire = {
-					remove_modifier = promoted_authoritarian
+					remove_modifier = promoted_egalitarian
 				}
 			}
 
@@ -434,8 +430,8 @@ totalitarian = {
 				exists = owner
 				parameter:empire = {
 					NOR = {
-						has_modifier = suppressed_authoritarian
-						has_modifier = promoted_authoritarian
+						has_modifier = suppressed_egalitarian
+						has_modifier = promoted_egalitarian
 					}
 				}
 			}
@@ -443,7 +439,7 @@ totalitarian = {
 			effect = {
 				add_modifier = { modifier = suppressed_faction days = -1 }
 				parameter:empire = {
-					add_modifier = { modifier = suppressed_authoritarian days = -1 }
+					add_modifier = { modifier = suppressed_egalitarian days = -1 }
 				}
 			}
 
@@ -458,14 +454,14 @@ totalitarian = {
 			potential = {
 				exists = owner
 				parameter:empire = {
-					has_modifier = suppressed_authoritarian
+					has_modifier = suppressed_egalitarian
 				}
 			}
 
 			effect = {
 				remove_modifier = suppressed_faction
 				parameter:empire = {
-					remove_modifier = suppressed_authoritarian
+					remove_modifier = suppressed_egalitarian
 				}
 			}
 
