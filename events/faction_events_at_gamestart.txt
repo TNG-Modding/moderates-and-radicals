@@ -7,7 +7,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		add_resource = { idealogical_purity = 50	}
+		add_resource = { ideological_purity = 50	}
 		add_resource = { diversity_of_discussion = 50	}
 	}
 }

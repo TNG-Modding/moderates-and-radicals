@@ -389,7 +389,7 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name = "background_idealogical_purity"
+			name = "background_ideological_purity"
 			position = { x = 405 y = 5 }
 			size = { width = 70 height = 48 }
 			background = {
@@ -399,13 +399,13 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name = "tb_idealogical_purity_group"
+			name = "tb_ideological_purity_group"
 			position = { x = 400 y = 10 }
 			size = { width = 74 height = 35 }
 	
 			iconType = {
 				name = "icon"
-				spriteType = "GFX_resource_idealogical_purity"
+				spriteType = "GFX_resource_ideological_purity"
 				position = { x = 30 y = 2 }
 				tooltip_mode_enabled = yes
 				alwaysTransparent = yes

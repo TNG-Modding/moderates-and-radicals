@@ -1,4 +1,4 @@
-idealogical_purity = {
+ideological_purity = {
 	max = 100
 	tooltip_decimals = 3
 	fixed_max_amount = yes

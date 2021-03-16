@@ -1,7 +1,7 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_resource_idealogical_purity"
-		texturefile = "gfx/interface/icons/resources/idealogical_purity.dds"
+		name = "GFX_resource_ideological_purity"
+		texturefile = "gfx/interface/icons/resources/ideological_purity.dds"
 	}
 }
 

@@ -13,7 +13,7 @@ progressive_radicals = {
 		category = pop_radical_factions
 		produces = {
 			influence = -6
-			idealogical_purity = -2
+			ideological_purity = -2
 		}
 	}
 

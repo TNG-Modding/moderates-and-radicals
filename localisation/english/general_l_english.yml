@@ -1,7 +1,7 @@
 ﻿l_english:
 
- idealogical_purity:0 "Idealogical Purity"
- idealogical_purity_desc:0 "The level of defacto commitment to the founding ideals of our empire."
+ ideological_purity:0 "Ideological Purity"
+ ideological_purity_desc:0 "The level of defacto commitment to the founding ideals of our empire.\n\n§GHigh Ideological Purity >80§!\n\nPlanet Stability +10\n\n§RLow Ideological Purity§!\n\n+1 Political Dissident Per 30 Pops"
 
  diversity_of_discussion:0 "Diversity of Discussion"
  diversity_of_discussion_desc:0 "The varity of ideas dicussed in governance. Empire with a high diversity of discussion increase faction attraction for non-empire ethics."

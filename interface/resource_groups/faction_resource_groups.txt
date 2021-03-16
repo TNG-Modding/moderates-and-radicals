@@ -1,7 +1,7 @@
 
-tb_idealogical_purity_group = {
+tb_ideological_purity_group = {
 	resources = {
-		idealogical_purity
+		ideological_purity
 	}
 	localization = {
 		"RESOURCE_GROUP_DEFAULT" = default	
