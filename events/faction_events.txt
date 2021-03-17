@@ -65,10 +65,6 @@ pop_faction_event = {
 				text = factions.1.desc.gov_xenoist
 				is_pop_faction_type = gov_xenoist
 			}
-			success_text = {
-				hidden:owner = { NOT = { has_country_flag = first_faction } }
-				text = factions.1.desc.firstfinisher
-			}
 
 			# Standard
 			success_text = {
@@ -126,7 +122,12 @@ pop_faction_event = {
 	}
 	
 	after = {
-		hidden_effect = { owner = { set_country_flag = first_faction } }
+		hidden_effect = { 
+			owner = { 
+				set_country_flag = first_faction 
+				add_modifier = { modifier = factions_enabled_modifiers days = -1 }
+			} 
+		}
 	}
 
 	option = {

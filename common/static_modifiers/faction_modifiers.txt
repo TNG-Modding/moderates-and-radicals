@@ -1,0 +1,4 @@
+factions_enabled_modifiers = {
+	country_base_ideological_purity_produces_add = -0.20
+	country_base_diversity_of_discussion_produces_add = 0.10
+}

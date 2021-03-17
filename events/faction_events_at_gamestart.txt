@@ -4,10 +4,24 @@ namespace = faction_start
 country_event = {
 	id = faction_start.1
 	hide_window = yes
-	is_triggered_only = yes
+	is_triggered_only = no
 
-	immediate = {
-		add_resource = { ideological_purity = 50	}
-		add_resource = { diversity_of_discussion = 50	}
+	trigger = {
+		owner = { 
+			NOT = {
+				has_country_flag = faction_starting_resources 
+			}
+		}
+	}
+	
+
+	after = {
+		hidden_effect = { 
+			owner = { 
+				set_country_flag = faction_starting_resources
+				add_resource = { ideological_purity = 50 }
+				add_resource = { diversity_of_discussion = 50	}
+			} 
+		}
 	}
 }

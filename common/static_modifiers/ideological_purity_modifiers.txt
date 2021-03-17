@@ -1,6 +1,6 @@
 high_ideological_purity = {
-	planet_stability_add = 10
-	country_base_ideological_purity_produces_add = -0.5
+	planet_stability_add = -5
+	country_base_ideological_purity_produces_add = -0.15
 }
 
 mid_ideological_purity = {
@@ -8,9 +8,7 @@ mid_ideological_purity = {
 }
 
 low_ideological_purity = {
-	# job_dissident_per_pop = 0.033
-	country_base_ideological_purity_produces_add = 1
-	country_base_influence_produces_add = -1
-	planet_stability_add = -10
-	job_criminal_per_pop = 0.033
+	planet_stability_add = -5
+	country_base_ideological_purity_produces_add = 0.15
+	job_ideological_dissident_per_pop = 0.03
 }

@@ -1,10 +1,20 @@
 ﻿l_english:
 
+ factions_enabled_modifiers:0 "Politics"
+ factions_enabled_modifiers_desc:0 "The political landscape is had to navigate, will be able to hold fast to our ideals?"
+
  ideological_purity:0 "Ideological Purity"
- ideological_purity_desc:0 "The level of defacto commitment to the founding ideals of our empire.\n\n§GHigh Ideological Purity >80§!\n\nPlanet Stability +10\n\n§RLow Ideological Purity§!\n\n+1 Political Dissident Per 30 Pops"
+ ideological_purity_desc:0 "The level of defacto commitment to the founding ideals of our empire.\n\n§GHigh Ideological Purity > 80§!\nPlanet Stability -5\nIdeological Purity -0.15\n\n§YMid Ideological Purity§!\nPlanet Stability +5\n\n§RLow Ideological Purity < 20§!\nPlanet Stability -5\nIdeological Purity +0.15\n+1 Political Dissident Per 30 Pops"
+
+ job_ideological_dissident:0 "Ideological Dissident"
+ job_ideological_dissident_plural:0 "Ideological Dissident"
+ job_ideological_dissident_desc:0 "These dissidents live contrary to all that our empire holds dear. Their beliefs make it impossible for them to function in our society."
+ mod_job_ideological_dissident_add:0 "$job_criminal$ Jobs"
+ mod_job_ideological_dissident_per_pop:0 "§G+1§! $job_ideological_dissident$ Job per $VALUE$ Pops"
+ mod_job_ideological_dissident_per_pop_short:0 "\n§G+1§! £mod_job_ideological_dissident_add£ per $VALUE$ £pop£"
 
  diversity_of_discussion:0 "Diversity of Discussion"
- diversity_of_discussion_desc:0 "The varity of ideas dicussed in governance. Empire with a high diversity of discussion increase faction attraction for non-empire ethics."
+ diversity_of_discussion_desc:0 "The varity of ideas dicussed in governance.\n\n§GHigh Diversity of Discussion > 60§!\n25% Governing Ethics Attraction\nPlanet Stability -5\nDiversity of Discussion -0.15\n\n§YMid Diversity of Discussion§!\nPlanet Stability +5\n\n§RLow Diversity of Discussion < 40§!\n-25% Governing Ethics Attraction\nPlanet Stability -5\nDiversity of Discussion +0.15"
 
  pop_moderate_factions:0 "Moderate Factions"
  pop_radical_factions:0 "Radical Factions"
