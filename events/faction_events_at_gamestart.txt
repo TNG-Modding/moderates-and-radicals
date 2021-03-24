@@ -21,6 +21,14 @@ country_event = {
 				set_country_flag = faction_starting_resources
 				add_resource = { ideological_purity = 50 }
 				add_resource = { diversity_of_discussion = 50	}
+				add_resource = { supremacist_rebel_support = 1	}
+				add_resource = { progressive_rebel_support = 1	}
+				add_resource = { technologist_rebel_support = 1	}
+				add_resource = { prosperity_rebel_support = 1	}
+				add_resource = { xenoist_rebel_support = 1	}
+				add_resource = { totalitarian_rebel_support = 1	}
+				add_resource = { traditionalist_rebel_support = 1	}
+				add_resource = { imperialist_rebel_support = 1	}
 			} 
 		}
 	}

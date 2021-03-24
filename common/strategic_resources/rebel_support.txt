@@ -1,0 +1,79 @@
+supremacist_rebel_support = {
+	max = 100
+	tooltip_decimals = 3
+	fixed_max_amount = yes
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+progressive_rebel_support = {
+	max = 100
+	tooltip_decimals = 3
+	fixed_max_amount = yes
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+technologist_rebel_support = {
+	max = 100
+	tooltip_decimals = 3
+	fixed_max_amount = yes
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+prosperity_rebel_support = {
+	max = 100
+	tooltip_decimals = 3
+	fixed_max_amount = yes
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+xenoist_rebel_support = {
+	max = 100
+	tooltip_decimals = 3
+	fixed_max_amount = yes
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+totalitarian_rebel_support = {
+	max = 100
+	tooltip_decimals = 3
+	fixed_max_amount = yes
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+traditionalist_rebel_support = {
+	max = 100
+	tooltip_decimals = 3
+	fixed_max_amount = yes
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+imperialist_rebel_support = {
+	max = 100
+	tooltip_decimals = 3
+	fixed_max_amount = yes
+	
+	ai_weight = {
+		weight = 1
+	}
+}
