@@ -1,7 +1,7 @@
 ﻿l_english:
 
  factions_enabled_modifiers:0 "Politics"
- factions_enabled_modifiers_desc:0 "The political landscape is had to navigate, will be able to hold fast to our ideals?"
+ factions_enabled_modifiers_desc:0 "The political landscape is hard to navigate, will be able to hold fast to our ideals?"
 
  ideological_purity:0 "Ideological Purity"
  ideological_purity_desc:0 "The level of defacto commitment to the founding ideals of our empire.\n\n§GHigh Ideological Purity > 80§!\nPlanet Stability -5\nIdeological Purity -0.15\n\n§YMid Ideological Purity§!\nPlanet Stability +5\n\n§RLow Ideological Purity < 20§!\nPlanet Stability -5\nIdeological Purity +0.15\n+1 Political Dissident Per 30 Pops"
