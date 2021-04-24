@@ -12,8 +12,7 @@ traditionalist_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			influence = -6
-			ideological_purity = -2
+			imperialist_radicals_militancy = -2
 		}
 	}
 

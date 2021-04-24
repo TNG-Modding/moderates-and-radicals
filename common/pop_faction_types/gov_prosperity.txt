@@ -12,7 +12,7 @@ gov_prosperity = {
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 1.5
+			influence = 2
 			ideological_purity = 1
 		}
 	}
