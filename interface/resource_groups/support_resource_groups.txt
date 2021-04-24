@@ -1,0 +1,17 @@
+tb_support_group = {
+	resources = {
+		supremacist_support,
+		progressive_support,
+		technologist_support,
+		prosperity_support,
+		xenoist_support,
+		totalitarian_support,
+		traditionalist_support,
+		imperialist_support
+	}
+	localization = {
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+	}
+	onclick = faction
+}

@@ -1,0 +1,39 @@
+imperialist_radicals_exist = { 
+	country_base_imperialist_support_produces_add = 2
+	country_base_imperialist_militancy_support_produces_add = 2
+}
+
+supremacist_radicals_exist = { 
+	country_base_supremacist_support_produces_add = 2
+	country_base_supremacist_militancy_support_produces_add = 2
+}
+
+progressive_radicals_exist = { 
+	country_base_progressive_support_produces_add = 2
+	country_base_progressive_militancy_support_produces_add = 2
+}
+
+technologist_radicals_exist = { 
+	country_base_technologist_support_produces_add = 2
+	country_base_technologist_militancy_support_produces_add = 2
+}
+
+prosperity_radicals_exist = { 
+	country_base_prosperity_support_produces_add = 2
+	country_base_prosperity_militancy_support_produces_add = 2
+}
+
+xenoist_radicals_exist = { 
+	country_base_xenoist_support_produces_add = 2
+	country_base_xenoist_militancy_support_produces_add = 2
+}
+
+totalitarian_radicals_exist = { 
+	country_base_totalitarian_support_produces_add = 2
+	country_base_totalitarian_militancy_support_produces_add = 2
+}
+
+traditionalist_radicals_exist = { 
+	country_base_traditionalist_support_produces_add = 2
+	country_base_traditionalist_militancy_support_produces_add = 2
+}

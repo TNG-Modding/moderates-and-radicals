@@ -1,0 +1,63 @@
+imperialist_radicals_militancy = {
+	max = 100
+	tooltip_decimals = 0
+	fixed_max_amount = yes
+	
+	ai_weight = { weight = 1 }
+}
+
+supremacist_radicals_militancy = {
+	max = 100
+	tooltip_decimals = 0
+	fixed_max_amount = yes
+	
+	ai_weight = { weight = 1 }
+}
+
+progressive_radicals_militancy = {
+	max = 100
+	tooltip_decimals = 0
+	fixed_max_amount = yes
+	
+	ai_weight = { weight = 1 }
+}
+
+technologist_radicals_militancy = {
+	max = 100
+	tooltip_decimals = 0
+	fixed_max_amount = yes
+	
+	ai_weight = { weight = 1 }
+}
+
+prosperity_radicals_militancy = {
+	max = 100
+	tooltip_decimals = 0
+	fixed_max_amount = yes
+	
+	ai_weight = { weight = 1 }
+}
+
+xenoist_radicals_militancy = {
+	max = 100
+	tooltip_decimals = 0
+	fixed_max_amount = yes
+	
+	ai_weight = { weight = 1 }
+}
+
+totalitarian_radicals_militancy = {
+	max = 100
+	tooltip_decimals = 0
+	fixed_max_amount = yes
+	
+	ai_weight = { weight = 1 }
+}
+
+traditionalist_radicals_militancy = {
+	max = 100
+	tooltip_decimals = 0
+	fixed_max_amount = yes
+	
+	ai_weight = { weight = 1 }
+}
