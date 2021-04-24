@@ -13,7 +13,7 @@ prosperity_radicals = {
 		category = pop_radical_factions
 		produces = {
 			imperialist_radicals_militancy = -2
-			prosperity_support
+			prosperity_support = 1
 		}
 	}
 
