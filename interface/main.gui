@@ -535,38 +535,8 @@ guiTypes = {
 				}
 			}
 
-			containerWindowType = {
-				name = "tb_diversity_of_discussion_group"
-				size = { width = 74 height = 35 }
-				position = { x = 1060 y = 0 }
-
-				background = {
-					name = "background"
-					spriteType = "GFX_invisible"
-				}
-
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_resource_diversity_of_discussion"
-					position = { x = 30 y = 2 }
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-
-				instantTextBoxType={
-					name = "amount"
-					font = "cg_16b"
-					position = { x = 2 y = 16 }
-					maxWidth = 70
-					maxHeight = 16
-					text = "0 / 0"
-					format = center
-					alwaysTransparent = yes
-				}
-			}
-
 			# dropDownBoxType = {
-			# 	name = "tb_rebel_support_group"
+			# 	name = "tb_support_group"
 			# 	size = { width = 80 height = 35 }
 			# 	position = { x = 1120 y = 0 }
 

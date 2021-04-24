@@ -1,34 +1,34 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_resource_supremacist_rebel_support"
+		name = "GFX_resource_supremacist_support"
 		texturefile = "gfx/interface/icons/resources/ideological_purity.dds"
 	}
 	spriteType = {
-		name = "GFX_resource_progressive_rebel_support"
+		name = "GFX_resource_progressive_support"
 		texturefile = "gfx/interface/icons/resources/ideological_purity.dds"
 	}
 	spriteType = {
-		name = "GFX_resource_technologist_rebel_support"
+		name = "GFX_resource_technologist_support"
 		texturefile = "gfx/interface/icons/resources/ideological_purity.dds"
 	}
 	spriteType = {
-		name = "GFX_resource_pacifist_rebel_support"
+		name = "GFX_resource_pacifist_support"
 		texturefile = "gfx/interface/icons/resources/ideological_purity.dds"
 	}
 	spriteType = {
-		name = "GFX_resource_xenoist_rebel_support"
+		name = "GFX_resource_xenoist_support"
 		texturefile = "gfx/interface/icons/resources/ideological_purity.dds"
 	}
 	spriteType = {
-		name = "GFX_resource_totalitarian_rebel_support"
+		name = "GFX_resource_totalitarian_support"
 		texturefile = "gfx/interface/icons/resources/ideological_purity.dds"
 	}
 	spriteType = {
-		name = "GFX_resource_traditionalist_rebel_support"
+		name = "GFX_resource_traditionalist_support"
 		texturefile = "gfx/interface/icons/resources/ideological_purity.dds"
 	}
 	spriteType = {
-		name = "GFX_resource_militarist_rebel_support"
+		name = "GFX_resource_militarist_support"
 		texturefile = "gfx/interface/icons/resources/ideological_purity.dds"
 	}
 }

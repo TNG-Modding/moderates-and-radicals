@@ -4,10 +4,3 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/resources/ideological_purity.dds"
 	}
 }
-
-spriteTypes = {
-	spriteType = {
-		name = "GFX_resource_diversity_of_discussion"
-		texturefile = "gfx/interface/icons/resources/diversity_of_discussion.dds"
-	}
-}
