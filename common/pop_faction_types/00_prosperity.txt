@@ -36,14 +36,6 @@ prosperity = {
 		}
 	}
 
-	resources = {
-		category = pop_factions
-		produces = {
-			influence = 1.5
-			diversity_of_discussion = 1
-		}
-	}
-
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
