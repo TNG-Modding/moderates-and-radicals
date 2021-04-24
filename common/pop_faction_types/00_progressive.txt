@@ -13,6 +13,7 @@ progressive = {
 		category = pop_factions
 		produces = {
 			influence = 2
+			progressive_support = 1
 		}
 	}
 

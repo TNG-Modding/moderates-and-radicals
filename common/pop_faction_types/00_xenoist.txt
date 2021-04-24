@@ -13,6 +13,7 @@ xenoist = {
 		category = pop_factions
 		produces = {
 			influence = 2
+			xenoist_support = 1
 		}
 	}
 

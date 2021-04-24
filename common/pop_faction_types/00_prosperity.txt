@@ -9,6 +9,14 @@ prosperity = {
 	unique = yes
 	support_multiplier = 1
 
+	resources = {
+		category = pop_factions
+		produces = {
+			influence = 2
+			prosperity_support = 1
+		}
+	}
+
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes

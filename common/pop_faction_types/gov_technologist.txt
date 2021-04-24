@@ -14,6 +14,7 @@ gov_technologist = {
 		produces = {
 			influence = 2
 			ideological_purity = 1
+			technologist_support = 1
 		}
 	}
 

@@ -13,6 +13,7 @@ imperialist = {
 		category = pop_factions
 		produces = {
 			influence = 2
+			imperialist_support = 1
 		}
 	}
 

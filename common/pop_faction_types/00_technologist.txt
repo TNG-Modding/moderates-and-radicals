@@ -13,6 +13,7 @@ technologist = {
 		category = pop_factions
 		produces = {
 			influence = 2
+			technologist_support = 1
 		}
 	}
 

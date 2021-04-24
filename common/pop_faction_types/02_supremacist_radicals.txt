@@ -13,6 +13,7 @@ supremacist_radicals = {
 		category = pop_radical_factions
 		produces = {
 			imperialist_radicals_militancy = -2
+			supremacist_support = 1
 		}
 	}
 

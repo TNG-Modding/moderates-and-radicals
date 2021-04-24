@@ -13,6 +13,7 @@ supremacist = {
 		category = pop_factions
 		produces = {
 			influence = 2
+			supremacist_support = 1
 		}
 	}
 
