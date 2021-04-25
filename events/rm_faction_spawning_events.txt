@@ -80,8 +80,7 @@ pop_faction_event = {
 				is_pop_faction_type = xenoist
 			}
 			success_text = {
-				hidden:owner = { NOT = { has_country_flag = first_faction } }
-				text = faction_spawn.1.desc.firstfinisher
+				text = faction_spawn.1.desc.finisher
 			}
 		}
 	}
