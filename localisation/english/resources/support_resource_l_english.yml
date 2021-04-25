@@ -1,25 +1,33 @@
 ﻿l_english:
 
- imperialist_support:0 "Support for Imperialists"
+ imperialist_support:0 "Imperialist Support"
  imperialist_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
+ mod_country_base_imperialist_support_produces_add:2 "Monthly Imperialist Support Output"
 
- supremacist_support:0 "Support for Supremacists"
+ supremacist_support:0 "Supremacist Support"
  supremacist_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
+ mod_country_base_supremacist_support_produces_add:2 "Monthly Supremacist Support Output"
 
- progressive_support:0 "Support for Progressives"
+ progressive_support:0 "Progressive Support"
  progressive_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
+ mod_country_base_progressive_support_produces_add:2 "Monthly Progressive Support Output"
 
- technologist_support:0 "Support for Technologists"
+ technologist_support:0 "Technologist Support"
  technologist_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
+ mod_country_base_technologist_support_produces_add:2 "Monthly Technologist Support Output"
 
- prosperity_support:0 "Support for Pacifists"
+ prosperity_support:0 "Pacifist Support"
  prosperity_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
+ mod_country_base_prosperity_support_produces_add:2 "Monthly Pacifist Support Output"
 
- xenoist_support:0 "Support for Xenoists"
+ xenoist_support:0 "Xenoist Support"
  xenoist_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
+ mod_country_base_xenoist_support_produces_add:2 "Monthly Xenoist Support Output"
 
- totalitarian_support:0 "Support for Totalitarian"
+ totalitarian_support:0 "Totalitarian Support"
  totalitarian_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
+ mod_country_base_totalitarian_support_produces_add:2 "Monthly Totalitarian Support Output"
 
- traditionalist_support:0 "Support for Traditionalists"
+ traditionalist_support:0 "Traditionalist Support"
  traditionalist_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
+ mod_country_base_traditionalist_support_produces_add:2 "Monthly Traditionalist Support Output"
