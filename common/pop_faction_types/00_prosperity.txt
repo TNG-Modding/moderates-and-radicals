@@ -18,8 +18,8 @@ prosperity = {
 	}
 
 	is_potential = {
-		years_passed > 10
-		has_encountered_other_species = yes
+		#years_passed > 10
+		#has_encountered_other_species = yes
 		NOR = { 
 			has_ethic = ethic_gestalt_consciousness 
 			has_ethic = ethic_fanatic_militarist
@@ -27,7 +27,7 @@ prosperity = {
 			has_ethic = ethic_pacifist
 			has_ethic = ethic_fanatic_pacifist
 		}
-		count_owned_pops = {
+		count_owned_pop = {
 			count >= 5
 			limit = {
 				has_ethic = ethic_pacifist

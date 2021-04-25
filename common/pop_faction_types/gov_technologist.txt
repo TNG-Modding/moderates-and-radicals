@@ -19,13 +19,13 @@ gov_technologist = {
 	}
 
 	is_potential = {
-		years_passed > 10
-		has_encountered_other_species = yes
+		#years_passed > 10
+		#has_encountered_other_species = yes
 		OR = {  
 			has_ethic = ethic_fanatic_materialist
 			has_ethic = ethic_materialist
 		}
-		count_owned_pops = {
+		count_owned_pop = {
 			count >= 5
 			limit = {
 				has_ethic = ethic_materialist

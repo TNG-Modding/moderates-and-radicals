@@ -19,13 +19,13 @@ gov_traditionalist = {
 	}
 
 	is_potential = {
-		years_passed > 10
-		has_encountered_other_species = yes
+		#years_passed > 10
+		#has_encountered_other_species = yes
 		OR = { 
 			has_ethic = ethic_fanatic_spiritualist
 			has_ethic = ethic_spiritualist
 		}
-		count_owned_pops = {
+		count_owned_pop = {
 			count >= 5
 			limit = {
 				has_ethic = ethic_spiritualist

@@ -19,13 +19,13 @@ gov_progressive = {
 	}
 
 	is_potential = {
-		years_passed > 10
-		has_encountered_other_species = yes
+		#years_passed > 10
+		#has_encountered_other_species = yes
 		OR = { 
 			has_ethic = ethic_fanatic_egalitarian
 			has_ethic = ethic_egalitarian
 		}
-		count_owned_pops = {
+		count_owned_pop = {
 			count >= 5
 			limit = {
 				has_ethic = ethic_egalitarian

@@ -25,7 +25,7 @@ supremacist_radicals = {
 			has_ethic = ethic_fanatic_xenophile
 			has_ethic = ethic_xenophile 
 		}
-		count_owned_pops = {
+		count_owned_pop = {
 			count >= 5
 			limit = {
 				has_ethic = ethic_xenophobe
@@ -43,7 +43,7 @@ supremacist_radicals = {
 	}
 
 	on_create = {
-		pop_faction_event = { id = factions.9990 }
+		pop_faction_event = { id = faction_spawn.2 }
 	}
 
 	can_join_pre_triggers = {
