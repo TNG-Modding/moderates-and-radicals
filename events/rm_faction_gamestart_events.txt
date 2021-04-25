@@ -3,7 +3,9 @@ namespace = faction_start
 country_event = {
 	id = faction_start.1
 	hide_window = yes
+
 	is_triggered_only = no
+	fire_only_once = yes
 
 	trigger = {
 		owner = { 
@@ -17,7 +19,9 @@ country_event = {
 		hidden_effect = { 
 			owner = { 
 				set_country_flag = faction_starting_resources
+
 				add_resource = { ideological_purity = 50 }
+				
 				add_resource = { supremacist_support = 1	}
 				add_resource = { progressive_support = 1	}
 				add_resource = { technologist_support = 1	}
@@ -26,6 +30,15 @@ country_event = {
 				add_resource = { totalitarian_support = 1	}
 				add_resource = { traditionalist_support = 1	}
 				add_resource = { imperialist_support = 1	}
+
+				add_resource = { supremacist_militancy = 1	}
+				add_resource = { progressive_militancy = 1	}
+				add_resource = { technologist_militancy = 1	}
+				add_resource = { prosperity_militancy = 1	}
+				add_resource = { xenoist_militancy = 1	}
+				add_resource = { totalitarian_militancy = 1	}
+				add_resource = { traditionalist_militancy = 1	}
+				add_resource = { imperialist_militancy = 1	}
 			} 
 		}
 	}

@@ -1,3 +1,30 @@
 factions_enabled_modifiers = {
-	country_base_ideological_purity_produces_add = -0.20
+
+	# Ideological purity trends down over time
+	country_base_ideological_purity_produces_add = -0.5
+
+	# Support and militancy trends down by default
+	country_base_imperialist_support_produces_add = -1
+	country_base_imperialist_militancy_produces_add = -1
+
+	country_base_supremacist_support_produces_add = -1
+	country_base_supremacist_militancy_produces_add = -1
+
+	country_base_progressive_support_produces_add = -1
+	country_base_progressive_militancy_produces_add = -1
+
+	country_base_technologist_support_produces_add = -1
+	country_base_technologist_militancy_produces_add = -1
+
+	country_base_prosperity_support_produces_add = -1
+	country_base_prosperity_militancy_produces_add = -1
+
+	country_base_xenoist_support_produces_add = -1
+	country_base_xenoist_militancy_produces_add = -1
+
+	country_base_totalitarian_support_produces_add = -1
+	country_base_totalitarian_militancy_produces_add = -1
+	
+	country_base_traditionalist_support_produces_add = -1
+	country_base_traditionalist_militancy_produces_add = -1
 }
