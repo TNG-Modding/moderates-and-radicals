@@ -1,4 +1,4 @@
-imperialist_radicals_militancy = {
+imperialist_militancy = {
 	max = 100
 	tooltip_decimals = 0
 	fixed_max_amount = yes
@@ -6,7 +6,7 @@ imperialist_radicals_militancy = {
 	ai_weight = { weight = 1 }
 }
 
-supremacist_radicals_militancy = {
+supremacist_militancy = {
 	max = 100
 	tooltip_decimals = 0
 	fixed_max_amount = yes
@@ -14,7 +14,7 @@ supremacist_radicals_militancy = {
 	ai_weight = { weight = 1 }
 }
 
-progressive_radicals_militancy = {
+progressive_militancy = {
 	max = 100
 	tooltip_decimals = 0
 	fixed_max_amount = yes
@@ -22,7 +22,7 @@ progressive_radicals_militancy = {
 	ai_weight = { weight = 1 }
 }
 
-technologist_radicals_militancy = {
+technologist_militancy = {
 	max = 100
 	tooltip_decimals = 0
 	fixed_max_amount = yes
@@ -30,7 +30,7 @@ technologist_radicals_militancy = {
 	ai_weight = { weight = 1 }
 }
 
-prosperity_radicals_militancy = {
+prosperity_militancy = {
 	max = 100
 	tooltip_decimals = 0
 	fixed_max_amount = yes
@@ -38,7 +38,7 @@ prosperity_radicals_militancy = {
 	ai_weight = { weight = 1 }
 }
 
-xenoist_radicals_militancy = {
+xenoist_militancy = {
 	max = 100
 	tooltip_decimals = 0
 	fixed_max_amount = yes
@@ -46,7 +46,7 @@ xenoist_radicals_militancy = {
 	ai_weight = { weight = 1 }
 }
 
-totalitarian_radicals_militancy = {
+totalitarian_militancy = {
 	max = 100
 	tooltip_decimals = 0
 	fixed_max_amount = yes
@@ -54,7 +54,7 @@ totalitarian_radicals_militancy = {
 	ai_weight = { weight = 1 }
 }
 
-traditionalist_radicals_militancy = {
+traditionalist_militancy = {
 	max = 100
 	tooltip_decimals = 0
 	fixed_max_amount = yes
