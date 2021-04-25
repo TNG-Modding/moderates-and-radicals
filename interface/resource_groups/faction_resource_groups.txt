@@ -1,7 +1,35 @@
-
 tb_ideological_purity_group = {
 	resources = {
 		ideological_purity
+	}
+	localization = {
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
+	}
+	onclick = faction
+}
+
+tb_faction_standing_group = {
+	resources = {
+		imperialist_support,
+		imperialist_militancy,
+		supremacist_support,
+		supremacist_militancy,
+		progressive_support,
+		progressive_militancy,
+		technologist_support,
+		technologist_militancy,
+		prosperity_support,
+		prosperity_militancy,
+		xenoist_support,
+		xenoist_militancy,
+		totalitarian_support,
+		totalitarian_militancy,
+		traditionalist_support,
+		traditionalist_militancy
 	}
 	localization = {
 		"RESOURCE_GROUP_DEFAULT" = default	

@@ -1,5 +1,8 @@
 ﻿l_english:
 
+ imperialist_support:0 "Support for Imperialists"
+ imperialist_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
+
  supremacist_support:0 "Support for Supremacists"
  supremacist_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
 
@@ -20,6 +23,3 @@
 
  traditionalist_support:0 "Support for Traditionalists"
  traditionalist_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
-
- imperialist_support:0 "Support for Imperialists"
- imperialist_support_desc:0 "Support tracks the buildup of arguments and influence in support of an ethos."
