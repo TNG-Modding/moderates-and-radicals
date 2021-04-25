@@ -14,21 +14,21 @@ tb_ideological_purity_group = {
 
 tb_faction_standing_group = {
 	resources = {
-		imperialist_support,
-		imperialist_militancy,
-		supremacist_support,
-		supremacist_militancy,
-		progressive_support,
-		progressive_militancy,
-		technologist_support,
-		technologist_militancy,
-		prosperity_support,
-		prosperity_militancy,
-		xenoist_support,
-		xenoist_militancy,
-		totalitarian_support,
-		totalitarian_militancy,
-		traditionalist_support,
+		imperialist_support
+		imperialist_militancy
+		supremacist_support
+		supremacist_militancy
+		progressive_support
+		progressive_militancy
+		technologist_support
+		technologist_militancy
+		prosperity_support
+		prosperity_militancy
+		xenoist_support
+		xenoist_militancy
+		totalitarian_support
+		totalitarian_militancy
+		traditionalist_support
 		traditionalist_militancy
 	}
 	localization = {
