@@ -353,7 +353,7 @@ gov_xenoist = {
 				OR = {
 					has_country_flag = found_presapients
 					any_planet_within_border = {
-						any_pop = {
+						any_owned_pop = {
 							is_sapient = no
 						}
 					}
