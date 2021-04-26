@@ -18,7 +18,7 @@ guiTypes = {
 			name = "background"
 			spriteType = "GFX_tile_outliner_bg"
 		}
-
+		
 		containerWindowType = {
 			name = "leader_portrait"
 			size = { width = 300 height = 300 }
@@ -271,13 +271,13 @@ guiTypes = {
 		buttonType = {
 			name = "sort_effects"
 			#size = { x = 298 y = 35 }
-			position = { x = 1126 y = 52 }
-			spriteType = "GFX_standard_button_200_24"
+			position = { x = 1126 y = 45 }
+			spriteType = "GFX_button_116_24"
 			buttonFont = "cg_16b"
 			text = "POP_FACTIONS_COLUMN_SUPPORT_EFFECTS"
 			font = "cg_16b"
 			orientation = UPPER_LEFT
-		}			
+		}		
 		
 		containerWindowType = {
 			name = "list_background"
@@ -386,42 +386,7 @@ guiTypes = {
 			max_slots_vertical = 1
 			format = "LOWER_LEFT"
 			add_horizontal = yes
-		}
-
-		# containerWindowType = {
-		# 	name = "background_ideological_purity"
-		# 	position = { x = 405 y = 5 }
-		# 	size = { width = 70 height = 48 }
-		# 	background = {
-		# 		name = "background"
-		# 		spriteType = "GFX_tiles_dark_area_cut_8"
-		# 	}
-		# }
-
-		# containerWindowType = {
-		# 	name = "tb_ideological_purity_group"
-		# 	position = { x = 400 y = 10 }
-		# 	size = { width = 74 height = 35 }
-	
-		# 	iconType = {
-		# 		name = "icon"
-		# 		spriteType = "GFX_resource_ideological_purity"
-		# 		position = { x = 30 y = 2 }
-		# 		tooltip_mode_enabled = yes
-		# 		alwaysTransparent = yes
-		# 	}
-	
-		# 	instantTextBoxType={
-		# 		name = "amount"
-		# 		font = "cg_16b"
-		# 		position = { x = 4 y = 20 }
-		# 		maxWidth = 70
-		# 		maxHeight = 16
-		# 		text = "0 / 0"
-		# 		format = center
-		# 		alwaysTransparent = yes
-		# 	}
-		# }
+		}	
 
 		### ACTIONS
 
@@ -808,7 +773,7 @@ guiTypes = {
 			text = "INFLUENCE_GAIN_FROM_FACTION"
 			maxWidth = 300
 			maxHeight = 30		
-		}
+		}		
 		
 		gridBoxType = {
 			name = "demands_list"
@@ -855,6 +820,4 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 	}
-
-	
 }
