@@ -24,7 +24,7 @@ progressive_support = {
 
 technologist_support = {
 	max = 100
-	tooltip_decimals = 0
+	tooltip_decimals = 2
 	fixed_max_amount = yes
 	
 	ai_weight = { weight = 1 }
@@ -32,7 +32,7 @@ technologist_support = {
 
 prosperity_support = {
 	max = 100
-	tooltip_decimals = 0
+	tooltip_decimals = 2
 	fixed_max_amount = yes
 	
 	ai_weight = { weight = 1 }
@@ -40,7 +40,7 @@ prosperity_support = {
 
 xenoist_support = {
 	max = 100
-	tooltip_decimals = 0
+	tooltip_decimals = 2
 	fixed_max_amount = yes
 	
 	ai_weight = { weight = 1 }
@@ -48,7 +48,7 @@ xenoist_support = {
 
 totalitarian_support = {
 	max = 100
-	tooltip_decimals = 0
+	tooltip_decimals = 2
 	fixed_max_amount = yes
 	
 	ai_weight = { weight = 1 }
@@ -56,7 +56,7 @@ totalitarian_support = {
 
 traditionalist_support = {
 	max = 100
-	tooltip_decimals = 0
+	tooltip_decimals = 2
 	fixed_max_amount = yes
 	
 	ai_weight = { weight = 1 }
