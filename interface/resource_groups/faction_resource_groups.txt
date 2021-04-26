@@ -17,8 +17,11 @@ tb_faction_imperialist_support_group = {
 		imperialist_support
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -28,8 +31,11 @@ tb_faction_imperialist_militancy_group = {
 		imperialist_militancy
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -39,8 +45,11 @@ tb_faction_supremacist_support_group = {
 		supremacist_support
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -50,8 +59,11 @@ tb_faction_supremacist_militancy_group = {
 		supremacist_militancy
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -61,8 +73,11 @@ tb_faction_progressive_support_group = {
 		progressive_support
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -72,8 +87,11 @@ tb_faction_progressive_militancy_group = {
 		progressive_militancy
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -83,8 +101,11 @@ tb_faction_technologist_support_group = {
 		technologist_support
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -94,8 +115,11 @@ tb_faction_technologist_militancy_group = {
 		technologist_militancy
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -105,8 +129,11 @@ tb_faction_prosperity_support_group = {
 		prosperity_support
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -116,8 +143,11 @@ tb_faction_prosperity_militancy_group = {
 		prosperity_militancy
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -127,8 +157,11 @@ tb_faction_xenoist_support_group = {
 		xenoist_support
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -138,8 +171,11 @@ tb_faction_xenoist_militancy_group = {
 		xenoist_militancy
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -149,8 +185,11 @@ tb_faction_totalitarian_support_group = {
 		totalitarian_support
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -160,8 +199,11 @@ tb_faction_totalitarian_militancy_group = {
 		totalitarian_militancy
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -171,8 +213,11 @@ tb_faction_traditionalist_support_group = {
 		traditionalist_support
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
@@ -182,8 +227,11 @@ tb_faction_traditionalist_militancy_group = {
 		traditionalist_militancy
 	}
 	localization = {
-		"RESOURCE_GROUP_BALANCE_ONLY" = default
-		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT" = default	
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = faction
 }
