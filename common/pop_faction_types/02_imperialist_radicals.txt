@@ -44,6 +44,11 @@ imperialist_radicals = {
 
 	on_create = {
 		pop_faction_event = { id = faction_spawn.2 }
+		pop_faction_event = { id = faction_spawn.3 }
+	}
+	on_destroy = {
+		# Removing faction exist static modifier
+		pop_faction_event = { id = faction_spawn.4 }
 	}
 
 	can_join_pre_triggers = {

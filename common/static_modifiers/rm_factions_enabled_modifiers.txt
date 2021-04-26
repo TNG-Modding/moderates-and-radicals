@@ -1,4 +1,4 @@
-factions_enabled_modifiers = {
+politics = {
 
 	# Ideological purity trends down over time
 	country_base_ideological_purity_produces_add = -0.5
