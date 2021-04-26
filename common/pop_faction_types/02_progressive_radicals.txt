@@ -12,14 +12,14 @@ progressive_radicals = {
 	resources = {
 		category = pop_factions
 		produces = {
-			progressive_militancy = -2
-			progressive_support = 1 
+			progressive_militancy = -12
+			progressive_support = 12
 		}
 	}
 
 	is_potential = {
-		years_passed > 11
-		has_encountered_other_species = yes
+		#years_passed > 11
+		#has_encountered_other_species = yes
 		owner = { has_country_flag = first_faction } 
 		OR = { 
 			has_ethic = ethic_fanatic_authoritarian
@@ -39,7 +39,7 @@ progressive_radicals = {
 	}
 	on_destroy = {
 		# Removing faction exist static modifier
-		pop_faction_event = { id = faction_spawn.4 }
+		remove_modifier = progressive_radicals_exist
 	}
 
 	parameters = {

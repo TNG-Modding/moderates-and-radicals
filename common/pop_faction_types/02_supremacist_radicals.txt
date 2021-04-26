@@ -12,14 +12,14 @@ supremacist_radicals = {
 	resources = {
 		category = pop_factions
 		produces = {
-			supremacist_militancy = -2
-			supremacist_support = 1
+			supremacist_militancy = -12
+			supremacist_support = 12
 		}
 	}
 
 	is_potential = {
-		years_passed > 11
-		has_encountered_other_species = yes
+		#years_passed > 11
+		#has_encountered_other_species = yes
 		owner = { has_country_flag = first_faction } 
 		OR = { 
 			has_ethic = ethic_fanatic_xenophile
@@ -48,7 +48,7 @@ supremacist_radicals = {
 	}
 	on_destroy = {
 		# Removing faction exist static modifier
-		pop_faction_event = { id = faction_spawn.4 }
+		remove_modifier = supremacist_radicals_exist 
 	}
 
 	can_join_pre_triggers = {

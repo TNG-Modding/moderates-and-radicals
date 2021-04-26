@@ -12,8 +12,8 @@ imperialist_radicals = {
 	resources = {
 		category = pop_factions
 		produces = {
-			imperialist_militancy = -2
-			imperialist_support = 1
+			imperialist_militancy = -12
+			imperialist_support = 12
 		}
 	}
 
@@ -48,7 +48,7 @@ imperialist_radicals = {
 	}
 	on_destroy = {
 		# Removing faction exist static modifier
-		pop_faction_event = { id = faction_spawn.4 }
+		remove_modifier = imperialist_radicals_exist 
 	}
 
 	can_join_pre_triggers = {

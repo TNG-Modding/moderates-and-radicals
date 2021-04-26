@@ -48,7 +48,7 @@ xenoist_radicals = {
 	}
 	on_destroy = {
 		# Removing faction exist static modifier
-		pop_faction_event = { id = faction_spawn.4 }
+		remove_modifier = xenoist_radicals_exist
 	}
 
 	can_join_pre_triggers = {
