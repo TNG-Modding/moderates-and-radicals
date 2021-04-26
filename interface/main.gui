@@ -780,11 +780,72 @@ guiTypes = {
 				}
 			}
 
-			# Xenoist
+			# prosperity
+			containerWindowType = {
+				name = "tb_faction_prosperity_support_group"
+				size = { width = 70 height = 40 }
+				position = { x = 1295 y = 0 }
+			
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+			
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_prosperity_support"
+					position = { x = 0 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+			
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 2 y = 2 }
+					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+			
+			containerWindowType = {
+				name = "tb_faction_prosperity_militancy_group"
+				size = { width = 70 height = 40 }
+				position = { x = 1295 y = 15 }
+			
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+			
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_prosperity_militancy"
+					position = { x = 0 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+			
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 2 y = 2 }
+					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			# xenoist
 			containerWindowType = {
 				name = "tb_faction_xenoist_support_group"
 				size = { width = 70 height = 40 }
-				position = { x = 1295 y = 0 }
+				position = { x = 1350 y = 0 }
 			
 				background = {
 					name = "background"
@@ -814,7 +875,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "tb_faction_xenoist_militancy_group"
 				size = { width = 70 height = 40 }
-				position = { x = 1295 y = 15 }
+				position = { x = 1350 y = 15 }
 			
 				background = {
 					name = "background"
@@ -841,11 +902,11 @@ guiTypes = {
 				}
 			}
 
-			# Totalitarian
+			# totalitarian
 			containerWindowType = {
 				name = "tb_faction_totalitarian_support_group"
 				size = { width = 70 height = 40 }
-				position = { x = 1350 y = 0 }
+				position = { x = 1405 y = 0 }
 			
 				background = {
 					name = "background"
@@ -875,7 +936,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "tb_faction_totalitarian_militancy_group"
 				size = { width = 70 height = 40 }
-				position = { x = 1350 y = 15 }
+				position = { x = 1405 y = 15 }
 			
 				background = {
 					name = "background"
@@ -902,11 +963,11 @@ guiTypes = {
 				}
 			}
 
-			# Traditionalist
+			# traditionalist
 			containerWindowType = {
 				name = "tb_faction_traditionalist_support_group"
 				size = { width = 70 height = 40 }
-				position = { x = 1405 y = 0 }
+				position = { x = 1460 y = 0 }
 			
 				background = {
 					name = "background"
@@ -936,7 +997,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "tb_faction_traditionalist_militancy_group"
 				size = { width = 70 height = 40 }
-				position = { x = 1405 y = 15 }
+				position = { x = 1460 y = 15 }
 			
 				background = {
 					name = "background"
