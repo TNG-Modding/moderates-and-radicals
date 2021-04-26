@@ -184,7 +184,7 @@ pop_faction_event = {
 	is_triggered_only = yes
 	immediate = {
 		if = {
-			trigger = {
+			limit = {
 				is_pop_faction_type = imperialist_radicals
 			}
 			owner = { 
@@ -195,104 +195,46 @@ pop_faction_event = {
 			} 
 		}
 		else_if = {
-			trigger = {
+			limit = {
 				is_pop_faction_type = supremacist_radicals
 			}
 			owner = { add_modifier = { modifier = supremacist_radicals_exist days = -1 } } 
 		}
 		else_if = {
-			trigger = {
+			limit = {
 				is_pop_faction_type = progressive_radicals
 			}
 			owner = { add_modifier = { modifier = progressive_radicals_exist days = -1 } } 
 		}
 		else_if = {
-			trigger = {
+			limit = {
 				is_pop_faction_type = technologist_radicals
 			}
 			owner = { add_modifier = { modifier = technologist_radicals_exist days = -1 } } 
 		}
 		else_if = {
-			trigger = {
+			limit = {
 				is_pop_faction_type = prosperity_radicals
 			}
 			owner = { add_modifier = { modifier = prosperity_radicals_exist days = -1 } } 
 		}
 		else_if = {
-			trigger = {
+			limit = {
 				is_pop_faction_type = xenoist_radicals
 			}
 			owner = { add_modifier = { modifier = xenoist_radicals_exist days = -1 } } 
 		}
 		else_if = {
-			trigger = {
+			limit = {
 				is_pop_faction_type = totalitarian_radicals
 			}
 			owner = { add_modifier = { modifier = totalitarian_radicals_exist days = -1 } } 
 		}
 		else_if = {
-			trigger = {
+			limit = {
 				is_pop_faction_type = traditionalist_radicals
 			}
 			owner = { add_modifier = { modifier = traditionalist_radicals_exist days = -1 } } 
-		}
-	}
-}
-
-# Called on faction destory for radicals
-pop_faction_event = {
-	id = faction_spawn.4
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		if = {
-			trigger = {
-				is_pop_faction_type = imperialist_radicals
-			}
-			owner = { remove_modifier = imperialist_radicals_exist } 
-		}
-		else_if = {
-			trigger = {
-				is_pop_faction_type = supremacist_radicals
-			}
-			owner = { remove_modifier = supremacist_radicals_exist } 
-		}
-		else_if = {
-			trigger = {
-				is_pop_faction_type = progressive_radicals
-			}
-			owner = { remove_modifier = progressive_radicals_exist } 
-		}
-		else_if = {
-			trigger = {
-				is_pop_faction_type = technologist_radicals
-			}
-			owner = { remove_modifier = technologist_radicals_exist } 
-		}
-		else_if = {
-			trigger = {
-				is_pop_faction_type = prosperity_radicals
-			}
-			owner = { remove_modifier = prosperity_radicals_exist } 
-		}
-		else_if = {
-			trigger = {
-				is_pop_faction_type = xenoist_radicals
-			}
-			owner = { remove_modifier = xenoist_radicals_exist } 
-		}
-		else_if = {
-			trigger = {
-				is_pop_faction_type = totalitarian_radicals
-			}
-			owner = { remove_modifier = totalitarian_radicals_exist } 
-		}
-		else_if = {
-			trigger = {
-				is_pop_faction_type = traditionalist_radicals 
-			}
-			owner = { remove_modifier = traditionalist_radicals_exist } 
 		}
 	}
 }
