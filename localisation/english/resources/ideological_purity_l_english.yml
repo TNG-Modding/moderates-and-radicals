@@ -1,5 +1,7 @@
 ﻿l_english:
 
  ideological_purity:0 "Ideological Purity"
- ideological_purity_desc:0 "The level of defacto commitment to the founding ideals of our empire.\n\n§GHigh Ideological Purity > 80§!\nPlanet Stability -5\nIdeological Purity -0.15\n\n§YMid Ideological Purity§!\nPlanet Stability +5\n\n§RLow Ideological Purity < 20§!\nPlanet Stability -5\nIdeological Purity +0.15\n+1 Political Dissident Per 30 Pops"
+ ideological_purity_desc:0 "The level of defacto commitment to the founding ideals of our empire."
  mod_country_base_ideological_purity_produces_add:0 "Monthly Ideological Purity Output"
+
+# \n\n§GHigh Ideological Purity > 80§!\nPlanet Stability -5\nIdeological Purity -0.15\n\n§YMid Ideological Purity§!\nPlanet Stability +5\n\n§RLow Ideological Purity < 20§!\nPlanet Stability -5\nIdeological Purity +0.15\n+1 Political Dissident Per 30 Pops
