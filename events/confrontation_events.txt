@@ -1,0 +1,51 @@
+namespace = confrontations
+
+country_event = {
+	id = confrontations.1
+	hide_window = yes
+
+	is_triggered_only = no
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		export_resource_stockpile_to_variable = {
+			resource = ideological_purity
+			variable = current_ideological_purity
+		}
+
+		export_resource_stockpile_to_variable = {
+			resource = imperialist_support
+			variable = current_imperialist_support
+		}
+		export_resource_stockpile_to_variable = {
+			resource = technologist_support
+			variable = current_technologist_support
+		}
+		export_resource_stockpile_to_variable = {
+			resource = supremacist_support
+			variable = current_supremacist_support
+		}
+		export_resource_stockpile_to_variable = {
+			resource = progressive_support
+			variable = current_progressive_support
+		}
+		export_resource_stockpile_to_variable = {
+			resource = prosperity_support
+			variable = current_prosperity_support
+		}
+		export_resource_stockpile_to_variable = {
+			resource = xenoist_support
+			variable = current_xenoist_support
+		}
+		export_resource_stockpile_to_variable = {
+			resource = totalitarian_support
+			variable = current_totalitarian_support
+		}
+		export_resource_stockpile_to_variable = {
+			resource = traditionalist_support
+			variable = current_traditionalist_support
+		}
+	}
+}

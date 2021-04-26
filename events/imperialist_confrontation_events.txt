@@ -1,0 +1,47 @@
+namespace = imperialist_confrontations
+
+# imperialist
+country_event = {
+	id = imperialist_confrontations.1
+	title = imperialist_confrontations.1
+	desc = imperialist_confrontations.1.desc
+	hide_window = no
+
+	is_triggered_only = no
+
+	picture = GFX_evt_assembly_fight
+	show_sound = event_super_explosion
+
+	mean_time_to_happen = { months = 1 }
+	trigger = {
+		is_variable_set = current_imperialist_support
+		is_variable_set = current_ideological_purity
+
+		check_variable = {
+			which = current_imperialist_support
+			value > current_ideological_purity
+		}
+	}
+
+	immediate = {
+		export_resource_income_to_variable = { 
+			resource = imperialist_support 
+			variable = current_imperialist_support_income
+		}
+
+		# One years income
+		multiply_variable = {
+			which = current_imperialist_support_income
+			value = 12
+		}
+
+		add_resource = { 
+			imperialist_support = -1
+			mult = current_imperialist_support_income 
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}

@@ -1,0 +1,47 @@
+namespace = technologist_confrontations
+
+# technologist
+country_event = {
+	id = technologist_confrontations.1
+	title = technologist_confrontations.1
+	desc = technologist_confrontations.1.desc
+	hide_window = no
+
+	is_triggered_only = no
+
+	picture = GFX_evt_assembly_fight
+	show_sound = event_super_explosion
+
+	mean_time_to_happen = { months = 1 }
+	trigger = {
+		is_variable_set = current_technologist_support
+		is_variable_set = current_ideological_purity
+		
+		check_variable = {
+			which = current_technologist_support
+			value > current_ideological_purity
+		}
+	}
+
+	immediate = {
+		export_resource_income_to_variable = { 
+			resource = technologist_support 
+			variable = current_technologist_support_income
+		}
+
+		# One years income
+		multiply_variable = {
+			which = current_technologist_support_income
+			value = 12
+		}
+
+		add_resource = { 
+			technologist_support = -1
+			mult = current_technologist_support_income 
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}
