@@ -482,92 +482,16 @@ technologist = {
 				}
 			}
 		}
-		promote_faction = {
-			title = "PROMOTE_FACTION"
-			description = "PROMOTE_FACTION_DESC"
+		conduct_operation = {
+			title = "CONDUCT_OPERATION"
+			description = "CONDUCT_OPERATION_DESC"
 
 			potential = {
 				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_materialist
-						has_modifier = promoted_materialist
-					}
-				}
 			}
 
 			effect = {
-				parameter:empire = {
-					add_modifier = { modifier = promoted_materialist days = -1 }
-				}
-			}
-
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_promote_faction = {
-			title = "CANCEL_PROMOTE_FACTION"
-			description = "CANCEL_PROMOTE_FACTION_DESC"
-
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = promoted_materialist
-				}
-			}
-
-			effect = {
-				parameter:empire = {
-					remove_modifier = promoted_materialist
-				}
-			}
-
-			ai_weight = {
-				base = 0
-			}
-		}
-		suppress_faction = {
-			title = "SUPPRESS_FACTION"
-			description = "SUPPRESS_FACTION_DESC"
-
-			potential = {
-				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_materialist
-						has_modifier = promoted_materialist
-					}
-				}
-			}
-
-			effect = {
-				add_modifier = { modifier = suppressed_faction days = -1 }
-				parameter:empire = {
-					add_modifier = { modifier = suppressed_materialist days = -1 }
-				}
-			}
-
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_suppress_faction = {
-			title = "CANCEL_SUPPRESS_FACTION"
-			description = "CANCEL_SUPPRESS_FACTION_DESC"
-
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = suppressed_materialist
-				}
-			}
-
-			effect = {
-				remove_modifier = suppressed_faction
-				parameter:empire = {
-					remove_modifier = suppressed_materialist
-				}
+				pop_faction_event = { id = operations.1 }
 			}
 
 			ai_weight = {

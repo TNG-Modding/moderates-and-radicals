@@ -1,0 +1,16 @@
+﻿l_english:
+ 
+ CONDUCT_OPERATION:0 "Launch Operation"
+ CONDUCT_OPERATION_DESC:0 "Launch an operation against this faction to alter its support and militancy."
+
+ # Normal Operations
+ operations.1:0 "Launch an Operation"
+ operations.1.desc:0 "We cannot leave the political future of [Root.Owner.GetName] up to chance. We must take action regarding the §H[Root.GetName]§! in order to safeguard our ideals. As an official faction within our government, the §H[Root.GetName]§! has many officials, delegates, and stress points that we might use to our advantage."
+
+ # Radical operations
+ operations.2:0 "Launch an Operation"
+ operations.2.desc:0 "We cannot leave the political future of [Root.Owner.GetName] up to chance. We must take action against the §H[Root.GetName]§! in order to safeguard our ideals. While acting against radicals is never easy, we nevertheless have many tools that might be used to subvert the influence."
+
+ # Government operation
+ operations.3:0 "Launch an Operation"
+ operations.3.desc:0 "We rely on the §H[Root.GetName]§! to spearhead the political future of [Root.Owner.GetName]. We can wield this faction as an extension of our government apparatus."
