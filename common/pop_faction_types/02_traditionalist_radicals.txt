@@ -10,7 +10,7 @@ traditionalist_radicals = {
 	support_multiplier = 1
 
 	resources = {
-		category = pop_factions
+		category = pop_radical_factions
 		produces = {
 			traditionalist_militancy = -12
 			traditionalist_support = 12

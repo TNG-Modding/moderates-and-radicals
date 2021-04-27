@@ -10,7 +10,7 @@ prosperity_radicals = {
 	support_multiplier = 1
 
 	resources = {
-		category = pop_factions
+		category = pop_radical_factions
 		produces = {
 			prosperity_militancy = -12
 			prosperity_support = 12

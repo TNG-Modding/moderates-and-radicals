@@ -10,7 +10,7 @@ technologist_radicals = {
 	support_multiplier = 1
 
 	resources = {
-		category = pop_factions
+		category = pop_radical_factions
 		produces = {
 			technologist_militancy = -12
 			technologist_support = 12
