@@ -9,7 +9,7 @@
  # Government factions
  faction_spawn.1.desc.gov_imperialist:0 "Their members have been pushing hard for us to assert our military dominance over the rest of the galaxy. Their militarist ideals are the bedrock of our government.\n\n"
  faction_spawn.1.desc.gov_progressive:0 "Their members work for equality and justice for all denizens of our empire. Their egalitarian ideals are the bedrock of our government.\n\n"
- faction_spawn.1.desc.gov_prosperity:0 "Their members lobby for a national focus on financial growth and stability through peaceful means. Their pacifist ideals are the bedrock of our government.\n\n"
+ faction_spawn.1.desc.gov_prosperity:0 "Their members lobby for a national focus on financial growing and stability through peaceful means. Their pacifist ideals are the bedrock of our government.\n\n"
  faction_spawn.1.desc.gov_supremacist:0 "Their members seek to assert the primacy of the [Root.Owner.GetSpeciesAdj] species, by curtailing the rights of aliens if necessary. Their supremacist ideals are the bedrock of our government.\n\n"
  faction_spawn.1.desc.gov_technologist:0 "Their members have been pushing hard for the advancement of the sciences. Their materialist ideals are the bedrock of our government.\n\n"
  faction_spawn.1.desc.gov_totalitarian:0 "Their members have been pushing hard for an extreme centralization of political and military power. Their authoritarian ideals are the bedrock of our government.\n\n"
@@ -20,7 +20,7 @@
  faction_spawn.1.desc.imperialist:0 "Their members have been pushing hard for us to assert our military dominance over the rest of the galaxy.\n\n"
  faction_spawn.1.desc.isolationist:0 "Their members are advocating for closed borders and non-interference with galactic affairs.\n\n"
  faction_spawn.1.desc.progressive:0 "Their members work for equality and justice for all denizens of our empire.\n\n"
- faction_spawn.1.desc.prosperity:1 "Their members lobby for a national focus on financial growth and stability through peaceful means."
+ faction_spawn.1.desc.prosperity:1 "Their members lobby for a national focus on financial growing and stability through peaceful means."
  faction_spawn.1.desc.supremacist:0 "Their members seek to assert the primacy of the [Root.Owner.GetSpeciesAdj] species, by curtailing the rights of aliens if necessary.\n\n"
  faction_spawn.1.desc.technologist:0 "Their members have been pushing hard for the advancement of the sciences.\n\n"
  faction_spawn.1.desc.totalitarian:0 "Their members have been pushing hard for an extreme centralization of political and military power.\n\n"
