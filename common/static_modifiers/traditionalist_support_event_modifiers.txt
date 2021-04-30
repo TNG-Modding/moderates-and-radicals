@@ -1,0 +1,30 @@
+traditional_debates_continue_modifier = {
+	country_ideological_purity_produces_add = -0.2
+	country_traditionalist_militancy_produces_add = 0.2
+}
+
+traditionalist_debates_stopped_modifier = {
+	country_traditionalist_militancy_produces_add = 0.1
+}
+
+traditional_riots_continue_modifier = {
+	country_traditionalist_unity_produces_add = 60
+	country_traditionalist_militancy_produces_add = 0.1
+}
+
+traditional_riots_stopped_modifier = {
+	country_traditionalist_militancy_produces_add = 0.2
+}
+
+traditionalist_violent_riots_continue_modifier = {
+	all_technology_research_speed = -0.1
+	country_traditionalist_militancy_produces_add = 0.1
+}
+
+traditionalist_violent_riots_stopped_modifier = {
+	country_traditionalist_militancy_produces_add = 0.25
+}
+
+traditionalist_coup_continue_modifier = {
+	country_ideological_purity_produces_add = 0.2
+}
