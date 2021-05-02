@@ -9,6 +9,9 @@ country_event = {
 
     mean_time_to_happen = { months = 1 }
     trigger = {
+        NOT = {
+            has_modifier = recent_political_event
+        }
         is_variable_set = current_imperialist_support
         is_variable_set = current_ideological_purity
 
@@ -19,6 +22,10 @@ country_event = {
     }
 
     immediate = {
+        add_modifier = {
+            modifier = recent_political_event
+            years = 1
+        }
         export_resource_income_to_variable = { 
             resource = imperialist_support 
             variable = current_imperialist_support_income
