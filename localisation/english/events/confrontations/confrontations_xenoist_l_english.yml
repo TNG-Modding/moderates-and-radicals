@@ -2,29 +2,29 @@
 
  xenoist_confrontations.10:0 "A Political Debate"
  xenoist_confrontations.10.desc:0 "The xenophiles within the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of overly xenophile language in the latest government policy plan has angered many factions within our government."
- xenoist_confrontations.10.a:0 "Increase support over time."
- xenoist_debates_continue_modifier:0 "Xenoist Support growing"
- xenoist_confrontations.10.b:0 "Reset support to zero but increase militancy."
- xenoist_debates_stopped_modifier:0 "Xenoist Militancy growing"
+ xenoist_confrontations.10.a:0 "Support the policy."
+ xenoist_debates_continue_modifier:0 "Xenoist Debates Continue"
+ xenoist_confrontations.10.b:0 "Strike the wording from the policy."
+ xenoist_debates_stopped_modifier:0 "Xenoist Debates Stopped"
 
  xenoist_confrontations.20:0 "Riots"
  xenoist_confrontations.20.desc:0 "The xenophiles within the [Root.GetName] have taken to the streets of [Root.Capital.GetName] causing chaos and disorder. Xenoists can be found everywhere making speeches pushing xenoist talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated."
  xenoist_confrontations.20.a:0 "We can do nothing."
- xenoist_riots_continue_modifier:0 "Xenoist Support Shrinking"
+ xenoist_riots_continue_modifier:0 "Xenoist Riots Continue"
  xenoist_confrontations.20.b:0 "Crush them!"
- xenoist_riots_stopped_modifier:0 "Xenoist Militancy Shrinking"
+ xenoist_riots_stopped_modifier:0 "Xenoist Riots Stopped"
 
- xenoist_confrontations.30:0 "Book Burning"
- xenoist_confrontations.30.desc:0 "The xenophiles within the [Root.GetName] have gathered on [Root.Capital.GetName] in an informal gathering demanding xenoist teachings in schools. They are destroying any datalogs or holo-vids that contain propaganda that doesn't support the xenoist point of view."
- xenoist_confrontations.30.a:0 "Let the fire burn."
- xenoist_violent_riots_continue_modifier:0 ""
+ xenoist_confrontations.30:0 "Destruction of Propaganda"
+ xenoist_confrontations.30.desc:0 "The xenophiles within the [Root.GetName] have gathered on [Root.Capital.GetName] in an informal gathering demanding xenoist teachings in schools. They are destroying any datalogs or holo-vids that contain propaganda that doesn't support the xenoist point of view. The fires from the destruction can be seen from the very steps of the capitol."
+ xenoist_confrontations.30.a:0 "Let the fires continue."
+ xenoist_violent_riots_continue_modifier:0 "Xenoist Holovid Burning Continues"
  xenoist_confrontations.30.b:0 "Stop the fires!"
- xenoist_violent_riots_stopped_modifier:0 ""
+ xenoist_violent_riots_stopped_modifier:0 "Holovid Burning Stopped"
 
  xenoist_confrontations.40:0 "Xenophile Coup!"
  xenoist_confrontations.40.desc:0 "The xenophiles have staged a coup within our empire! A new government has been declared and much of the ruling class has sought asylum outside our empire. Without the support of our ruler class, we have no choice but to accept their demands."
  xenoist_confrontations.40.a:0 "Blasted xenoists!"
- xenoist_coup_continue_modifier:0 "The xenoists have successfully seized control of the government."
+ xenoist_coup_continue_modifier:0 "Successful Xenoist coup."
 
 
 

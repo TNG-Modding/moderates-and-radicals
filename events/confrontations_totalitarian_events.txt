@@ -92,13 +92,15 @@ country_event = {
     option = {
         name = totalitarian_confrontations.10.a
 
-        export_resource_income_to_variable = {
-            resource = alloys
-            variable = monthly_alloys_income
-        }
-        multiply_variable = {
-            which = monthly_alloys_income
-            value = 6
+        hidden_effect = {
+            export_resource_income_to_variable = {
+                resource = alloys
+                variable = monthly_alloys_income
+            }
+            multiply_variable = {
+                which = monthly_alloys_income
+                value = 6
+            }
         }
         add_resource = {
             alloys = 1

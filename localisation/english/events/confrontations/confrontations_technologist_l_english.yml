@@ -2,29 +2,29 @@
 
  technologist_confrontations.10:0 "A Political Debate"
  technologist_confrontations.10.desc:0 "The materialists within the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of overly materialist language in the latest government policy plan has angered many factions within our government."
- technologist_confrontations.10.a:0 "Increase support over time."
- technologist_debates_continue_modifier:0 "Technologist Support growing"
- technologist_confrontations.10.b:0 "Reset support to zero but increase militancy."
- technologist_debates_stopped_modifier:0 "Technologist Militancy growing"
+ technologist_confrontations.10.a:0 "Support the policy."
+ technologist_debates_continue_modifier:0 "Technologist Debates Continue"
+ technologist_confrontations.10.b:0 "Strike the wording from the policy."
+ technologist_debates_stopped_modifier:0 "Technologist Debates Stopped"
 
  technologist_confrontations.20:0 "Riots"
  technologist_confrontations.20.desc:0 "The materialists within the [Root.GetName] have taken to the streets of [Root.Capital.GetName] causing chaos and disorder. Technologists can be found everywhere making speeches pushing technologist talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated."
  technologist_confrontations.20.a:0 "We can do nothing."
- technologist_riots_continue_modifier:0 "Technologist Support Shrinking"
+ technologist_riots_continue_modifier:0 "Technologist Riots Continue"
  technologist_confrontations.20.b:0 "Crush them!"
- technologist_riots_stopped_modifier:0 "Technologist Militancy Shrinking"
+ technologist_riots_stopped_modifier:0 "Technologist Riots Stopped"
 
- technologist_confrontations.30:0 "Book Burning"
- technologist_confrontations.30.desc:0 "The materialists within the [Root.GetName] have gathered on [Root.Capital.GetName] in an informal gathering demanding technologist teachings in schools. They are destroying any datalogs or holo-vids that contain propaganda that doesn't support the technologist point of view."
- technologist_confrontations.30.a:0 "Let the fire burn."
- technologist_violent_riots_continue_modifier:0 ""
+ technologist_confrontations.30:0 "Destruction of Propaganda"
+ technologist_confrontations.30.desc:0 "The materialists within the [Root.GetName] have gathered on [Root.Capital.GetName] in an informal gathering demanding technologist teachings in schools. They are destroying any datalogs or holo-vids that contain propaganda that doesn't support the technologist point of view. The fires from the destruction can be seen from the very steps of the capitol."
+ technologist_confrontations.30.a:0 "Let the fires continue."
+ technologist_violent_riots_continue_modifier:0 "Technologist Holovid Burning Continues"
  technologist_confrontations.30.b:0 "Stop the fires!"
- technologist_violent_riots_stopped_modifier:0 ""
+ technologist_violent_riots_stopped_modifier:0 "Holovid Burning Stopped"
 
  technologist_confrontations.40:0 "Materialist Coup!"
  technologist_confrontations.40.desc:0 "The materialists have staged a coup within our empire! A new government has been declared and much of the ruling class has sought asylum outside our empire. Without the support of our ruler class, we have no choice but to accept their demands."
  technologist_confrontations.40.a:0 "Blasted technologists!"
- technologist_coup_continue_modifier:0 "The technologists have successfully seized control of the government."
+ technologist_coup_continue_modifier:0 "Successful Technologist coup."
 
 
 

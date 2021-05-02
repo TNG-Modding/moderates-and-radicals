@@ -92,13 +92,15 @@ country_event = {
     option = {
         name = {{faction}}_confrontations.10.a
 
-        export_resource_income_to_variable = {
-            resource = {{resource}}
-            variable = monthly_{{resource}}_income
-        }
-        multiply_variable = {
-            which = monthly_{{resource}}_income
-            value = 6
+        hidden_effect = {
+            export_resource_income_to_variable = {
+                resource = {{resource}}
+                variable = monthly_{{resource}}_income
+            }
+            multiply_variable = {
+                which = monthly_{{resource}}_income
+                value = 6
+            }
         }
         add_resource = {
             {{resource}} = 1
