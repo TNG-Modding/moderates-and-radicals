@@ -1,0 +1,68 @@
+{
+    "specs": [
+        {
+            "varname": "imperialist_faction",
+            "ethic": "militarist",
+            "Ethic": "Militarist",
+            "faction": "imperialist",
+            "Faction": "Imperialist",
+            "resource": "alloys"
+        },
+        {
+            "varname": "supremacist_faction",
+            "ethic": "xenophobe",
+            "Ethic": "Xenophobe",
+            "faction": "supremacist",
+            "Faction": "Supremacist",
+            "resource": "alloys"
+        },
+        {
+            "varname": "progressive_faction",
+            "ethic": "egalitarian",
+            "Ethic": "Egalitarian",
+            "faction": "progressive",
+            "Faction": "Progressive",
+            "resource": "consumer_goods"
+        },
+        {
+            "varname": "technologist_faction",
+            "ethic": "materialist",
+            "Ethic": "Materialist",
+            "faction": "technologist",
+            "Faction": "Technologist",
+            "resource": "alloys"
+        },
+        {
+            "varname": "prosperity_faction",
+            "ethic": "pacifist",
+            "Ethic": "Pacifist",
+            "faction": "prosperity",
+            "Faction": "Prosperity",
+            "resource": "consumer_goods"
+        },
+        {
+            "varname": "xenoist_faction",
+            "ethic": "xenophile",
+            "Ethic": "Xenophile",
+            "faction": "xenoist",
+            "Faction": "Xenoist",
+            "resource": "consumer_goods"
+        },
+        {
+            "varname": "totalitarian_faction",
+            "ethic": "authoritarian",
+            "Ethic": "Authoritarian",
+            "faction": "totalitarian",
+            "Faction": "Totalitarian",
+            "resource": "alloys"
+        },
+        {
+            "varname": "traditionalist_faction",
+            "ethic": "spiritualist",
+            "Ethic": "Spiritualist",
+            "faction": "traditionalist",
+            "Faction": "Traditionalist",
+            "resource": "consumer_goods"
+        }
+    ]
+}

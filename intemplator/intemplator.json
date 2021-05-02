@@ -1,0 +1,28 @@
+{
+    "orders": [
+        {
+            "name": "Faction Events",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/faction_events",
+            "outputDirectoryPath": "../events",
+            "disabled": false,
+            "dumpContents": true
+        },
+        {
+            "name": "Faction Event Modifiers",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/faction_event_static_modifiers",
+            "outputDirectoryPath": "../common/static_modifiers",
+            "disabled": false,
+            "dumpContents": true
+        },
+        {
+            "name": "Faction Event Localization",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/faction_event_localization",
+            "outputDirectoryPath": "../localisation/english/events/confrontations",
+            "disabled": false,
+            "dumpContents": true
+        }
+    ]
+}
