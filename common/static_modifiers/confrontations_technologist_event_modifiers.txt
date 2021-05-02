@@ -1,0 +1,30 @@
+technologist_debates_continue_modifier = {
+	country_ideological_purity_produces_add = -0.2
+	country_technologist_militancy_produces_add = 0.2
+}
+
+technologist_debates_stopped_modifier = {
+	country_technologist_militancy_produces_add = 0.1
+}
+
+technologist_riots_continue_modifier = {
+	country_alloys_produces_add = 60
+	country_technologist_militancy_produces_add = 0.1
+}
+
+technologist_riots_stopped_modifier = {
+	country_technologist_militancy_produces_add = 0.2
+}
+
+technologist_violent_riots_continue_modifier = {
+	all_technology_research_speed = -0.1
+	country_technologist_militancy_produces_add = 0.1
+}
+
+technologist_violent_riots_stopped_modifier = {
+	country_technologist_militancy_produces_add = 0.25
+}
+
+technologist_coup_continue_modifier = {
+	country_ideological_purity_produces_add = 0.2
+}

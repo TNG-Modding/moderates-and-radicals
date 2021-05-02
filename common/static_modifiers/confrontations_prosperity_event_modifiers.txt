@@ -1,0 +1,30 @@
+prosperity_debates_continue_modifier = {
+	country_ideological_purity_produces_add = -0.2
+	country_prosperity_militancy_produces_add = 0.2
+}
+
+prosperity_debates_stopped_modifier = {
+	country_prosperity_militancy_produces_add = 0.1
+}
+
+prosperity_riots_continue_modifier = {
+	country_consumer_goods_produces_add = 60
+	country_prosperity_militancy_produces_add = 0.1
+}
+
+prosperity_riots_stopped_modifier = {
+	country_prosperity_militancy_produces_add = 0.2
+}
+
+prosperity_violent_riots_continue_modifier = {
+	all_technology_research_speed = -0.1
+	country_prosperity_militancy_produces_add = 0.1
+}
+
+prosperity_violent_riots_stopped_modifier = {
+	country_prosperity_militancy_produces_add = 0.25
+}
+
+prosperity_coup_continue_modifier = {
+	country_ideological_purity_produces_add = 0.2
+}

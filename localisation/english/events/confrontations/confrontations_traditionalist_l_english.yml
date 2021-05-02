@@ -1,0 +1,32 @@
+l_english:
+
+ traditionalist_confrontations.10:0 "A Political Debate"
+ traditionalist_confrontations.10.desc:0 "The spiritualists within the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of overly spiritualist language in the latest government policy plan has angered many factions within our government."
+ traditionalist_confrontations.10.a:0 "Increase support over time."
+ traditionalist_debates_continue_modifier:0 "Traditionalist Support growing"
+ traditionalist_confrontations.10.b:0 "Reset support to zero but increase militancy."
+ traditionalist_debates_stopped_modifier:0 "Traditionalist Militancy growing"
+
+ traditionalist_confrontations.20:0 "Riots"
+ traditionalist_confrontations.20.desc:0 "The spiritualists within the [Root.GetName] have taken to the streets of [Root.Capital.GetName] causing chaos and disorder. Traditionalists can be found everywhere making speeches pushing traditionalist talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated."
+ traditionalist_confrontations.20.a:0 "We can do nothing."
+ traditionalist_riots_continue_modifier:0 "Traditionalist Support Shrinking"
+ traditionalist_confrontations.20.b:0 "Crush them!"
+ traditionalist_riots_stopped_modifier:0 "Traditionalist Militancy Shrinking"
+
+ traditionalist_confrontations.30:0 "Book Burning"
+ traditionalist_confrontations.30.desc:0 "The spiritualists within the [Root.GetName] have gathered on [Root.Capital.GetName] in an informal gathering demanding traditionalist teachings in schools. They are destroying any datalogs or holo-vids that contain propaganda that doesn't support the traditionalist point of view."
+ traditionalist_confrontations.30.a:0 "Let the fire burn."
+ traditionalist_violent_riots_continue_modifier:0 ""
+ traditionalist_confrontations.30.b:0 "Stop the fires!"
+ traditionalist_violent_riots_stopped_modifier:0 ""
+
+ traditionalist_confrontations.40:0 "Spiritualist Coup!"
+ traditionalist_confrontations.40.desc:0 "The spiritualists have staged a coup within our empire! A new government has been declared and much of the ruling class has sought asylum outside our empire. Without the support of our ruler class, we have no choice but to accept their demands."
+ traditionalist_confrontations.40.a:0 "Blasted traditionalists!"
+ traditionalist_coup_continue_modifier:0 "The traditionalists have successfully seized control of the government."
+
+
+
+
+ 

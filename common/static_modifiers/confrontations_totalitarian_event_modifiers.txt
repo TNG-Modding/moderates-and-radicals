@@ -1,0 +1,30 @@
+totalitarian_debates_continue_modifier = {
+	country_ideological_purity_produces_add = -0.2
+	country_totalitarian_militancy_produces_add = 0.2
+}
+
+totalitarian_debates_stopped_modifier = {
+	country_totalitarian_militancy_produces_add = 0.1
+}
+
+totalitarian_riots_continue_modifier = {
+	country_alloys_produces_add = 60
+	country_totalitarian_militancy_produces_add = 0.1
+}
+
+totalitarian_riots_stopped_modifier = {
+	country_totalitarian_militancy_produces_add = 0.2
+}
+
+totalitarian_violent_riots_continue_modifier = {
+	all_technology_research_speed = -0.1
+	country_totalitarian_militancy_produces_add = 0.1
+}
+
+totalitarian_violent_riots_stopped_modifier = {
+	country_totalitarian_militancy_produces_add = 0.25
+}
+
+totalitarian_coup_continue_modifier = {
+	country_ideological_purity_produces_add = 0.2
+}

@@ -1,0 +1,30 @@
+supremacist_debates_continue_modifier = {
+	country_ideological_purity_produces_add = -0.2
+	country_supremacist_militancy_produces_add = 0.2
+}
+
+supremacist_debates_stopped_modifier = {
+	country_supremacist_militancy_produces_add = 0.1
+}
+
+supremacist_riots_continue_modifier = {
+	country_alloys_produces_add = 60
+	country_supremacist_militancy_produces_add = 0.1
+}
+
+supremacist_riots_stopped_modifier = {
+	country_supremacist_militancy_produces_add = 0.2
+}
+
+supremacist_violent_riots_continue_modifier = {
+	all_technology_research_speed = -0.1
+	country_supremacist_militancy_produces_add = 0.1
+}
+
+supremacist_violent_riots_stopped_modifier = {
+	country_supremacist_militancy_produces_add = 0.25
+}
+
+supremacist_coup_continue_modifier = {
+	country_ideological_purity_produces_add = 0.2
+}

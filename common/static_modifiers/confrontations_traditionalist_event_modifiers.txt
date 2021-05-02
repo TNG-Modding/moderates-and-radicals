@@ -1,4 +1,4 @@
-traditional_debates_continue_modifier = {
+traditionalist_debates_continue_modifier = {
 	country_ideological_purity_produces_add = -0.2
 	country_traditionalist_militancy_produces_add = 0.2
 }
@@ -7,12 +7,12 @@ traditionalist_debates_stopped_modifier = {
 	country_traditionalist_militancy_produces_add = 0.1
 }
 
-traditional_riots_continue_modifier = {
-	country_traditionalist_unity_produces_add = 60
+traditionalist_riots_continue_modifier = {
+	country_consumer_goods_produces_add = 60
 	country_traditionalist_militancy_produces_add = 0.1
 }
 
-traditional_riots_stopped_modifier = {
+traditionalist_riots_stopped_modifier = {
 	country_traditionalist_militancy_produces_add = 0.2
 }
 

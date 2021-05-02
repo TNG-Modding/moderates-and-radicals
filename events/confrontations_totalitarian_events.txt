@@ -1,0 +1,256 @@
+namespace = totalitarian_confrontations
+
+# totalitarian
+country_event = {
+    id = totalitarian_confrontations.1
+    hide_window = yes
+
+    is_triggered_only = no
+
+    mean_time_to_happen = { months = 1 }
+    trigger = {
+        is_variable_set = current_totalitarian_support
+        is_variable_set = current_ideological_purity
+
+        check_variable = {
+            which = current_totalitarian_support
+            value > current_ideological_purity
+        }
+    }
+
+    immediate = {
+        export_resource_income_to_variable = { 
+            resource = totalitarian_support 
+            variable = current_totalitarian_support_income
+        }
+
+        # One years income
+        multiply_variable = {
+            which = current_totalitarian_support_income
+            value = 12
+        }
+
+        add_resource = { 
+            totalitarian_support = -1
+            mult = current_totalitarian_support_income 
+        }
+
+        export_resource_stockpile_to_variable = { 
+            resource = totalitarian_militancy
+            variable = current_totalitarian_militancy
+        }
+
+        if = {
+            limit = {
+                check_variable = {
+                    which = current_totalitarian_militancy
+                    value > 75
+                }
+            }
+            country_event = { id = totalitarian_confrontations.40 }
+        }	
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = current_totalitarian_militancy
+                    value > 50
+                }
+            }
+            country_event = { id = totalitarian_confrontations.30 }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = current_totalitarian_militancy
+                    value > 25
+                }
+            }
+            country_event = { id = totalitarian_confrontations.20 }
+        }
+        else = {
+            country_event = { id = totalitarian_confrontations.10 }
+        }	
+    }
+}
+
+# Political debate
+country_event = {
+    id = totalitarian_confrontations.10
+    title = totalitarian_confrontations.10
+    desc = totalitarian_confrontations.10.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_assembly_fight
+    show_sound = event_super_explosion
+
+    immediate = {
+        
+    }
+
+    option = {
+        name = totalitarian_confrontations.10.a
+
+        export_resource_income_to_variable = {
+            resource = alloys
+            variable = monthly_alloys_income
+        }
+        multiply_variable = {
+            which = monthly_alloys_income
+            value = 6
+        }
+        add_resource = {
+            alloys = 1
+            mult = monthly_alloys_income
+        }
+        add_modifier = {
+            modifier = totalitarian_debates_continue_modifier
+            years = 3
+        }
+    }
+    option = {
+        name = totalitarian_confrontations.10.b
+
+        add_modifier = {
+            modifier = totalitarian_debates_stopped_modifier
+            years = 3
+        }
+    }
+}
+
+# Riots
+country_event = {
+    id = totalitarian_confrontations.20
+    title = totalitarian_confrontations.20
+    desc = totalitarian_confrontations.20.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_assembly_fight
+    show_sound = event_super_explosion
+
+    immediate = {
+        
+    }
+
+    option = {
+        name = totalitarian_confrontations.20.a
+
+        add_modifier = {
+            modifier = totalitarian_riots_continue_modifier
+            years = 3
+        }
+
+        random_owned_pop = {
+            limit = {
+                NOT = { 
+                    pop_has_ethic = ethic_authoritarian
+                }
+            }
+            pop_change_ethic = ethic_authoritarian
+        }
+    }
+
+    option = {
+        name = totalitarian_confrontations.20.b
+
+        add_modifier = {
+            modifier = totalitarian_riots_stopped_modifier
+            years = 3
+        }
+    }
+}
+
+# Book Burning
+country_event = {
+    id = totalitarian_confrontations.30
+    title = totalitarian_confrontations.30
+    desc = totalitarian_confrontations.30.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_assembly_fight
+    show_sound = event_super_explosion
+
+    immediate = {
+        
+    }
+
+    option = {
+        name = totalitarian_confrontations.20.a
+
+        add_modifier = {
+            modifier = totalitarian_violent_riots_continue_modifier
+            years = 3
+        }
+    }
+    option = {
+        name = totalitarian_confrontations.20.b
+
+        add_modifier = {
+            modifier = totalitarian_violent_riots_stopped_modifier
+            years = 3
+        }
+    }
+}
+
+# Coup
+country_event = {
+    id = totalitarian_confrontations.40
+    title = totalitarian_confrontations.40
+    desc = totalitarian_confrontations.40.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_assembly_fight
+    show_sound = event_super_explosion
+
+    immediate = {
+        
+    }
+
+    option = {
+        name = totalitarian_confrontations.40.a
+        
+        if = {
+            limit = { 
+                NOT = { 
+                    has_ethic = "ethic_fanatic_authoritarian" 
+                } 
+            }
+            shift_ethic = ethic_authoritarian
+        }
+        
+        add_resource = {
+            ideological_purity = -25
+        }
+
+        add_modifier = {
+            modifier = totalitarian_coup_continue_modifier
+            years = 3
+        }
+
+        # Convert pops
+
+        # Make refugees of the leadership class
+
+        # Inform others
+        # every_relation = {
+        #     limit = {
+        #         is_ai = no
+        #         is_country_type = default
+        #         has_communications = prev
+        #         has_intel_level = {
+        #             who = prev
+        #             category = government
+        #             level >= 1
+        #         }
+        #     }
+        #     country_event = { id = factions.2000 }
+        # }        
+    }
+}

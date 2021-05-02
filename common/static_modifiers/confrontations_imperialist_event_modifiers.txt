@@ -1,0 +1,30 @@
+imperialist_debates_continue_modifier = {
+	country_ideological_purity_produces_add = -0.2
+	country_imperialist_militancy_produces_add = 0.2
+}
+
+imperialist_debates_stopped_modifier = {
+	country_imperialist_militancy_produces_add = 0.1
+}
+
+imperialist_riots_continue_modifier = {
+	country_alloys_produces_add = 60
+	country_imperialist_militancy_produces_add = 0.1
+}
+
+imperialist_riots_stopped_modifier = {
+	country_imperialist_militancy_produces_add = 0.2
+}
+
+imperialist_violent_riots_continue_modifier = {
+	all_technology_research_speed = -0.1
+	country_imperialist_militancy_produces_add = 0.1
+}
+
+imperialist_violent_riots_stopped_modifier = {
+	country_imperialist_militancy_produces_add = 0.25
+}
+
+imperialist_coup_continue_modifier = {
+	country_ideological_purity_produces_add = 0.2
+}
