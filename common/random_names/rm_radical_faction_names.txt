@@ -45,7 +45,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "supremacist_radicals"
 		}
 	}
-	format = "<radical_names> [This.Owner.GetSpeciesName] <supremacist_radicals_names_1> <supremacist_radicals_names_2>"
+	format = "[This.Owner.GetSpeciesName] <supremacist_radicals_names_1> <supremacist_radicals_names_2>"
 }
 
 ## imperialist_radicalss
@@ -84,7 +84,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "imperialist_radicals"
 		}
 	}
-	format = "<radical_names> <imperialist_radicals_names>"
+	format = "<imperialist_radicals_names>"
 }
 
 ## totalitarian_radicalss
@@ -129,7 +129,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "totalitarian_radicals"
 		}
 	}
-	format = "<radical_names> <totalitarian_radicals_names_1> <totalitarian_radicals_names_2>"
+	format = "<totalitarian_radicals_names_1> <totalitarian_radicals_names_2>"
 }
 
 ## progressive_radicalss
@@ -188,7 +188,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "progressive_radicals"
 		}
 	}
-	format = "<radical_names> <progressive_radicals_names_1> <progressive_radicals_names_2>"
+	format = "<progressive_radicals_names_1> <progressive_radicals_names_2>"
 }
 
 
@@ -241,7 +241,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "prosperity_radicals"
 		}
 	}
-	format = "<radical_names> <prosperity_radicals_names_1> <prosperity_radicals_names_2>"
+	format = "<prosperity_radicals_names_1> <prosperity_radicals_names_2>"
 }
 
 ## technologist_radicalss
@@ -284,7 +284,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "technologist_radicals"
 		}
 	}
-	format = "<radical_names> <technologist_radicals_names_1> <technologist_radicals_names_2>"
+	format = "<technologist_radicals_names_1> <technologist_radicals_names_2>"
 }
 
 ## traditionalist_radicalss
@@ -330,7 +330,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "traditionalist_radicals"
 		}
 	}
-	format = "<radical_names> <traditionalist_radicals_names_1> <traditionalist_radicals_names_2>"
+	format = "<traditionalist_radicals_names_1> <traditionalist_radicals_names_2>"
 }
 
 ## xenoist_radicalss
@@ -396,5 +396,5 @@ pop_faction_name_format = {
 			is_pop_faction_type = "xenoist_radicals"
 		}
 	}
-	format = "<radical_names> <xenoist_radicals_names_1> <xenoist_radicals_names_2> <xenoist_radicals_names_3>"
+	format = "<xenoist_radicals_names_1> <xenoist_radicals_names_2> <xenoist_radicals_names_3>"
 }
