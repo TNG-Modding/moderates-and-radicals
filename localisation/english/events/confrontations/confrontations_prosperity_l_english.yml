@@ -22,7 +22,7 @@
  prosperity_violent_riots_stopped_modifier:0 "Imperialists Burning Stopped"
 
  confrontations_prosperity.40:0 "Pacifist Coup!"
- confrontations_prosperity.40.desc:0 "The pacifists have staged a coup within our empire! A new government has been declared that properly enshrines pacifist ideals. This sudden change has left our empire in disorder, as many of the ruling class have sought asylum outside our borders where imperialist views might be more welcome. Without the support of our ruling class, we have no choice but to accept their demands."
+ confrontations_prosperity.40.desc:0 "The pacifists have staged a coup within our empire! A new government has been declared that properly enshrines pacifist ideals. This sudden change has left our empire in disorder, as many of the ruling class have been killed for holding suspiciously imperialist views. Without the support of our ruling class, we have no choice but to accept their demands."
  confrontations_prosperity.40.a:0 "Blasted pacifists!"
  prosperity_coup_continue_modifier:0 "Successful Pacifist Coup."
 

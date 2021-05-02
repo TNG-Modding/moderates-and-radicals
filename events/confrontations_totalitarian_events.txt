@@ -27,7 +27,7 @@ country_event = {
         # One years income
         multiply_variable = {
             which = current_totalitarian_support_income
-            value = 12
+            value = 36
         }
 
         add_resource = { 
@@ -94,16 +94,16 @@ country_event = {
 
         export_resource_income_to_variable = {
             resource = alloys
-            variable = current_monthly_alloys_income
+            variable = current_monthly_totalitarian_alloys_income
         }
         multiply_variable = {
-            which = current_monthly_alloys_income
+            which = current_monthly_totalitarian_alloys_income
             value = 6
         }
         
         add_resource = {
             alloys = 1
-            mult = current_monthly_alloys_income
+            mult = current_monthly_totalitarian_alloys_income
         }
         add_modifier = {
             modifier = totalitarian_debates_continue_modifier
@@ -235,9 +235,63 @@ country_event = {
             years = 3
         }
 
-        # Convert pops
+        # Kill ruler
+        kill_leader = {
+            type = ruler
+        }
 
-        # Make refugees of the leadership class
+        # Kill rulers of wrong ethic
+        if = {
+            limit = {
+                count_owned_pop = {
+                    count >= 3
+                    limit = {
+                        NOT = { pop_has_ethic = ethic_authoritarian }
+                        is_pop_category = ruler
+                    }
+                }
+            }
+            random_owned_pop = {
+                limit = {
+                    NOT = { pop_has_ethic = ethic_authoritarian }
+                    is_pop_category = ruler
+                }
+                kill_pop = yes
+            }
+            random_owned_pop = {
+                limit = {
+                    NOT = { pop_has_ethic = ethic_authoritarian }
+                    is_pop_category	= ruler
+                }
+                kill_pop = yes
+            }
+            random_owned_pop = {
+                limit = {
+                    NOT = { pop_has_ethic = ethic_authoritarian }
+                    is_pop_category	= ruler
+                }
+                kill_pop = yes
+            }
+        }
+        else = {
+            random_owned_pop = {
+                limit = {
+                    NOT = { pop_has_ethic = ethic_authoritarian }
+                    is_pop_category	= ruler
+                }
+                kill_pop = yes
+            }
+            random_owned_pop = {
+                limit = {
+                    NOT = { pop_has_ethic = ethic_authoritarian }
+                    is_pop_category	= ruler
+                }
+                kill_pop = yes
+            }
+        }
+        
+
+        # Convert pops
 
         # Inform others
         # every_relation = {

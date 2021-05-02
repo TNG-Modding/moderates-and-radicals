@@ -22,7 +22,7 @@
  totalitarian_violent_riots_stopped_modifier:0 "Progressives Burning Stopped"
 
  confrontations_totalitarian.40:0 "Authoritarian Coup!"
- confrontations_totalitarian.40.desc:0 "The authoritarians have staged a coup within our empire! A new government has been declared that properly enshrines authoritarian ideals. This sudden change has left our empire in disorder, as many of the ruling class have sought asylum outside our borders where progressive views might be more welcome. Without the support of our ruling class, we have no choice but to accept their demands."
+ confrontations_totalitarian.40.desc:0 "The authoritarians have staged a coup within our empire! A new government has been declared that properly enshrines authoritarian ideals. This sudden change has left our empire in disorder, as many of the ruling class have been killed for holding suspiciously progressive views. Without the support of our ruling class, we have no choice but to accept their demands."
  confrontations_totalitarian.40.a:0 "Blasted authoritarians!"
  totalitarian_coup_continue_modifier:0 "Successful Authoritarian Coup."
 

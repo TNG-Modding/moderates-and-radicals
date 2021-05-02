@@ -22,7 +22,7 @@
  traditionalist_violent_riots_stopped_modifier:0 "Technologist Burning Stopped"
 
  confrontations_traditionalist.40:0 "Traditionalist Coup!"
- confrontations_traditionalist.40.desc:0 "The traditionalists have staged a coup within our empire! A new government has been declared that properly enshrines spiritualist ideals. This sudden change has left our empire in disorder, as many of the ruling class have sought asylum outside our borders where technologist views might be more welcome. Without the support of our ruling class, we have no choice but to accept their demands."
+ confrontations_traditionalist.40.desc:0 "The traditionalists have staged a coup within our empire! A new government has been declared that properly enshrines spiritualist ideals. This sudden change has left our empire in disorder, as many of the ruling class have been killed for holding suspiciously technologist views. Without the support of our ruling class, we have no choice but to accept their demands."
  confrontations_traditionalist.40.a:0 "Blasted traditionalists!"
  traditionalist_coup_continue_modifier:0 "Successful Traditionalist Coup."
 
