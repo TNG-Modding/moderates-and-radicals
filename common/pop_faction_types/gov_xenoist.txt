@@ -13,7 +13,8 @@ gov_xenoist = {
 		category = pop_factions
 		produces = {
 			ideological_purity = 1
-			xenoist_support = 1
+			# supremacist_militancy = 3
+			# xenoist_support = 4
 		}
 		produces = {
 			trigger = {
@@ -29,6 +30,7 @@ gov_xenoist = {
 			has_ethic = ethic_fanatic_xenophile
 			has_ethic = ethic_xenophile
 		}
+		has_modifier = politics
 		count_owned_pop = {
 			count >= 5
 			limit = {

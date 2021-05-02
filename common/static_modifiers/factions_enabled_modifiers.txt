@@ -4,28 +4,28 @@ politics = {
 	country_ideological_purity_produces_add = -0.5
 
 	# Support and militancy trends down by default
-	country_imperialist_support_produces_add = -0.1
+	# country_imperialist_support_produces_add = -0.1
 	country_imperialist_militancy_produces_add = -0.1
 
-	country_supremacist_support_produces_add = -0.1
+	# country_supremacist_support_produces_add = -0.1
 	country_supremacist_militancy_produces_add = -0.1
 
-	country_progressive_support_produces_add = -0.1
+	# country_progressive_support_produces_add = -0.1
 	country_progressive_militancy_produces_add = -0.1
 
-	country_technologist_support_produces_add = -0.1
+	# country_technologist_support_produces_add = -0.1
 	country_technologist_militancy_produces_add = -0.1
 
-	country_prosperity_support_produces_add = -0.1
+	# country_prosperity_support_produces_add = -0.1
 	country_prosperity_militancy_produces_add = -0.1
 
-	country_xenoist_support_produces_add = -0.1
+	# country_xenoist_support_produces_add = -0.1
 	country_xenoist_militancy_produces_add = -0.1
 
-	country_totalitarian_support_produces_add = -0.1
+	# country_totalitarian_support_produces_add = -0.1
 	country_totalitarian_militancy_produces_add = -0.1
 	
-	country_traditionalist_support_produces_add = -0.1
+	# country_traditionalist_support_produces_add = -0.1
 	country_traditionalist_militancy_produces_add = -0.1
 }
 

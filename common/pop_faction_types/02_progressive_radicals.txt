@@ -25,6 +25,7 @@ progressive_radicals = {
 			has_ethic = ethic_fanatic_authoritarian
 			has_ethic = ethic_authoritarian
 		}
+		has_modifier = politics
 		count_owned_pop = {
 			count >= 5
 			limit = {

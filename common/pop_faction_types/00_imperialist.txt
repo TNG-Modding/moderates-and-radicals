@@ -12,7 +12,7 @@ imperialist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			imperialist_support = 1
+			imperialist_support = 12
 		}
 		produces = {
 			trigger = {
@@ -31,6 +31,7 @@ imperialist = {
 			has_ethic = ethic_militarist
 			has_ethic = ethic_fanatic_militarist
 		}
+		has_modifier = politics
 		count_owned_pop = {
 			count >= 5
 			limit = {

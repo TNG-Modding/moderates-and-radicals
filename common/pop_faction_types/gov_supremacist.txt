@@ -13,7 +13,7 @@ gov_supremacist = {
 		category = pop_factions
 		produces = {
 			ideological_purity = 1
-			supremacist_support = 1
+			# supremacist_support = 4
 		}
 		produces = {
 			trigger = {
@@ -29,6 +29,7 @@ gov_supremacist = {
 			has_ethic = ethic_xenophobe
 			has_ethic = ethic_fanatic_xenophobe
 		}
+		has_modifier = politics
 		count_owned_pop = {
 			count >= 5
 			limit = {

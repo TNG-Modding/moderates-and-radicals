@@ -25,6 +25,7 @@ xenoist_radicals = {
 			has_ethic = ethic_fanatic_xenophobe
 			has_ethic = ethic_xenophobe
 		}
+		has_modifier = politics
 		count_owned_pop = {
 			count >= 5
 			limit = {

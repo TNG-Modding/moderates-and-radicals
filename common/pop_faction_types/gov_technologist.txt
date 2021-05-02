@@ -13,7 +13,7 @@ gov_technologist = {
 		category = pop_factions
 		produces = {
 			ideological_purity = 1
-			technologist_support = 1
+			# technologist_support = 4
 		}
 		produces = {
 			trigger = {
@@ -29,6 +29,7 @@ gov_technologist = {
 			has_ethic = ethic_fanatic_materialist
 			has_ethic = ethic_materialist
 		}
+		has_modifier = politics
 		count_owned_pop = {
 			count >= 5
 			limit = {

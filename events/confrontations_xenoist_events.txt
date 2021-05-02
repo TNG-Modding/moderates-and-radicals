@@ -12,6 +12,7 @@ country_event = {
         NOT = {
             has_modifier = recent_political_event
         }
+        has_modifier = politics
         is_variable_set = current_xenoist_support
         is_variable_set = current_ideological_purity
 
