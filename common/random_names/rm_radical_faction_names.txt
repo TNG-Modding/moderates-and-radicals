@@ -1,3 +1,15 @@
+pop_faction_name_parts_list = {
+	key = "radical_names"
+	parts = {
+		"Guerillas of the" = 1
+		"Radicals for the" = 1
+		"Agents of the" = 1
+		"Dissidents of the" = 1
+		"Rebels of the" = 1
+		"Freethinkers of the" = 1
+	}
+}
+
 ## supremacist_radicalss
 pop_faction_name_parts_list = {
 	key = "supremacist_radicals_names_1"
@@ -33,7 +45,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "supremacist_radicals"
 		}
 	}
-	format = "[This.Owner.GetSpeciesName] <supremacist_radicals_names_1> <supremacist_radicals_names_2>"
+	format = "<radical_names> [This.Owner.GetSpeciesName] <supremacist_radicals_names_1> <supremacist_radicals_names_2>"
 }
 
 ## imperialist_radicalss
@@ -44,7 +56,6 @@ pop_faction_name_parts_list = {
 		"Veterans for Victory Movement" = 1
 		"Military-Industrial Complex" = 1
 		"Strength Through Conquest Coalition" = 1
-		"Knights of the Void" = 1
 		"Patriotic Vanguard" = 1
 		"Order of the Burning Star" = 1
 		"Crimson Warrior Lodge" = 1
@@ -73,7 +84,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "imperialist_radicals"
 		}
 	}
-	format = "<imperialist_radicals_names>"
+	format = "<radical_names> <imperialist_radicals_names>"
 }
 
 ## totalitarian_radicalss
@@ -118,7 +129,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "totalitarian_radicals"
 		}
 	}
-	format = "<totalitarian_radicals_names_1> <totalitarian_radicals_names_2>"
+	format = "<radical_names> <totalitarian_radicals_names_1> <totalitarian_radicals_names_2>"
 }
 
 ## progressive_radicalss
@@ -177,7 +188,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "progressive_radicals"
 		}
 	}
-	format = "<progressive_radicals_names_1> <progressive_radicals_names_2>"
+	format = "<radical_names> <progressive_radicals_names_1> <progressive_radicals_names_2>"
 }
 
 
@@ -230,7 +241,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "prosperity_radicals"
 		}
 	}
-	format = "<prosperity_radicals_names_1> <prosperity_radicals_names_2>"
+	format = "<radical_names> <prosperity_radicals_names_1> <prosperity_radicals_names_2>"
 }
 
 ## technologist_radicalss
@@ -273,7 +284,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "technologist_radicals"
 		}
 	}
-	format = "<technologist_radicals_names_1> <technologist_radicals_names_2>"
+	format = "<radical_names> <technologist_radicals_names_1> <technologist_radicals_names_2>"
 }
 
 ## traditionalist_radicalss
@@ -319,7 +330,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "traditionalist_radicals"
 		}
 	}
-	format = "<traditionalist_radicals_names_1> <traditionalist_radicals_names_2>"
+	format = "<radical_names> <traditionalist_radicals_names_1> <traditionalist_radicals_names_2>"
 }
 
 ## xenoist_radicalss
@@ -385,5 +396,5 @@ pop_faction_name_format = {
 			is_pop_faction_type = "xenoist_radicals"
 		}
 	}
-	format = "<xenoist_radicals_names_1> <xenoist_radicals_names_2> <xenoist_radicals_names_3>"
+	format = "<radical_names> <xenoist_radicals_names_1> <xenoist_radicals_names_2> <xenoist_radicals_names_3>"
 }
