@@ -6,7 +6,15 @@
             "Ethic": "Militarist",
             "faction": "imperialist",
             "Faction": "Imperialist",
-            "resource": "alloys"
+            "adjective": "imperialist",
+            "Adjective": "Imperialist",
+            "resource": "alloys",
+            "enemyEthic": "pacifist",
+            "EnemyEthic": "Pacifist",
+            "enemyFaction": "prosperity",
+            "EnemyFaction": "Prosperity",
+            "enemyAdjective": "pacifist",
+            "EnemyAdjective": "Pacifist"
         },
         {
             "varname": "supremacist_faction",
@@ -14,7 +22,15 @@
             "Ethic": "Xenophobe",
             "faction": "supremacist",
             "Faction": "Supremacist",
-            "resource": "alloys"
+            "adjective": "supremacist",
+            "Adjective": "Supremacist",
+            "resource": "alloys",
+            "enemyEthic": "xenophile",
+            "EnemyEthic": "Xenophile",
+            "enemyFaction": "xenoist",
+            "EnemyFaction": "Xenoist",
+            "enemyAdjective": "xenoist",
+            "EnemyAdjective": "Xenoists"
         },
         {
             "varname": "progressive_faction",
@@ -22,7 +38,15 @@
             "Ethic": "Egalitarian",
             "faction": "progressive",
             "Faction": "Progressive",
-            "resource": "consumer_goods"
+            "adjective": "progressive",
+            "Adjective": "Progressives",
+            "resource": "consumer_goods",
+            "enemyEthic": "authoritarian",
+            "EnemyEthic": "Authoritarian",
+            "enemyFaction": "totalitarian",
+            "EnemyFaction": "Totalitarian",
+            "enemyAdjective": "totalitarian",
+            "EnemyAdjective": "Totalitarians"
         },
         {
             "varname": "technologist_faction",
@@ -30,7 +54,15 @@
             "Ethic": "Materialist",
             "faction": "technologist",
             "Faction": "Technologist",
-            "resource": "alloys"
+            "adjective": "technologist",
+            "Adjective": "Technologist",
+            "resource": "alloys",
+            "enemyEthic": "spiritualist",
+            "EnemyEthic": "Spiritualist",
+            "enemyFaction": "traditionalist",
+            "EnemyFaction": "Traditionalist",
+            "enemyAdjective": "traditionalist",
+            "EnemyAdjective": "Traditionalist"
         },
         {
             "varname": "prosperity_faction",
@@ -38,7 +70,15 @@
             "Ethic": "Pacifist",
             "faction": "prosperity",
             "Faction": "Prosperity",
-            "resource": "consumer_goods"
+            "adjective": "pacifist",
+            "Adjective": "Pacifist",
+            "resource": "consumer_goods",
+            "enemyEthic": "militarist",
+            "EnemyEthic": "Militarist",
+            "enemyFaction": "imperialist",
+            "EnemyFaction": "Imperialist",
+            "enemyAdjective": "imperialist",
+            "EnemyAdjective": "Imperialists"
         },
         {
             "varname": "xenoist_faction",
@@ -46,7 +86,15 @@
             "Ethic": "Xenophile",
             "faction": "xenoist",
             "Faction": "Xenoist",
-            "resource": "consumer_goods"
+            "adjective": "xenoist",
+            "Adjective": "Xenoist",
+            "resource": "consumer_goods",
+            "enemyEthic": "xenophobe",
+            "EnemyEthic": "Xenophobe",
+            "enemyFaction": "supremacist",
+            "EnemyFaction": "Supremacist",
+            "enemyAdjective": "supremacist",
+            "EnemyAdjective": "Supremacist"
         },
         {
             "varname": "totalitarian_faction",
@@ -54,7 +102,15 @@
             "Ethic": "Authoritarian",
             "faction": "totalitarian",
             "Faction": "Totalitarian",
-            "resource": "alloys"
+            "adjective": "authoritarian",
+            "Adjective": "Authoritarian",
+            "resource": "alloys",
+            "enemyEthic": "egalitarian",
+            "EnemyEthic": "Egalitarian",
+            "enemyFaction": "progressive",
+            "EnemyFaction": "Progressive",
+            "enemyAdjective": "progressive",
+            "EnemyAdjective": "Progressives"
         },
         {
             "varname": "traditionalist_faction",
@@ -62,7 +118,15 @@
             "Ethic": "Spiritualist",
             "faction": "traditionalist",
             "Faction": "Traditionalist",
-            "resource": "consumer_goods"
+            "adjective": "traditionalist",
+            "Adjective": "Traditionalist",
+            "resource": "consumer_goods",
+            "enemyEthic": "materialist",
+            "EnemyEthic": "Materialist",
+            "enemyFaction": "technologist",
+            "EnemyFaction": "Technologist",
+            "enemyAdjective": "technologist",
+            "EnemyAdjective": "Technologist"
         }
     ]
 }

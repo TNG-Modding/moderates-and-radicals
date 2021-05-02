@@ -83,25 +83,24 @@ country_event = {
     is_triggered_only = yes
 
     picture = GFX_evt_assembly_fight
-    show_sound = event_super_explosion
+    show_sound = event_factions
 
-    hidden_effect = {
+    immediate = {
         country_event = { id = confrontations.1 }
     }
 
     option = {
         name = confrontations_{{faction}}.10.a
 
-        hidden_effect = {
-            export_resource_income_to_variable = {
-                resource = {{resource}}
-                variable = current_monthly_{{resource}}_income
-            }
-            multiply_variable = {
-                which = current_monthly_{{resource}}_income
-                value = 6
-            }
+        export_resource_income_to_variable = {
+            resource = {{resource}}
+            variable = current_monthly_{{resource}}_income
         }
+        multiply_variable = {
+            which = current_monthly_{{resource}}_income
+            value = 6
+        }
+        
         add_resource = {
             {{resource}} = 1
             mult = current_monthly_{{resource}}_income
@@ -130,10 +129,10 @@ country_event = {
 
     is_triggered_only = yes
 
-    picture = GFX_evt_burning_city
-    show_sound = event_air_raid_siren_02
+    picture = GFX_evt_night_raid
+    show_sound = event_super_explosion
 
-    hidden_effect = {
+    immediate = {
         country_event = { id = confrontations.1 }
     }
 
@@ -177,12 +176,12 @@ country_event = {
     picture = GFX_evt_burning_city
     show_sound = event_air_raid_siren
 
-    hidden_effect = {
+    immediate = {
         country_event = { id = confrontations.1 }
     }
 
     option = {
-        name = confrontations_{{faction}}.20.a
+        name = confrontations_{{faction}}.30.a
 
         add_modifier = {
             modifier = {{faction}}_violent_riots_continue_modifier
@@ -190,7 +189,7 @@ country_event = {
         }
     }
     option = {
-        name = confrontations_{{faction}}.20.b
+        name = confrontations_{{faction}}.30.b
 
         add_modifier = {
             modifier = {{faction}}_violent_riots_stopped_modifier
@@ -208,10 +207,10 @@ country_event = {
 
     is_triggered_only = yes
 
-    picture = GFX_evt_announcement
-    show_sound = event_factions
+    picture = GFX_evt_open_revolt
+    show_sound = event_super_explosion
 
-    hidden_effect = {
+    immediate = {
         country_event = { id = confrontations.1 }
     }
 

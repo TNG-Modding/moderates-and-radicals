@@ -8,21 +8,21 @@ xenoist_debates_stopped_modifier = {
 }
 
 xenoist_riots_continue_modifier = {
-	country_consumer_goods_produces_add = 60
-	country_xenoist_militancy_produces_add = 0.1
+	country_xenoist_militancy_produces_add = 0.25
 }
 
 xenoist_riots_stopped_modifier = {
-	country_xenoist_militancy_produces_add = 0.2
+	country_xenoist_militancy_produces_add = 0.25
 }
 
 xenoist_violent_riots_continue_modifier = {
 	all_technology_research_speed = -0.1
 	country_xenoist_militancy_produces_add = 0.1
+	country_supremacist_militancy_produces_add = 0.5
 }
 
 xenoist_violent_riots_stopped_modifier = {
-	country_xenoist_militancy_produces_add = 0.25
+	country_xenoist_militancy_produces_add = 1
 }
 
 xenoist_coup_continue_modifier = {

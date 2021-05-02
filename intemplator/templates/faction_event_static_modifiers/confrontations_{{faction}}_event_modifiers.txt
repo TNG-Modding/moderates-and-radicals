@@ -8,21 +8,21 @@
 }
 
 {{faction}}_riots_continue_modifier = {
-	country_{{resource}}_produces_add = 60
-	country_{{faction}}_militancy_produces_add = 0.1
+	country_{{faction}}_militancy_produces_add = 0.25
 }
 
 {{faction}}_riots_stopped_modifier = {
-	country_{{faction}}_militancy_produces_add = 0.2
+	country_{{faction}}_militancy_produces_add = 0.25
 }
 
 {{faction}}_violent_riots_continue_modifier = {
 	all_technology_research_speed = -0.1
 	country_{{faction}}_militancy_produces_add = 0.1
+	country_{{enemyFaction}}_militancy_produces_add = 0.5
 }
 
 {{faction}}_violent_riots_stopped_modifier = {
-	country_{{faction}}_militancy_produces_add = 0.25
+	country_{{faction}}_militancy_produces_add = 1
 }
 
 {{faction}}_coup_continue_modifier = {

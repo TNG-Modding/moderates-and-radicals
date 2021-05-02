@@ -1,30 +1,30 @@
 ﻿l_english:
 
- confrontations_progressive.10:0 "A Political Debate"
- confrontations_progressive.10.desc:0 "The egalitarians within the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of overly egalitarian language in the latest government policy plan has angered many factions within our government."
- confrontations_progressive.10.a:0 "Support the policy."
- progressive_debates_continue_modifier:0 "Progressive Debates Continue"
+ confrontations_progressive.10:0 "Egalitarian Policy"
+ confrontations_progressive.10.desc:0 "The progressives within the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of egalitarian language in the latest government policy plan has angered many factions within our government."
+ confrontations_progressive.10.a:0 "Support the progressive policy."
+ progressive_debates_continue_modifier:0 "Progressives Policy Wording Used"
  confrontations_progressive.10.b:0 "Strike the wording from the policy."
- progressive_debates_stopped_modifier:0 "Progressive Debates Stopped"
+ progressive_debates_stopped_modifier:0 "Progressives Policy Wording Rewritten"
 
- confrontations_progressive.20:0 "Riots"
- confrontations_progressive.20.desc:0 "The egalitarians within the [Root.GetName] have taken to the streets of [Root.Capital.GetName] causing chaos and disorder. Progressives can be found everywhere making speeches pushing progressive talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Progressive emissaries have approached our government asking us to endorse their movement."
- confrontations_progressive.20.a:0 "Endorse the s."
- progressive_riots_continue_modifier:0 "Progressive Riots Continue"
+ confrontations_progressive.20:0 "Progressives Riots"
+ confrontations_progressive.20.desc:0 "The progressives within the [Root.GetName] have taken to the streets of [Root.Capital.GetName] causing chaos and disorder. Progressivess can be found everywhere making speeches pushing egalitarian talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Progressives emissaries have approached our government asking us to endorse their movement."
+ confrontations_progressive.20.a:0 "Endorse the egalitarians."
+ progressive_riots_continue_modifier:0 "Egalitarian Riots Continue"
  confrontations_progressive.20.b:0 "Shut them down!"
- progressive_riots_stopped_modifier:0 "Progressive Riots Stopped"
+ progressive_riots_stopped_modifier:0 "Egalitarian Riots Stopped"
 
- confrontations_progressive.30:0 "Destruction of Propaganda"
- confrontations_progressive.30.desc:0 "The egalitarians within the [Root.GetName] have gathered on [Root.Capital.GetName] in an informal gathering demanding progressive teachings in schools. They are destroying any datalogs or holo-vids that contain propaganda that doesn't support the progressive point of view. The fires from the destruction can be seen from the very steps of the capitol."
+ confrontations_progressive.30:0 "Destruction of Totalitarian Propaganda"
+ confrontations_progressive.30.desc:0 "The progressives within the [Root.GetName] have gathered on [Root.Capital.GetName] to demand we strike authoritarian teachings from all government curriculum. They have taken it upon themselves to destroy datalogs and holo-vids that contain totalitarian propaganda. The fires from the destruction can be seen from the very steps of the capitol. The totalitarians are understandably upset, and they are asking us to denounce the destruction."
  confrontations_progressive.30.a:0 "Let the fires continue."
- progressive_violent_riots_continue_modifier:0 "Progressive Holovid Burning Continues"
+ progressive_violent_riots_continue_modifier:0 "Totalitarians Holovid Burning Continues"
  confrontations_progressive.30.b:0 "Stop the fires!"
- progressive_violent_riots_stopped_modifier:0 "Holovid Burning Stopped"
+ progressive_violent_riots_stopped_modifier:0 "Totalitarians Burning Stopped"
 
- confrontations_progressive.40:0 "Egalitarian Coup!"
- confrontations_progressive.40.desc:0 "The egalitarians have staged a coup within our empire! A new government has been declared and much of the ruling class has sought asylum outside our empire. Without the support of our ruler class, we have no choice but to accept their demands."
+ confrontations_progressive.40:0 "Progressives Coup!"
+ confrontations_progressive.40.desc:0 "The progressives have staged a coup within our empire! A new government has been declared that properly enshrines egalitarian ideals. This sudden change has left our empire in disorder, as many of the ruling class have sought asylum outside our borders where totalitarian views might be more welcome. Without the support of our ruling class, we have no choice but to accept their demands."
  confrontations_progressive.40.a:0 "Blasted progressives!"
- progressive_coup_continue_modifier:0 "Successful Progressive coup."
+ progressive_coup_continue_modifier:0 "Successful Progressives Coup."
 
 
 

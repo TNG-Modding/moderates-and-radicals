@@ -1,30 +1,30 @@
 ﻿l_english:
 
- confrontations_imperialist.10:0 "A Political Debate"
- confrontations_imperialist.10.desc:0 "The militarists within the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of overly militarist language in the latest government policy plan has angered many factions within our government."
- confrontations_imperialist.10.a:0 "Support the policy."
- imperialist_debates_continue_modifier:0 "Imperialist Debates Continue"
+ confrontations_imperialist.10:0 "Militarist Policy"
+ confrontations_imperialist.10.desc:0 "The imperialists within the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of militarist language in the latest government policy plan has angered many factions within our government."
+ confrontations_imperialist.10.a:0 "Support the imperialist policy."
+ imperialist_debates_continue_modifier:0 "Imperialist Policy Wording Used"
  confrontations_imperialist.10.b:0 "Strike the wording from the policy."
- imperialist_debates_stopped_modifier:0 "Imperialist Debates Stopped"
+ imperialist_debates_stopped_modifier:0 "Imperialist Policy Wording Rewritten"
 
- confrontations_imperialist.20:0 "Riots"
- confrontations_imperialist.20.desc:0 "The militarists within the [Root.GetName] have taken to the streets of [Root.Capital.GetName] causing chaos and disorder. Imperialists can be found everywhere making speeches pushing imperialist talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Imperialist emissaries have approached our government asking us to endorse their movement."
- confrontations_imperialist.20.a:0 "Endorse the s."
- imperialist_riots_continue_modifier:0 "Imperialist Riots Continue"
+ confrontations_imperialist.20:0 "Imperialist Riots"
+ confrontations_imperialist.20.desc:0 "The imperialists within the [Root.GetName] have taken to the streets of [Root.Capital.GetName] causing chaos and disorder. Imperialists can be found everywhere making speeches pushing militarist talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Imperialist emissaries have approached our government asking us to endorse their movement."
+ confrontations_imperialist.20.a:0 "Endorse the militarists."
+ imperialist_riots_continue_modifier:0 "Militarist Riots Continue"
  confrontations_imperialist.20.b:0 "Shut them down!"
- imperialist_riots_stopped_modifier:0 "Imperialist Riots Stopped"
+ imperialist_riots_stopped_modifier:0 "Militarist Riots Stopped"
 
- confrontations_imperialist.30:0 "Destruction of Propaganda"
- confrontations_imperialist.30.desc:0 "The militarists within the [Root.GetName] have gathered on [Root.Capital.GetName] in an informal gathering demanding imperialist teachings in schools. They are destroying any datalogs or holo-vids that contain propaganda that doesn't support the imperialist point of view. The fires from the destruction can be seen from the very steps of the capitol."
+ confrontations_imperialist.30:0 "Destruction of Prosperity Propaganda"
+ confrontations_imperialist.30.desc:0 "The imperialists within the [Root.GetName] have gathered on [Root.Capital.GetName] to demand we strike pacifist teachings from all government curriculum. They have taken it upon themselves to destroy datalogs and holo-vids that contain pacifist propaganda. The fires from the destruction can be seen from the very steps of the capitol. The pacifists are understandably upset, and they are asking us to denounce the destruction."
  confrontations_imperialist.30.a:0 "Let the fires continue."
- imperialist_violent_riots_continue_modifier:0 "Imperialist Holovid Burning Continues"
+ imperialist_violent_riots_continue_modifier:0 "Pacifist Holovid Burning Continues"
  confrontations_imperialist.30.b:0 "Stop the fires!"
- imperialist_violent_riots_stopped_modifier:0 "Holovid Burning Stopped"
+ imperialist_violent_riots_stopped_modifier:0 "Pacifist Burning Stopped"
 
- confrontations_imperialist.40:0 "Militarist Coup!"
- confrontations_imperialist.40.desc:0 "The militarists have staged a coup within our empire! A new government has been declared and much of the ruling class has sought asylum outside our empire. Without the support of our ruler class, we have no choice but to accept their demands."
+ confrontations_imperialist.40:0 "Imperialist Coup!"
+ confrontations_imperialist.40.desc:0 "The imperialists have staged a coup within our empire! A new government has been declared that properly enshrines militarist ideals. This sudden change has left our empire in disorder, as many of the ruling class have sought asylum outside our borders where pacifist views might be more welcome. Without the support of our ruling class, we have no choice but to accept their demands."
  confrontations_imperialist.40.a:0 "Blasted imperialists!"
- imperialist_coup_continue_modifier:0 "Successful Imperialist coup."
+ imperialist_coup_continue_modifier:0 "Successful Imperialist Coup."
 
 
 

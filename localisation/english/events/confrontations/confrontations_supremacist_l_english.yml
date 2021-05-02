@@ -1,30 +1,30 @@
 ﻿l_english:
 
- confrontations_supremacist.10:0 "A Political Debate"
- confrontations_supremacist.10.desc:0 "The xenophobes within the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of overly xenophobe language in the latest government policy plan has angered many factions within our government."
- confrontations_supremacist.10.a:0 "Support the policy."
- supremacist_debates_continue_modifier:0 "Supremacist Debates Continue"
+ confrontations_supremacist.10:0 "Xenophobe Policy"
+ confrontations_supremacist.10.desc:0 "The supremacists within the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of xenophobe language in the latest government policy plan has angered many factions within our government."
+ confrontations_supremacist.10.a:0 "Support the supremacist policy."
+ supremacist_debates_continue_modifier:0 "Supremacist Policy Wording Used"
  confrontations_supremacist.10.b:0 "Strike the wording from the policy."
- supremacist_debates_stopped_modifier:0 "Supremacist Debates Stopped"
+ supremacist_debates_stopped_modifier:0 "Supremacist Policy Wording Rewritten"
 
- confrontations_supremacist.20:0 "Riots"
- confrontations_supremacist.20.desc:0 "The xenophobes within the [Root.GetName] have taken to the streets of [Root.Capital.GetName] causing chaos and disorder. Supremacists can be found everywhere making speeches pushing supremacist talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Supremacist emissaries have approached our government asking us to endorse their movement."
- confrontations_supremacist.20.a:0 "Endorse the s."
- supremacist_riots_continue_modifier:0 "Supremacist Riots Continue"
+ confrontations_supremacist.20:0 "Supremacist Riots"
+ confrontations_supremacist.20.desc:0 "The supremacists within the [Root.GetName] have taken to the streets of [Root.Capital.GetName] causing chaos and disorder. Supremacists can be found everywhere making speeches pushing xenophobe talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Supremacist emissaries have approached our government asking us to endorse their movement."
+ confrontations_supremacist.20.a:0 "Endorse the xenophobes."
+ supremacist_riots_continue_modifier:0 "Xenophobe Riots Continue"
  confrontations_supremacist.20.b:0 "Shut them down!"
- supremacist_riots_stopped_modifier:0 "Supremacist Riots Stopped"
+ supremacist_riots_stopped_modifier:0 "Xenophobe Riots Stopped"
 
- confrontations_supremacist.30:0 "Destruction of Propaganda"
- confrontations_supremacist.30.desc:0 "The xenophobes within the [Root.GetName] have gathered on [Root.Capital.GetName] in an informal gathering demanding supremacist teachings in schools. They are destroying any datalogs or holo-vids that contain propaganda that doesn't support the supremacist point of view. The fires from the destruction can be seen from the very steps of the capitol."
+ confrontations_supremacist.30:0 "Destruction of Xenoist Propaganda"
+ confrontations_supremacist.30.desc:0 "The supremacists within the [Root.GetName] have gathered on [Root.Capital.GetName] to demand we strike xenophile teachings from all government curriculum. They have taken it upon themselves to destroy datalogs and holo-vids that contain xenoist propaganda. The fires from the destruction can be seen from the very steps of the capitol. The xenoists are understandably upset, and they are asking us to denounce the destruction."
  confrontations_supremacist.30.a:0 "Let the fires continue."
- supremacist_violent_riots_continue_modifier:0 "Supremacist Holovid Burning Continues"
+ supremacist_violent_riots_continue_modifier:0 "Xenoists Holovid Burning Continues"
  confrontations_supremacist.30.b:0 "Stop the fires!"
- supremacist_violent_riots_stopped_modifier:0 "Holovid Burning Stopped"
+ supremacist_violent_riots_stopped_modifier:0 "Xenoists Burning Stopped"
 
- confrontations_supremacist.40:0 "Xenophobe Coup!"
- confrontations_supremacist.40.desc:0 "The xenophobes have staged a coup within our empire! A new government has been declared and much of the ruling class has sought asylum outside our empire. Without the support of our ruler class, we have no choice but to accept their demands."
+ confrontations_supremacist.40:0 "Supremacist Coup!"
+ confrontations_supremacist.40.desc:0 "The supremacists have staged a coup within our empire! A new government has been declared that properly enshrines xenophobe ideals. This sudden change has left our empire in disorder, as many of the ruling class have sought asylum outside our borders where xenoist views might be more welcome. Without the support of our ruling class, we have no choice but to accept their demands."
  confrontations_supremacist.40.a:0 "Blasted supremacists!"
- supremacist_coup_continue_modifier:0 "Successful Supremacist coup."
+ supremacist_coup_continue_modifier:0 "Successful Supremacist Coup."
 
 
 

@@ -8,21 +8,21 @@ progressive_debates_stopped_modifier = {
 }
 
 progressive_riots_continue_modifier = {
-	country_consumer_goods_produces_add = 60
-	country_progressive_militancy_produces_add = 0.1
+	country_progressive_militancy_produces_add = 0.25
 }
 
 progressive_riots_stopped_modifier = {
-	country_progressive_militancy_produces_add = 0.2
+	country_progressive_militancy_produces_add = 0.25
 }
 
 progressive_violent_riots_continue_modifier = {
 	all_technology_research_speed = -0.1
 	country_progressive_militancy_produces_add = 0.1
+	country_totalitarian_militancy_produces_add = 0.5
 }
 
 progressive_violent_riots_stopped_modifier = {
-	country_progressive_militancy_produces_add = 0.25
+	country_progressive_militancy_produces_add = 1
 }
 
 progressive_coup_continue_modifier = {
