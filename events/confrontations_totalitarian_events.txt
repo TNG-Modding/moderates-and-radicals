@@ -1,8 +1,8 @@
-namespace = totalitarian_confrontations
+namespace = confrontations_totalitarian
 
 # totalitarian
 country_event = {
-    id = totalitarian_confrontations.1
+    id = confrontations_totalitarian.1
     hide_window = yes
 
     is_triggered_only = no
@@ -47,7 +47,7 @@ country_event = {
                     value > 75
                 }
             }
-            country_event = { id = totalitarian_confrontations.40 }
+            country_event = { id = confrontations_totalitarian.40 }
         }	
         else_if = {
             limit = {
@@ -56,7 +56,7 @@ country_event = {
                     value > 50
                 }
             }
-            country_event = { id = totalitarian_confrontations.30 }
+            country_event = { id = confrontations_totalitarian.30 }
         }
         else_if = {
             limit = {
@@ -65,19 +65,19 @@ country_event = {
                     value > 25
                 }
             }
-            country_event = { id = totalitarian_confrontations.20 }
+            country_event = { id = confrontations_totalitarian.20 }
         }
         else = {
-            country_event = { id = totalitarian_confrontations.10 }
+            country_event = { id = confrontations_totalitarian.10 }
         }	
     }
 }
 
 # Political debate
 country_event = {
-    id = totalitarian_confrontations.10
-    title = totalitarian_confrontations.10
-    desc = totalitarian_confrontations.10.desc
+    id = confrontations_totalitarian.10
+    title = confrontations_totalitarian.10
+    desc = confrontations_totalitarian.10.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -85,26 +85,26 @@ country_event = {
     picture = GFX_evt_assembly_fight
     show_sound = event_super_explosion
 
-    immediate = {
-        
+    hidden_effect = {
+        country_event = { id = confrontations.1 }
     }
 
     option = {
-        name = totalitarian_confrontations.10.a
+        name = confrontations_totalitarian.10.a
 
         hidden_effect = {
             export_resource_income_to_variable = {
                 resource = alloys
-                variable = monthly_alloys_income
+                variable = current_monthly_alloys_income
             }
             multiply_variable = {
-                which = monthly_alloys_income
+                which = current_monthly_alloys_income
                 value = 6
             }
         }
         add_resource = {
             alloys = 1
-            mult = monthly_alloys_income
+            mult = current_monthly_alloys_income
         }
         add_modifier = {
             modifier = totalitarian_debates_continue_modifier
@@ -112,7 +112,7 @@ country_event = {
         }
     }
     option = {
-        name = totalitarian_confrontations.10.b
+        name = confrontations_totalitarian.10.b
 
         add_modifier = {
             modifier = totalitarian_debates_stopped_modifier
@@ -123,22 +123,22 @@ country_event = {
 
 # Riots
 country_event = {
-    id = totalitarian_confrontations.20
-    title = totalitarian_confrontations.20
-    desc = totalitarian_confrontations.20.desc
+    id = confrontations_totalitarian.20
+    title = confrontations_totalitarian.20
+    desc = confrontations_totalitarian.20.desc
     hide_window = no
 
     is_triggered_only = yes
 
-    picture = GFX_evt_assembly_fight
-    show_sound = event_super_explosion
+    picture = GFX_evt_burning_city
+    show_sound = event_air_raid_siren_02
 
-    immediate = {
-        
+    hidden_effect = {
+        country_event = { id = confrontations.1 }
     }
 
     option = {
-        name = totalitarian_confrontations.20.a
+        name = confrontations_totalitarian.20.a
 
         add_modifier = {
             modifier = totalitarian_riots_continue_modifier
@@ -156,7 +156,7 @@ country_event = {
     }
 
     option = {
-        name = totalitarian_confrontations.20.b
+        name = confrontations_totalitarian.20.b
 
         add_modifier = {
             modifier = totalitarian_riots_stopped_modifier
@@ -167,22 +167,22 @@ country_event = {
 
 # Book Burning
 country_event = {
-    id = totalitarian_confrontations.30
-    title = totalitarian_confrontations.30
-    desc = totalitarian_confrontations.30.desc
+    id = confrontations_totalitarian.30
+    title = confrontations_totalitarian.30
+    desc = confrontations_totalitarian.30.desc
     hide_window = no
 
     is_triggered_only = yes
 
-    picture = GFX_evt_assembly_fight
-    show_sound = event_super_explosion
+    picture = GFX_evt_burning_city
+    show_sound = event_air_raid_siren
 
-    immediate = {
-        
+    hidden_effect = {
+        country_event = { id = confrontations.1 }
     }
 
     option = {
-        name = totalitarian_confrontations.20.a
+        name = confrontations_totalitarian.20.a
 
         add_modifier = {
             modifier = totalitarian_violent_riots_continue_modifier
@@ -190,7 +190,7 @@ country_event = {
         }
     }
     option = {
-        name = totalitarian_confrontations.20.b
+        name = confrontations_totalitarian.20.b
 
         add_modifier = {
             modifier = totalitarian_violent_riots_stopped_modifier
@@ -201,22 +201,22 @@ country_event = {
 
 # Coup
 country_event = {
-    id = totalitarian_confrontations.40
-    title = totalitarian_confrontations.40
-    desc = totalitarian_confrontations.40.desc
+    id = confrontations_totalitarian.40
+    title = confrontations_totalitarian.40
+    desc = confrontations_totalitarian.40.desc
     hide_window = no
 
     is_triggered_only = yes
 
-    picture = GFX_evt_assembly_fight
-    show_sound = event_super_explosion
+    picture = GFX_evt_announcement
+    show_sound = event_factions
 
-    immediate = {
-        
+    hidden_effect = {
+        country_event = { id = confrontations.1 }
     }
 
     option = {
-        name = totalitarian_confrontations.40.a
+        name = confrontations_totalitarian.40.a
         
         if = {
             limit = { 

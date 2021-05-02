@@ -1,10 +1,10 @@
 xenoist_debates_continue_modifier = {
 	country_ideological_purity_produces_add = -0.2
-	country_xenoist_militancy_produces_add = 0.2
+	country_xenoist_militancy_produces_add = 0.1
 }
 
 xenoist_debates_stopped_modifier = {
-	country_xenoist_militancy_produces_add = 0.1
+	country_xenoist_militancy_produces_add = 1
 }
 
 xenoist_riots_continue_modifier = {

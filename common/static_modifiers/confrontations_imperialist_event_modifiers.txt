@@ -1,10 +1,10 @@
 imperialist_debates_continue_modifier = {
 	country_ideological_purity_produces_add = -0.2
-	country_imperialist_militancy_produces_add = 0.2
+	country_imperialist_militancy_produces_add = 0.1
 }
 
 imperialist_debates_stopped_modifier = {
-	country_imperialist_militancy_produces_add = 0.1
+	country_imperialist_militancy_produces_add = 1
 }
 
 imperialist_riots_continue_modifier = {

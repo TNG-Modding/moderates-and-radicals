@@ -1,10 +1,10 @@
 totalitarian_debates_continue_modifier = {
 	country_ideological_purity_produces_add = -0.2
-	country_totalitarian_militancy_produces_add = 0.2
+	country_totalitarian_militancy_produces_add = 0.1
 }
 
 totalitarian_debates_stopped_modifier = {
-	country_totalitarian_militancy_produces_add = 0.1
+	country_totalitarian_militancy_produces_add = 1
 }
 
 totalitarian_riots_continue_modifier = {

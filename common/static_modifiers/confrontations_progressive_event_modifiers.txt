@@ -1,10 +1,10 @@
 progressive_debates_continue_modifier = {
 	country_ideological_purity_produces_add = -0.2
-	country_progressive_militancy_produces_add = 0.2
+	country_progressive_militancy_produces_add = 0.1
 }
 
 progressive_debates_stopped_modifier = {
-	country_progressive_militancy_produces_add = 0.1
+	country_progressive_militancy_produces_add = 1
 }
 
 progressive_riots_continue_modifier = {
