@@ -12,14 +12,18 @@ xenoist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
 			xenoist_support = 1
+		}
+		produces = {
+			trigger = {
+				years_passed > 10
+				has_encountered_other_species = yes
+			}
+			influence = 2
 		}
 	}
 
 	is_potential = {
-		#years_passed > 10
-		#has_encountered_other_species = yes
 		NOR = { 
 			has_ethic = ethic_gestalt_consciousness 
 			has_ethic = ethic_fanatic_xenophobe

@@ -12,15 +12,19 @@ gov_imperialist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
 			ideological_purity = 1
 			imperialist_support = 1
+		}
+		produces = {
+			trigger = {
+				years_passed > 10
+				has_encountered_other_species = yes
+			}
+			influence = 2
 		}
 	}
 
 	is_potential = {
-		#years_passed > 10
-		#has_encountered_other_species = yes
 		OR = {  
 			has_ethic = ethic_fanatic_militarist
 			has_ethic = ethic_militarist
