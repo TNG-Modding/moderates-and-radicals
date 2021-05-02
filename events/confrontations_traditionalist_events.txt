@@ -44,11 +44,38 @@ country_event = {
             limit = {
                 check_variable = {
                     which = current_traditionalist_militancy
-                    value > 75
+                    value > 90
                 }
             }
-            country_event = { id = confrontations_traditionalist.40 }
+            every_pop_faction = {
+                limit = {
+                    OR = {
+                        is_pop_faction_type = gov_traditionalist
+                        is_pop_faction_type = traditionalist_radicals
+                        is_pop_faction_type = traditionalist
+                    }
+                }
+                pop_faction_event = { id = confrontations_traditionalist.90 }
+            }
         }	
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = current_traditionalist_militancy
+                    value > 80
+                }
+            }
+            every_pop_faction = {
+                limit = {
+                    OR = {
+                        is_pop_faction_type = gov_traditionalist
+                        is_pop_faction_type = traditionalist_radicals
+                        is_pop_faction_type = traditionalist
+                    }
+                }
+                pop_faction_event = { id = confrontations_traditionalist.80 }
+            }
+        }
         else_if = {
             limit = {
                 check_variable = {
@@ -56,7 +83,16 @@ country_event = {
                     value > 50
                 }
             }
-            country_event = { id = confrontations_traditionalist.30 }
+            every_pop_faction = {
+                limit = {
+                    OR = {
+                        is_pop_faction_type = gov_traditionalist
+                        is_pop_faction_type = traditionalist_radicals
+                        is_pop_faction_type = traditionalist
+                    }
+                }
+                pop_faction_event = { id = confrontations_traditionalist.30 }
+            }
         }
         else_if = {
             limit = {
@@ -65,16 +101,35 @@ country_event = {
                     value > 25
                 }
             }
-            country_event = { id = confrontations_traditionalist.20 }
+            every_pop_faction = {
+                limit = {
+                    OR = {
+                        is_pop_faction_type = gov_traditionalist
+                        is_pop_faction_type = traditionalist_radicals
+                        is_pop_faction_type = traditionalist
+                    }
+                }
+                pop_faction_event = { id = confrontations_traditionalist.20 }
+            }
         }
         else = {
-            country_event = { id = confrontations_traditionalist.10 }
-        }	
+            every_pop_faction = {
+                limit = {
+                    OR = {
+                        is_pop_faction_type = gov_traditionalist
+                        is_pop_faction_type = traditionalist_radicals
+                        is_pop_faction_type = traditionalist
+                    }
+                }
+                pop_faction_event = { id = confrontations_traditionalist.10 }
+            }
+        }	 
     }
 }
 
+
 # Political debate
-country_event = {
+pop_faction_event = {
     id = confrontations_traditionalist.10
     title = confrontations_traditionalist.10
     desc = confrontations_traditionalist.10.desc
@@ -86,42 +141,46 @@ country_event = {
     show_sound = event_factions
 
     immediate = {
-        country_event = { id = confrontations.1 }
+        owner = { country_event = { id = confrontations.1 } }
     }
 
     option = {
         name = confrontations_traditionalist.10.a
 
-        export_resource_income_to_variable = {
-            resource = consumer_goods
-            variable = current_monthly_traditionalist_consumer_goods_income
-        }
-        multiply_variable = {
-            which = current_monthly_traditionalist_consumer_goods_income
-            value = 6
-        }
-        
-        add_resource = {
-            consumer_goods = 1
-            mult = current_monthly_traditionalist_consumer_goods_income
-        }
-        add_modifier = {
-            modifier = traditionalist_debates_continue_modifier
-            years = 3
+        owner = {
+            export_resource_income_to_variable = {
+                resource = consumer_goods
+                variable = current_monthly_traditionalist_consumer_goods_income
+            }
+            multiply_variable = {
+                which = current_monthly_traditionalist_consumer_goods_income
+                value = 6
+            }
+            
+            add_resource = {
+                consumer_goods = 1
+                mult = current_monthly_traditionalist_consumer_goods_income
+            }
+            add_modifier = {
+                modifier = traditionalist_debates_continue_modifier
+                years = 3
+            }
         }
     }
     option = {
         name = confrontations_traditionalist.10.b
 
-        add_modifier = {
-            modifier = traditionalist_debates_stopped_modifier
-            years = 3
+        owner = {
+            add_modifier = {
+                modifier = traditionalist_debates_stopped_modifier
+                years = 3
+            }
         }
     }
 }
 
 # Riots
-country_event = {
+pop_faction_event = {
     id = confrontations_traditionalist.20
     title = confrontations_traditionalist.20
     desc = confrontations_traditionalist.20.desc
@@ -133,39 +192,43 @@ country_event = {
     show_sound = event_super_explosion
 
     immediate = {
-        country_event = { id = confrontations.1 }
+        owner = { country_event = { id = confrontations.1 } }
     }
 
     option = {
         name = confrontations_traditionalist.20.a
 
-        add_modifier = {
-            modifier = traditionalist_riots_continue_modifier
-            years = 3
-        }
-
-        random_owned_pop = {
-            limit = {
-                NOT = { 
-                    pop_has_ethic = ethic_spiritualist
-                }
+        owner = {
+            add_modifier = {
+                modifier = traditionalist_riots_continue_modifier
+                years = 3
             }
-            pop_change_ethic = ethic_spiritualist
+
+            random_owned_pop = {
+                limit = {
+                    NOT = { 
+                        pop_has_ethic = ethic_spiritualist
+                    }
+                }
+                pop_change_ethic = ethic_spiritualist
+            }
         }
     }
 
     option = {
         name = confrontations_traditionalist.20.b
 
-        add_modifier = {
-            modifier = traditionalist_riots_stopped_modifier
-            years = 3
+        owner = {
+            add_modifier = {
+                modifier = traditionalist_riots_stopped_modifier
+                years = 3
+            }
         }
     }
 }
 
 # Book Burning
-country_event = {
+pop_faction_event = {
     id = confrontations_traditionalist.30
     title = confrontations_traditionalist.30
     desc = confrontations_traditionalist.30.desc
@@ -177,32 +240,36 @@ country_event = {
     show_sound = event_air_raid_siren
 
     immediate = {
-        country_event = { id = confrontations.1 }
+        owner = { country_event = { id = confrontations.1 } }
     }
 
     option = {
         name = confrontations_traditionalist.30.a
 
-        add_modifier = {
-            modifier = traditionalist_violent_riots_continue_modifier
-            years = 3
+        owner = {
+            add_modifier = {
+                modifier = traditionalist_violent_riots_continue_modifier
+                years = 3
+            }
         }
     }
     option = {
         name = confrontations_traditionalist.30.b
 
-        add_modifier = {
-            modifier = traditionalist_violent_riots_stopped_modifier
-            years = 3
+        owner = {
+            add_modifier = {
+                modifier = traditionalist_violent_riots_stopped_modifier
+                years = 3
+            }
         }
     }
 }
 
-# Coup
-country_event = {
-    id = confrontations_traditionalist.40
-    title = confrontations_traditionalist.40
-    desc = confrontations_traditionalist.40.desc
+# Ruler assassination
+pop_faction_event = {
+    id = confrontations_traditionalist.80
+    title = confrontations_traditionalist.80
+    desc = confrontations_traditionalist.80.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -211,101 +278,142 @@ country_event = {
     show_sound = event_super_explosion
 
     immediate = {
-        country_event = { id = confrontations.1 }
+        owner = { country_event = { id = confrontations.1 } }
     }
 
     option = {
-        name = confrontations_traditionalist.40.a
+        name = confrontations_traditionalist.80.a
         
-        if = {
-            limit = { 
-                NOT = { 
-                    has_ethic = "ethic_fanatic_spiritualist" 
-                } 
+        owner = {
+            add_resource = {
+                ideological_purity = -25
+                traditionalist_militancy = 10
+                traditionalist_support = 10
             }
-            shift_ethic = ethic_spiritualist
+
+            add_modifier = {
+                modifier = traditionalist_ruler_assassination_continue_modifier
+                years = 3
+            }
+
+            # Kill ruler
+            kill_leader = {
+                type = ruler
+            }    
         }
+    }
+}
+
+# Coup
+pop_faction_event = {
+    id = confrontations_traditionalist.90
+    title = confrontations_traditionalist.90
+    desc = confrontations_traditionalist.90.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_open_revolt
+    show_sound = event_super_explosion
+
+    immediate = {
+        owner = { country_event = { id = confrontations.1 } }
+    }
+
+    option = {
+        name = confrontations_traditionalist.90.a
         
-        add_resource = {
-            ideological_purity = -25
-        }
+        owner = {
+            if = {
+                limit = { 
+                    NOT = { 
+                        has_ethic = "ethic_fanatic_spiritualist" 
+                    } 
+                }
+                shift_ethic = ethic_spiritualist
+            }
+            
+            add_resource = {
+                ideological_purity = -25
+            }
 
-        add_modifier = {
-            modifier = traditionalist_coup_continue_modifier
-            years = 3
-        }
+            add_modifier = {
+                modifier = traditionalist_coup_continue_modifier
+                years = 3
+            }
 
-        # Kill ruler
-        kill_leader = {
-            type = ruler
-        }
+            # Kill ruler
+            kill_leader = {
+                type = ruler
+            }
 
-        # Kill rulers of wrong ethic
-        if = {
-            limit = {
-                count_owned_pop = {
-                    count >= 3
+            # Kill rulers of wrong ethic
+            if = {
+                limit = {
+                    count_owned_pop = {
+                        count >= 3
+                        limit = {
+                            NOT = { pop_has_ethic = ethic_spiritualist }
+                            is_pop_category = ruler
+                        }
+                    }
+                }
+                random_owned_pop = {
                     limit = {
                         NOT = { pop_has_ethic = ethic_spiritualist }
                         is_pop_category = ruler
                     }
+                    kill_pop = yes
+                }
+                random_owned_pop = {
+                    limit = {
+                        NOT = { pop_has_ethic = ethic_spiritualist }
+                        is_pop_category	= ruler
+                    }
+                    kill_pop = yes
+                }
+                random_owned_pop = {
+                    limit = {
+                        NOT = { pop_has_ethic = ethic_spiritualist }
+                        is_pop_category	= ruler
+                    }
+                    kill_pop = yes
                 }
             }
-            random_owned_pop = {
-                limit = {
-                    NOT = { pop_has_ethic = ethic_spiritualist }
-                    is_pop_category = ruler
+            else = {
+                random_owned_pop = {
+                    limit = {
+                        NOT = { pop_has_ethic = ethic_spiritualist }
+                        is_pop_category	= ruler
+                    }
+                    kill_pop = yes
                 }
-                kill_pop = yes
-            }
-            random_owned_pop = {
-                limit = {
-                    NOT = { pop_has_ethic = ethic_spiritualist }
-                    is_pop_category	= ruler
+                random_owned_pop = {
+                    limit = {
+                        NOT = { pop_has_ethic = ethic_spiritualist }
+                        is_pop_category	= ruler
+                    }
+                    kill_pop = yes
                 }
-                kill_pop = yes
             }
-            random_owned_pop = {
-                limit = {
-                    NOT = { pop_has_ethic = ethic_spiritualist }
-                    is_pop_category	= ruler
-                }
-                kill_pop = yes
-            }
-        }
-        else = {
-            random_owned_pop = {
-                limit = {
-                    NOT = { pop_has_ethic = ethic_spiritualist }
-                    is_pop_category	= ruler
-                }
-                kill_pop = yes
-            }
-            random_owned_pop = {
-                limit = {
-                    NOT = { pop_has_ethic = ethic_spiritualist }
-                    is_pop_category	= ruler
-                }
-                kill_pop = yes
-            }
-        }
-        
+            
 
-        # Convert pops
+            # Convert pops
 
-        # Inform others
-        # every_relation = {
-        #     limit = {
-        #         is_ai = no
-        #         is_country_type = default
-        #         has_communications = prev
-        #         has_intel_level = {
-        #             who = prev
-        #             category = government
-        #             level >= 1
-        #         }
-        #     }
-        #     country_event = { id = factions.2000 }
-        # }        
+            # Inform others
+            # every_relation = {
+            #     limit = {
+            #         is_ai = no
+            #         is_country_type = default
+            #         has_communications = prev
+            #         has_intel_level = {
+            #             who = prev
+            #             category = government
+            #             level >= 1
+            #         }
+            #     }
+            #     country_event = { id = factions.2000 }
+            # }    
+        }    
     }
 }

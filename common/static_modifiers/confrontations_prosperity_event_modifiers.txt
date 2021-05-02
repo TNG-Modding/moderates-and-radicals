@@ -25,6 +25,10 @@ prosperity_violent_riots_stopped_modifier = {
 	country_prosperity_militancy_produces_add = 1
 }
 
+prosperity_ruler_assassination_continue_modifier = {
+	country_ideological_purity_produces_add = -0.2
+}
+
 prosperity_coup_continue_modifier = {
 	country_ideological_purity_produces_add = 0.2
 }

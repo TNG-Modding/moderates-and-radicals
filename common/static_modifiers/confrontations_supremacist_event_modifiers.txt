@@ -25,6 +25,10 @@ supremacist_violent_riots_stopped_modifier = {
 	country_supremacist_militancy_produces_add = 1
 }
 
+supremacist_ruler_assassination_continue_modifier = {
+	country_ideological_purity_produces_add = -0.2
+}
+
 supremacist_coup_continue_modifier = {
 	country_ideological_purity_produces_add = 0.2
 }

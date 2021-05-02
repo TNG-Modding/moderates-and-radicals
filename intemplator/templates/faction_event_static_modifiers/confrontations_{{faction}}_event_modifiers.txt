@@ -25,6 +25,10 @@
 	country_{{faction}}_militancy_produces_add = 1
 }
 
+{{faction}}_ruler_assassination_continue_modifier = {
+	country_ideological_purity_produces_add = -0.2
+}
+
 {{faction}}_coup_continue_modifier = {
 	country_ideological_purity_produces_add = 0.2
 }
