@@ -6,7 +6,8 @@
             "templateDirectoryPath": "./templates/faction_events",
             "outputDirectoryPath": "../events",
             "disabled": false,
-            "dumpContents": true
+            "dumpContents": true,
+            "isBom": false
         },
         {
             "name": "Faction Event Modifiers",
@@ -14,7 +15,8 @@
             "templateDirectoryPath": "./templates/faction_event_static_modifiers",
             "outputDirectoryPath": "../common/static_modifiers",
             "disabled": false,
-            "dumpContents": true
+            "dumpContents": true,
+            "isBom": false
         },
         {
             "name": "Faction Event Localization",
@@ -22,7 +24,8 @@
             "templateDirectoryPath": "./templates/faction_event_localization",
             "outputDirectoryPath": "../localisation/english/events/confrontations",
             "disabled": false,
-            "dumpContents": true
+            "dumpContents": true,
+            "isBom": true
         }
     ]
 }
