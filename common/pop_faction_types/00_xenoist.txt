@@ -16,8 +16,8 @@ xenoist = {
 		}
 		produces = {
 			trigger = {
-				years_passed > 10
-				has_encountered_other_species = yes
+				owner = { years_passed > 10
+				has_encountered_other_species = yes }
 			}
 			influence = 2
 		}
