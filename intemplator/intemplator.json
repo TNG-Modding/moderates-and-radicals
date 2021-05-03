@@ -1,29 +1,56 @@
 {
     "orders": [
         {
-            "name": "Faction Events",
+            "name": "Faction Confrontation Events",
             "specFilePath": "./specs/factions.json",
-            "templateDirectoryPath": "./templates/faction_events",
+            "templateDirectoryPath": "./templates/faction_confrontation_events",
             "outputDirectoryPath": "../events",
             "disabled": false,
             "dumpContents": true,
             "isBom": false
         },
         {
-            "name": "Faction Event Modifiers",
+            "name": "Faction Confrontation Event Static Modifiers",
             "specFilePath": "./specs/factions.json",
-            "templateDirectoryPath": "./templates/faction_event_static_modifiers",
+            "templateDirectoryPath": "./templates/faction_confrontation_event_static_modifiers",
             "outputDirectoryPath": "../common/static_modifiers",
             "disabled": false,
             "dumpContents": true,
             "isBom": false
         },
         {
-            "name": "Faction Event Localization",
+            "name": "Faction Confrontation Event Localization",
             "specFilePath": "./specs/factions.json",
-            "templateDirectoryPath": "./templates/faction_event_localization",
+            "templateDirectoryPath": "./templates/faction_confrontation_event_localization",
             "outputDirectoryPath": "../localisation/english/events/confrontations",
             "disabled": false,
+            "dumpContents": true,
+            "isBom": true
+        },
+        {
+            "name": "Faction Operation Events",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/faction_operation_events",
+            "outputDirectoryPath": "../events",
+            "disabled": false,
+            "dumpContents": true,
+            "isBom": false
+        },
+        {
+            "name": "Faction Operation Event Static Modifiers",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/faction_operation_event_static_modifiers",
+            "outputDirectoryPath": "../common/static_modifiers",
+            "disabled": false,
+            "dumpContents": true,
+            "isBom": false
+        },
+        {
+            "name": "Faction Operation Event Localization",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/faction_operation_event_localization",
+            "outputDirectoryPath": "../localisation/english/events/operations",
+            "disabled": true,
             "dumpContents": true,
             "isBom": true
         }

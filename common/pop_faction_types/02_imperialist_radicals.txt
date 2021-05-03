@@ -512,7 +512,7 @@ imperialist_radicals = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations.2 }
+				pop_faction_event = { id = operations_imperialist.2 }
 			}
 
 			ai_weight = {

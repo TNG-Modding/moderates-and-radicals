@@ -460,7 +460,7 @@ traditionalist_radicals = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations.2 }
+				pop_faction_event = { id = operations_traditionalist.2 }
 			}
 
 			ai_weight = {

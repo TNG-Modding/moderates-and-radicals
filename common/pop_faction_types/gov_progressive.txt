@@ -300,7 +300,7 @@ gov_progressive = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations.3 }
+				pop_faction_event = { id = operations_progressive.3 }
 			}
 
 			ai_weight = {

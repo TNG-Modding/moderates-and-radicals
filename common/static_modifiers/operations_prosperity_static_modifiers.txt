@@ -1,0 +1,9 @@
+# Prosperity Operations Static Modifiers
+anti_pacifist_diatribe_modifier = {
+	country_ideological_purity_produces_add = 0.2
+	country_prosperity_militancy_produces_add = -1
+}
+
+pacifist_radical_roundup_continue_modifier = {
+	country_prosperity_militancy_produces_add = -1
+}

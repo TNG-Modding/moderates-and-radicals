@@ -475,7 +475,7 @@ gov_traditionalist = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations.3 }
+				pop_faction_event = { id = operations_traditionalist.3 }
 			}
 
 			ai_weight = {

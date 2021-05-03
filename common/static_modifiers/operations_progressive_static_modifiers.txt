@@ -1,0 +1,9 @@
+# Progressive Operations Static Modifiers
+anti_progressive_diatribe_modifier = {
+	country_ideological_purity_produces_add = 0.2
+	country_progressive_militancy_produces_add = -1
+}
+
+progressive_radical_roundup_continue_modifier = {
+	country_progressive_militancy_produces_add = -1
+}

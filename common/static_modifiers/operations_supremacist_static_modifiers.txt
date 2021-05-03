@@ -1,0 +1,9 @@
+# Supremacist Operations Static Modifiers
+anti_supremacist_diatribe_modifier = {
+	country_ideological_purity_produces_add = 0.2
+	country_supremacist_militancy_produces_add = -1
+}
+
+supremacist_radical_roundup_continue_modifier = {
+	country_supremacist_militancy_produces_add = -1
+}

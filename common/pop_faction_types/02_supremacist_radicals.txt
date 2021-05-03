@@ -481,7 +481,7 @@ supremacist_radicals = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations.2 }
+				pop_faction_event = { id = operations_supremacist.2 }
 			}
 
 			ai_weight = {

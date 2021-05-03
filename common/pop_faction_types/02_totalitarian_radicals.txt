@@ -287,7 +287,7 @@ totalitarian_radicals = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations.2 }
+				pop_faction_event = { id = operations_totalitarian.2 }
 			}
 
 			ai_weight = {

@@ -1,0 +1,9 @@
+# Traditionalist Operations Static Modifiers
+anti_traditionalist_diatribe_modifier = {
+	country_ideological_purity_produces_add = 0.2
+	country_traditionalist_militancy_produces_add = -1
+}
+
+traditionalist_radical_roundup_continue_modifier = {
+	country_traditionalist_militancy_produces_add = -1
+}
