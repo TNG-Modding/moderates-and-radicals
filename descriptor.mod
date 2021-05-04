@@ -1,7 +1,6 @@
-version="1.2"
+version="1.0"
 tags={
 	"Gameplay"
 }
-name="Moderates and Radicals"
+name="[TNG] Factions Matter"
 supported_version="2.8.1"
-remote_file_id="2420559618"
