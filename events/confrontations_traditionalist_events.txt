@@ -63,7 +63,13 @@ country_event = {
                         is_pop_faction_type = traditionalist
                     }
                 }
-                pop_faction_event = { id = confrontations_traditionalist.90 }
+                random_list = {
+                    100 = {
+                        pop_faction_event = { id = confrontations_traditionalist.90 }
+                    }
+                    
+                }
+                
             }
         }	
         else_if = {
@@ -81,7 +87,11 @@ country_event = {
                         is_pop_faction_type = traditionalist
                     }
                 }
-                pop_faction_event = { id = confrontations_traditionalist.80 }
+                random_list = {
+                    100 = {
+                        pop_faction_event = { id = confrontations_traditionalist.80 }
+                    }
+                }
             }
         }
         else_if = {
@@ -99,7 +109,11 @@ country_event = {
                         is_pop_faction_type = traditionalist
                     }
                 }
-                pop_faction_event = { id = confrontations_traditionalist.30 }
+                random_list = {
+                    100 = {
+                        pop_faction_event = { id = confrontations_traditionalist.30 }
+                    }
+                }
             }
         }
         else_if = {
@@ -117,7 +131,11 @@ country_event = {
                         is_pop_faction_type = traditionalist
                     }
                 }
-                pop_faction_event = { id = confrontations_traditionalist.20 }
+                random_list = {
+                    100 = {
+                        pop_faction_event = { id = confrontations_traditionalist.20 }
+                    }
+                }
             }
         }
         else = {
@@ -129,7 +147,11 @@ country_event = {
                         is_pop_faction_type = traditionalist
                     }
                 }
-                pop_faction_event = { id = confrontations_traditionalist.10 }
+                random_list = {
+                    100 = {
+                        pop_faction_event = { id = confrontations_traditionalist.10 }
+                    }
+                }
             }
         }	 
     }
