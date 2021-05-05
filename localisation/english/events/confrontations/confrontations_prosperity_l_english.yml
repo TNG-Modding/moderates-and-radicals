@@ -57,3 +57,12 @@
  prosperity_effects_powerful_unhappy:0 "Unhappy Influential Pacifists"
  prosperity_effects_weak_unhappy:0 "Unhappy Sideline Pacifists"
  prosperity_effects_pathetic_unhappy:0 "Unhappy Fringe Pacifists"
+
+ # Radical faction effects
+ prosperity_radicals_effects_powerful_happy:0 "Happy Influential Radical Pacifists"
+ prosperity_radicals_effects_weak_happy:0 "Happy Sideline Radical Pacifists"
+ prosperity_radicals_effects_pathetic_happy:0 "Happy Fringe Radical Pacifists"
+
+ prosperity_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical Pacifists"
+ prosperity_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical Pacifists"
+ prosperity_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical Pacifists"

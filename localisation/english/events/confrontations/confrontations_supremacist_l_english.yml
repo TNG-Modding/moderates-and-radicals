@@ -57,3 +57,12 @@
  supremacist_effects_powerful_unhappy:0 "Unhappy Influential Supremacists"
  supremacist_effects_weak_unhappy:0 "Unhappy Sideline Supremacists"
  supremacist_effects_pathetic_unhappy:0 "Unhappy Fringe Supremacists"
+
+ # Radical faction effects
+ supremacist_radicals_effects_powerful_happy:0 "Happy Influential Radical Supremacists"
+ supremacist_radicals_effects_weak_happy:0 "Happy Sideline Radical Supremacists"
+ supremacist_radicals_effects_pathetic_happy:0 "Happy Fringe Radical Supremacists"
+
+ supremacist_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical Supremacists"
+ supremacist_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical Supremacists"
+ supremacist_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical Supremacists"

@@ -57,3 +57,12 @@
  traditionalist_effects_powerful_unhappy:0 "Unhappy Influential Traditionalists"
  traditionalist_effects_weak_unhappy:0 "Unhappy Sideline Traditionalists"
  traditionalist_effects_pathetic_unhappy:0 "Unhappy Fringe Traditionalists"
+
+ # Radical faction effects
+ traditionalist_radicals_effects_powerful_happy:0 "Happy Influential Radical Traditionalists"
+ traditionalist_radicals_effects_weak_happy:0 "Happy Sideline Radical Traditionalists"
+ traditionalist_radicals_effects_pathetic_happy:0 "Happy Fringe Radical Traditionalists"
+
+ traditionalist_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical Traditionalists"
+ traditionalist_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical Traditionalists"
+ traditionalist_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical Traditionalists"

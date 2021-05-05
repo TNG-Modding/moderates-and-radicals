@@ -57,3 +57,12 @@ l_english:
  {{faction}}_effects_powerful_unhappy:0 "Unhappy Influential {{Adjective}}s"
  {{faction}}_effects_weak_unhappy:0 "Unhappy Sideline {{Adjective}}s"
  {{faction}}_effects_pathetic_unhappy:0 "Unhappy Fringe {{Adjective}}s"
+
+ # Radical faction effects
+ {{faction}}_radicals_effects_powerful_happy:0 "Happy Influential Radical {{Adjective}}s"
+ {{faction}}_radicals_effects_weak_happy:0 "Happy Sideline Radical {{Adjective}}s"
+ {{faction}}_radicals_effects_pathetic_happy:0 "Happy Fringe Radical {{Adjective}}s"
+
+ {{faction}}_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical {{Adjective}}s"
+ {{faction}}_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical {{Adjective}}s"
+ {{faction}}_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical {{Adjective}}s"

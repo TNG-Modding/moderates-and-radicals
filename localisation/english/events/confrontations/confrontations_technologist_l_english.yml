@@ -57,3 +57,12 @@
  technologist_effects_powerful_unhappy:0 "Unhappy Influential Technologists"
  technologist_effects_weak_unhappy:0 "Unhappy Sideline Technologists"
  technologist_effects_pathetic_unhappy:0 "Unhappy Fringe Technologists"
+
+ # Radical faction effects
+ technologist_radicals_effects_powerful_happy:0 "Happy Influential Radical Technologists"
+ technologist_radicals_effects_weak_happy:0 "Happy Sideline Radical Technologists"
+ technologist_radicals_effects_pathetic_happy:0 "Happy Fringe Radical Technologists"
+
+ technologist_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical Technologists"
+ technologist_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical Technologists"
+ technologist_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical Technologists"

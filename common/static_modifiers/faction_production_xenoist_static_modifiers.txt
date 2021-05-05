@@ -34,3 +34,36 @@ xenoist_effects_pathetic_unhappy = {
 	country_base_xenoist_militancy_produces_add = 1
 	country_base_xenoist_support_produces_add = 1
 }
+
+# Radicals #
+# Happy
+xenoist_radicals_effects_powerful_happy = {
+	country_base_xenoist_militancy_produces_add = -3
+	country_base_xenoist_support_produces_add = 3
+}
+
+xenoist_radicals_effects_weak_happy = {
+	country_base_xenoist_militancy_produces_add = -3
+	country_base_xenoist_support_produces_add = 2
+}
+
+xenoist_radicals_effects_pathetic_happy = {
+	country_base_xenoist_militancy_produces_add = -3
+	country_base_xenoist_support_produces_add = 1
+}
+
+# Unhappy
+xenoist_radicals_effects_powerful_unhappy = {
+	country_base_xenoist_militancy_produces_add = 6
+	country_base_xenoist_support_produces_add = 3
+}
+
+xenoist_radicals_effects_weak_unhappy = {
+	country_base_xenoist_militancy_produces_add = 3
+	country_base_xenoist_support_produces_add = 2
+}
+
+xenoist_radicals_effects_pathetic_unhappy = {
+	country_base_xenoist_militancy_produces_add = 1
+	country_base_xenoist_support_produces_add = 1
+}

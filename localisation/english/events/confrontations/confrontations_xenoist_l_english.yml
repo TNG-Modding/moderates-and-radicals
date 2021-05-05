@@ -57,3 +57,12 @@
  xenoist_effects_powerful_unhappy:0 "Unhappy Influential Xenoists"
  xenoist_effects_weak_unhappy:0 "Unhappy Sideline Xenoists"
  xenoist_effects_pathetic_unhappy:0 "Unhappy Fringe Xenoists"
+
+ # Radical faction effects
+ xenoist_radicals_effects_powerful_happy:0 "Happy Influential Radical Xenoists"
+ xenoist_radicals_effects_weak_happy:0 "Happy Sideline Radical Xenoists"
+ xenoist_radicals_effects_pathetic_happy:0 "Happy Fringe Radical Xenoists"
+
+ xenoist_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical Xenoists"
+ xenoist_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical Xenoists"
+ xenoist_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical Xenoists"

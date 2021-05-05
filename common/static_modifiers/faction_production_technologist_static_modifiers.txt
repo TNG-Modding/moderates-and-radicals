@@ -34,3 +34,36 @@ technologist_effects_pathetic_unhappy = {
 	country_base_technologist_militancy_produces_add = 1
 	country_base_technologist_support_produces_add = 1
 }
+
+# Radicals #
+# Happy
+technologist_radicals_effects_powerful_happy = {
+	country_base_technologist_militancy_produces_add = -3
+	country_base_technologist_support_produces_add = 3
+}
+
+technologist_radicals_effects_weak_happy = {
+	country_base_technologist_militancy_produces_add = -3
+	country_base_technologist_support_produces_add = 2
+}
+
+technologist_radicals_effects_pathetic_happy = {
+	country_base_technologist_militancy_produces_add = -3
+	country_base_technologist_support_produces_add = 1
+}
+
+# Unhappy
+technologist_radicals_effects_powerful_unhappy = {
+	country_base_technologist_militancy_produces_add = 6
+	country_base_technologist_support_produces_add = 3
+}
+
+technologist_radicals_effects_weak_unhappy = {
+	country_base_technologist_militancy_produces_add = 3
+	country_base_technologist_support_produces_add = 2
+}
+
+technologist_radicals_effects_pathetic_unhappy = {
+	country_base_technologist_militancy_produces_add = 1
+	country_base_technologist_support_produces_add = 1
+}
