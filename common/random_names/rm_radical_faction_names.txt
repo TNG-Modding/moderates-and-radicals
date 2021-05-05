@@ -10,7 +10,7 @@ pop_faction_name_parts_list = {
 	}
 }
 
-## supremacist_radicalss
+## supremacist_radicals
 pop_faction_name_parts_list = {
 	key = "supremacist_radicals_names_1"
 	parts = {
@@ -48,7 +48,7 @@ pop_faction_name_format = {
 	format = "[This.Owner.GetSpeciesName] <supremacist_radicals_names_1> <supremacist_radicals_names_2>"
 }
 
-## imperialist_radicalss
+## imperialist_radicals
 pop_faction_name_parts_list = {
 	key = "imperialist_radicals_names"
 	parts = {
@@ -87,7 +87,7 @@ pop_faction_name_format = {
 	format = "<imperialist_radicals_names>"
 }
 
-## totalitarian_radicalss
+## totalitarian_radicals
 pop_faction_name_parts_list = {
 	key = "totalitarian_radicals_names_1"
 	parts = {
@@ -132,7 +132,7 @@ pop_faction_name_format = {
 	format = "<totalitarian_radicals_names_1> <totalitarian_radicals_names_2>"
 }
 
-## progressive_radicalss
+## progressive_radicals
 pop_faction_name_parts_list = {
 	key = "progressive_radicals_names_1"
 	parts = {
@@ -244,7 +244,7 @@ pop_faction_name_format = {
 	format = "<prosperity_radicals_names_1> <prosperity_radicals_names_2>"
 }
 
-## technologist_radicalss
+## technologist_radicals
 pop_faction_name_parts_list = {
 	key = "technologist_radicals_names_1"
 	parts = {
@@ -262,7 +262,6 @@ pop_faction_name_parts_list = {
 		"of Higher Learning" = 1
 		"of United Scientists" = 1
 		"of Technological Progress" = 1
-		"of technologist_radicalss" = 1
 		"of Advanced Sciences" = 1
 		"of Scientific Scholars" = 1
 		"of Scientific Ascendancy" = 1
@@ -287,7 +286,7 @@ pop_faction_name_format = {
 	format = "<technologist_radicals_names_1> <technologist_radicals_names_2>"
 }
 
-## traditionalist_radicalss
+## traditionalist_radicals
 pop_faction_name_parts_list = {
 	key = "traditionalist_radicals_names_1"
 	parts = {
@@ -317,7 +316,6 @@ pop_faction_name_parts_list = {
 		"of Exalted Clergy" = 1
 		"of the High Priesthood" = 1
 		"of the Sacrosanct Truths" = 1
-		"of Pious traditionalist_radicalss" = 1
 		"of Faith and Values" = 1
 	}
 }
@@ -333,7 +331,7 @@ pop_faction_name_format = {
 	format = "<traditionalist_radicals_names_1> <traditionalist_radicals_names_2>"
 }
 
-## xenoist_radicalss
+## xenoist_radicals
 pop_faction_name_parts_list = {
 	key = "xenoist_radicals_names_1"
 	parts = {
