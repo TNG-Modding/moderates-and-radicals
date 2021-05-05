@@ -178,20 +178,11 @@ pop_faction_event = {
         name = confrontations_totalitarian.10.a
 
         owner = {
-            hidden_effect = {
-                export_resource_income_to_variable = {
-                    resource = alloys
-                    variable = current_monthly_totalitarian_alloys_income
-                }
-                multiply_variable = {
-                    which = current_monthly_totalitarian_alloys_income
-                    value = 6
-                }
-            }            
-            
-            add_resource = {
-                alloys = 1
-                mult = current_monthly_totalitarian_alloys_income
+            add_monthly_resource_mult = {
+                resource = alloys
+                value = 6
+                max = 1000
+                min = 30
             }
             add_modifier = {
                 modifier = totalitarian_debates_continue_modifier

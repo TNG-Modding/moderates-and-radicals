@@ -60,10 +60,10 @@ technologist_radicals_effects_powerful_unhappy = {
 
 technologist_radicals_effects_weak_unhappy = {
 	country_base_technologist_militancy_produces_add = 3
-	country_base_technologist_support_produces_add = 2
+	country_base_technologist_support_produces_add = 3
 }
 
 technologist_radicals_effects_pathetic_unhappy = {
 	country_base_technologist_militancy_produces_add = 1
-	country_base_technologist_support_produces_add = 1
+	country_base_technologist_support_produces_add = 3
 }
