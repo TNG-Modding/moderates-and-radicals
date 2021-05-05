@@ -178,14 +178,16 @@ pop_faction_event = {
         name = confrontations_{{faction}}.10.a
 
         owner = {
-            export_resource_income_to_variable = {
-                resource = {{resource}}
-                variable = current_monthly_{{faction}}_{{resource}}_income
-            }
-            multiply_variable = {
-                which = current_monthly_{{faction}}_{{resource}}_income
-                value = 6
-            }
+            hidden_effect = {
+                export_resource_income_to_variable = {
+                    resource = {{resource}}
+                    variable = current_monthly_{{faction}}_{{resource}}_income
+                }
+                multiply_variable = {
+                    which = current_monthly_{{faction}}_{{resource}}_income
+                    value = 6
+                }
+            }            
             
             add_resource = {
                 {{resource}} = 1

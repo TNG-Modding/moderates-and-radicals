@@ -178,14 +178,16 @@ pop_faction_event = {
         name = confrontations_traditionalist.10.a
 
         owner = {
-            export_resource_income_to_variable = {
-                resource = consumer_goods
-                variable = current_monthly_traditionalist_consumer_goods_income
-            }
-            multiply_variable = {
-                which = current_monthly_traditionalist_consumer_goods_income
-                value = 6
-            }
+            hidden_effect = {
+                export_resource_income_to_variable = {
+                    resource = consumer_goods
+                    variable = current_monthly_traditionalist_consumer_goods_income
+                }
+                multiply_variable = {
+                    which = current_monthly_traditionalist_consumer_goods_income
+                    value = 6
+                }
+            }            
             
             add_resource = {
                 consumer_goods = 1
