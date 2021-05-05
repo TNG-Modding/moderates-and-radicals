@@ -48,3 +48,12 @@
  authoritarian_radical_roundup_continue_modifier:0 "Authoritarian Radical Round-Up"
  operations_totalitarian.diatribe:0 "Anti-Authoritarian Diatribe"
  anti_authoritarian_diatribe_modifier:0 "Anti-Authoritarian Diatribe"
+
+ # Faction effects
+ totalitarian_effects_powerful_happy:0 "Happy Influential Authoritarians"
+ totalitarian_effects_weak_happy:0 "Happy Sideline Authoritarians"
+ totalitarian_effects_pathetic_happy:0 "Happy Fringe Authoritarians"
+
+ totalitarian_effects_powerful_unhappy:0 "Unhappy Influential Authoritarians"
+ totalitarian_effects_weak_unhappy:0 "Unhappy Sideline Authoritarians"
+ totalitarian_effects_pathetic_unhappy:0 "Unhappy Fringe Authoritarians"

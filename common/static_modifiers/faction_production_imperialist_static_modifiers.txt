@@ -1,0 +1,36 @@
+##											##
+## Imperialist approval * support modifiers ##
+##											##
+
+
+# Happy
+imperialist_effects_powerful_happy = {
+	country_base_imperialist_militancy_produces_add = -3
+	country_base_imperialist_support_produces_add = 3
+}
+
+imperialist_effects_weak_happy = {
+	country_base_imperialist_militancy_produces_add = -2
+	country_base_imperialist_support_produces_add = 2
+}
+
+imperialist_effects_pathetic_happy = {
+	country_base_imperialist_militancy_produces_add = -1
+	country_base_imperialist_support_produces_add = 1
+}
+
+# Unhappy
+imperialist_effects_powerful_unhappy = {
+	country_base_imperialist_militancy_produces_add = 3
+	country_base_imperialist_support_produces_add = 3
+}
+
+imperialist_effects_weak_unhappy = {
+	country_base_imperialist_militancy_produces_add = 2
+	country_base_imperialist_support_produces_add = 2
+}
+
+imperialist_effects_pathetic_unhappy = {
+	country_base_imperialist_militancy_produces_add = 1
+	country_base_imperialist_support_produces_add = 1
+}

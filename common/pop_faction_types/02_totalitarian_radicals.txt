@@ -12,8 +12,9 @@ totalitarian_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			totalitarian_militancy = -12
-			totalitarian_support = 12
+			# totalitarian_militancy = -12
+			# totalitarian_support = 12
+			ideological_purity = -2
 		}
 	}
 

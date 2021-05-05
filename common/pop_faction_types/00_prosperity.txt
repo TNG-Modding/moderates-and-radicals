@@ -12,7 +12,8 @@ prosperity = {
 	resources = {
 		category = pop_factions
 		produces = {
-			prosperity_support = 12
+			# prosperity_support = 12
+			ideological_purity = -1
 		}
 		produces = {
 			trigger = {

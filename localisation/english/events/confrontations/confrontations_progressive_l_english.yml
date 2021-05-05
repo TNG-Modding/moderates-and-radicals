@@ -48,3 +48,12 @@
  progressive_radical_roundup_continue_modifier:0 "Progressive Radical Round-Up"
  operations_progressive.diatribe:0 "Anti-Progressive Diatribe"
  anti_progressive_diatribe_modifier:0 "Anti-Progressive Diatribe"
+
+ # Faction effects
+ progressive_effects_powerful_happy:0 "Happy Influential Progressives"
+ progressive_effects_weak_happy:0 "Happy Sideline Progressives"
+ progressive_effects_pathetic_happy:0 "Happy Fringe Progressives"
+
+ progressive_effects_powerful_unhappy:0 "Unhappy Influential Progressives"
+ progressive_effects_weak_unhappy:0 "Unhappy Sideline Progressives"
+ progressive_effects_pathetic_unhappy:0 "Unhappy Fringe Progressives"

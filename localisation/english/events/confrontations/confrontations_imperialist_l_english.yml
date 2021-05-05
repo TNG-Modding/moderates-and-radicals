@@ -48,3 +48,12 @@
  imperialist_radical_roundup_continue_modifier:0 "Imperialist Radical Round-Up"
  operations_imperialist.diatribe:0 "Anti-Imperialist Diatribe"
  anti_imperialist_diatribe_modifier:0 "Anti-Imperialist Diatribe"
+
+ # Faction effects
+ imperialist_effects_powerful_happy:0 "Happy Influential Imperialists"
+ imperialist_effects_weak_happy:0 "Happy Sideline Imperialists"
+ imperialist_effects_pathetic_happy:0 "Happy Fringe Imperialists"
+
+ imperialist_effects_powerful_unhappy:0 "Unhappy Influential Imperialists"
+ imperialist_effects_weak_unhappy:0 "Unhappy Sideline Imperialists"
+ imperialist_effects_pathetic_unhappy:0 "Unhappy Fringe Imperialists"

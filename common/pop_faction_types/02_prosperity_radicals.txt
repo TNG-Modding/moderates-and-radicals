@@ -12,8 +12,9 @@ prosperity_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			prosperity_militancy = -12
-			prosperity_support = 12
+			# prosperity_militancy = -12
+			# prosperity_support = 12
+			ideological_purity = -2
 		}
 	}
 

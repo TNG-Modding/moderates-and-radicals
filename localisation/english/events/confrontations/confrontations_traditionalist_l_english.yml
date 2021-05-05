@@ -48,3 +48,12 @@
  traditionalist_radical_roundup_continue_modifier:0 "Traditionalist Radical Round-Up"
  operations_traditionalist.diatribe:0 "Anti-Traditionalist Diatribe"
  anti_traditionalist_diatribe_modifier:0 "Anti-Traditionalist Diatribe"
+
+ # Faction effects
+ traditionalist_effects_powerful_happy:0 "Happy Influential Traditionalists"
+ traditionalist_effects_weak_happy:0 "Happy Sideline Traditionalists"
+ traditionalist_effects_pathetic_happy:0 "Happy Fringe Traditionalists"
+
+ traditionalist_effects_powerful_unhappy:0 "Unhappy Influential Traditionalists"
+ traditionalist_effects_weak_unhappy:0 "Unhappy Sideline Traditionalists"
+ traditionalist_effects_pathetic_unhappy:0 "Unhappy Fringe Traditionalists"

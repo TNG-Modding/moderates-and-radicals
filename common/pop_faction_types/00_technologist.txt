@@ -12,7 +12,8 @@ technologist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			technologist_support = 12
+			# technologist_support = 12
+			ideological_purity = -1
 		}
 		produces = {
 			trigger = {

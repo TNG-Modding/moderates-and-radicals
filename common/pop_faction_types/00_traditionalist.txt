@@ -12,7 +12,8 @@ traditionalist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			traditionalist_support = 12
+			# traditionalist_support = 12
+			ideological_purity = -1
 		}
 		produces = {
 			trigger = {

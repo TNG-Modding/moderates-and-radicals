@@ -48,3 +48,12 @@
  pacifist_radical_roundup_continue_modifier:0 "Pacifist Radical Round-Up"
  operations_prosperity.diatribe:0 "Anti-Pacifist Diatribe"
  anti_pacifist_diatribe_modifier:0 "Anti-Pacifist Diatribe"
+
+ # Faction effects
+ prosperity_effects_powerful_happy:0 "Happy Influential Pacifists"
+ prosperity_effects_weak_happy:0 "Happy Sideline Pacifists"
+ prosperity_effects_pathetic_happy:0 "Happy Fringe Pacifists"
+
+ prosperity_effects_powerful_unhappy:0 "Unhappy Influential Pacifists"
+ prosperity_effects_weak_unhappy:0 "Unhappy Sideline Pacifists"
+ prosperity_effects_pathetic_unhappy:0 "Unhappy Fringe Pacifists"

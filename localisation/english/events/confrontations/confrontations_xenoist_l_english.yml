@@ -48,3 +48,12 @@
  xenoist_radical_roundup_continue_modifier:0 "Xenoist Radical Round-Up"
  operations_xenoist.diatribe:0 "Anti-Xenoist Diatribe"
  anti_xenoist_diatribe_modifier:0 "Anti-Xenoist Diatribe"
+
+ # Faction effects
+ xenoist_effects_powerful_happy:0 "Happy Influential Xenoists"
+ xenoist_effects_weak_happy:0 "Happy Sideline Xenoists"
+ xenoist_effects_pathetic_happy:0 "Happy Fringe Xenoists"
+
+ xenoist_effects_powerful_unhappy:0 "Unhappy Influential Xenoists"
+ xenoist_effects_weak_unhappy:0 "Unhappy Sideline Xenoists"
+ xenoist_effects_pathetic_unhappy:0 "Unhappy Fringe Xenoists"

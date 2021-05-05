@@ -12,7 +12,8 @@ supremacist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			supremacist_support = 12
+			# supremacist_support = 12
+			ideological_purity = -1
 		}
 		produces = {
 			trigger = {

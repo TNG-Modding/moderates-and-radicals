@@ -12,7 +12,8 @@ totalitarian = {
 	resources = {
 		category = pop_factions
 		produces = {
-			totalitarian_support = 12
+			# totalitarian_support = 12
+			ideological_purity = -1
 		}
 		produces = {
 			trigger = {

@@ -12,8 +12,9 @@ xenoist_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			xenoist_militancy = -2
-			xenoist_support = 1
+			# xenoist_militancy = -2
+			# xenoist_support = 1
+			ideological_purity = -2
 		}
 	}
 

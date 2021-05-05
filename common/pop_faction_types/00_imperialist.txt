@@ -12,7 +12,8 @@ imperialist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			imperialist_support = 12
+			# imperialist_support = 12
+			ideological_purity = -1
 		}
 		produces = {
 			trigger = {

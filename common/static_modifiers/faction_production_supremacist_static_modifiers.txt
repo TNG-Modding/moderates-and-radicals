@@ -1,0 +1,36 @@
+##											##
+## Supremacist approval * support modifiers ##
+##											##
+
+
+# Happy
+supremacist_effects_powerful_happy = {
+	country_base_supremacist_militancy_produces_add = -3
+	country_base_supremacist_support_produces_add = 3
+}
+
+supremacist_effects_weak_happy = {
+	country_base_supremacist_militancy_produces_add = -2
+	country_base_supremacist_support_produces_add = 2
+}
+
+supremacist_effects_pathetic_happy = {
+	country_base_supremacist_militancy_produces_add = -1
+	country_base_supremacist_support_produces_add = 1
+}
+
+# Unhappy
+supremacist_effects_powerful_unhappy = {
+	country_base_supremacist_militancy_produces_add = 3
+	country_base_supremacist_support_produces_add = 3
+}
+
+supremacist_effects_weak_unhappy = {
+	country_base_supremacist_militancy_produces_add = 2
+	country_base_supremacist_support_produces_add = 2
+}
+
+supremacist_effects_pathetic_unhappy = {
+	country_base_supremacist_militancy_produces_add = 1
+	country_base_supremacist_support_produces_add = 1
+}

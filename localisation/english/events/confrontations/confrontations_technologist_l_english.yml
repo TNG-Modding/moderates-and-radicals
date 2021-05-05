@@ -48,3 +48,12 @@
  technologist_radical_roundup_continue_modifier:0 "Technologist Radical Round-Up"
  operations_technologist.diatribe:0 "Anti-Technologist Diatribe"
  anti_technologist_diatribe_modifier:0 "Anti-Technologist Diatribe"
+
+ # Faction effects
+ technologist_effects_powerful_happy:0 "Happy Influential Technologists"
+ technologist_effects_weak_happy:0 "Happy Sideline Technologists"
+ technologist_effects_pathetic_happy:0 "Happy Fringe Technologists"
+
+ technologist_effects_powerful_unhappy:0 "Unhappy Influential Technologists"
+ technologist_effects_weak_unhappy:0 "Unhappy Sideline Technologists"
+ technologist_effects_pathetic_unhappy:0 "Unhappy Fringe Technologists"

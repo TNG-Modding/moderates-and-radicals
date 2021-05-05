@@ -53,6 +53,33 @@
             "disabled": true,
             "dumpContents": true,
             "isBom": true
+        },
+        {
+            "name": "Faction Production Events",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/faction_production_events",
+            "outputDirectoryPath": "../events",
+            "disabled": false,
+            "dumpContents": true,
+            "isBom": false
+        },
+        {
+            "name": "Faction Production Static Modifiers",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/faction_production_static_modifiers",
+            "outputDirectoryPath": "../common/static_modifiers",
+            "disabled": false,
+            "dumpContents": true,
+            "isBom": false
+        },
+        {
+            "name": "Faction Production Event Localization",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/faction_production_localization",
+            "outputDirectoryPath": "../localisation/english/modifiers",
+            "disabled": true,
+            "dumpContents": true,
+            "isBom": true
         }
     ]
 }

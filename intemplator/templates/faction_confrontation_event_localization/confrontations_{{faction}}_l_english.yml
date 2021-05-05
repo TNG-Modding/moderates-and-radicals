@@ -48,3 +48,12 @@ l_english:
  {{adjective}}_radical_roundup_continue_modifier:0 "{{Adjective}} Radical Round-Up"
  operations_{{faction}}.diatribe:0 "Anti-{{Adjective}} Diatribe"
  anti_{{adjective}}_diatribe_modifier:0 "Anti-{{Adjective}} Diatribe"
+
+ # Faction effects
+ {{faction}}_effects_powerful_happy:0 "Happy Influential {{Adjective}}s"
+ {{faction}}_effects_weak_happy:0 "Happy Sideline {{Adjective}}s"
+ {{faction}}_effects_pathetic_happy:0 "Happy Fringe {{Adjective}}s"
+
+ {{faction}}_effects_powerful_unhappy:0 "Unhappy Influential {{Adjective}}s"
+ {{faction}}_effects_weak_unhappy:0 "Unhappy Sideline {{Adjective}}s"
+ {{faction}}_effects_pathetic_unhappy:0 "Unhappy Fringe {{Adjective}}s"

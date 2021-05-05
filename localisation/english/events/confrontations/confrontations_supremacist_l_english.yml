@@ -48,3 +48,12 @@
  supremacist_radical_roundup_continue_modifier:0 "Supremacist Radical Round-Up"
  operations_supremacist.diatribe:0 "Anti-Supremacist Diatribe"
  anti_supremacist_diatribe_modifier:0 "Anti-Supremacist Diatribe"
+
+ # Faction effects
+ supremacist_effects_powerful_happy:0 "Happy Influential Supremacists"
+ supremacist_effects_weak_happy:0 "Happy Sideline Supremacists"
+ supremacist_effects_pathetic_happy:0 "Happy Fringe Supremacists"
+
+ supremacist_effects_powerful_unhappy:0 "Unhappy Influential Supremacists"
+ supremacist_effects_weak_unhappy:0 "Unhappy Sideline Supremacists"
+ supremacist_effects_pathetic_unhappy:0 "Unhappy Fringe Supremacists"
