@@ -1,34 +1,34 @@
 prosperity_debates_continue_modifier = {
-	country_ideological_purity_produces_add = -0.2
-	country_prosperity_militancy_produces_add = 0.1
+	country_base_ideological_purity_produces_add = -0.2
+	country_base_prosperity_militancy_produces_add = 0.1
 }
 
 prosperity_debates_stopped_modifier = {
-	country_prosperity_militancy_produces_add = 1
+	country_base_prosperity_militancy_produces_add = 1
 }
 
 prosperity_riots_continue_modifier = {
-	country_prosperity_militancy_produces_add = 0.25
+	country_base_prosperity_militancy_produces_add = 0.25
 }
 
 prosperity_riots_stopped_modifier = {
-	country_prosperity_militancy_produces_add = 0.25
+	country_base_prosperity_militancy_produces_add = 0.25
 }
 
 prosperity_violent_riots_continue_modifier = {
 	all_technology_research_speed = -0.1
-	country_prosperity_militancy_produces_add = 0.1
-	country_imperialist_militancy_produces_add = 0.5
+	country_base_prosperity_militancy_produces_add = 0.1
+	country_base_imperialist_militancy_produces_add = 0.5
 }
 
 prosperity_violent_riots_stopped_modifier = {
-	country_prosperity_militancy_produces_add = 1
+	country_base_prosperity_militancy_produces_add = 1
 }
 
 prosperity_ruler_assassination_continue_modifier = {
-	country_ideological_purity_produces_add = -0.2
+	country_base_ideological_purity_produces_add = -0.2
 }
 
 prosperity_coup_continue_modifier = {
-	country_ideological_purity_produces_add = 0.2
+	country_base_ideological_purity_produces_add = 0.2
 }
