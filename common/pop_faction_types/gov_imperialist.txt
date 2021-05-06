@@ -12,7 +12,7 @@ gov_imperialist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			ideological_purity = 1
+			ideological_purity_desired_value_change = 1
 			# imperialist_support = 4
 		}
 		produces = {

@@ -13,7 +13,7 @@ xenoist = {
 		category = pop_factions
 		produces = {
 			# xenoist_support = 12
-			ideological_purity = -1
+			ideological_purity_desired_value_change = -1
 		}
 		produces = {
 			trigger = {

@@ -25,7 +25,7 @@ country_event = {
 					days = -1 
 				}
 
-				add_resource = { ideological_purity = 50 }
+				add_resource = { ideological_purity_current_value = 50 }
 				
 				add_resource = { supremacist_support = 1	}
 				add_resource = { progressive_support = 1	}

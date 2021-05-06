@@ -11,7 +11,7 @@ country_event = {
 
 	immediate = {
 		export_resource_stockpile_to_variable = {
-			resource = ideological_purity
+			resource = ideological_purity_current_value
 			variable = current_ideological_purity
 		}
 

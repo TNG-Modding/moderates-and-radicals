@@ -309,7 +309,7 @@ pop_faction_event = {
         
         owner = {
             add_resource = {
-                ideological_purity = -25
+                ideological_purity_current_value = -25
                 {{faction}}_militancy = 10
                 {{faction}}_support = 10
             }
@@ -357,7 +357,7 @@ pop_faction_event = {
             }
             
             add_resource = {
-                ideological_purity = -25
+                ideological_purity_current_value = -25
             }
 
             add_modifier = {

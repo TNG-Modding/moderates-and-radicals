@@ -12,7 +12,7 @@ gov_totalitarian = {
 	resources = {
 		category = pop_factions
 		produces = {
-			ideological_purity = 1
+			ideological_purity_desired_value_change = 1
 			# totalitarian_support = 4
 		}
 		produces = {

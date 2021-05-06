@@ -14,7 +14,7 @@ progressive_radicals = {
 		produces = {
 			# progressive_militancy = -12
 			# progressive_support = 12
-			ideological_purity = -2
+			ideological_purity_desired_value_change = -2
 		}
 	}
 
