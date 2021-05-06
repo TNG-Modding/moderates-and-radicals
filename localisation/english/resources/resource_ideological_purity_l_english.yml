@@ -1,7 +1,7 @@
 ﻿l_english:
 
  ideological_purity_desired_value_change:0 "Ideological Purity Resting Point Change"
- ideological_purity_desired_value_change_desc:0 "The amount we raise the resting point of our Ideological Purity, The level of defacto commitment to the founding ideals of our empire."
+ ideological_purity_desired_value_change_desc:0 "The amount we raise the resting point of our Ideological Purity, the level of defacto commitment to the founding ideals of our empire."
  mod_country_base_ideological_purity_desired_value_change_produces_add:0 "Ideological Purity Resting Point Change"
  mod_country_ideological_purity_desired_value_change_produces_add:0 "Ideological Purity Resting Point Change"
 

@@ -4,7 +4,7 @@
             "varname": "ideological_purity",
             "name": "ideological purity",
             "Name": "Ideological Purity",
-            "desc": "The level of defacto commitment to the founding ideals of our empire",
+            "desc": "the level of defacto commitment to the founding ideals of our empire",
             "Desc": "The level of defacto commitment to the founding ideals of our empire",
             "maxValue": 99,
             "baseValue": 50,
