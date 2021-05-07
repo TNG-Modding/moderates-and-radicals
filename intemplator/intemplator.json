@@ -148,8 +148,8 @@
             "name": "Desired Resource Modifier Icons",
             "specFilePath": "./specs/desiredResources.json",
             "templateDirectoryPath": "./templates/desired_resource_all_modifier_icons",
-            "outputDirectoryPath": "../gfx/inteface/icons/modifiers",
-            "disabled": true,
+            "outputDirectoryPath": "../gfx/interface/icons/modifiers",
+            "disabled": false,
             "dumpContents": true,
             "isBom": false
         },
