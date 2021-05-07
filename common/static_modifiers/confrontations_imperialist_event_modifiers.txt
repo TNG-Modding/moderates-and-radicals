@@ -1,9 +1,6 @@
 imperialist_debates_continue_modifier = {
-	hidden_effect = {
-		country_base_ideological_purity_desired_value_change_produces_add = -5
-		country_base_imperialist_militancy_desired_value_change_produces_add = 5
-	}
-	
+	country_base_ideological_purity_desired_value_change_produces_add = -5
+	country_base_imperialist_militancy_desired_value_change_produces_add = 5
 }
 
 imperialist_debates_stopped_modifier = {
