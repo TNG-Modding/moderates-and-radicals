@@ -104,7 +104,7 @@
             "specFilePath": "./specs/desiredResources.json",
             "templateDirectoryPath": "./templates/desired_resource_icons_gfx",
             "outputDirectoryPath": "../interface/resources",
-            "disabled": false,
+            "disabled": true,
             "dumpContents": true,
             "isBom": false
         },
@@ -127,6 +127,15 @@
             "isBom": false
         },
         {
+            "name": "Desired Resource Gui",
+            "specFilePath": "./specs/desiredResources.json",
+            "templateDirectoryPath": "./templates/desired_resource_main_gui",
+            "outputDirectoryPath": "../interface",
+            "disabled": false,
+            "dumpContents": true,
+            "isBom": false
+        },
+        {
             "name": "Desired Resource Event Static Modifiers",
             "specFilePath": "./specs/desiredResources.json",
             "templateDirectoryPath": "./templates/desired_resource_static_modifiers",
@@ -138,7 +147,7 @@
         {
             "name": "Desired Resource Modifier Icons",
             "specFilePath": "./specs/desiredResources.json",
-            "templateDirectoryPath": "./templates/desired_resource_modifier_icons",
+            "templateDirectoryPath": "./templates/desired_resource_all_modifier_icons",
             "outputDirectoryPath": "../gfx/inteface/icons/modifiers",
             "disabled": true,
             "dumpContents": true,

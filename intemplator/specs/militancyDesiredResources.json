@@ -1,0 +1,84 @@
+﻿{
+    "specs": [
+        {
+            "varname": "imperialist_militancy",
+            "name": "imperialist militancy",
+            "Name": "Imperialist Militancy",
+            "desc": "imperialist militancy tracks the buildup of armaments and anger in defense of militarism",
+            "Desc": "Imperialist militancy tracks the buildup of armaments and anger in defense of militarism",
+            "maxValue": 99,
+            "baseValue": 5,
+            "changePerMonth": 1
+        },
+        {
+            "varname": "supremacist_militancy",
+            "name": "supremacist militancy",
+            "Name": "Supremacist Militancy",
+            "desc": "supremacist militancy tracks the buildup of armaments and anger in defense of xenophobia",
+            "Desc": "Supremacist militancy tracks the buildup of armaments and anger in defense of xenophobia",
+            "maxValue": 99,
+            "baseValue": 5,
+            "changePerMonth": 1
+        },
+        {
+            "varname": "progressive_militancy",
+            "name": "progressive militancy",
+            "Name": "Progressive Militancy",
+            "desc": "progressive militancy tracks the buildup of armaments and anger in defense of egalitarianism",
+            "Desc": "Progressive militancy tracks the buildup of armaments and anger in defense of egalitarianism",
+            "maxValue": 99,
+            "baseValue": 5,
+            "changePerMonth": 1
+        },
+        {
+            "varname": "technologist_militancy",
+            "name": "technologist militancy",
+            "Name": "Technologist Militancy",
+            "desc": "technologist militancy tracks the buildup of armaments and anger in defense of materialism",
+            "Desc": "Technologist militancy tracks the buildup of armaments and anger in defense of materialism",
+            "maxValue": 99,
+            "baseValue": 5,
+            "changePerMonth": 1
+        },
+        {
+            "varname": "pacifist_militancy",
+            "name": "pacifist militancy",
+            "Name": "Pacifist Militancy",
+            "desc": "pacifist militancy tracks the buildup of armaments and anger in defense of pacifism",
+            "Desc": "Pacifist militancy tracks the buildup of armaments and anger in defense of pacifism",
+            "maxValue": 99,
+            "baseValue": 5,
+            "changePerMonth": 1
+        },
+        {
+            "varname": "xenoist_militancy",
+            "name": "xenoist militancy",
+            "Name": "Xenoist Militancy",
+            "desc": "xenoist militancy tracks the buildup of armaments and anger in defense of xenophilia",
+            "Desc": "Xenoist militancy tracks the buildup of armaments and anger in defense of xenophilia",
+            "maxValue": 99,
+            "baseValue": 5,
+            "changePerMonth": 1
+        },
+        {
+            "varname": "totalitarian_militancy",
+            "name": "totalitarian militancy",
+            "Name": "Totalitarian Militancy",
+            "desc": "totalitarian militancy tracks the buildup of armaments and anger in defense of authoritarianism",
+            "Desc": "Totalitarian militancy tracks the buildup of armaments and anger in defense of authoritarianism",
+            "maxValue": 99,
+            "baseValue": 5,
+            "changePerMonth": 1
+        },
+        {
+            "varname": "traditionalist_militancy",
+            "name": "traditionalist militancy",
+            "Name": "Traditionalist Militancy",
+            "desc": "traditionalist militancy tracks the buildup of armaments and anger in defense of spiritualism",
+            "Desc": "Traditionalist militancy tracks the buildup of armaments and anger in defense of spiritualism",
+            "maxValue": 99,
+            "baseValue": 5,
+            "changePerMonth": 1
+        }
+    ]
+}
