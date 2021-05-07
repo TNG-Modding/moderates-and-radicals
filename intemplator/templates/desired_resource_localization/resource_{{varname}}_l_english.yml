@@ -16,3 +16,6 @@ l_english:
  {{varname}}_desired_value_desc:0 "The {{name}} value we trend towards over time."
  mod_country_base_{{varname}}_desired_value_produces_add:0 "This shouldn't be visible"
  mod_country_{{varname}}_desired_value_produces_add:0 "This shouldn't be visible"
+
+ message_{{varname}}_values_updated:0 "{{Name}} Values Updated"
+ {{varname}}_values_updated_message:0 "{{varname}} Current [Root.current_{{varname}}_current_value]\nDesired [Root.{{varname}}_new_desired_value]\nChange [Root.current_{{varname}}_desired_value_change]\nDelta [Root.delta_between_current_desired_{{varname}}]"

@@ -16,3 +16,6 @@
  progressive_militancy_desired_value_desc:0 "The progressive militancy value we trend towards over time."
  mod_country_base_progressive_militancy_desired_value_produces_add:0 "This shouldn't be visible"
  mod_country_progressive_militancy_desired_value_produces_add:0 "This shouldn't be visible"
+
+ message_progressive_militancy_values_updated:0 "Progressive Militancy Values Updated"
+ progressive_militancy_values_updated_message:0 "progressive_militancy Current [Root.current_progressive_militancy_current_value]\nDesired [Root.progressive_militancy_new_desired_value]\nChange [Root.current_progressive_militancy_desired_value_change]\nDelta [Root.delta_between_current_desired_progressive_militancy]"

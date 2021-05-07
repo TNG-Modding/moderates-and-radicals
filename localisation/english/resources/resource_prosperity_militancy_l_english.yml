@@ -16,3 +16,6 @@
  prosperity_militancy_desired_value_desc:0 "The pacifist militancy value we trend towards over time."
  mod_country_base_prosperity_militancy_desired_value_produces_add:0 "This shouldn't be visible"
  mod_country_prosperity_militancy_desired_value_produces_add:0 "This shouldn't be visible"
+
+ message_prosperity_militancy_values_updated:0 "Pacifist Militancy Values Updated"
+ prosperity_militancy_values_updated_message:0 "prosperity_militancy Current [Root.current_prosperity_militancy_current_value]\nDesired [Root.prosperity_militancy_new_desired_value]\nChange [Root.current_prosperity_militancy_desired_value_change]\nDelta [Root.delta_between_current_desired_prosperity_militancy]"
