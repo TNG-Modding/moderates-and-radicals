@@ -9,6 +9,10 @@ country_event = {
 		days = 30
 	}
 
+	trigger = {
+		has_modifier = politics
+	}
+
 	immediate = {
 		# Get the current production
 		export_resource_income_to_variable = {
@@ -24,6 +28,32 @@ country_event = {
 		change_variable = {
 			which = traditionalist_militancy_new_desired_value
 			value = current_traditionalist_militancy_desired_value_change
+		}
+
+		# Clamp desired value to 0 inclusive to 99 inclusive
+		if = {
+			limit = {
+				check_variable = {
+					which = traditionalist_militancy_new_desired_value
+					value > 99
+				}
+			}
+			set_variable = {
+				which = traditionalist_militancy_new_desired_value
+				value = 99
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = traditionalist_militancy_new_desired_value
+					value < 0
+				}
+			}
+			set_variable = {
+				which = traditionalist_militancy_new_desired_value
+				value = 0
+			}
 		}
 		# traditionalist_militancy_new_desired_value is now the new desired point
 		
@@ -61,7 +91,7 @@ country_event = {
 			value = traditionalist_militancy_new_desired_value
 		}
 		subtract_variable = {
-			which = traditionalist_militancy_new_desired_value
+			which = delta_between_current_desired_traditionalist_militancy
 			value = current_traditionalist_militancy_current_value
 		}
 		# delta_between_current_desired_traditionalist_militancy now represents the difference between the values
@@ -101,5 +131,12 @@ country_event = {
 				}
 			}
 		}
+
+		# create_message = {
+		# 	type = traditionalist_militancy_values_updated
+		# 	localization = traditionalist_militancy_values_updated_message
+		# 	days = 5
+		# 	target = root
+		# }
 	}	
 }
