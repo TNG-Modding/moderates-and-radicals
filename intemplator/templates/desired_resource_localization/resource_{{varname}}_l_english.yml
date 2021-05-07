@@ -1,7 +1,7 @@
 l_english:
 
  {{varname}}_desired_value_change:0 "{{Name}} Resting Point Change"
- {{varname}}_desired_value_change_desc:0 "The amount we raise the resting point of our {{Name}}, {{desc}}."
+ {{varname}}_desired_value_change_desc:0 "The amount we raise the resting point of our {{name}}, {{desc}}."
  mod_country_base_{{varname}}_desired_value_change_produces_add:0 "{{Name}} Resting Point Change"
  mod_country_{{varname}}_desired_value_change_produces_add:0 "{{Name}} Resting Point Change"
 

@@ -1,0 +1,105 @@
+namespace = supremacist_militancy_desired_resource_events
+
+country_event = {
+	id = supremacist_militancy_desired_resource_events.1
+	hide_window = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		# Get the current production
+		export_resource_income_to_variable = {
+			resource = supremacist_militancy_desired_value_change
+			variable = current_supremacist_militancy_desired_value_change
+		}
+
+		# Define new desired point
+		set_variable = {
+			which = supremacist_militancy_new_desired_value
+			value = 5
+		}
+		change_variable = {
+			which = supremacist_militancy_new_desired_value
+			value = current_supremacist_militancy_desired_value_change
+		}
+		# supremacist_militancy_new_desired_value is now the new desired point
+		
+		# Old desired value
+		export_resource_stockpile_to_variable = {
+			resource = supremacist_militancy_desired_value
+			variable = current_supremacist_militancy_desired_value
+		}
+
+		# Determine the delta needed to achieve new desired value
+		set_variable = {
+			which = supremacist_militancy_desired_value_delta
+			value = supremacist_militancy_new_desired_value 
+		}
+		subtract_variable = {
+			which = supremacist_militancy_desired_value_delta
+			value = current_supremacist_militancy_desired_value
+		}
+		# supremacist_militancy_desired_value_delta is now the delta between new and old desired point
+
+		# Set desired value to new desired value
+		add_resource = {
+			supremacist_militancy_desired_value = 1
+			mult = supremacist_militancy_desired_value_delta
+		}
+
+		# Get current value of supremacist_militancy
+		export_resource_stockpile_to_variable = {
+			resource = supremacist_militancy_current_value
+			variable = current_supremacist_militancy_current_value
+		}
+
+		set_variable = {
+			which = delta_between_current_desired_supremacist_militancy
+			value = supremacist_militancy_new_desired_value
+		}
+		subtract_variable = {
+			which = supremacist_militancy_new_desired_value
+			value = current_supremacist_militancy_current_value
+		}
+		# delta_between_current_desired_supremacist_militancy now represents the difference between the values
+
+		# If we are close, remove modifiers, if we are far, add trending up or trending down
+		if = {
+			limit = {
+				check_variable = {
+					which = delta_between_current_desired_supremacist_militancy
+					value <= 1
+				}
+				check_variable = {
+					which = delta_between_current_desired_supremacist_militancy
+					value >= -1
+				}
+			}
+			remove_modifier = supremacist_militancy_current_value_trending_up
+			remove_modifier = supremacist_militancy_current_value_trending_down
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = supremacist_militancy_new_desired_value
+						value >= current_supremacist_militancy_current_value
+					}
+				}
+				add_modifier = {
+					modifier = supremacist_militancy_current_value_trending_up
+					days = -1
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = supremacist_militancy_current_value_trending_down
+					days = -1
+				}
+			}
+		}
+	}	
+}

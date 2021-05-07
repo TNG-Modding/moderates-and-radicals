@@ -353,7 +353,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "navy_group"
 				size = { width = 84 height = 35 }
-				position = { x = 250 y = 0 }
+				position = { x = 225 y = 0 }
 
 				background = {
 					name = "background"
@@ -509,8 +509,8 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "background_ideological_purity"
-				size = { width = 75 height = 33 }
-				position = { x = 995 y = 2 }
+				size = { width = 70 height = 33 }
+				position = { x = 970 y = 2 }
 	
 				background = {
 					name = "background"
@@ -519,7 +519,7 @@ guiTypes = {
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_resource_ideological_purity"
-					position = { x = 28 y = -1 }
+					position = { x = 25 y = -1 }
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
@@ -528,7 +528,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "tb_ideological_purity_current_value_group"
 				size = { width = 45 height = 33 }
-				position = { x = 995 y = 2 }
+				position = { x = 970 y = 2 }
 
 				background = {
 					name = "background"
@@ -550,7 +550,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "tb_ideological_purity_desired_value_group"
 				size = { width = 30 height = 33 }
-				position = { x = 1040 y = 2 }
+				position = { x = 1010 y = 2 }
 
 				background = {
 					name = "background"
@@ -584,7 +584,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "tb_faction_imperialist_support_group"
 				size = { width = 70 height = 40 }
-				position = { x = 1075 y = 0 }
+				position = { x = 1050 y = 0 }
 
 				background = {
 					name = "background"
@@ -612,9 +612,9 @@ guiTypes = {
 			}
 
 			containerWindowType = {
-				name = "tb_faction_imperialist_militancy_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1075 y = 15 }
+				name = "tb_imperialist_militancy_current_value_group"
+				size = { width = 70 height = 20 }
+				position = { x = 1050 y = 15 }
 
 				background = {
 					name = "background"
@@ -641,181 +641,32 @@ guiTypes = {
 				}
 			}
 
-			# Supremacist
 			containerWindowType = {
-				name = "tb_faction_supremacist_support_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1130 y = 0 }
-			
-				background = {
-					name = "background"
-					spriteType = "GFX_invisible"
-				}
-			
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_resource_supremacist_support"
-					position = { x = 0 y = 0 }
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-			
-				instantTextBoxType={
-					name = "amount"
-					font = "cg_16b"
-					position = { x = 2 y = 2 }
-					maxWidth = 70
-					maxHeight = 16
-					text = "0 / 0"
-					format = center
-					alwaysTransparent = yes
-				}
-			}
-			
-			containerWindowType = {
-				name = "tb_faction_supremacist_militancy_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1130 y = 15 }
-			
-				background = {
-					name = "background"
-					spriteType = "GFX_invisible"
-				}
-			
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_resource_supremacist_militancy"
-					position = { x = 0 y = 0 }
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-			
-				instantTextBoxType={
-					name = "amount"
-					font = "cg_16b"
-					position = { x = 2 y = 2 }
-					maxWidth = 70
-					maxHeight = 16
-					text = "0 / 0"
-					format = center
-					alwaysTransparent = yes
-				}
-			}
+				name = "tb_imperialist_militancy_desired_value_group"
+				size = { width = 30 height = 20 }
+				position = { x = 1100 y = 15 }
 
-			# Progressive
-			containerWindowType = {
-				name = "tb_faction_progressive_support_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1185 y = 0 }
-			
 				background = {
 					name = "background"
 					spriteType = "GFX_invisible"
 				}
-			
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_resource_progressive_support"
-					position = { x = 0 y = 0 }
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-			
-				instantTextBoxType={
-					name = "amount"
-					font = "cg_16b"
-					position = { x = 2 y = 2 }
-					maxWidth = 70
-					maxHeight = 16
-					text = "0 / 0"
-					format = center
-					alwaysTransparent = yes
-				}
-			}
-			
-			containerWindowType = {
-				name = "tb_faction_progressive_militancy_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1185 y = 15 }
-			
-				background = {
-					name = "background"
-					spriteType = "GFX_invisible"
-				}
-			
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_resource_progressive_militancy"
-					position = { x = 0 y = 0 }
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-			
-				instantTextBoxType={
-					name = "amount"
-					font = "cg_16b"
-					position = { x = 2 y = 2 }
-					maxWidth = 70
-					maxHeight = 16
-					text = "0 / 0"
-					format = center
-					alwaysTransparent = yes
-				}
-			}
 
-			containerWindowType = {
-				name = "tb_faction_technologist_support_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1240 y = 0 }
-			
-				background = {
-					name = "background"
-					spriteType = "GFX_invisible"
-				}
-			
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_resource_technologist_support"
-					position = { x = 0 y = 0 }
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-			
 				instantTextBoxType={
-					name = "amount"
+					name = "divider"
 					font = "cg_16b"
-					position = { x = 2 y = 2 }
-					maxWidth = 70
+					position = { x = -10 y = 2 }
+					maxWidth = 30
 					maxHeight = 16
-					text = "0 / 0"
+					text = "/"
 					format = center
 					alwaysTransparent = yes
 				}
-			}
-			
-			containerWindowType = {
-				name = "tb_faction_technologist_militancy_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1240 y = 15 }
-			
-				background = {
-					name = "background"
-					spriteType = "GFX_invisible"
-				}
-			
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_resource_technologist_militancy"
-					position = { x = 0 y = 0 }
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-			
+
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
-					position = { x = 2 y = 2 }
-					maxWidth = 70
+					position = { x = 0 y = 2 }
+					maxWidth = 30
 					maxHeight = 16
 					text = "0 / 0"
 					format = center
@@ -827,13 +678,13 @@ guiTypes = {
 			containerWindowType = {
 				name = "tb_faction_prosperity_support_group"
 				size = { width = 70 height = 40 }
-				position = { x = 1295 y = 0 }
-			
+				position = { x = 1125 y = 0 }
+
 				background = {
 					name = "background"
 					spriteType = "GFX_invisible"
 				}
-			
+
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_resource_prosperity_support"
@@ -841,7 +692,7 @@ guiTypes = {
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
-			
+
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
@@ -853,17 +704,17 @@ guiTypes = {
 					alwaysTransparent = yes
 				}
 			}
-			
+
 			containerWindowType = {
-				name = "tb_faction_prosperity_militancy_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1295 y = 15 }
-			
+				name = "tb_prosperity_militancy_current_value_group"
+				size = { width = 70 height = 20 }
+				position = { x = 1125 y = 15 }
+
 				background = {
 					name = "background"
 					spriteType = "GFX_invisible"
 				}
-			
+
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_resource_prosperity_militancy"
@@ -871,12 +722,139 @@ guiTypes = {
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
-			
+
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
 					position = { x = 2 y = 2 }
 					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "tb_prosperity_militancy_desired_value_group"
+				size = { width = 30 height = 20 }
+				position = { x = 1175 y = 15 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				instantTextBoxType={
+					name = "divider"
+					font = "cg_16b"
+					position = { x = -10 y = 2 }
+					maxWidth = 30
+					maxHeight = 16
+					text = "/"
+					format = center
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 0 y = 2 }
+					maxWidth = 30
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			# supremacist
+			containerWindowType = {
+				name = "tb_faction_supremacist_support_group"
+				size = { width = 70 height = 40 }
+				position = { x = 1200 y = 0 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_supremacist_support"
+					position = { x = 0 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 2 y = 2 }
+					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "tb_supremacist_militancy_current_value_group"
+				size = { width = 70 height = 20 }
+				position = { x = 1200 y = 15 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_supremacist_militancy"
+					position = { x = 0 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 2 y = 2 }
+					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "tb_supremacist_militancy_desired_value_group"
+				size = { width = 30 height = 20 }
+				position = { x = 1250 y = 15 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				instantTextBoxType={
+					name = "divider"
+					font = "cg_16b"
+					position = { x = -10 y = 2 }
+					maxWidth = 30
+					maxHeight = 16
+					text = "/"
+					format = center
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 0 y = 2 }
+					maxWidth = 30
 					maxHeight = 16
 					text = "0 / 0"
 					format = center
@@ -888,13 +866,13 @@ guiTypes = {
 			containerWindowType = {
 				name = "tb_faction_xenoist_support_group"
 				size = { width = 70 height = 40 }
-				position = { x = 1350 y = 0 }
-			
+				position = { x = 1275 y = 0 }
+
 				background = {
 					name = "background"
 					spriteType = "GFX_invisible"
 				}
-			
+
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_resource_xenoist_support"
@@ -902,7 +880,7 @@ guiTypes = {
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
-			
+
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
@@ -914,17 +892,17 @@ guiTypes = {
 					alwaysTransparent = yes
 				}
 			}
-			
+
 			containerWindowType = {
-				name = "tb_faction_xenoist_militancy_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1350 y = 15 }
-			
+				name = "tb_xenoist_militancy_current_value_group"
+				size = { width = 70 height = 20 }
+				position = { x = 1275 y = 15 }
+
 				background = {
 					name = "background"
 					spriteType = "GFX_invisible"
 				}
-			
+
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_resource_xenoist_militancy"
@@ -932,12 +910,139 @@ guiTypes = {
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
-			
+
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
 					position = { x = 2 y = 2 }
 					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "tb_xenoist_militancy_desired_value_group"
+				size = { width = 30 height = 20 }
+				position = { x = 1325 y = 15 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				instantTextBoxType={
+					name = "divider"
+					font = "cg_16b"
+					position = { x = -10 y = 2 }
+					maxWidth = 30
+					maxHeight = 16
+					text = "/"
+					format = center
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 0 y = 2 }
+					maxWidth = 30
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			# progressive
+			containerWindowType = {
+				name = "tb_faction_progressive_support_group"
+				size = { width = 70 height = 40 }
+				position = { x = 1350 y = 0 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_progressive_support"
+					position = { x = 0 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 2 y = 2 }
+					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "tb_progressive_militancy_current_value_group"
+				size = { width = 70 height = 20 }
+				position = { x = 1350 y = 15 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_progressive_militancy"
+					position = { x = 0 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 2 y = 2 }
+					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "tb_progressive_militancy_desired_value_group"
+				size = { width = 30 height = 20 }
+				position = { x = 1400 y = 15 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				instantTextBoxType={
+					name = "divider"
+					font = "cg_16b"
+					position = { x = -10 y = 2 }
+					maxWidth = 30
+					maxHeight = 16
+					text = "/"
+					format = center
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 0 y = 2 }
+					maxWidth = 30
 					maxHeight = 16
 					text = "0 / 0"
 					format = center
@@ -949,13 +1054,13 @@ guiTypes = {
 			containerWindowType = {
 				name = "tb_faction_totalitarian_support_group"
 				size = { width = 70 height = 40 }
-				position = { x = 1405 y = 0 }
-			
+				position = { x = 1425 y = 0 }
+
 				background = {
 					name = "background"
 					spriteType = "GFX_invisible"
 				}
-			
+
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_resource_totalitarian_support"
@@ -963,37 +1068,7 @@ guiTypes = {
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
-			
-				instantTextBoxType={
-					name = "amount"
-					font = "cg_16b"
-					position = { x = 2 y = 2 }
-					maxWidth = 70
-					maxHeight = 16
-					text = "0 / 0"
-					format = center
-					alwaysTransparent = yes
-				}
-			}
-			
-			containerWindowType = {
-				name = "tb_faction_totalitarian_militancy_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1405 y = 15 }
-			
-				background = {
-					name = "background"
-					spriteType = "GFX_invisible"
-				}
-			
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_resource_totalitarian_militancy"
-					position = { x = 0 y = 0 }
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-			
+
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
@@ -1006,25 +1081,24 @@ guiTypes = {
 				}
 			}
 
-			# traditionalist
 			containerWindowType = {
-				name = "tb_faction_traditionalist_support_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1460 y = 0 }
-			
+				name = "tb_totalitarian_militancy_current_value_group"
+				size = { width = 70 height = 20 }
+				position = { x = 1425 y = 15 }
+
 				background = {
 					name = "background"
 					spriteType = "GFX_invisible"
 				}
-			
+
 				iconType = {
 					name = "icon"
-					spriteType = "GFX_resource_traditionalist_support"
+					spriteType = "GFX_resource_totalitarian_militancy"
 					position = { x = 0 y = 0 }
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
-			
+
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
@@ -1036,17 +1110,175 @@ guiTypes = {
 					alwaysTransparent = yes
 				}
 			}
-			
+
 			containerWindowType = {
-				name = "tb_faction_traditionalist_militancy_group"
-				size = { width = 70 height = 40 }
-				position = { x = 1460 y = 15 }
-			
+				name = "tb_totalitarian_militancy_desired_value_group"
+				size = { width = 30 height = 20 }
+				position = { x = 1475 y = 15 }
+
 				background = {
 					name = "background"
 					spriteType = "GFX_invisible"
 				}
-			
+
+				instantTextBoxType={
+					name = "divider"
+					font = "cg_16b"
+					position = { x = -10 y = 2 }
+					maxWidth = 30
+					maxHeight = 16
+					text = "/"
+					format = center
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 0 y = 2 }
+					maxWidth = 30
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			# technologist
+			containerWindowType = {
+				name = "tb_faction_technologist_support_group"
+				size = { width = 70 height = 40 }
+				position = { x = 1500 y = 0 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_technologist_support"
+					position = { x = 0 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 2 y = 2 }
+					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "tb_technologist_militancy_current_value_group"
+				size = { width = 70 height = 20 }
+				position = { x = 1500 y = 15 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_technologist_militancy"
+					position = { x = 0 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 2 y = 2 }
+					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "tb_technologist_militancy_desired_value_group"
+				size = { width = 30 height = 20 }
+				position = { x = 1550 y = 15 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				instantTextBoxType={
+					name = "divider"
+					font = "cg_16b"
+					position = { x = -10 y = 2 }
+					maxWidth = 30
+					maxHeight = 16
+					text = "/"
+					format = center
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 0 y = 2 }
+					maxWidth = 30
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			# traditionalist
+			containerWindowType = {
+				name = "tb_faction_traditionalist_support_group"
+				size = { width = 70 height = 40 }
+				position = { x = 1575 y = 0 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_traditionalist_support"
+					position = { x = 0 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 2 y = 2 }
+					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "tb_traditionalist_militancy_current_value_group"
+				size = { width = 70 height = 20 }
+				position = { x = 1575 y = 15 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_resource_traditionalist_militancy"
@@ -1054,12 +1286,45 @@ guiTypes = {
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
-			
+
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
 					position = { x = 2 y = 2 }
 					maxWidth = 70
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "tb_traditionalist_militancy_desired_value_group"
+				size = { width = 30 height = 20 }
+				position = { x = 1625 y = 15 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+
+				instantTextBoxType={
+					name = "divider"
+					font = "cg_16b"
+					position = { x = -10 y = 2 }
+					maxWidth = 30
+					maxHeight = 16
+					text = "/"
+					format = center
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 0 y = 2 }
+					maxWidth = 30
 					maxHeight = 16
 					text = "0 / 0"
 					format = center

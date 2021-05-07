@@ -51,7 +51,7 @@
             "changePerMonth": 1
         },
         {
-            "varname": "pacifist_militancy",
+            "varname": "prosperity_militancy",
             "name": "pacifist militancy",
             "Name": "Pacifist Militancy",
             "desc": "pacifist militancy tracks the buildup of armaments and anger in defense of pacifism",

@@ -1,13 +1,13 @@
 ﻿l_english:
 
- mod_country_imperialist_militancy_produces_add:0 "Monthly Imperialist Militancy"
- mod_country_supremacist_militancy_produces_add:0 "Monthly Supremacist Militancy"
- mod_country_progressive_militancy_produces_add:0 "Monthly Progressive Militancy"
- mod_country_technologist_militancy_produces_add:0 "Monthly Technologist Militancy"
- mod_country_prosperity_militancy_produces_add:0 "Monthly Pacifist Militancy"
- mod_country_xenoist_militancy_produces_add:0 "Monthly Xenoist Militancy"
- mod_country_totalitarian_militancy_produces_add:0 "Monthly Totalitarian Militancy"
- mod_country_traditionalist_militancy_produces_add:0 "Monthly Traditionalist Militancy"
+ mod_country_imperialist_militancy_desired_value_change_produces_add:0 "Monthly Imperialist Militancy"
+ mod_country_supremacist_militancy_desired_value_change_produces_add:0 "Monthly Supremacist Militancy"
+ mod_country_progressive_militancy_desired_value_change_produces_add:0 "Monthly Progressive Militancy"
+ mod_country_technologist_militancy_desired_value_change_produces_add:0 "Monthly Technologist Militancy"
+ mod_country_prosperity_militancy_desired_value_change_produces_add:0 "Monthly Pacifist Militancy"
+ mod_country_xenoist_militancy_desired_value_change_produces_add:0 "Monthly Xenoist Militancy"
+ mod_country_totalitarian_militancy_desired_value_change_produces_add:0 "Monthly Totalitarian Militancy"
+ mod_country_traditionalist_militancy_desired_value_change_produces_add:0 "Monthly Traditionalist Militancy"
 
  mod_country_imperialist_support_produces_add:0 "Monthly Imperialist Momentum"
  mod_country_supremacist_support_produces_add:0 "Monthly Supremacist Momentum"

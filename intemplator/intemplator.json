@@ -130,7 +130,7 @@
             "name": "Desired Resource Gui",
             "specFilePath": "./specs/desiredResources.json",
             "templateDirectoryPath": "./templates/desired_resource_main_gui",
-            "outputDirectoryPath": "../interface",
+            "outputDirectoryPath": "../generated/desired_resources",
             "disabled": false,
             "dumpContents": true,
             "isBom": false

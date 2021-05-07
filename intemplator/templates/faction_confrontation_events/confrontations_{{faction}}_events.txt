@@ -44,7 +44,7 @@ country_event = {
         }
 
         export_resource_stockpile_to_variable = { 
-            resource = {{faction}}_militancy
+            resource = {{faction}}_militancy_current_value
             variable = current_{{faction}}_militancy
         }
 
@@ -310,7 +310,7 @@ pop_faction_event = {
         owner = {
             add_resource = {
                 ideological_purity_current_value = -25
-                {{faction}}_militancy = 10
+                {{faction}}_militancy_current_value = 10
                 {{faction}}_support = 10
             }
 

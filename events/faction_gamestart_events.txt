@@ -36,14 +36,14 @@ country_event = {
 				add_resource = { traditionalist_support = 1	}
 				add_resource = { imperialist_support = 1	}
 
-				add_resource = { supremacist_militancy = 1	}
-				add_resource = { progressive_militancy = 1	}
-				add_resource = { technologist_militancy = 1	}
-				add_resource = { prosperity_militancy = 1	}
-				add_resource = { xenoist_militancy = 1	}
-				add_resource = { totalitarian_militancy = 1	}
-				add_resource = { traditionalist_militancy = 1	}
-				add_resource = { imperialist_militancy = 1	}
+				add_resource = { supremacist_militancy_current_value = 10	}
+				add_resource = { progressive_militancy_current_value = 10	}
+				add_resource = { technologist_militancy_current_value = 10	}
+				add_resource = { prosperity_militancy_current_value = 10	}
+				add_resource = { xenoist_militancy_current_value = 10	}
+				add_resource = { totalitarian_militancy_current_value = 10	}
+				add_resource = { traditionalist_militancy_current_value = 10	}
+				add_resource = { imperialist_militancy_current_value = 10	}
 			} 
 		}
 	}
