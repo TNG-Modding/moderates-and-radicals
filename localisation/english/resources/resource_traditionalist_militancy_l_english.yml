@@ -2,12 +2,12 @@
 
  traditionalist_militancy_desired_value_change:0 "Traditionalist Militancy Resting Point Change"
  traditionalist_militancy_desired_value_change_desc:0 "The amount we raise the resting point of our traditionalist militancy, traditionalist militancy tracks the buildup of armaments and anger in defense of spiritualism."
- mod_country_base_traditionalist_militancy_desired_value_change_produces_add:0 "Traditionalist Militancy Resting Point Change"
+ mod_country_base_traditionalist_militancy_desired_value_change_produces_add:0 "Traditionalist Militancy Base Resting Point Change"
  mod_country_traditionalist_militancy_desired_value_change_produces_add:0 "Traditionalist Militancy Resting Point Change"
 
  traditionalist_militancy_current_value:0 "Traditionalist Militancy"
  traditionalist_militancy_current_value_desc:0 "Traditionalist militancy tracks the buildup of armaments and anger in defense of spiritualism."
- mod_country_base_traditionalist_militancy_current_value_produces_add:0 "Monthly Traditionalist Militancy Production"
+ mod_country_base_traditionalist_militancy_current_value_produces_add:0 "Monthly Traditionalist Militancy Base Production"
  mod_country_traditionalist_militancy_current_value_produces_add:0 "Monthly Traditionalist Militancy Production"
  traditionalist_militancy_current_value_trending_up:0 "Traditionalist Militancy Trending Up"
  traditionalist_militancy_current_value_trending_down:0 "Traditionalist Militancy Trending Down"

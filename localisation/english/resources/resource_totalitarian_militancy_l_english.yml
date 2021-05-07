@@ -2,12 +2,12 @@
 
  totalitarian_militancy_desired_value_change:0 "Totalitarian Militancy Resting Point Change"
  totalitarian_militancy_desired_value_change_desc:0 "The amount we raise the resting point of our totalitarian militancy, totalitarian militancy tracks the buildup of armaments and anger in defense of authoritarianism."
- mod_country_base_totalitarian_militancy_desired_value_change_produces_add:0 "Totalitarian Militancy Resting Point Change"
+ mod_country_base_totalitarian_militancy_desired_value_change_produces_add:0 "Totalitarian Militancy Base Resting Point Change"
  mod_country_totalitarian_militancy_desired_value_change_produces_add:0 "Totalitarian Militancy Resting Point Change"
 
  totalitarian_militancy_current_value:0 "Totalitarian Militancy"
  totalitarian_militancy_current_value_desc:0 "Totalitarian militancy tracks the buildup of armaments and anger in defense of authoritarianism."
- mod_country_base_totalitarian_militancy_current_value_produces_add:0 "Monthly Totalitarian Militancy Production"
+ mod_country_base_totalitarian_militancy_current_value_produces_add:0 "Monthly Totalitarian Militancy Base Production"
  mod_country_totalitarian_militancy_current_value_produces_add:0 "Monthly Totalitarian Militancy Production"
  totalitarian_militancy_current_value_trending_up:0 "Totalitarian Militancy Trending Up"
  totalitarian_militancy_current_value_trending_down:0 "Totalitarian Militancy Trending Down"

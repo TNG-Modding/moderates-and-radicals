@@ -2,12 +2,12 @@
 
  progressive_militancy_desired_value_change:0 "Progressive Militancy Resting Point Change"
  progressive_militancy_desired_value_change_desc:0 "The amount we raise the resting point of our progressive militancy, progressive militancy tracks the buildup of armaments and anger in defense of egalitarianism."
- mod_country_base_progressive_militancy_desired_value_change_produces_add:0 "Progressive Militancy Resting Point Change"
+ mod_country_base_progressive_militancy_desired_value_change_produces_add:0 "Progressive Militancy Base Resting Point Change"
  mod_country_progressive_militancy_desired_value_change_produces_add:0 "Progressive Militancy Resting Point Change"
 
  progressive_militancy_current_value:0 "Progressive Militancy"
  progressive_militancy_current_value_desc:0 "Progressive militancy tracks the buildup of armaments and anger in defense of egalitarianism."
- mod_country_base_progressive_militancy_current_value_produces_add:0 "Monthly Progressive Militancy Production"
+ mod_country_base_progressive_militancy_current_value_produces_add:0 "Monthly Progressive Militancy Base Production"
  mod_country_progressive_militancy_current_value_produces_add:0 "Monthly Progressive Militancy Production"
  progressive_militancy_current_value_trending_up:0 "Progressive Militancy Trending Up"
  progressive_militancy_current_value_trending_down:0 "Progressive Militancy Trending Down"
