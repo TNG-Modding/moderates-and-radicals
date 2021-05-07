@@ -101,11 +101,11 @@ country_event = {
 			limit = {
 				check_variable = {
 					which = delta_between_current_desired_ideological_purity
-					value <= 1
+					value <= 2
 				}
 				check_variable = {
 					which = delta_between_current_desired_ideological_purity
-					value >= -1
+					value >= -2
 				}
 			}
 			remove_modifier = ideological_purity_current_value_trending_up
