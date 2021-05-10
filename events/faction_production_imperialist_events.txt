@@ -12,8 +12,20 @@ country_event = {
 	immediate = {
 		country_event = { id = imperialist_support_approval_effects.2 }
 		country_event = { id = imperialist_support_approval_effects.3 }
-		country_event = { id = imperialist_support_approval_effects.4 }
-		country_event = { id = imperialist_support_approval_effects.5 }
+		every_pop_faction = {
+			if = {
+				limit = {
+					is_pop_faction_type = imperialist
+				}
+				pop_faction_event = { id = imperialist_support_approval_effects.4 }
+			}
+			else_if = {
+				limit = {
+					is_pop_faction_type = imperialist_radicals
+				}
+				pop_faction_event = { id = imperialist_support_approval_effects.5 }
+			}
+		}
 	}
 }
 
@@ -83,10 +95,7 @@ pop_faction_event = {
 			is_country_type = default
 			has_modifier = politics
 		}
-		OR = {
-			# is_pop_faction_type = gov_imperialist
-			is_pop_faction_type = imperialist
-		}
+		is_pop_faction_type = imperialist
 	}
 
 	immediate = {
@@ -229,9 +238,7 @@ pop_faction_event = {
 			is_country_type = default
 			has_modifier = politics
 		}
-		OR = {
-			is_pop_faction_type = imperialist_radicals
-		}
+		is_pop_faction_type = imperialist_radicals
 	}
 
 	immediate = {
