@@ -17,9 +17,9 @@
  confrontations_progressive.30:0 "Destruction of Totalitarian Propaganda"
  confrontations_progressive.30.desc:0 "The progressives of the [Root.GetName] have gathered on [Root.Owner.Capital.GetName] to demand we strike authoritarian teachings from all government curriculum. They have taken it upon themselves to destroy datalogs and holovids that contain totalitarian propaganda. The fires from the destruction can be seen from the very steps of the capitol. The totalitarians are understandably upset, and they are asking us to denounce the destruction."
  confrontations_progressive.30.a:0 "Let the fires continue."
- progressive_violent_riots_continue_modifier:0 "Totalitarians Holovid Burning Continues"
+ progressive_violent_riots_continue_modifier:0 "Totalitarian Holovid Burning Continues"
  confrontations_progressive.30.b:0 "Stop the fires!"
- progressive_violent_riots_stopped_modifier:0 "Totalitarians Burning Stopped"
+ progressive_violent_riots_stopped_modifier:0 "Totalitarian Burning Stopped"
 
  confrontations_progressive.80:0 "[Root.Owner.GetRulerTitle] [Root.Owner.GetRulerName] Assassinated by Progressives!"
  confrontations_progressive.80.desc:0 "The progressives have assassinated our [Root.Owner.GetRulerTitle]! Our empire is still reeling from the news. To push it further, the [Root.GetName] are streaming horrifying holovids on every planet that detail the many 'crimes' of the late [Root.Owner.GetRulerName] while calling for egalitarian policies and the destruction of the totalitarians."

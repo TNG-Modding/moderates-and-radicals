@@ -30,7 +30,7 @@
             "enemyFaction": "xenoist",
             "EnemyFaction": "Xenoist",
             "enemyAdjective": "xenoist",
-            "EnemyAdjective": "Xenoists"
+            "EnemyAdjective": "Xenoist"
         },
         {
             "varname": "progressive_faction",
@@ -46,7 +46,7 @@
             "enemyFaction": "totalitarian",
             "EnemyFaction": "Totalitarian",
             "enemyAdjective": "totalitarian",
-            "EnemyAdjective": "Totalitarians"
+            "EnemyAdjective": "Totalitarian"
         },
         {
             "varname": "technologist_faction",
@@ -78,7 +78,7 @@
             "enemyFaction": "imperialist",
             "EnemyFaction": "Imperialist",
             "enemyAdjective": "imperialist",
-            "EnemyAdjective": "Imperialists"
+            "EnemyAdjective": "Imperialist"
         },
         {
             "varname": "xenoist_faction",
@@ -110,7 +110,7 @@
             "enemyFaction": "progressive",
             "EnemyFaction": "Progressive",
             "enemyAdjective": "progressive",
-            "EnemyAdjective": "Progressives"
+            "EnemyAdjective": "Progressive"
         },
         {
             "varname": "traditionalist_faction",
