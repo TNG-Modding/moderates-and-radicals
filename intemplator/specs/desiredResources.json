@@ -17,7 +17,7 @@
             "desc": "imperialist militancy tracks the buildup of armaments and anger in defense of militarism",
             "Desc": "Imperialist militancy tracks the buildup of armaments and anger in defense of militarism",
             "maxValue": 99,
-            "baseValue": 5,
+            "baseValue": 10,
             "changePerMonth": 1
         },
         {
@@ -27,7 +27,7 @@
             "desc": "supremacist militancy tracks the buildup of armaments and anger in defense of xenophobia",
             "Desc": "Supremacist militancy tracks the buildup of armaments and anger in defense of xenophobia",
             "maxValue": 99,
-            "baseValue": 5,
+            "baseValue": 10,
             "changePerMonth": 1
         },
         {
@@ -37,7 +37,7 @@
             "desc": "progressive militancy tracks the buildup of armaments and anger in defense of egalitarianism",
             "Desc": "Progressive militancy tracks the buildup of armaments and anger in defense of egalitarianism",
             "maxValue": 99,
-            "baseValue": 5,
+            "baseValue": 10,
             "changePerMonth": 1
         },
         {
@@ -47,7 +47,7 @@
             "desc": "technologist militancy tracks the buildup of armaments and anger in defense of materialism",
             "Desc": "Technologist militancy tracks the buildup of armaments and anger in defense of materialism",
             "maxValue": 99,
-            "baseValue": 5,
+            "baseValue": 10,
             "changePerMonth": 1
         },
         {
@@ -57,7 +57,7 @@
             "desc": "pacifist militancy tracks the buildup of armaments and anger in defense of pacifism",
             "Desc": "Pacifist militancy tracks the buildup of armaments and anger in defense of pacifism",
             "maxValue": 99,
-            "baseValue": 5,
+            "baseValue": 10,
             "changePerMonth": 1
         },
         {
@@ -67,7 +67,7 @@
             "desc": "xenoist militancy tracks the buildup of armaments and anger in defense of xenophilia",
             "Desc": "Xenoist militancy tracks the buildup of armaments and anger in defense of xenophilia",
             "maxValue": 99,
-            "baseValue": 5,
+            "baseValue": 10,
             "changePerMonth": 1
         },
         {
@@ -77,7 +77,7 @@
             "desc": "totalitarian militancy tracks the buildup of armaments and anger in defense of authoritarianism",
             "Desc": "Totalitarian militancy tracks the buildup of armaments and anger in defense of authoritarianism",
             "maxValue": 99,
-            "baseValue": 5,
+            "baseValue": 10,
             "changePerMonth": 1
         },
         {
@@ -87,7 +87,7 @@
             "desc": "traditionalist militancy tracks the buildup of armaments and anger in defense of spiritualism",
             "Desc": "Traditionalist militancy tracks the buildup of armaments and anger in defense of spiritualism",
             "maxValue": 99,
-            "baseValue": 5,
+            "baseValue": 10,
             "changePerMonth": 1
         }
     ]
