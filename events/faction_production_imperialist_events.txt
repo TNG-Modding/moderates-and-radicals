@@ -4,15 +4,24 @@
 
 namespace = imperialist_support_approval_effects
 
-# Factions despawn, remove modifiers
 country_event = {
 	id = imperialist_support_approval_effects.1
 	hide_window = yes
-	is_triggered_only = no
+	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		days = 30
+	immediate = {
+		country_event = { id = imperialist_support_approval_effects.2 }
+		country_event = { id = imperialist_support_approval_effects.3 }
+		country_event = { id = imperialist_support_approval_effects.4 }
+		country_event = { id = imperialist_support_approval_effects.5 }
 	}
+}
+
+# Factions despawn, remove modifiers
+country_event = {
+	id = imperialist_support_approval_effects.2
+	hide_window = yes
+	is_triggered_only = yes
 
 	trigger = {
 		is_country_type = default
@@ -37,13 +46,9 @@ country_event = {
 
 # Radicals despawn
 country_event = {
-	id = imperialist_support_approval_effects.2
+	id = imperialist_support_approval_effects.3
 	hide_window = yes
-	is_triggered_only = no
-
-	mean_time_to_happen = {
-		days = 30
-	}
+	is_triggered_only = yes
 
 	trigger = {
 		is_country_type = default
@@ -68,14 +73,10 @@ country_event = {
 
 # Check influence of faction
 pop_faction_event = {
-	id = imperialist_support_approval_effects.3
+	id = imperialist_support_approval_effects.4
 
 	hide_window = yes
-	is_triggered_only = no
-
-	mean_time_to_happen = {
-		days = 30
-	}
+	is_triggered_only = yes
 
 	trigger = {
 		owner = {
@@ -214,7 +215,7 @@ pop_faction_event = {
 
 # Check if radicals are influential
 pop_faction_event = {
-	id = imperialist_support_approval_effects.4
+	id = imperialist_support_approval_effects.5
 
 	hide_window = yes
 	is_triggered_only = no
