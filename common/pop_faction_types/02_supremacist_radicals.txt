@@ -14,7 +14,7 @@ supremacist_radicals = {
 		produces = {
 			# supremacist_militancy = -12
 			# supremacist_support = 12
-			ideological_purity_desired_value_change = -2
+			# ideological_purity_desired_value_change = -50
 		}
 	}
 

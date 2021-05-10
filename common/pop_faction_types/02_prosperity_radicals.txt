@@ -14,7 +14,7 @@ prosperity_radicals = {
 		produces = {
 			# prosperity_militancy = -12
 			# prosperity_support = 12
-			ideological_purity_desired_value_change = -2
+			# ideological_purity_desired_value_change = -50
 		}
 	}
 

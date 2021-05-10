@@ -12,7 +12,7 @@ gov_xenoist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			ideological_purity_desired_value_change = 1
+			ideological_purity_desired_value_change = 50
 			# supremacist_militancy = 3
 			# xenoist_support = 4
 		}

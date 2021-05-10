@@ -14,7 +14,7 @@ xenoist_radicals = {
 		produces = {
 			# xenoist_militancy = -2
 			# xenoist_support = 1
-			ideological_purity_desired_value_change = -2
+			# ideological_purity_desired_value_change = -50
 		}
 	}
 

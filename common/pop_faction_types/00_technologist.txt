@@ -12,10 +12,6 @@ technologist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			# technologist_support = 12
-			ideological_purity_desired_value_change = -1
-		}
-		produces = {
 			trigger = {
 				owner = { years_passed > 10
 				has_encountered_other_species = yes }

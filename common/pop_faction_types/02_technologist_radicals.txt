@@ -14,7 +14,7 @@ technologist_radicals = {
 		produces = {
 			# technologist_militancy = -12
 			# technologist_support = 12
-			ideological_purity_desired_value_change = -2
+			# ideological_purity_desired_value_change = -50
 		}
 	}
 
