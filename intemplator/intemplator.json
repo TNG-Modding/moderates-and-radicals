@@ -161,6 +161,34 @@
             "disabled": false,
             "dumpContents": true,
             "isBom": true
+        },
+
+        {
+            "name": "Fanatic Events",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/fanatic_events",
+            "outputDirectoryPath": "../events",
+            "disabled": false,
+            "dumpContents": true,
+            "isBom": false
+        },
+        {
+            "name": "Fanatic Static Modifiers",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/fanatic_static_modifiers",
+            "outputDirectoryPath": "../common/static_modifiers",
+            "disabled": false,
+            "dumpContents": true,
+            "isBom": false
+        },
+        {
+            "name": "Fanatic Localisation",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/fanatic_localization",
+            "outputDirectoryPath": "../localisation/english/modifiers",
+            "disabled": false,
+            "dumpContents": true,
+            "isBom": true
         }
     ]
 }
