@@ -2,18 +2,18 @@
 
  xenoist_militancy_desired_value_change:0 "Xenoist Militancy Resting Point Change"
  xenoist_militancy_desired_value_change_desc:0 "The amount we raise the resting point of our xenoist militancy, xenoist militancy tracks the buildup of armaments and anger in defense of xenophilia."
- mod_country_base_xenoist_militancy_desired_value_change_produces_add:0 "Xenoist Militancy Base Resting Point Change"
+ mod_country_base_xenoist_militancy_desired_value_change_produces_add:0 "Xenoist Militancy Resting Point Change"
  mod_country_xenoist_militancy_desired_value_change_produces_add:0 "Xenoist Militancy Resting Point Change"
 
  xenoist_militancy_current_value:0 "Xenoist Militancy"
  xenoist_militancy_current_value_desc:0 "Xenoist militancy tracks the buildup of armaments and anger in defense of xenophilia."
- mod_country_base_xenoist_militancy_current_value_produces_add:0 "Monthly Xenoist Militancy Base Production"
+ mod_country_base_xenoist_militancy_current_value_produces_add:0 "Monthly Xenoist Militancy Production"
  mod_country_xenoist_militancy_current_value_produces_add:0 "Monthly Xenoist Militancy Production"
  xenoist_militancy_current_value_trending_up:0 "Xenoist Militancy Trending Up"
  xenoist_militancy_current_value_trending_down:0 "Xenoist Militancy Trending Down"
 
  xenoist_militancy_desired_value:0 "Xenoist Militancy Resting Point"
- xenoist_militancy_desired_value_desc:0 "The xenoist militancy value we trend towards over time."
+ xenoist_militancy_desired_value_desc:0 "The xenoist militancy value we trend towards over time. It has a base value of 10."
  mod_country_base_xenoist_militancy_desired_value_produces_add:0 "This shouldn't be visible"
  mod_country_xenoist_militancy_desired_value_produces_add:0 "This shouldn't be visible"
 
