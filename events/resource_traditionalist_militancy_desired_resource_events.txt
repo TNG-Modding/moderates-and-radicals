@@ -1,17 +1,34 @@
 namespace = traditionalist_militancy_desired_resource_events
 
+# Update traditionalist_militancy current, desired resting point, and current monthly gain
 country_event = {
 	id = traditionalist_militancy_desired_resource_events.1
 	hide_window = yes
-	is_triggered_only = no
+	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		days = 30
-	}
+	immediate = {
+		
+		country_event = { id = traditionalist_militancy_desired_resource_events.2 }
+		country_event = { id = traditionalist_militancy_desired_resource_events.3 }
+		country_event = { id = traditionalist_militancy_desired_resource_events.4 }
+		country_event = { id = traditionalist_militancy_desired_resource_events.5 }
+		country_event = { id = traditionalist_militancy_desired_resource_events.6 }
+		country_event = { id = traditionalist_militancy_desired_resource_events.7 }
 
-	trigger = {
-		has_modifier = politics
-	}
+		# create_message = {
+		# 	type = traditionalist_militancy_values_updated
+		# 	localization = traditionalist_militancy_values_updated_message
+		# 	days = 5
+		# 	target = root
+		# }
+	}	
+}
+
+# Define traditionalist_militancy_new_desired_value based on traditionalist_militancy desired point change production
+country_event = {
+	id = traditionalist_militancy_desired_resource_events.2
+	hide_window = yes
+	is_triggered_only = yes
 
 	immediate = {
 		# Get the current production
@@ -23,7 +40,7 @@ country_event = {
 		# Define new desired point
 		set_variable = {
 			which = traditionalist_militancy_new_desired_value
-			value = 5
+			value = 10
 		}
 		change_variable = {
 			which = traditionalist_militancy_new_desired_value
@@ -56,7 +73,16 @@ country_event = {
 			}
 		}
 		# traditionalist_militancy_new_desired_value is now the new desired point
-		
+	}
+}
+
+# Set traditionalist_militancy resting point to traditionalist_militancy_new_desired_value
+country_event = {
+	id = traditionalist_militancy_desired_resource_events.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
 		# Old desired value
 		export_resource_stockpile_to_variable = {
 			resource = traditionalist_militancy_desired_value
@@ -79,7 +105,16 @@ country_event = {
 			traditionalist_militancy_desired_value = 1
 			mult = traditionalist_militancy_desired_value_delta
 		}
+	}
+}
 
+# Set delta_between_current_desired_traditionalist_militancy
+country_event = {
+	id = traditionalist_militancy_desired_resource_events.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
 		# Get current value of traditionalist_militancy
 		export_resource_stockpile_to_variable = {
 			resource = traditionalist_militancy_current_value
@@ -95,23 +130,105 @@ country_event = {
 			value = current_traditionalist_militancy_current_value
 		}
 		# delta_between_current_desired_traditionalist_militancy now represents the difference between the values
+	}
+}
 
+# Set next_months_current_traditionalist_militancy
+country_event = {
+	id = traditionalist_militancy_desired_resource_events.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
 		# If we are close, remove modifiers, if we are far, add trending up or trending down
+		set_variable = {
+			which = next_months_current_traditionalist_militancy
+			value = current_traditionalist_militancy_current_value
+		}
+		change_variable = {
+			which = next_months_current_traditionalist_militancy
+			value = current_traditionalist_militancy_desired_value_change
+		}
+	}
+}
+
+# Set floored_current_traditionalist_militancy_value and floored_desired_traditionalist_militancy_value
+country_event = {
+	id = traditionalist_militancy_desired_resource_events.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_variable = {
+			which = floored_current_traditionalist_militancy_value
+			value = current_traditionalist_militancy_current_value
+		}
+		floor_variable = floored_current_traditionalist_militancy_value
+		
+		set_variable = {
+			which = floored_desired_traditionalist_militancy_value
+			value = traditionalist_militancy_new_desired_value
+		}
+		floor_variable = floored_desired_traditionalist_militancy_value
+	}
+}
+
+# Set trending current value
+country_event = {
+	id = traditionalist_militancy_desired_resource_events.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
 		if = {
+			# If the value is close enough, do nothing
 			limit = {
 				check_variable = {
-					which = delta_between_current_desired_traditionalist_militancy
-					value <= 2
-				}
-				check_variable = {
-					which = delta_between_current_desired_traditionalist_militancy
-					value >= -2
+					which = floored_current_traditionalist_militancy_value
+					value = floored_desired_traditionalist_militancy_value
 				}
 			}
 			remove_modifier = traditionalist_militancy_current_value_trending_up
 			remove_modifier = traditionalist_militancy_current_value_trending_down
 		}
-		else = {
+		else_if = {
+			# Adding this months resources would put us over the desired point, so just set it equal to the desired point
+			limit = {
+				OR = {
+					
+					AND = {
+						check_variable = {
+							which = current_traditionalist_militancy_current_value
+							value < traditionalist_militancy_new_desired_value
+						}
+						check_variable = {
+							which = next_months_current_traditionalist_militancy
+							value >= traditionalist_militancy_new_desired_value
+						}
+					}
+
+					AND = {
+						check_variable = {
+							which = current_traditionalist_militancy_current_value
+							value > traditionalist_militancy_new_desired_value
+						}
+						check_variable = {
+							which = next_months_current_traditionalist_militancy
+							value <= traditionalist_militancy_new_desired_value
+						}
+					}
+				}
+				
+			}
+			remove_modifier = traditionalist_militancy_current_value_trending_up
+			remove_modifier = traditionalist_militancy_current_value_trending_down
+			add_resource = {
+				traditionalist_militancy_current_value = 1
+				mult = delta_between_current_desired_traditionalist_militancy
+			}
+		}
+		else_if = {
+			# If we are far away from our desired value
 			if = {
 				limit = {
 					check_variable = {
@@ -131,12 +248,5 @@ country_event = {
 				}
 			}
 		}
-
-		# create_message = {
-		# 	type = traditionalist_militancy_values_updated
-		# 	localization = traditionalist_militancy_values_updated_message
-		# 	days = 5
-		# 	target = root
-		# }
-	}	
+	}
 }
