@@ -32,3 +32,8 @@ prosperity_ruler_assassination_continue_modifier = {
 prosperity_coup_continue_modifier = {
 	country_base_ideological_purity_desired_value_change_produces_add = 20
 }
+
+prosperity_putsch_continue_modifier = {
+	country_base_ideological_purity_desired_value_change_produces_add = -10
+	country_base_prosperity_militancy_desired_value_change_produces_add = 10
+}

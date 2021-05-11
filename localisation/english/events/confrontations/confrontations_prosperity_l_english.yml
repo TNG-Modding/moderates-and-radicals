@@ -31,6 +31,11 @@
  confrontations_prosperity.90.a:0 "Blasted - I mean - long live the [Root.GetName]!"
  prosperity_coup_continue_modifier:0 "Successful Pacifist Coup"
 
+ confrontations_prosperity.91:0 "Pacifist Putsch!"
+ confrontations_prosperity.91.desc:0 "Pacifists led by [putsch_leader.GetName] have staged a deadly putsch within our empire! All of the major leaders of our government have been assassinated in a string of violent and often public murders. \n\n[putsch_leader.GetName] has assured the citizenry that they will govern as [root.owner.GetName] rulers always have, but with specific accommodations for their pacifist viewpoints. Many of [putsch_leader.GetName]'s cronies such as Governor [new_governor.GetName] and Admiral [new_admiral.GetName] have been promoted to high ranking government positions in the wake of this violent event. Their inexperience is palpable, but we will have to make the best of the situation."
+ confrontations_prosperity.91.a:0 "Great, [putsch_leader.GetName]'s lackeys running things..."
+ prosperity_putsch_continue_modifier:0 "Successful Pacifist Putsch"
+
  # Normal Prosperity Operations
  operations_prosperity.1:0 "Launch an Operation"
  operations_prosperity.1.desc:0 "We cannot leave the political future of [Root.Owner.GetName] up to chance. We must take action regarding the §H[Root.GetName]§! in order to safeguard our ideals. As an official faction within our government, the §H[Root.GetName]§! has many officials, delegates, and stress points that we might use to our advantage."

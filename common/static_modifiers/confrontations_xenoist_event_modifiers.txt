@@ -32,3 +32,8 @@ xenoist_ruler_assassination_continue_modifier = {
 xenoist_coup_continue_modifier = {
 	country_base_ideological_purity_desired_value_change_produces_add = 20
 }
+
+xenoist_putsch_continue_modifier = {
+	country_base_ideological_purity_desired_value_change_produces_add = -10
+	country_base_xenoist_militancy_desired_value_change_produces_add = 10
+}

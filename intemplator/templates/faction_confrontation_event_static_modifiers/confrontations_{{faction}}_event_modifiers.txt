@@ -32,3 +32,8 @@
 {{faction}}_coup_continue_modifier = {
 	country_base_ideological_purity_desired_value_change_produces_add = 20
 }
+
+{{faction}}_putsch_continue_modifier = {
+	country_base_ideological_purity_desired_value_change_produces_add = -10
+	country_base_{{faction}}_militancy_desired_value_change_produces_add = 10
+}
