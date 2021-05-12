@@ -26,41 +26,41 @@ country_event = {
         # Get the current production
         export_resource_income_to_variable = {
             resource = progressive_militancy_desired_value_change
-            variable = current_progressive_militancy_desired_value_change
+            variable = dre_current_progressive_militancy_desired_value_change
         }
 
         # Define new desired point
         set_variable = {
-            which = progressive_militancy_new_desired_value
+            which = dre_progressive_militancy_new_desired_value
             value = 10
         }
         change_variable = {
-            which = progressive_militancy_new_desired_value
-            value = current_progressive_militancy_desired_value_change
+            which = dre_progressive_militancy_new_desired_value
+            value = dre_current_progressive_militancy_desired_value_change
         }
 
         # Clamp desired value to 0 inclusive to 99 inclusive
         if = {
             limit = {
                 check_variable = {
-                    which = progressive_militancy_new_desired_value
+                    which = dre_progressive_militancy_new_desired_value
                     value > 99
                 }
             }
             set_variable = {
-                which = progressive_militancy_new_desired_value
+                which = dre_progressive_militancy_new_desired_value
                 value = 99
             }
         }
         else_if = {
             limit = {
                 check_variable = {
-                    which = progressive_militancy_new_desired_value
+                    which = dre_progressive_militancy_new_desired_value
                     value < 0
                 }
             }
             set_variable = {
-                which = progressive_militancy_new_desired_value
+                which = dre_progressive_militancy_new_desired_value
                 value = 0
             }
         }
@@ -78,24 +78,24 @@ country_event = {
         # Old desired value
         export_resource_stockpile_to_variable = {
             resource = progressive_militancy_desired_value
-            variable = current_progressive_militancy_desired_value
+            variable = dre_current_progressive_militancy_desired_value
         }
 
         # Determine the delta needed to achieve new desired value
         set_variable = {
-            which = progressive_militancy_desired_value_delta
-            value = progressive_militancy_new_desired_value 
+            which = dre_progressive_militancy_desired_value_delta
+            value = dre_progressive_militancy_new_desired_value 
         }
         subtract_variable = {
-            which = progressive_militancy_desired_value_delta
-            value = current_progressive_militancy_desired_value
+            which = dre_progressive_militancy_desired_value_delta
+            value = dre_current_progressive_militancy_desired_value
         }
         # progressive_militancy_desired_value_delta is now the delta between new and old desired point
 
         # Set desired value to new desired value
         add_resource = {
             progressive_militancy_desired_value = 1
-            mult = progressive_militancy_desired_value_delta
+            mult = dre_progressive_militancy_desired_value_delta
         }
     }
 }
@@ -110,15 +110,15 @@ country_event = {
         # Get current value of progressive_militancy
         export_resource_stockpile_to_variable = {
             resource = progressive_militancy_current_value
-            variable = current_progressive_militancy_current_value
+            variable = dre_current_progressive_militancy_current_value
         }
 
         set_variable = {
-            which = delta_between_current_desired_progressive_militancy
+            which = dre_delta_between_current_desired_progressive_militancy
             value = progressive_militancy_new_desired_value
         }
         subtract_variable = {
-            which = delta_between_current_desired_progressive_militancy
+            which = dre_delta_between_current_desired_progressive_militancy
             value = current_progressive_militancy_current_value
         }
         # delta_between_current_desired_progressive_militancy now represents the difference between the values
@@ -134,12 +134,12 @@ country_event = {
     immediate = {
         # If we are close, remove modifiers, if we are far, add trending up or trending down
         set_variable = {
-            which = next_months_current_progressive_militancy
-            value = current_progressive_militancy_current_value
+            which = dre_next_months_current_progressive_militancy
+            value = dre_current_progressive_militancy_current_value
         }
         change_variable = {
-            which = next_months_current_progressive_militancy
-            value = current_progressive_militancy_desired_value_change
+            which = dre_next_months_current_progressive_militancy
+            value = dre_current_progressive_militancy_desired_value_change
         }
     }
 }
@@ -152,16 +152,16 @@ country_event = {
     
     immediate = {
         set_variable = {
-            which = floored_current_progressive_militancy_value
-            value = current_progressive_militancy_current_value
+            which = dre_floored_current_progressive_militancy_value
+            value = dre_current_progressive_militancy_current_value
         }
-        floor_variable = floored_current_progressive_militancy_value
+        floor_variable = dre_floored_current_progressive_militancy_value
         
         set_variable = {
-            which = floored_desired_progressive_militancy_value
-            value = progressive_militancy_new_desired_value
+            which = dre_floored_desired_progressive_militancy_value
+            value = dre_progressive_militancy_new_desired_value
         }
-        floor_variable = floored_desired_progressive_militancy_value
+        floor_variable = dre_floored_desired_progressive_militancy_value
     }
 }
 
@@ -176,8 +176,8 @@ country_event = {
             # If the value is close enough, do nothing
             limit = {
                 check_variable = {
-                    which = floored_current_progressive_militancy_value
-                    value = floored_desired_progressive_militancy_value
+                    which = dre_floored_current_progressive_militancy_value
+                    value = dre_floored_desired_progressive_militancy_value
                 }
             }
             remove_modifier = progressive_militancy_current_value_trending_up
@@ -190,23 +190,23 @@ country_event = {
                     
                     AND = {
                         check_variable = {
-                            which = current_progressive_militancy_current_value
-                            value < progressive_militancy_new_desired_value
+                            which = dre_current_progressive_militancy_current_value
+                            value < dre_progressive_militancy_new_desired_value
                         }
                         check_variable = {
-                            which = next_months_current_progressive_militancy
-                            value >= progressive_militancy_new_desired_value
+                            which = dre_next_months_current_progressive_militancy
+                            value >= dre_progressive_militancy_new_desired_value
                         }
                     }
 
                     AND = {
                         check_variable = {
-                            which = current_progressive_militancy_current_value
-                            value > progressive_militancy_new_desired_value
+                            which = dre_current_progressive_militancy_current_value
+                            value > dre_progressive_militancy_new_desired_value
                         }
                         check_variable = {
-                            which = next_months_current_progressive_militancy
-                            value <= progressive_militancy_new_desired_value
+                            which = dre_next_months_current_progressive_militancy
+                            value <= dre_progressive_militancy_new_desired_value
                         }
                     }
                 }
@@ -216,7 +216,7 @@ country_event = {
             remove_modifier = progressive_militancy_current_value_trending_down
             add_resource = {
                 progressive_militancy_current_value = 1
-                mult = delta_between_current_desired_progressive_militancy
+                mult = dre_delta_between_current_desired_progressive_militancy
             }
         }
         else_if = {
@@ -224,8 +224,8 @@ country_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = progressive_militancy_new_desired_value
-                        value >= current_progressive_militancy_current_value
+                        which = dre_progressive_militancy_new_desired_value
+                        value >= dre_current_progressive_militancy_current_value
                     }
                 }
                 add_modifier = {

@@ -26,41 +26,41 @@ country_event = {
         # Get the current production
         export_resource_income_to_variable = {
             resource = {{varname}}_desired_value_change
-            variable = current_{{varname}}_desired_value_change
+            variable = dre_current_{{varname}}_desired_value_change
         }
 
         # Define new desired point
         set_variable = {
-            which = {{varname}}_new_desired_value
+            which = dre_{{varname}}_new_desired_value
             value = {{baseValue}}
         }
         change_variable = {
-            which = {{varname}}_new_desired_value
-            value = current_{{varname}}_desired_value_change
+            which = dre_{{varname}}_new_desired_value
+            value = dre_current_{{varname}}_desired_value_change
         }
 
         # Clamp desired value to 0 inclusive to {{maxValue}} inclusive
         if = {
             limit = {
                 check_variable = {
-                    which = {{varname}}_new_desired_value
+                    which = dre_{{varname}}_new_desired_value
                     value > {{maxValue}}
                 }
             }
             set_variable = {
-                which = {{varname}}_new_desired_value
+                which = dre_{{varname}}_new_desired_value
                 value = {{maxValue}}
             }
         }
         else_if = {
             limit = {
                 check_variable = {
-                    which = {{varname}}_new_desired_value
+                    which = dre_{{varname}}_new_desired_value
                     value < 0
                 }
             }
             set_variable = {
-                which = {{varname}}_new_desired_value
+                which = dre_{{varname}}_new_desired_value
                 value = 0
             }
         }
@@ -78,24 +78,24 @@ country_event = {
         # Old desired value
         export_resource_stockpile_to_variable = {
             resource = {{varname}}_desired_value
-            variable = current_{{varname}}_desired_value
+            variable = dre_current_{{varname}}_desired_value
         }
 
         # Determine the delta needed to achieve new desired value
         set_variable = {
-            which = {{varname}}_desired_value_delta
-            value = {{varname}}_new_desired_value 
+            which = dre_{{varname}}_desired_value_delta
+            value = dre_{{varname}}_new_desired_value 
         }
         subtract_variable = {
-            which = {{varname}}_desired_value_delta
-            value = current_{{varname}}_desired_value
+            which = dre_{{varname}}_desired_value_delta
+            value = dre_current_{{varname}}_desired_value
         }
         # {{varname}}_desired_value_delta is now the delta between new and old desired point
 
         # Set desired value to new desired value
         add_resource = {
             {{varname}}_desired_value = 1
-            mult = {{varname}}_desired_value_delta
+            mult = dre_{{varname}}_desired_value_delta
         }
     }
 }
@@ -110,15 +110,15 @@ country_event = {
         # Get current value of {{varname}}
         export_resource_stockpile_to_variable = {
             resource = {{varname}}_current_value
-            variable = current_{{varname}}_current_value
+            variable = dre_current_{{varname}}_current_value
         }
 
         set_variable = {
-            which = delta_between_current_desired_{{varname}}
+            which = dre_delta_between_current_desired_{{varname}}
             value = {{varname}}_new_desired_value
         }
         subtract_variable = {
-            which = delta_between_current_desired_{{varname}}
+            which = dre_delta_between_current_desired_{{varname}}
             value = current_{{varname}}_current_value
         }
         # delta_between_current_desired_{{varname}} now represents the difference between the values
@@ -134,12 +134,12 @@ country_event = {
     immediate = {
         # If we are close, remove modifiers, if we are far, add trending up or trending down
         set_variable = {
-            which = next_months_current_{{varname}}
-            value = current_{{varname}}_current_value
+            which = dre_next_months_current_{{varname}}
+            value = dre_current_{{varname}}_current_value
         }
         change_variable = {
-            which = next_months_current_{{varname}}
-            value = current_{{varname}}_desired_value_change
+            which = dre_next_months_current_{{varname}}
+            value = dre_current_{{varname}}_desired_value_change
         }
     }
 }
@@ -152,16 +152,16 @@ country_event = {
     
     immediate = {
         set_variable = {
-            which = floored_current_{{varname}}_value
-            value = current_{{varname}}_current_value
+            which = dre_floored_current_{{varname}}_value
+            value = dre_current_{{varname}}_current_value
         }
-        floor_variable = floored_current_{{varname}}_value
+        floor_variable = dre_floored_current_{{varname}}_value
         
         set_variable = {
-            which = floored_desired_{{varname}}_value
-            value = {{varname}}_new_desired_value
+            which = dre_floored_desired_{{varname}}_value
+            value = dre_{{varname}}_new_desired_value
         }
-        floor_variable = floored_desired_{{varname}}_value
+        floor_variable = dre_floored_desired_{{varname}}_value
     }
 }
 
@@ -176,8 +176,8 @@ country_event = {
             # If the value is close enough, do nothing
             limit = {
                 check_variable = {
-                    which = floored_current_{{varname}}_value
-                    value = floored_desired_{{varname}}_value
+                    which = dre_floored_current_{{varname}}_value
+                    value = dre_floored_desired_{{varname}}_value
                 }
             }
             remove_modifier = {{varname}}_current_value_trending_up
@@ -190,23 +190,23 @@ country_event = {
                     
                     AND = {
                         check_variable = {
-                            which = current_{{varname}}_current_value
-                            value < {{varname}}_new_desired_value
+                            which = dre_current_{{varname}}_current_value
+                            value < dre_{{varname}}_new_desired_value
                         }
                         check_variable = {
-                            which = next_months_current_{{varname}}
-                            value >= {{varname}}_new_desired_value
+                            which = dre_next_months_current_{{varname}}
+                            value >= dre_{{varname}}_new_desired_value
                         }
                     }
 
                     AND = {
                         check_variable = {
-                            which = current_{{varname}}_current_value
-                            value > {{varname}}_new_desired_value
+                            which = dre_current_{{varname}}_current_value
+                            value > dre_{{varname}}_new_desired_value
                         }
                         check_variable = {
-                            which = next_months_current_{{varname}}
-                            value <= {{varname}}_new_desired_value
+                            which = dre_next_months_current_{{varname}}
+                            value <= dre_{{varname}}_new_desired_value
                         }
                     }
                 }
@@ -216,7 +216,7 @@ country_event = {
             remove_modifier = {{varname}}_current_value_trending_down
             add_resource = {
                 {{varname}}_current_value = 1
-                mult = delta_between_current_desired_{{varname}}
+                mult = dre_delta_between_current_desired_{{varname}}
             }
         }
         else_if = {
@@ -224,8 +224,8 @@ country_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = {{varname}}_new_desired_value
-                        value >= current_{{varname}}_current_value
+                        which = dre_{{varname}}_new_desired_value
+                        value >= dre_current_{{varname}}_current_value
                     }
                 }
                 add_modifier = {
