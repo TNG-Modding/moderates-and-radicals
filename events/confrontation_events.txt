@@ -44,5 +44,14 @@ country_event = {
 			resource = traditionalist_support
 			variable = current_traditionalist_support
 		}
+
+		country_event = { id = confrontations_imperialist.1 } 
+		country_event = { id = confrontations_supremacist.1 }
+		country_event = { id = confrontations_progressive.1 }
+		country_event = { id = confrontations_technologist.1 }
+		country_event = { id = confrontations_prosperity.1 }
+		country_event = { id = confrontations_xenoist.1 }
+		country_event = { id = confrontations_totalitarian.1 }
+		country_event = { id = confrontations_traditionalist.1 }
 	}
 }

@@ -1,20 +1,16 @@
 namespace = confrontations_prosperity
 
-# prosperity
+# Prosperity Confrontations
+
+# Calculating which confrontation to use
 country_event = {
     id = confrontations_prosperity.1
     hide_window = yes
+    is_triggered_only = yes
 
-    is_triggered_only = no
-
-    mean_time_to_happen = { months = 1 }
     trigger = {
-        NOT = {
-            has_modifier = recent_political_event
-        }
+        NOT = { has_modifier = recent_political_event }
         has_modifier = politics
-        is_variable_set = current_prosperity_support
-        is_variable_set = current_ideological_purity
 
         check_variable = {
             which = current_prosperity_support
@@ -23,16 +19,130 @@ country_event = {
     }
 
     immediate = {
+        export_resource_stockpile_to_variable = { 
+            resource = prosperity_militancy_current_value
+            variable = current_prosperity_militancy
+        }
+        every_pop_faction = {
+            limit = {
+                OR = {
+                    is_pop_faction_type = gov_prosperity
+                    is_pop_faction_type = prosperity_radicals
+                    is_pop_faction_type = prosperity
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = current_prosperity_militancy
+                        value > 90
+                    }
+                }
+                
+                random_list = {
+                    20 = {
+                        # Prosperity Coup
+                        pop_faction_event = { id = confrontations_prosperity.90 }
+                    }
+                    80 = {
+                        # Prosperity Putsch
+                        pop_faction_event = { id = confrontations_prosperity.91 }
+                    }                    
+                }                
+                
+            }	
+            else_if = {
+                limit = {
+                    check_variable = {
+                        which = current_prosperity_militancy
+                        value > 80
+                    }
+                }
+                random_list = {
+                    0 = {
+                        # Ruler Assassinated
+                        pop_faction_event = { id = confrontations_prosperity.80 }
+                    }
+                    50 = {
+                        # Faction Leader Assassinated
+                        pop_faction_event = { id = confrontations_prosperity.81 }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    check_variable = {
+                        which = current_prosperity_militancy
+                        value > 50
+                    }
+                }
+                random_list = {
+                    100 = {
+                        # Militarist Book Burning
+                        pop_faction_event = { id = confrontations_prosperity.30 }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    check_variable = {
+                        which = current_prosperity_militancy
+                        value > 25
+                    }
+                }
+                random_list = {
+                    100 = {
+                        # Prosperity Riots and Endorse Movement
+                        pop_faction_event = { id = confrontations_prosperity.20 }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    check_variable = {
+                        which = current_prosperity_militancy
+                        value >= 0
+                    }
+                }
+                random_list = {
+                    100 = {
+                        # Pacifist policy wording
+                        pop_faction_event = { id = confrontations_prosperity.10 }
+                    }
+                }
+            }	 
+            else = {
+                # create_message = {
+                #     type = BYPASS_EXPLORED
+                #     localization = BYPASS_EXPLORED_MESSAGE
+                #     days = 30
+                #     target = root
+                #     variable = { type = name localization = SYSTEM1 scope = from }
+                #     variable = { type = name localization = SYSTEM2 scope = fromfrom }
+                # }
+            }
+        }        
+    }
+}
+
+# Dock prosperity_support
+country_event = {
+    id = confrontations_prosperity.2
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
         add_modifier = {
             modifier = recent_political_event
-            years = 1
+            months = 3
         }
         export_resource_income_to_variable = { 
             resource = prosperity_support 
             variable = current_prosperity_support_income
         }
 
-        # One years income
+        # Three years income
         multiply_variable = {
             which = current_prosperity_support_income
             value = 36
@@ -42,119 +152,6 @@ country_event = {
             prosperity_support = -1
             mult = current_prosperity_support_income 
         }
-
-        export_resource_stockpile_to_variable = { 
-            resource = prosperity_militancy_current_value
-            variable = current_prosperity_militancy
-        }
-
-        if = {
-            limit = {
-                check_variable = {
-                    which = current_prosperity_militancy
-                    value > 90
-                }
-            }
-            every_pop_faction = {
-                limit = {
-                    OR = {
-                        is_pop_faction_type = gov_prosperity
-                        is_pop_faction_type = prosperity_radicals
-                        is_pop_faction_type = prosperity
-                    }
-                }
-                random_list = {
-                    0 = {
-                        pop_faction_event = { id = confrontations_prosperity.90 }
-                    }
-                    100 = {
-                        pop_faction_event = { id = confrontations_prosperity.91 }
-                    }                    
-                }                
-            }
-        }	
-        else_if = {
-            limit = {
-                check_variable = {
-                    which = current_prosperity_militancy
-                    value > 80
-                }
-            }
-            every_pop_faction = {
-                limit = {
-                    OR = {
-                        is_pop_faction_type = gov_prosperity
-                        is_pop_faction_type = prosperity_radicals
-                        is_pop_faction_type = prosperity
-                    }
-                }
-                random_list = {
-                    100 = {
-                        pop_faction_event = { id = confrontations_prosperity.80 }
-                    }
-                }
-            }
-        }
-        else_if = {
-            limit = {
-                check_variable = {
-                    which = current_prosperity_militancy
-                    value > 50
-                }
-            }
-            every_pop_faction = {
-                limit = {
-                    OR = {
-                        is_pop_faction_type = gov_prosperity
-                        is_pop_faction_type = prosperity_radicals
-                        is_pop_faction_type = prosperity
-                    }
-                }
-                random_list = {
-                    100 = {
-                        pop_faction_event = { id = confrontations_prosperity.30 }
-                    }
-                }
-            }
-        }
-        else_if = {
-            limit = {
-                check_variable = {
-                    which = current_prosperity_militancy
-                    value > 25
-                }
-            }
-            every_pop_faction = {
-                limit = {
-                    OR = {
-                        is_pop_faction_type = gov_prosperity
-                        is_pop_faction_type = prosperity_radicals
-                        is_pop_faction_type = prosperity
-                    }
-                }
-                random_list = {
-                    100 = {
-                        pop_faction_event = { id = confrontations_prosperity.20 }
-                    }
-                }
-            }
-        }
-        else = {
-            every_pop_faction = {
-                limit = {
-                    OR = {
-                        is_pop_faction_type = gov_prosperity
-                        is_pop_faction_type = prosperity_radicals
-                        is_pop_faction_type = prosperity
-                    }
-                }
-                random_list = {
-                    100 = {
-                        pop_faction_event = { id = confrontations_prosperity.10 }
-                    }
-                }
-            }
-        }	 
     }
 }
 
@@ -170,6 +167,10 @@ pop_faction_event = {
 
     picture = GFX_evt_assembly_fight
     show_sound = event_factions
+
+    immediate = {
+        owner = { country_event = { id = confrontations_prosperity.2 } }
+    }
 
     option = {
         name = confrontations_prosperity.10.a
@@ -210,6 +211,10 @@ pop_faction_event = {
 
     picture = GFX_evt_night_raid
     show_sound = event_super_explosion
+
+    immediate = {
+        owner = { country_event = { id = confrontations_prosperity.2 } }
+    }
 
     option = {
         name = confrontations_prosperity.20.a
@@ -256,7 +261,7 @@ pop_faction_event = {
     show_sound = event_air_raid_siren
 
     immediate = {
-        owner = { country_event = { id = confrontations.1 } }
+        owner = { country_event = { id = confrontations_prosperity.2 } }
     }
 
     option = {
@@ -293,6 +298,21 @@ pop_faction_event = {
     picture = GFX_evt_open_revolt
     show_sound = event_super_explosion
 
+    trigger = {
+        owner = {
+            count_owned_leader = {
+                limit = {
+                    leader_class = ruler 
+                }
+                count > 0
+            }
+        }        
+    }
+
+    immediate = {
+        owner = { country_event = { id = confrontations_prosperity.2 } }
+    }
+
     option = {
         name = confrontations_prosperity.80.a
         
@@ -317,6 +337,253 @@ pop_faction_event = {
     }
 }
 
+# Faction assassinated non government faction
+pop_faction_event = {
+    id = confrontations_prosperity.81
+    title = confrontations_prosperity.81
+    desc = confrontations_prosperity.81.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_open_revolt
+    show_sound = event_super_explosion
+
+    trigger = {
+        # Is there a non government faction that is not the same as root
+        # This is faction infighting
+        owner = {
+            count_pop_faction = {
+                limit = {
+                    NOT = {
+                        is_same_value = root
+                    }
+                    NOR = {
+                        is_pop_faction_type = gov_imperialist
+                        is_pop_faction_type = gov_supremacist
+                        is_pop_faction_type = gov_progressive
+                        is_pop_faction_type = gov_technologist
+                        is_pop_faction_type = gov_prosperity
+                        is_pop_faction_type = gov_xenoist
+                        is_pop_faction_type = gov_totalitarian
+                        is_pop_faction_type = gov_traditionalist
+                    }
+                    owner = {
+                        count_owned_leader = {
+                            limit = {
+                                leader_of_faction = prevprev
+                            }
+                            count = 1
+                        }
+                    }
+                }    
+                count > 0            
+            }
+        }
+    }
+
+    immediate = {
+        owner = {
+            random_pop_faction = {
+                limit = {
+                    NOT = {
+                        is_same_value = root
+                    }
+                    NOR = {
+                        is_pop_faction_type = gov_imperialist
+                        is_pop_faction_type = gov_supremacist
+                        is_pop_faction_type = gov_progressive
+                        is_pop_faction_type = gov_technologist
+                        is_pop_faction_type = gov_prosperity
+                        is_pop_faction_type = gov_xenoist
+                        is_pop_faction_type = gov_totalitarian
+                        is_pop_faction_type = gov_traditionalist
+                    }
+                    owner = {
+                        count_owned_leader = {
+                            limit = {
+                                leader_of_faction = prevprev 
+                            }
+                            count = 1
+                        }
+                    }
+                }
+                save_event_target_as = assassinated_leader_faction
+
+                owner = {
+                    every_owned_leader = {
+                        limit = {
+                            leader_of_faction = event_target:assassinated_leader_faction
+                        }
+                        save_event_target_as = assassinated_faction_leader
+                    }
+                }                
+            }
+            owner = { country_event = { id = confrontations_prosperity.2 } }
+        }
+        
+        event_target:assassinated_faction_leader = {
+            kill_leader = {
+                show_notification = yes
+            }
+        }        
+    }
+
+    option = {
+        name = confrontations_prosperity.81.a
+        
+        owner = {
+            add_resource = {
+                ideological_purity_current_value = -25
+            }
+            if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = imperialist
+                            is_pop_faction_type = imperialist_radicals
+                        }                        
+                    }
+                }
+                add_resource = {
+                    imperialist_militancy_desired_value_change = 10
+                    imperialist_support = 10
+                }
+                add_modifier = {
+                    modifier = imperialist_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = supremacist
+                            is_pop_faction_type = supremacist_radicals
+                        }                        
+                    }
+                }
+                add_resource = {
+                    supremacist_militancy_desired_value_change = 10
+                    supremacist_support = 10
+                }
+                add_modifier = {
+                    modifier = supremacist_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = progressive
+                            is_pop_faction_type = progressive_radicals
+                        }                        
+                    }
+                }
+                add_resource = {
+                    progressive_militancy_desired_value_change = 10
+                    progressive_support = 10
+                }
+                add_modifier = {
+                    modifier = progressive_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = technologist
+                            is_pop_faction_type = technologist_radicals
+                        }                        
+                    }
+                }
+                add_resource = {
+                    technologist_militancy_desired_value_change = 10
+                    technologist_support = 10
+                }
+                add_modifier = {
+                    modifier = technologist_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = prosperity
+                            is_pop_faction_type = prosperity_radicals
+                        }                        
+                    }
+                }
+                add_resource = {
+                    prosperity_militancy_desired_value_change = 10
+                    prosperity_support = 10
+                }
+                add_modifier = {
+                    modifier = prosperity_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = xenoist
+                            is_pop_faction_type = xenoist_radicals
+                        }                        
+                    }
+                }
+                add_resource = {
+                    xenoist_militancy_desired_value_change = 10
+                    xenoist_support = 10
+                }
+                add_modifier = {
+                    modifier = xenoist_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = totalitarian
+                            is_pop_faction_type = totalitarian_radicals
+                        }                        
+                    }
+                }
+                add_resource = {
+                    totalitarian_militancy_desired_value_change = 10
+                    totalitarian_support = 10
+                }
+                add_modifier = {
+                    modifier = totalitarian_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = traditionalist
+                            is_pop_faction_type = traditionalist_radicals
+                        }                        
+                    }
+                }
+                add_resource = {
+                    traditionalist_militancy_desired_value_change = 10
+                    traditionalist_support = 10
+                }     
+                add_modifier = {
+                    modifier = traditionalist_faction_leader_assassination_continue_modifier
+                    years = 3
+                }           
+            }
+        }
+    }
+}
+
 # Coup
 pop_faction_event = {
     id = confrontations_prosperity.90
@@ -329,9 +596,7 @@ pop_faction_event = {
     picture = GFX_evt_open_revolt
     show_sound = event_super_explosion
 
-    option = {
-        name = confrontations_prosperity.90.a
-        
+    immediate = {
         owner = {
             if = {
                 limit = { 
@@ -341,6 +606,17 @@ pop_faction_event = {
                 }
                 shift_ethic = ethic_pacifist
             }
+            kill_leader = {
+                type = ruler
+            }
+            owner = { country_event = { id = confrontations_prosperity.2 } }
+        }
+    }
+
+    option = {
+        name = confrontations_prosperity.90.a
+        
+        owner = {
             
             add_resource = {
                 ideological_purity_current_value = -25
@@ -349,11 +625,6 @@ pop_faction_event = {
             add_modifier = {
                 modifier = prosperity_coup_continue_modifier
                 years = 3
-            }
-
-            # Kill ruler
-            kill_leader = {
-                type = ruler
             }
 
             # Kill rulers of wrong ethic
@@ -406,9 +677,6 @@ pop_faction_event = {
                 }
             }
             
-
-            # Convert pops
-
             # Inform others
             # every_relation = {
             #     limit = {
@@ -567,7 +835,8 @@ pop_faction_event = {
                 assign_leader = event_target:new_admiral
             }
         }
-          
+
+        owner = { country_event = { id = confrontations_prosperity.2 } }          
     }
 
     option = {
