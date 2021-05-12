@@ -33,9 +33,11 @@ country_event = {
             }
             if = {
                 limit = {
-                    check_variable = {
-                        which = current_xenoist_militancy
-                        value > 90
+                    owner = { 
+                        check_variable = {
+                            which = current_imperialist_militancy
+                            value > 90
+                        } 
                     }
                 }
                 
@@ -53,9 +55,11 @@ country_event = {
             }	
             else_if = {
                 limit = {
-                    check_variable = {
-                        which = current_xenoist_militancy
-                        value > 80
+                    owner = { 
+                        check_variable = {
+                            which = current_imperialist_militancy
+                            value > 80
+                        } 
                     }
                 }
                 random_list = {
@@ -71,9 +75,11 @@ country_event = {
             }
             else_if = {
                 limit = {
-                    check_variable = {
-                        which = current_xenoist_militancy
-                        value > 50
+                    owner = { 
+                        check_variable = {
+                            which = current_imperialist_militancy
+                            value > 50
+                        } 
                     }
                 }
                 random_list = {
@@ -85,9 +91,11 @@ country_event = {
             }
             else_if = {
                 limit = {
-                    check_variable = {
-                        which = current_xenoist_militancy
-                        value > 25
+                    owner = { 
+                        check_variable = {
+                            which = current_imperialist_militancy
+                            value > 25
+                        } 
                     }
                 }
                 random_list = {
@@ -99,9 +107,11 @@ country_event = {
             }
             else_if = {
                 limit = {
-                    check_variable = {
-                        which = current_xenoist_militancy
-                        value >= 0
+                    owner = { 
+                        check_variable = {
+                            which = current_imperialist_militancy
+                            value > 0
+                        } 
                     }
                 }
                 random_list = {
