@@ -112,14 +112,13 @@ country_event = {
             resource = ideological_purity_current_value
             variable = dre_current_ideological_purity_current_value
         }
-
         set_variable = {
             which = dre_delta_between_current_desired_ideological_purity
-            value = ideological_purity_new_desired_value
+            value = dre_ideological_purity_new_desired_value
         }
         subtract_variable = {
             which = dre_delta_between_current_desired_ideological_purity
-            value = current_ideological_purity_current_value
+            value = dre_current_ideological_purity_current_value
         }
         # delta_between_current_desired_ideological_purity now represents the difference between the values
     }
@@ -132,14 +131,17 @@ country_event = {
     is_triggered_only = yes
     
     immediate = {
-        # If we are close, remove modifiers, if we are far, add trending up or trending down
         set_variable = {
             which = dre_next_months_current_ideological_purity
             value = dre_current_ideological_purity_current_value
         }
+        export_resource_income_to_variable = {
+            resource = ideological_purity_current_value
+            variable = dre_ideological_purity_current_value_production
+        }
         change_variable = {
             which = dre_next_months_current_ideological_purity
-            value = dre_current_ideological_purity_desired_value_change
+            value = dre_ideological_purity_current_value_production
         }
     }
 }
@@ -187,7 +189,6 @@ country_event = {
             # Adding this months resources would put us over the desired point, so just set it equal to the desired point
             limit = {
                 OR = {
-                    
                     AND = {
                         check_variable = {
                             which = dre_current_ideological_purity_current_value
@@ -228,12 +229,14 @@ country_event = {
                         value >= dre_current_ideological_purity_current_value
                     }
                 }
+                remove_modifier = ideological_purity_current_value_trending_down
                 add_modifier = {
                     modifier = ideological_purity_current_value_trending_up
                     days = -1
                 }
             }
             else = {
+                remove_modifier = ideological_purity_current_value_trending_up
                 add_modifier = {
                     modifier = ideological_purity_current_value_trending_down
                     days = -1

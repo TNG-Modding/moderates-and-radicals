@@ -112,14 +112,13 @@ country_event = {
             resource = {{varname}}_current_value
             variable = dre_current_{{varname}}_current_value
         }
-
         set_variable = {
             which = dre_delta_between_current_desired_{{varname}}
-            value = {{varname}}_new_desired_value
+            value = dre_{{varname}}_new_desired_value
         }
         subtract_variable = {
             which = dre_delta_between_current_desired_{{varname}}
-            value = current_{{varname}}_current_value
+            value = dre_current_{{varname}}_current_value
         }
         # delta_between_current_desired_{{varname}} now represents the difference between the values
     }
@@ -132,14 +131,17 @@ country_event = {
     is_triggered_only = yes
     
     immediate = {
-        # If we are close, remove modifiers, if we are far, add trending up or trending down
         set_variable = {
             which = dre_next_months_current_{{varname}}
             value = dre_current_{{varname}}_current_value
         }
+        export_resource_income_to_variable = {
+            resource = {{varname}}_current_value
+            variable = dre_{{varname}}_current_value_production
+        }
         change_variable = {
             which = dre_next_months_current_{{varname}}
-            value = dre_current_{{varname}}_desired_value_change
+            value = dre_{{varname}}_current_value_production
         }
     }
 }
@@ -187,7 +189,6 @@ country_event = {
             # Adding this months resources would put us over the desired point, so just set it equal to the desired point
             limit = {
                 OR = {
-                    
                     AND = {
                         check_variable = {
                             which = dre_current_{{varname}}_current_value
@@ -228,12 +229,14 @@ country_event = {
                         value >= dre_current_{{varname}}_current_value
                     }
                 }
+                remove_modifier = {{varname}}_current_value_trending_down
                 add_modifier = {
                     modifier = {{varname}}_current_value_trending_up
                     days = -1
                 }
             }
             else = {
+                remove_modifier = {{varname}}_current_value_trending_up
                 add_modifier = {
                     modifier = {{varname}}_current_value_trending_down
                     days = -1
