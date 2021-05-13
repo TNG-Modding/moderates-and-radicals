@@ -27,9 +27,9 @@
  imperialist_ruler_assassination_continue_modifier:0 "Imperialists Assassinated Ruler"
 
  confrontations_imperialist.81:0 "[assassinated_faction_leader.GetTitle] [assassinated_faction_leader.GetName] Assassinated!"
- confrontations_imperialist.81.desc:0 "The imperialists have assassinated [assassinated_faction_leader.GetTitle] [assassinated_faction_leader.GetName], the leader of the[assassinated_leader_faction.GetPopFactionName]! The political vacuum left by [assassinated_faction_leader.GetName] will take time to fill. Calls for the prosecution of those responsible can be heard everywhere."
+ confrontations_imperialist.81.desc:0 "The imperialists have assassinated [assassinated_faction_leader.GetTitle] [assassinated_faction_leader.GetName], the leader of the [assassinated_leader_faction.GetName]! Those who supported the late [assassinated_faction_leader.GetTitle] are calling for imperialist reparations for the outrage. Funeral attendance has swelled the hyperlanes, and most all mourn their passing."
  confrontations_imperialist.81.a:0 "We must have justice!"
- imperialist_faction_leader_assassination_continue_modifier:0 "Imperialists Faction Leader Assassinated"
+ imperialist_faction_leader_assassination_continue_modifier:0 "Imperialist Leader Assassinated"
 
  confrontations_imperialist.90:0 "Imperialist Coup!"
  confrontations_imperialist.90.desc:0 "The imperialists of the [Root.GetName] have staged a coup within our empire! A new government has been declared that properly enshrines militarist ideals. This sudden change has left our empire in disorder, as many of the ruling class have been killed for holding suspiciously pacifist views. Without the support of our ruling class, we have no choice but to accept their demands."

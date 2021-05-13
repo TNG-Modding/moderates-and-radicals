@@ -26,7 +26,7 @@ technologist_violent_riots_stopped_modifier = {
 }
 
 technologist_faction_leader_assassination_continue_modifier = {
-	country_base_technologist_militancy_desired_value_change_produces_add = -5
+	country_base_technologist_militancy_desired_value_change_produces_add = 10
 }
 
 technologist_ruler_assassination_continue_modifier = {

@@ -305,7 +305,7 @@ pop_faction_event = {
 
     is_triggered_only = yes
 
-    picture = GFX_evt_open_revolt
+    picture = GFX_evt_crisis_declared
     show_sound = event_super_explosion
 
     trigger = {
@@ -356,7 +356,7 @@ pop_faction_event = {
 
     is_triggered_only = yes
 
-    picture = GFX_evt_open_revolt
+    picture = GFX_evt_space_funeral
     show_sound = event_super_explosion
 
     trigger = {
@@ -382,7 +382,11 @@ pop_faction_event = {
                         count_owned_leader = {
                             limit = {
                                 leader_of_faction = prevprev
+                                NOT = {
+                                    leader_class = ruler
+                                }
                             }
+
                             count = 1
                         }
                     }
@@ -412,6 +416,9 @@ pop_faction_event = {
                     owner = {
                         count_owned_leader = {
                             limit = {
+                                NOT = {
+                                    leader_class = ruler
+                                }
                                 leader_of_faction = prevprev 
                             }
                             count = 1
@@ -456,8 +463,8 @@ pop_faction_event = {
                     }
                 }
                 add_resource = {
-                    imperialist_militancy_desired_value_change = 10
-                    imperialist_support = 10
+                    imperialist_militancy_current_value = 10
+                    imperialist_support = 100
                 }
                 add_modifier = {
                     modifier = imperialist_faction_leader_assassination_continue_modifier
@@ -474,8 +481,8 @@ pop_faction_event = {
                     }
                 }
                 add_resource = {
-                    supremacist_militancy_desired_value_change = 10
-                    supremacist_support = 10
+                    supremacist_militancy_current_value = 10
+                    supremacist_support = 100
                 }
                 add_modifier = {
                     modifier = supremacist_faction_leader_assassination_continue_modifier
@@ -492,8 +499,8 @@ pop_faction_event = {
                     }
                 }
                 add_resource = {
-                    progressive_militancy_desired_value_change = 10
-                    progressive_support = 10
+                    progressive_militancy_current_value = 10
+                    progressive_support = 100
                 }
                 add_modifier = {
                     modifier = progressive_faction_leader_assassination_continue_modifier
@@ -510,8 +517,8 @@ pop_faction_event = {
                     }
                 }
                 add_resource = {
-                    technologist_militancy_desired_value_change = 10
-                    technologist_support = 10
+                    technologist_militancy_current_value = 10
+                    technologist_support = 100
                 }
                 add_modifier = {
                     modifier = technologist_faction_leader_assassination_continue_modifier
@@ -528,8 +535,8 @@ pop_faction_event = {
                     }
                 }
                 add_resource = {
-                    prosperity_militancy_desired_value_change = 10
-                    prosperity_support = 10
+                    prosperity_militancy_current_value = 10
+                    prosperity_support = 100
                 }
                 add_modifier = {
                     modifier = prosperity_faction_leader_assassination_continue_modifier
@@ -546,8 +553,8 @@ pop_faction_event = {
                     }
                 }
                 add_resource = {
-                    xenoist_militancy_desired_value_change = 10
-                    xenoist_support = 10
+                    xenoist_militancy_current_value = 10
+                    xenoist_support = 100
                 }
                 add_modifier = {
                     modifier = xenoist_faction_leader_assassination_continue_modifier
@@ -564,8 +571,8 @@ pop_faction_event = {
                     }
                 }
                 add_resource = {
-                    totalitarian_militancy_desired_value_change = 10
-                    totalitarian_support = 10
+                    totalitarian_militancy_current_value = 10
+                    totalitarian_support = 100
                 }
                 add_modifier = {
                     modifier = totalitarian_faction_leader_assassination_continue_modifier
@@ -582,8 +589,8 @@ pop_faction_event = {
                     }
                 }
                 add_resource = {
-                    traditionalist_militancy_desired_value_change = 10
-                    traditionalist_support = 10
+                    traditionalist_militancy_current_value = 10
+                    traditionalist_support = 100
                 }     
                 add_modifier = {
                     modifier = traditionalist_faction_leader_assassination_continue_modifier

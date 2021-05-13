@@ -27,9 +27,9 @@ l_english:
  {{faction}}_ruler_assassination_continue_modifier:0 "{{Adjective}}s Assassinated Ruler"
 
  confrontations_{{faction}}.81:0 "[assassinated_faction_leader.GetTitle] [assassinated_faction_leader.GetName] Assassinated!"
- confrontations_{{faction}}.81.desc:0 "The {{adjective}}s have assassinated [assassinated_faction_leader.GetTitle] [assassinated_faction_leader.GetName], the leader of the[assassinated_leader_faction.GetPopFactionName]! The political vacuum left by [assassinated_faction_leader.GetName] will take time to fill. Calls for the prosecution of those responsible can be heard everywhere."
+ confrontations_{{faction}}.81.desc:0 "The {{adjective}}s have assassinated [assassinated_faction_leader.GetTitle] [assassinated_faction_leader.GetName], the leader of the [assassinated_leader_faction.GetName]! Those who supported the late [assassinated_faction_leader.GetTitle] are calling for {{adjective}} reparations for the outrage. Funeral attendance has swelled the hyperlanes, and most all mourn their passing."
  confrontations_{{faction}}.81.a:0 "We must have justice!"
- {{faction}}_faction_leader_assassination_continue_modifier:0 "{{Faction}}s Faction Leader Assassinated"
+ {{faction}}_faction_leader_assassination_continue_modifier:0 "{{Adjective}} Leader Assassinated"
 
  confrontations_{{faction}}.90:0 "{{Adjective}} Coup!"
  confrontations_{{faction}}.90.desc:0 "The {{adjective}}s of the [Root.GetName] have staged a coup within our empire! A new government has been declared that properly enshrines {{ethic}} ideals. This sudden change has left our empire in disorder, as many of the ruling class have been killed for holding suspiciously {{enemyAdjective}} views. Without the support of our ruling class, we have no choice but to accept their demands."
