@@ -149,7 +149,7 @@
             "specFilePath": "./specs/desiredResources.json",
             "templateDirectoryPath": "./templates/desired_resource_all_modifier_icons",
             "outputDirectoryPath": "../gfx/interface/icons/modifiers",
-            "disabled": false,
+            "disabled": true,
             "dumpContents": true,
             "isBom": false
         },
