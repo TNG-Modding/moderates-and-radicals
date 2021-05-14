@@ -19,7 +19,7 @@ country_event = {
     }
 
     immediate = {
-        export_resource_stockpile_to_variable = { 
+        export_resource_stockpile_to_variable = {
             resource = xenoist_militancy_current_value
             variable = current_xenoist_militancy
         }
@@ -37,14 +37,14 @@ country_event = {
                 }
                 if = {
                     limit = {
-                        owner = { 
+                        owner = {
                             check_variable = {
                                 which = current_xenoist_militancy
                                 value > 90
-                            } 
+                            }
                         }
                     }
-                    
+
                     random_list = {
                         40 = {
                             # Xenoist Coup
@@ -53,17 +53,17 @@ country_event = {
                         60 = {
                             # Xenoist Putsch
                             pop_faction_event = { id = confrontations_xenoist.91 }
-                        }                    
-                    }                
-                    
-                }	
+                        }
+                    }
+
+                }
                 else_if = {
                     limit = {
-                        owner = { 
+                        owner = {
                             check_variable = {
                                 which = current_xenoist_militancy
                                 value > 80
-                            } 
+                            }
                         }
                     }
                     random_list = {
@@ -87,11 +87,11 @@ country_event = {
                 }
                 else_if = {
                     limit = {
-                        owner = { 
+                        owner = {
                             check_variable = {
                                 which = current_xenoist_militancy
                                 value > 50
-                            } 
+                            }
                         }
                     }
                     random_list = {
@@ -135,11 +135,11 @@ country_event = {
                 }
                 else_if = {
                     limit = {
-                        owner = { 
+                        owner = {
                             check_variable = {
                                 which = current_xenoist_militancy
                                 value > 25
-                            } 
+                            }
                         }
                     }
                     random_list = {
@@ -179,11 +179,11 @@ country_event = {
                 }
                 else_if = {
                     limit = {
-                        owner = { 
+                        owner = {
                             check_variable = {
                                 which = current_xenoist_militancy
                                 value > 0
-                            } 
+                            }
                         }
                     }
                     random_list = {
@@ -216,7 +216,7 @@ country_event = {
                             pop_faction_event = { id = confrontations_xenoist.16 }
                         }
                     }
-                }	 
+                }
                 else = {
                     # create_message = {
                     #     type = BYPASS_EXPLORED
@@ -227,8 +227,8 @@ country_event = {
                     #     variable = { type = name localization = SYSTEM2 scope = fromfrom }
                     # }
                 }
-            }  
-        }      
+            }
+        }
     }
 }
 
@@ -244,8 +244,8 @@ country_event = {
             modifier = recent_political_event
             months = 3
         }
-        export_resource_income_to_variable = { 
-            resource = xenoist_support 
+        export_resource_income_to_variable = {
+            resource = xenoist_support
             variable = current_xenoist_support_income
         }
 
@@ -255,9 +255,9 @@ country_event = {
             value = 36
         }
 
-        add_resource = { 
+        add_resource = {
             xenoist_support = -1
-            mult = current_xenoist_support_income 
+            mult = current_xenoist_support_income
         }
     }
 }
@@ -344,7 +344,7 @@ pop_faction_event = {
                         is_pop_category = ruler
                         is_pop_category = specialist
                     }
-                    NOT = { 
+                    NOT = {
                         pop_has_ethic = ethic_xenophile
                     }
                 }
@@ -356,7 +356,7 @@ pop_faction_event = {
                         is_pop_category = ruler
                         is_pop_category = specialist
                     }
-                    NOT = { 
+                    NOT = {
                         pop_has_ethic = ethic_xenophile
                     }
                 }
@@ -409,7 +409,7 @@ pop_faction_event = {
                 species = owner_main_species
                 traits = {
                     trait = random_trait
-                }              
+                }
             }
         }
     }
@@ -430,7 +430,7 @@ pop_faction_event = {
                 species = owner_main_species
                 traits = {
                     trait = random_trait
-                }              
+                }
             }
         }
     }
@@ -451,7 +451,7 @@ pop_faction_event = {
                 species = owner_main_species
                 traits = {
                     trait = random_trait
-                }              
+                }
             }
         }
     }
@@ -472,7 +472,7 @@ pop_faction_event = {
                 species = owner_main_species
                 traits = {
                     trait = random_trait
-                }              
+                }
             }
         }
     }
@@ -519,8 +519,8 @@ pop_faction_event = {
                             count = 1
                         }
                     }
-                }    
-                count > 0            
+                }
+                count > 0
             }
         }
     }
@@ -548,14 +548,14 @@ pop_faction_event = {
                                 NOT = {
                                     leader_class = ruler
                                 }
-                                leader_of_faction = prevprev 
+                                leader_of_faction = prevprev
                             }
                             count = 1
                         }
                     }
                 }
                 save_event_target_as = confronted_leader_faction
-    
+
                 owner = {
                     every_owned_leader = {
                         limit = {
@@ -563,7 +563,7 @@ pop_faction_event = {
                         }
                         save_event_target_as = confronted_leader
                     }
-                }                
+                }
             }
             country_event = { id = confrontations_xenoist.2 }
         }
@@ -580,7 +580,7 @@ pop_faction_event = {
                         NOT = {
                             has_trait = leader_trait_substance_abuser
                         }
-                    }                    
+                    }
                 }
             }
         }
@@ -591,7 +591,7 @@ pop_faction_event = {
                 }
                 add_trait = leader_trait_substance_abuser
             }
-        }  
+        }
     }
     option = {
         name = confrontations_xenoist.13.b
@@ -605,7 +605,7 @@ pop_faction_event = {
                             has_trait = leader_trait_arrested_development
                             has_trait = leader_trait_substance_abuser
                         }
-                    }                    
+                    }
                 }
             }
         }
@@ -616,7 +616,7 @@ pop_faction_event = {
                 }
                 kill_leader = {}
             }
-        }        
+        }
     }
 
     option = {
@@ -661,14 +661,16 @@ pop_faction_event = {
     show_sound = event_factions
 
     trigger = {
-        count_owned_leader = {
-            count > 0
-            limit = {
-                leader_of_faction = root
-                NOT = {
-                    has_trait = leader_trait_arrested_development
+        owner = {
+            count_owned_leader = {
+                count > 0
+                limit = {
+                    leader_of_faction = root
+                    NOT = {
+                        has_trait = leader_trait_arrested_development
+                    }
                 }
-            }                    
+            }
         }
     }
 
@@ -686,17 +688,17 @@ pop_faction_event = {
                 max = 1000
                 min = 30
             }
-            export_resource_income_to_variable = { 
+            export_resource_income_to_variable = {
                 resource = energy
                 variable = temp_energy_income
             }
             multiply_variable = {
                 which = temp_energy_income
                 value = 9
-            }    
-            add_resource = { 
+            }
+            add_resource = {
                 energy = -1
-                mult = temp_energy_income 
+                mult = temp_energy_income
             }
         }
     }
@@ -732,17 +734,17 @@ pop_faction_event = {
         name = confrontations_xenoist.15.a
 
         owner = {
-            export_resource_income_to_variable = { 
+            export_resource_income_to_variable = {
                 resource = energy
                 variable = temp_energy_income
             }
             multiply_variable = {
                 which = temp_energy_income
                 value = 6
-            }    
-            add_resource = { 
+            }
+            add_resource = {
                 energy = -1
-                mult = temp_energy_income 
+                mult = temp_energy_income
             }
         }
     }
@@ -753,13 +755,13 @@ pop_faction_event = {
             every_owned_leader = {
                 limit = {
                     leader_of_faction = root
-                    NOT = { 
-                        has_trait = leader_trait_arrested_development 
+                    NOT = {
+                        has_trait = leader_trait_arrested_development
                     }
                 }
                 add_trait = leader_trait_arrested_development
             }
-            
+
             add_modifier = {
                 modifier = xenoist_debt_stopped_modifier
                 years = 3
@@ -835,7 +837,7 @@ pop_faction_event = {
 
             random_owned_pop = {
                 limit = {
-                    NOT = { 
+                    NOT = {
                         pop_has_ethic = ethic_xenophile
                     }
                 }
@@ -949,11 +951,11 @@ pop_faction_event = {
         owner = {
             count_owned_leader = {
                 limit = {
-                    leader_class = ruler 
+                    leader_class = ruler
                 }
                 count > 0
             }
-        }        
+        }
     }
 
     immediate = {
@@ -962,7 +964,7 @@ pop_faction_event = {
 
     option = {
         name = confrontations_xenoist.80.a
-        
+
         owner = {
             add_resource = {
                 ideological_purity_current_value = -25
@@ -979,7 +981,7 @@ pop_faction_event = {
             kill_leader = {
                 type = ruler
                 show_notification = yes
-            }    
+            }
         }
     }
 }
@@ -1027,8 +1029,8 @@ pop_faction_event = {
                             count = 1
                         }
                     }
-                }    
-                count > 0            
+                }
+                count > 0
             }
         }
     }
@@ -1056,7 +1058,7 @@ pop_faction_event = {
                                 NOT = {
                                     leader_class = ruler
                                 }
-                                leader_of_faction = prevprev 
+                                leader_of_faction = prevprev
                             }
                             count = 1
                         }
@@ -1071,21 +1073,21 @@ pop_faction_event = {
                         }
                         save_event_target_as = assassinated_faction_leader
                     }
-                }                
+                }
             }
             owner = { country_event = { id = confrontations_xenoist.2 } }
         }
-        
+
         event_target:assassinated_faction_leader = {
             kill_leader = {
                 show_notification = yes
             }
-        }        
+        }
     }
 
     option = {
         name = confrontations_xenoist.81.a
-        
+
         owner = {
             add_resource = {
                 ideological_purity_current_value = -25
@@ -1096,7 +1098,7 @@ pop_faction_event = {
                         OR = {
                             is_pop_faction_type = imperialist
                             is_pop_faction_type = imperialist_radicals
-                        }                        
+                        }
                     }
                 }
                 add_resource = {
@@ -1114,7 +1116,7 @@ pop_faction_event = {
                         OR = {
                             is_pop_faction_type = supremacist
                             is_pop_faction_type = supremacist_radicals
-                        }                        
+                        }
                     }
                 }
                 add_resource = {
@@ -1132,7 +1134,7 @@ pop_faction_event = {
                         OR = {
                             is_pop_faction_type = progressive
                             is_pop_faction_type = progressive_radicals
-                        }                        
+                        }
                     }
                 }
                 add_resource = {
@@ -1150,7 +1152,7 @@ pop_faction_event = {
                         OR = {
                             is_pop_faction_type = technologist
                             is_pop_faction_type = technologist_radicals
-                        }                        
+                        }
                     }
                 }
                 add_resource = {
@@ -1168,7 +1170,7 @@ pop_faction_event = {
                         OR = {
                             is_pop_faction_type = prosperity
                             is_pop_faction_type = prosperity_radicals
-                        }                        
+                        }
                     }
                 }
                 add_resource = {
@@ -1186,7 +1188,7 @@ pop_faction_event = {
                         OR = {
                             is_pop_faction_type = xenoist
                             is_pop_faction_type = xenoist_radicals
-                        }                        
+                        }
                     }
                 }
                 add_resource = {
@@ -1204,7 +1206,7 @@ pop_faction_event = {
                         OR = {
                             is_pop_faction_type = totalitarian
                             is_pop_faction_type = totalitarian_radicals
-                        }                        
+                        }
                     }
                 }
                 add_resource = {
@@ -1222,17 +1224,17 @@ pop_faction_event = {
                         OR = {
                             is_pop_faction_type = traditionalist
                             is_pop_faction_type = traditionalist_radicals
-                        }                        
+                        }
                     }
                 }
                 add_resource = {
                     traditionalist_militancy_current_value = 10
                     traditionalist_support = 100
-                }     
+                }
                 add_modifier = {
                     modifier = traditionalist_faction_leader_assassination_continue_modifier
                     years = 3
-                }           
+                }
             }
         }
     }
@@ -1253,10 +1255,10 @@ pop_faction_event = {
     immediate = {
         owner = {
             if = {
-                limit = { 
-                    NOT = { 
-                        has_ethic = "ethic_fanatic_xenophile" 
-                    } 
+                limit = {
+                    NOT = {
+                        has_ethic = "ethic_fanatic_xenophile"
+                    }
                 }
                 shift_ethic = ethic_xenophile
             }
@@ -1269,9 +1271,9 @@ pop_faction_event = {
 
     option = {
         name = confrontations_xenoist.90.a
-        
+
         owner = {
-            
+
             add_resource = {
                 ideological_purity_current_value = -25
             }
@@ -1330,7 +1332,7 @@ pop_faction_event = {
                     kill_pop = yes
                 }
             }
-            
+
             # Inform others
             # every_relation = {
             #     limit = {
@@ -1344,8 +1346,8 @@ pop_faction_event = {
             #         }
             #     }
             #     country_event = { id = factions.2000 }
-            # }    
-        }    
+            # }
+        }
     }
 }
 
@@ -1378,7 +1380,7 @@ pop_faction_event = {
             # Kill all leaders who arent the putsch leader
             every_owned_leader = {
                 limit = { NOT = { is_same_value = event_target:putsch_leader }}
-                kill_leader = { }  
+                kill_leader = { }
             }
 
             # Assign event_target:putsch_leader to ruler
@@ -1397,12 +1399,12 @@ pop_faction_event = {
                         }
                         effect = {
                             save_event_target_as = new_governor
-                        }                    
+                        }
                     }
                 }
-                
+
                 assign_leader = event_target:new_governor
-            }     
+            }
 
             # Scientist for every science ship
             every_owned_ship = {
@@ -1420,12 +1422,12 @@ pop_faction_event = {
                         }
                         effect = {
                             save_event_target_as = new_science_ship_scientist
-                        }                    
+                        }
                     }
-                }           
+                }
                 fleet = {
                     assign_leader = event_target:new_science_ship_scientist
-                }                     
+                }
             }
             # Scientist for each category
             create_leader = {
@@ -1463,7 +1465,7 @@ pop_faction_event = {
                 effect = {
                     save_event_target_as = new_scientist
                 }
-            }     
+            }
 
             # Create an admiral
             random_owned_fleet = {
@@ -1479,23 +1481,23 @@ pop_faction_event = {
                         traits = {
                             trait = random_trait
                         }
-                        
+
                         effect = {
                             save_event_target_as = new_admiral
                         }
                     }
                 }
-                
+
                 assign_leader = event_target:new_admiral
             }
         }
 
-        owner = { country_event = { id = confrontations_xenoist.2 } }          
+        owner = { country_event = { id = confrontations_xenoist.2 } }
     }
 
     option = {
         name = confrontations_xenoist.91.a
-        
+
         owner = {
             add_resource = {
                 ideological_purity_current_value = -25
@@ -1504,7 +1506,7 @@ pop_faction_event = {
             add_modifier = {
                 modifier = xenoist_putsch_continue_modifier
                 years = 3
-            }                   
+            }
         }
     }
 }
