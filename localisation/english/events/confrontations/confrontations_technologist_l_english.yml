@@ -1,7 +1,7 @@
 ﻿l_english:
 
  confrontations_technologist.10:0 "Materialist Policy"
- confrontations_technologist.10.desc:0 "The technologists of the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of materialist language in the latest government policy plan has angered many factions within the [Root.Owner.GetName]."
+ confrontations_technologist.10.desc:0 "The technologists of the [Root.GetName] have caused quite a stir on the debate floor. The materialist language in the latest government policy plan has caused quite the debate among the factions within the [Root.Owner.GetName]."
  confrontations_technologist.10.a:0 "Support the technologist policy."
  technologist_debates_continue_modifier:0 "Technologist Policy Wording Used"
  confrontations_technologist.10.b:0 "Strike the wording from the policy."
@@ -120,3 +120,12 @@
  technologist_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical Technologists"
  technologist_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical Technologists"
  technologist_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical Technologists"
+
+ # Gov faction effects
+ gov_technologist_effects_powerful_happy:0 "Happy Influential Government Technologists"
+ gov_technologist_effects_weak_happy:0 "Happy Sideline Government Technologists"
+ gov_technologist_effects_pathetic_happy:0 "Happy Fringe Government Technologists"
+
+ gov_technologist_effects_powerful_unhappy:0 "Unhappy Influential Government Technologists"
+ gov_technologist_effects_weak_unhappy:0 "Unhappy Sideline Government Technologists"
+ gov_technologist_effects_pathetic_unhappy:0 "Unhappy Fringe Government Technologists"

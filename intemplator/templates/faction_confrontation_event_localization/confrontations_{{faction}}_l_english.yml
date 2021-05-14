@@ -1,7 +1,7 @@
 l_english:
 
  confrontations_{{faction}}.10:0 "{{Ethic}} Policy"
- confrontations_{{faction}}.10.desc:0 "The {{adjective}}s of the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of {{ethic}} language in the latest government policy plan has angered many factions within the [Root.Owner.GetName]."
+ confrontations_{{faction}}.10.desc:0 "The {{adjective}}s of the [Root.GetName] have caused quite a stir on the debate floor. The {{ethic}} language in the latest government policy plan has caused quite the debate among the factions within the [Root.Owner.GetName]."
  confrontations_{{faction}}.10.a:0 "Support the {{adjective}} policy."
  {{faction}}_debates_continue_modifier:0 "{{Adjective}} Policy Wording Used"
  confrontations_{{faction}}.10.b:0 "Strike the wording from the policy."
@@ -120,3 +120,12 @@ l_english:
  {{faction}}_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical {{Adjective}}s"
  {{faction}}_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical {{Adjective}}s"
  {{faction}}_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical {{Adjective}}s"
+
+ # Gov faction effects
+ gov_{{faction}}_effects_powerful_happy:0 "Happy Influential Government {{Adjective}}s"
+ gov_{{faction}}_effects_weak_happy:0 "Happy Sideline Government {{Adjective}}s"
+ gov_{{faction}}_effects_pathetic_happy:0 "Happy Fringe Government {{Adjective}}s"
+
+ gov_{{faction}}_effects_powerful_unhappy:0 "Unhappy Influential Government {{Adjective}}s"
+ gov_{{faction}}_effects_weak_unhappy:0 "Unhappy Sideline Government {{Adjective}}s"
+ gov_{{faction}}_effects_pathetic_unhappy:0 "Unhappy Fringe Government {{Adjective}}s"

@@ -1,7 +1,7 @@
 ﻿l_english:
 
  confrontations_xenoist.10:0 "Xenophile Policy"
- confrontations_xenoist.10.desc:0 "The xenoists of the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of xenophile language in the latest government policy plan has angered many factions within the [Root.Owner.GetName]."
+ confrontations_xenoist.10.desc:0 "The xenoists of the [Root.GetName] have caused quite a stir on the debate floor. The xenophile language in the latest government policy plan has caused quite the debate among the factions within the [Root.Owner.GetName]."
  confrontations_xenoist.10.a:0 "Support the xenoist policy."
  xenoist_debates_continue_modifier:0 "Xenoist Policy Wording Used"
  confrontations_xenoist.10.b:0 "Strike the wording from the policy."
@@ -120,3 +120,12 @@
  xenoist_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical Xenoists"
  xenoist_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical Xenoists"
  xenoist_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical Xenoists"
+
+ # Gov faction effects
+ gov_xenoist_effects_powerful_happy:0 "Happy Influential Government Xenoists"
+ gov_xenoist_effects_weak_happy:0 "Happy Sideline Government Xenoists"
+ gov_xenoist_effects_pathetic_happy:0 "Happy Fringe Government Xenoists"
+
+ gov_xenoist_effects_powerful_unhappy:0 "Unhappy Influential Government Xenoists"
+ gov_xenoist_effects_weak_unhappy:0 "Unhappy Sideline Government Xenoists"
+ gov_xenoist_effects_pathetic_unhappy:0 "Unhappy Fringe Government Xenoists"

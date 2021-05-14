@@ -1,7 +1,7 @@
 ﻿l_english:
 
  confrontations_prosperity.10:0 "Pacifist Policy"
- confrontations_prosperity.10.desc:0 "The pacifists of the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of pacifist language in the latest government policy plan has angered many factions within the [Root.Owner.GetName]."
+ confrontations_prosperity.10.desc:0 "The pacifists of the [Root.GetName] have caused quite a stir on the debate floor. The pacifist language in the latest government policy plan has caused quite the debate among the factions within the [Root.Owner.GetName]."
  confrontations_prosperity.10.a:0 "Support the pacifist policy."
  prosperity_debates_continue_modifier:0 "Pacifist Policy Wording Used"
  confrontations_prosperity.10.b:0 "Strike the wording from the policy."
@@ -120,3 +120,12 @@
  prosperity_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical Pacifists"
  prosperity_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical Pacifists"
  prosperity_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical Pacifists"
+
+ # Gov faction effects
+ gov_prosperity_effects_powerful_happy:0 "Happy Influential Government Pacifists"
+ gov_prosperity_effects_weak_happy:0 "Happy Sideline Government Pacifists"
+ gov_prosperity_effects_pathetic_happy:0 "Happy Fringe Government Pacifists"
+
+ gov_prosperity_effects_powerful_unhappy:0 "Unhappy Influential Government Pacifists"
+ gov_prosperity_effects_weak_unhappy:0 "Unhappy Sideline Government Pacifists"
+ gov_prosperity_effects_pathetic_unhappy:0 "Unhappy Fringe Government Pacifists"

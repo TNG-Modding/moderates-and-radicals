@@ -67,3 +67,36 @@ supremacist_radicals_effects_pathetic_unhappy = {
 	country_base_supremacist_militancy_desired_value_change_produces_add = 25
 	country_base_supremacist_support_produces_add = 3
 }
+
+# Gov #
+# Happy
+gov_supremacist_effects_powerful_happy = {
+	country_base_supremacist_militancy_desired_value_change_produces_add = -50
+	country_base_supremacist_support_produces_add = 3
+}
+
+gov_supremacist_effects_weak_happy = {
+	country_base_supremacist_militancy_desired_value_change_produces_add = -50
+	country_base_supremacist_support_produces_add = 2
+}
+
+gov_supremacist_effects_pathetic_happy = {
+	country_base_supremacist_militancy_desired_value_change_produces_add = -50
+	country_base_supremacist_support_produces_add = 1
+}
+
+# Unhappy
+gov_supremacist_effects_powerful_unhappy = {
+	country_base_supremacist_militancy_desired_value_change_produces_add = 75
+	country_base_supremacist_support_produces_add = 3
+}
+
+gov_supremacist_effects_weak_unhappy = {
+	country_base_supremacist_militancy_desired_value_change_produces_add = 50
+	country_base_supremacist_support_produces_add = 3
+}
+
+gov_supremacist_effects_pathetic_unhappy = {
+	country_base_supremacist_militancy_desired_value_change_produces_add = 25
+	country_base_supremacist_support_produces_add = 3
+}

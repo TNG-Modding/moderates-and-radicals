@@ -1,7 +1,7 @@
 ﻿l_english:
 
  confrontations_supremacist.10:0 "Xenophobe Policy"
- confrontations_supremacist.10.desc:0 "The supremacists of the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of xenophobe language in the latest government policy plan has angered many factions within the [Root.Owner.GetName]."
+ confrontations_supremacist.10.desc:0 "The supremacists of the [Root.GetName] have caused quite a stir on the debate floor. The xenophobe language in the latest government policy plan has caused quite the debate among the factions within the [Root.Owner.GetName]."
  confrontations_supremacist.10.a:0 "Support the supremacist policy."
  supremacist_debates_continue_modifier:0 "Supremacist Policy Wording Used"
  confrontations_supremacist.10.b:0 "Strike the wording from the policy."
@@ -120,3 +120,12 @@
  supremacist_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical Supremacists"
  supremacist_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical Supremacists"
  supremacist_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical Supremacists"
+
+ # Gov faction effects
+ gov_supremacist_effects_powerful_happy:0 "Happy Influential Government Supremacists"
+ gov_supremacist_effects_weak_happy:0 "Happy Sideline Government Supremacists"
+ gov_supremacist_effects_pathetic_happy:0 "Happy Fringe Government Supremacists"
+
+ gov_supremacist_effects_powerful_unhappy:0 "Unhappy Influential Government Supremacists"
+ gov_supremacist_effects_weak_unhappy:0 "Unhappy Sideline Government Supremacists"
+ gov_supremacist_effects_pathetic_unhappy:0 "Unhappy Fringe Government Supremacists"

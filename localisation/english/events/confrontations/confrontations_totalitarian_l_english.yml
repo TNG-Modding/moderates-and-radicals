@@ -1,7 +1,7 @@
 ﻿l_english:
 
  confrontations_totalitarian.10:0 "Authoritarian Policy"
- confrontations_totalitarian.10.desc:0 "The authoritarians of the [Root.GetName] have caused quite a stir on the debate floor. The inclusion of authoritarian language in the latest government policy plan has angered many factions within the [Root.Owner.GetName]."
+ confrontations_totalitarian.10.desc:0 "The authoritarians of the [Root.GetName] have caused quite a stir on the debate floor. The authoritarian language in the latest government policy plan has caused quite the debate among the factions within the [Root.Owner.GetName]."
  confrontations_totalitarian.10.a:0 "Support the authoritarian policy."
  totalitarian_debates_continue_modifier:0 "Authoritarian Policy Wording Used"
  confrontations_totalitarian.10.b:0 "Strike the wording from the policy."
@@ -120,3 +120,12 @@
  totalitarian_radicals_effects_powerful_unhappy:0 "Unhappy Influential Radical Authoritarians"
  totalitarian_radicals_effects_weak_unhappy:0 "Unhappy Sideline Radical Authoritarians"
  totalitarian_radicals_effects_pathetic_unhappy:0 "Unhappy Fringe Radical Authoritarians"
+
+ # Gov faction effects
+ gov_totalitarian_effects_powerful_happy:0 "Happy Influential Government Authoritarians"
+ gov_totalitarian_effects_weak_happy:0 "Happy Sideline Government Authoritarians"
+ gov_totalitarian_effects_pathetic_happy:0 "Happy Fringe Government Authoritarians"
+
+ gov_totalitarian_effects_powerful_unhappy:0 "Unhappy Influential Government Authoritarians"
+ gov_totalitarian_effects_weak_unhappy:0 "Unhappy Sideline Government Authoritarians"
+ gov_totalitarian_effects_pathetic_unhappy:0 "Unhappy Fringe Government Authoritarians"

@@ -67,3 +67,36 @@
 	country_base_{{faction}}_militancy_desired_value_change_produces_add = 25
 	country_base_{{faction}}_support_produces_add = 3
 }
+
+# Gov #
+# Happy
+gov_{{faction}}_effects_powerful_happy = {
+	country_base_{{faction}}_militancy_desired_value_change_produces_add = -50
+	country_base_{{faction}}_support_produces_add = 3
+}
+
+gov_{{faction}}_effects_weak_happy = {
+	country_base_{{faction}}_militancy_desired_value_change_produces_add = -50
+	country_base_{{faction}}_support_produces_add = 2
+}
+
+gov_{{faction}}_effects_pathetic_happy = {
+	country_base_{{faction}}_militancy_desired_value_change_produces_add = -50
+	country_base_{{faction}}_support_produces_add = 1
+}
+
+# Unhappy
+gov_{{faction}}_effects_powerful_unhappy = {
+	country_base_{{faction}}_militancy_desired_value_change_produces_add = 75
+	country_base_{{faction}}_support_produces_add = 3
+}
+
+gov_{{faction}}_effects_weak_unhappy = {
+	country_base_{{faction}}_militancy_desired_value_change_produces_add = 50
+	country_base_{{faction}}_support_produces_add = 3
+}
+
+gov_{{faction}}_effects_pathetic_unhappy = {
+	country_base_{{faction}}_militancy_desired_value_change_produces_add = 25
+	country_base_{{faction}}_support_produces_add = 3
+}
