@@ -23,127 +23,132 @@ country_event = {
             resource = technologist_militancy_current_value
             variable = current_technologist_militancy
         }
-        every_pop_faction = {
+        while = {
             limit = {
-                OR = {
-                    is_pop_faction_type = gov_technologist
-                    is_pop_faction_type = technologist_radicals
-                    is_pop_faction_type = technologist
-                }
+                NOT = { has_modifier = recent_political_event }
             }
-            if = {
+            every_pop_faction = {
                 limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_technologist_militancy
-                            value > 90
-                        } 
+                    OR = {
+                        is_pop_faction_type = gov_technologist
+                        is_pop_faction_type = technologist_radicals
+                        is_pop_faction_type = technologist
                     }
                 }
-                
-                random_list = {
-                    20 = {
-                        # Technologist Coup
-                        pop_faction_event = { id = confrontations_technologist.90 }
+                if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_technologist_militancy
+                                value > 90
+                            } 
+                        }
                     }
-                    80 = {
-                        # Technologist Putsch
-                        pop_faction_event = { id = confrontations_technologist.91 }
-                    }                    
-                }                
-                
-            }	
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_technologist_militancy
-                            value > 80
-                        } 
+                    
+                    random_list = {
+                        20 = {
+                            # Technologist Coup
+                            pop_faction_event = { id = confrontations_technologist.90 }
+                        }
+                        80 = {
+                            # Technologist Putsch
+                            pop_faction_event = { id = confrontations_technologist.91 }
+                        }                    
+                    }                
+                    
+                }	
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_technologist_militancy
+                                value > 80
+                            } 
+                        }
                     }
-                }
-                random_list = {
-                    0 = {
-                        # Ruler Assassinated
-                        pop_faction_event = { id = confrontations_technologist.80 }
-                    }
-                    50 = {
-                        # Faction Leader Assassinated
-                        pop_faction_event = { id = confrontations_technologist.81 }
-                    }
-                }
-            }
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_technologist_militancy
-                            value > 50
-                        } 
-                    }
-                }
-                random_list = {
-                    100 = {
-                        # Spiritualist Book Burning
-                        pop_faction_event = { id = confrontations_technologist.30 }
+                    random_list = {
+                        0 = {
+                            # Ruler Assassinated
+                            pop_faction_event = { id = confrontations_technologist.80 }
+                        }
+                        50 = {
+                            # Faction Leader Assassinated
+                            pop_faction_event = { id = confrontations_technologist.81 }
+                        }
                     }
                 }
-            }
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_technologist_militancy
-                            value > 25
-                        } 
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_technologist_militancy
+                                value > 50
+                            } 
+                        }
+                    }
+                    random_list = {
+                        100 = {
+                            # Spiritualist Book Burning
+                            pop_faction_event = { id = confrontations_technologist.30 }
+                        }
                     }
                 }
-                random_list = {
-                    100 = {
-                        # Technologist Riots and Endorse Movement
-                        pop_faction_event = { id = confrontations_technologist.20 }
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_technologist_militancy
+                                value > 25
+                            } 
+                        }
+                    }
+                    random_list = {
+                        100 = {
+                            # Technologist Riots and Endorse Movement
+                            pop_faction_event = { id = confrontations_technologist.20 }
+                        }
                     }
                 }
-            }
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_technologist_militancy
-                            value > 0
-                        } 
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_technologist_militancy
+                                value > 0
+                            } 
+                        }
                     }
+                    random_list = {
+                        25 = {
+                            # Materialist policy wording
+                            pop_faction_event = { id = confrontations_technologist.10 }
+                        }
+                        25 = {
+                            # Inspiring speech
+                            pop_faction_event = { id = confrontations_technologist.11 }
+                        }
+                        25 = {
+                            # New leader
+                            pop_faction_event = { id = confrontations_technologist.12 }
+                        }
+                        25 = {
+                            # Confronts other faction leader
+                            pop_faction_event = { id = confrontations_technologist.13 }
+                        }
+                    }
+                }	 
+                else = {
+                    # create_message = {
+                    #     type = BYPASS_EXPLORED
+                    #     localization = BYPASS_EXPLORED_MESSAGE
+                    #     days = 30
+                    #     target = root
+                    #     variable = { type = name localization = SYSTEM1 scope = from }
+                    #     variable = { type = name localization = SYSTEM2 scope = fromfrom }
+                    # }
                 }
-                random_list = {
-                    25 = {
-                        # Materialist policy wording
-                        pop_faction_event = { id = confrontations_technologist.10 }
-                    }
-                    25 = {
-                        # Inspiring speech
-                        pop_faction_event = { id = confrontations_technologist.11 }
-                    }
-                    25 = {
-                        # New leader
-                        pop_faction_event = { id = confrontations_technologist.12 }
-                    }
-                    25 = {
-                        # Confronts other faction leader
-                        pop_faction_event = { id = confrontations_technologist.13 }
-                    }
-                }
-            }	 
-            else = {
-                # create_message = {
-                #     type = BYPASS_EXPLORED
-                #     localization = BYPASS_EXPLORED_MESSAGE
-                #     days = 30
-                #     target = root
-                #     variable = { type = name localization = SYSTEM1 scope = from }
-                #     variable = { type = name localization = SYSTEM2 scope = fromfrom }
-                # }
-            }
-        }        
+            }  
+        }      
     }
 }
 

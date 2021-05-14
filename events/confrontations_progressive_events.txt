@@ -23,127 +23,132 @@ country_event = {
             resource = progressive_militancy_current_value
             variable = current_progressive_militancy
         }
-        every_pop_faction = {
+        while = {
             limit = {
-                OR = {
-                    is_pop_faction_type = gov_progressive
-                    is_pop_faction_type = progressive_radicals
-                    is_pop_faction_type = progressive
-                }
+                NOT = { has_modifier = recent_political_event }
             }
-            if = {
+            every_pop_faction = {
                 limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_progressive_militancy
-                            value > 90
-                        } 
+                    OR = {
+                        is_pop_faction_type = gov_progressive
+                        is_pop_faction_type = progressive_radicals
+                        is_pop_faction_type = progressive
                     }
                 }
-                
-                random_list = {
-                    20 = {
-                        # Progressive Coup
-                        pop_faction_event = { id = confrontations_progressive.90 }
+                if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_progressive_militancy
+                                value > 90
+                            } 
+                        }
                     }
-                    80 = {
-                        # Progressive Putsch
-                        pop_faction_event = { id = confrontations_progressive.91 }
-                    }                    
-                }                
-                
-            }	
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_progressive_militancy
-                            value > 80
-                        } 
+                    
+                    random_list = {
+                        20 = {
+                            # Progressive Coup
+                            pop_faction_event = { id = confrontations_progressive.90 }
+                        }
+                        80 = {
+                            # Progressive Putsch
+                            pop_faction_event = { id = confrontations_progressive.91 }
+                        }                    
+                    }                
+                    
+                }	
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_progressive_militancy
+                                value > 80
+                            } 
+                        }
                     }
-                }
-                random_list = {
-                    0 = {
-                        # Ruler Assassinated
-                        pop_faction_event = { id = confrontations_progressive.80 }
-                    }
-                    50 = {
-                        # Faction Leader Assassinated
-                        pop_faction_event = { id = confrontations_progressive.81 }
-                    }
-                }
-            }
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_progressive_militancy
-                            value > 50
-                        } 
-                    }
-                }
-                random_list = {
-                    100 = {
-                        # Authoritarian Book Burning
-                        pop_faction_event = { id = confrontations_progressive.30 }
+                    random_list = {
+                        0 = {
+                            # Ruler Assassinated
+                            pop_faction_event = { id = confrontations_progressive.80 }
+                        }
+                        50 = {
+                            # Faction Leader Assassinated
+                            pop_faction_event = { id = confrontations_progressive.81 }
+                        }
                     }
                 }
-            }
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_progressive_militancy
-                            value > 25
-                        } 
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_progressive_militancy
+                                value > 50
+                            } 
+                        }
+                    }
+                    random_list = {
+                        100 = {
+                            # Authoritarian Book Burning
+                            pop_faction_event = { id = confrontations_progressive.30 }
+                        }
                     }
                 }
-                random_list = {
-                    100 = {
-                        # Progressive Riots and Endorse Movement
-                        pop_faction_event = { id = confrontations_progressive.20 }
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_progressive_militancy
+                                value > 25
+                            } 
+                        }
+                    }
+                    random_list = {
+                        100 = {
+                            # Progressive Riots and Endorse Movement
+                            pop_faction_event = { id = confrontations_progressive.20 }
+                        }
                     }
                 }
-            }
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_progressive_militancy
-                            value > 0
-                        } 
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_progressive_militancy
+                                value > 0
+                            } 
+                        }
                     }
+                    random_list = {
+                        25 = {
+                            # Egalitarian policy wording
+                            pop_faction_event = { id = confrontations_progressive.10 }
+                        }
+                        25 = {
+                            # Inspiring speech
+                            pop_faction_event = { id = confrontations_progressive.11 }
+                        }
+                        25 = {
+                            # New leader
+                            pop_faction_event = { id = confrontations_progressive.12 }
+                        }
+                        25 = {
+                            # Confronts other faction leader
+                            pop_faction_event = { id = confrontations_progressive.13 }
+                        }
+                    }
+                }	 
+                else = {
+                    # create_message = {
+                    #     type = BYPASS_EXPLORED
+                    #     localization = BYPASS_EXPLORED_MESSAGE
+                    #     days = 30
+                    #     target = root
+                    #     variable = { type = name localization = SYSTEM1 scope = from }
+                    #     variable = { type = name localization = SYSTEM2 scope = fromfrom }
+                    # }
                 }
-                random_list = {
-                    25 = {
-                        # Egalitarian policy wording
-                        pop_faction_event = { id = confrontations_progressive.10 }
-                    }
-                    25 = {
-                        # Inspiring speech
-                        pop_faction_event = { id = confrontations_progressive.11 }
-                    }
-                    25 = {
-                        # New leader
-                        pop_faction_event = { id = confrontations_progressive.12 }
-                    }
-                    25 = {
-                        # Confronts other faction leader
-                        pop_faction_event = { id = confrontations_progressive.13 }
-                    }
-                }
-            }	 
-            else = {
-                # create_message = {
-                #     type = BYPASS_EXPLORED
-                #     localization = BYPASS_EXPLORED_MESSAGE
-                #     days = 30
-                #     target = root
-                #     variable = { type = name localization = SYSTEM1 scope = from }
-                #     variable = { type = name localization = SYSTEM2 scope = fromfrom }
-                # }
-            }
-        }        
+            }  
+        }      
     }
 }
 

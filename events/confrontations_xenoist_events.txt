@@ -23,127 +23,132 @@ country_event = {
             resource = xenoist_militancy_current_value
             variable = current_xenoist_militancy
         }
-        every_pop_faction = {
+        while = {
             limit = {
-                OR = {
-                    is_pop_faction_type = gov_xenoist
-                    is_pop_faction_type = xenoist_radicals
-                    is_pop_faction_type = xenoist
-                }
+                NOT = { has_modifier = recent_political_event }
             }
-            if = {
+            every_pop_faction = {
                 limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_xenoist_militancy
-                            value > 90
-                        } 
+                    OR = {
+                        is_pop_faction_type = gov_xenoist
+                        is_pop_faction_type = xenoist_radicals
+                        is_pop_faction_type = xenoist
                     }
                 }
-                
-                random_list = {
-                    20 = {
-                        # Xenoist Coup
-                        pop_faction_event = { id = confrontations_xenoist.90 }
+                if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_xenoist_militancy
+                                value > 90
+                            } 
+                        }
                     }
-                    80 = {
-                        # Xenoist Putsch
-                        pop_faction_event = { id = confrontations_xenoist.91 }
-                    }                    
-                }                
-                
-            }	
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_xenoist_militancy
-                            value > 80
-                        } 
+                    
+                    random_list = {
+                        20 = {
+                            # Xenoist Coup
+                            pop_faction_event = { id = confrontations_xenoist.90 }
+                        }
+                        80 = {
+                            # Xenoist Putsch
+                            pop_faction_event = { id = confrontations_xenoist.91 }
+                        }                    
+                    }                
+                    
+                }	
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_xenoist_militancy
+                                value > 80
+                            } 
+                        }
                     }
-                }
-                random_list = {
-                    0 = {
-                        # Ruler Assassinated
-                        pop_faction_event = { id = confrontations_xenoist.80 }
-                    }
-                    50 = {
-                        # Faction Leader Assassinated
-                        pop_faction_event = { id = confrontations_xenoist.81 }
-                    }
-                }
-            }
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_xenoist_militancy
-                            value > 50
-                        } 
-                    }
-                }
-                random_list = {
-                    100 = {
-                        # Xenophobe Book Burning
-                        pop_faction_event = { id = confrontations_xenoist.30 }
+                    random_list = {
+                        0 = {
+                            # Ruler Assassinated
+                            pop_faction_event = { id = confrontations_xenoist.80 }
+                        }
+                        50 = {
+                            # Faction Leader Assassinated
+                            pop_faction_event = { id = confrontations_xenoist.81 }
+                        }
                     }
                 }
-            }
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_xenoist_militancy
-                            value > 25
-                        } 
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_xenoist_militancy
+                                value > 50
+                            } 
+                        }
+                    }
+                    random_list = {
+                        100 = {
+                            # Xenophobe Book Burning
+                            pop_faction_event = { id = confrontations_xenoist.30 }
+                        }
                     }
                 }
-                random_list = {
-                    100 = {
-                        # Xenoist Riots and Endorse Movement
-                        pop_faction_event = { id = confrontations_xenoist.20 }
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_xenoist_militancy
+                                value > 25
+                            } 
+                        }
+                    }
+                    random_list = {
+                        100 = {
+                            # Xenoist Riots and Endorse Movement
+                            pop_faction_event = { id = confrontations_xenoist.20 }
+                        }
                     }
                 }
-            }
-            else_if = {
-                limit = {
-                    owner = { 
-                        check_variable = {
-                            which = current_xenoist_militancy
-                            value > 0
-                        } 
+                else_if = {
+                    limit = {
+                        owner = { 
+                            check_variable = {
+                                which = current_xenoist_militancy
+                                value > 0
+                            } 
+                        }
                     }
+                    random_list = {
+                        25 = {
+                            # Xenophile policy wording
+                            pop_faction_event = { id = confrontations_xenoist.10 }
+                        }
+                        25 = {
+                            # Inspiring speech
+                            pop_faction_event = { id = confrontations_xenoist.11 }
+                        }
+                        25 = {
+                            # New leader
+                            pop_faction_event = { id = confrontations_xenoist.12 }
+                        }
+                        25 = {
+                            # Confronts other faction leader
+                            pop_faction_event = { id = confrontations_xenoist.13 }
+                        }
+                    }
+                }	 
+                else = {
+                    # create_message = {
+                    #     type = BYPASS_EXPLORED
+                    #     localization = BYPASS_EXPLORED_MESSAGE
+                    #     days = 30
+                    #     target = root
+                    #     variable = { type = name localization = SYSTEM1 scope = from }
+                    #     variable = { type = name localization = SYSTEM2 scope = fromfrom }
+                    # }
                 }
-                random_list = {
-                    25 = {
-                        # Xenophile policy wording
-                        pop_faction_event = { id = confrontations_xenoist.10 }
-                    }
-                    25 = {
-                        # Inspiring speech
-                        pop_faction_event = { id = confrontations_xenoist.11 }
-                    }
-                    25 = {
-                        # New leader
-                        pop_faction_event = { id = confrontations_xenoist.12 }
-                    }
-                    25 = {
-                        # Confronts other faction leader
-                        pop_faction_event = { id = confrontations_xenoist.13 }
-                    }
-                }
-            }	 
-            else = {
-                # create_message = {
-                #     type = BYPASS_EXPLORED
-                #     localization = BYPASS_EXPLORED_MESSAGE
-                #     days = 30
-                #     target = root
-                #     variable = { type = name localization = SYSTEM1 scope = from }
-                #     variable = { type = name localization = SYSTEM2 scope = fromfrom }
-                # }
-            }
-        }        
+            }  
+        }      
     }
 }
 
