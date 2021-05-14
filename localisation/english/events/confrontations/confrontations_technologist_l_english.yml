@@ -8,7 +8,7 @@
  technologist_debates_stopped_modifier:0 "Technologist Policy Wording Rewritten"
 
  confrontations_technologist.11:0 "The [Root.Leader.GetTitle]'s Materialist Speech"
- confrontations_technologist.11.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] has given a rousing speech on behalf of the [Root.GetName], and many of our leading officials have been won over. If we don't do something, they may permanently change their faction allegiance to something more outwardly technologist."
+ confrontations_technologist.11.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] has given a rousing speech on behalf of the [Root.GetName], and many of our ruling officials have been won over. If we don't do something, they may permanently change their faction allegiance to technologist."
  confrontations_technologist.11.a:0 "Quite the moving speech."
  confrontations_technologist.11.b:0 "Issue a scathing rebuttal!"
  technologist_speech_stopped_modifier:0 "Technologist Speech Rebutted"

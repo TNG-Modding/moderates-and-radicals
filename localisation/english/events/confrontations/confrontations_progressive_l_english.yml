@@ -8,7 +8,7 @@
  progressive_debates_stopped_modifier:0 "Progressive Policy Wording Rewritten"
 
  confrontations_progressive.11:0 "The [Root.Leader.GetTitle]'s Egalitarian Speech"
- confrontations_progressive.11.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] has given a rousing speech on behalf of the [Root.GetName], and many of our leading officials have been won over. If we don't do something, they may permanently change their faction allegiance to something more outwardly progressive."
+ confrontations_progressive.11.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] has given a rousing speech on behalf of the [Root.GetName], and many of our ruling officials have been won over. If we don't do something, they may permanently change their faction allegiance to progressive."
  confrontations_progressive.11.a:0 "Quite the moving speech."
  confrontations_progressive.11.b:0 "Issue a scathing rebuttal!"
  progressive_speech_stopped_modifier:0 "Progressive Speech Rebutted"

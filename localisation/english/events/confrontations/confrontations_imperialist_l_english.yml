@@ -8,7 +8,7 @@
  imperialist_debates_stopped_modifier:0 "Imperialist Policy Wording Rewritten"
 
  confrontations_imperialist.11:0 "The [Root.Leader.GetTitle]'s Militarist Speech"
- confrontations_imperialist.11.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] has given a rousing speech on behalf of the [Root.GetName], and many of our leading officials have been won over. If we don't do something, they may permanently change their faction allegiance to something more outwardly imperialist."
+ confrontations_imperialist.11.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] has given a rousing speech on behalf of the [Root.GetName], and many of our ruling officials have been won over. If we don't do something, they may permanently change their faction allegiance to imperialist."
  confrontations_imperialist.11.a:0 "Quite the moving speech."
  confrontations_imperialist.11.b:0 "Issue a scathing rebuttal!"
  imperialist_speech_stopped_modifier:0 "Imperialist Speech Rebutted"
