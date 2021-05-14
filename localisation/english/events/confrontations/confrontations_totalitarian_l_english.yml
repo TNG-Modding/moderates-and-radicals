@@ -39,7 +39,7 @@
  confrontations_totalitarian.15.b:0 "We won't bail them out."
  totalitarian_debt_stopped_modifier:0 "Authoritarian Faction Leader in Dire Straights"
  
- confrontations_totalitarian.16:0 "Authoritarians and their Gift"
+ confrontations_totalitarian.16:0 "The Authoritarian Gift"
  confrontations_totalitarian.16.desc:0 "The authoritarians of the [Root.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the authoritarian symbols of the [Root.GetName] litter our latest government projects. The authoritarians are happy to have a place in our government."
  confrontations_totalitarian.16.a:0 "What a nice gift!"
  totalitarian_gift_continue_modifier:0 "Authoritarians give gift."

@@ -39,7 +39,7 @@
  confrontations_xenoist.15.b:0 "We won't bail them out."
  xenoist_debt_stopped_modifier:0 "Xenoist Faction Leader in Dire Straights"
  
- confrontations_xenoist.16:0 "Xenoists and their Gift"
+ confrontations_xenoist.16:0 "The Xenoist Gift"
  confrontations_xenoist.16.desc:0 "The xenoists of the [Root.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the xenophile symbols of the [Root.GetName] litter our latest government projects. The xenoists are happy to have a place in our government."
  confrontations_xenoist.16.a:0 "What a nice gift!"
  xenoist_gift_continue_modifier:0 "Xenoists give gift."

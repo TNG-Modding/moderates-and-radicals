@@ -39,7 +39,7 @@
  confrontations_supremacist.15.b:0 "We won't bail them out."
  supremacist_debt_stopped_modifier:0 "Supremacist Faction Leader in Dire Straights"
  
- confrontations_supremacist.16:0 "Supremacists and their Gift"
+ confrontations_supremacist.16:0 "The Supremacist Gift"
  confrontations_supremacist.16.desc:0 "The supremacists of the [Root.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the xenophobe symbols of the [Root.GetName] litter our latest government projects. The supremacists are happy to have a place in our government."
  confrontations_supremacist.16.a:0 "What a nice gift!"
  supremacist_gift_continue_modifier:0 "Supremacists give gift."

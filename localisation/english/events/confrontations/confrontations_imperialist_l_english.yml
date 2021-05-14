@@ -39,7 +39,7 @@
  confrontations_imperialist.15.b:0 "We won't bail them out."
  imperialist_debt_stopped_modifier:0 "Imperialist Faction Leader in Dire Straights"
  
- confrontations_imperialist.16:0 "Imperialists and their Gift"
+ confrontations_imperialist.16:0 "The Imperialist Gift"
  confrontations_imperialist.16.desc:0 "The imperialists of the [Root.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the militarist symbols of the [Root.GetName] litter our latest government projects. The imperialists are happy to have a place in our government."
  confrontations_imperialist.16.a:0 "What a nice gift!"
  imperialist_gift_continue_modifier:0 "Imperialists give gift."

@@ -39,7 +39,7 @@
  confrontations_traditionalist.15.b:0 "We won't bail them out."
  traditionalist_debt_stopped_modifier:0 "Traditionalist Faction Leader in Dire Straights"
  
- confrontations_traditionalist.16:0 "Traditionalists and their Gift"
+ confrontations_traditionalist.16:0 "The Traditionalist Gift"
  confrontations_traditionalist.16.desc:0 "The traditionalists of the [Root.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the spiritualist symbols of the [Root.GetName] litter our latest government projects. The traditionalists are happy to have a place in our government."
  confrontations_traditionalist.16.a:0 "What a nice gift!"
  traditionalist_gift_continue_modifier:0 "Traditionalists give gift."

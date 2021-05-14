@@ -39,7 +39,7 @@
  confrontations_technologist.15.b:0 "We won't bail them out."
  technologist_debt_stopped_modifier:0 "Technologist Faction Leader in Dire Straights"
  
- confrontations_technologist.16:0 "Technologists and their Gift"
+ confrontations_technologist.16:0 "The Technologist Gift"
  confrontations_technologist.16.desc:0 "The technologists of the [Root.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the materialist symbols of the [Root.GetName] litter our latest government projects. The technologists are happy to have a place in our government."
  confrontations_technologist.16.a:0 "What a nice gift!"
  technologist_gift_continue_modifier:0 "Technologists give gift."

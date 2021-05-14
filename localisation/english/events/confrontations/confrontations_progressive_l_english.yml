@@ -39,7 +39,7 @@
  confrontations_progressive.15.b:0 "We won't bail them out."
  progressive_debt_stopped_modifier:0 "Progressive Faction Leader in Dire Straights"
  
- confrontations_progressive.16:0 "Progressives and their Gift"
+ confrontations_progressive.16:0 "The Progressive Gift"
  confrontations_progressive.16.desc:0 "The progressives of the [Root.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the egalitarian symbols of the [Root.GetName] litter our latest government projects. The progressives are happy to have a place in our government."
  confrontations_progressive.16.a:0 "What a nice gift!"
  progressive_gift_continue_modifier:0 "Progressives give gift."
