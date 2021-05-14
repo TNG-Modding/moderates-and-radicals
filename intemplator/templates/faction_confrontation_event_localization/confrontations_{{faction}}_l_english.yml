@@ -7,6 +7,26 @@ l_english:
  confrontations_{{faction}}.10.b:0 "Strike the wording from the policy."
  {{faction}}_debates_stopped_modifier:0 "{{Adjective}} Policy Wording Rewritten"
 
+ confrontations_{{faction}}.11:0 "The [Root.Leader.GetTitle]'s {{Ethic}} Speech"
+ confrontations_{{faction}}.11.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] has given a rousing speech on behalf of the [Root.GetName], and many of our leading officials have been won over. If we don't do something, they may permanently change their faction allegiance to something more outwardly {{adjective}}."
+ confrontations_{{faction}}.11.a:0 "Quite the moving speech."
+ confrontations_{{faction}}.11.b:0 "Issue a scathing rebuttal!"
+ {{faction}}_speech_stopped_modifier:0 "{{Adjective}} Speech Rebutted"
+
+ confrontations_{{faction}}.12:0 "Rising Star among the {{Adjective}}s"
+ confrontations_{{faction}}.12.desc:0 "Several officials from [Root.GetName] have risen to prominence through cunning and connections. We can have the pick of the lot, which will we promote?"
+ confrontations_{{faction}}.12.a:0 "The Governor."
+ confrontations_{{faction}}.12.b:0 "The Scientist."
+ confrontations_{{faction}}.12.c:0 "The Admiral."
+ confrontations_{{faction}}.12.d:0 "The General."
+
+ confrontations_{{faction}}.13:0 "[confronted_leader.GetName] Confronted!"
+ confrontations_{{faction}}.13.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has confronted [confronted_leader.GetTitle] [confronted_leader.GetName] of the [confronted_leader_faction.GetName]. In a flurry of {{ethic}} based arguments, [Root.Leader.GetName] has totally destroyed [confronted_leader.GetName] in public. Do we back [confronted_leader.GetTitle] [confronted_leader.GetName] up?"
+ confrontations_{{faction}}.13.a:0 "Let's see how [Root.Leader.GetName] likes it!"
+ confrontations_{{faction}}.13.b:0 "Let's see how [Root.Leader.GetName] likes it!"
+ confrontations_{{faction}}.13.c:0 "That's how it goes..."
+ confrontations_{{faction}}.13.d:0 "That's how it goes..."
+
  confrontations_{{faction}}.20:0 "{{Adjective}} Riots"
  confrontations_{{faction}}.20.desc:0 "The {{adjective}}s of the [Root.GetName] have taken to the streets of [Root.Owner.Capital.GetName] causing chaos and disorder. {{Adjective}}s can be found everywhere making speeches pushing {{ethic}} talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. {{Adjective}} emissaries have approached our government asking us to endorse their movement."
  confrontations_{{faction}}.20.a:0 "Endorse the actions of the [Root.GetName]"

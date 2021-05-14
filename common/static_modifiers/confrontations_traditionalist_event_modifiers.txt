@@ -7,6 +7,10 @@ traditionalist_debates_stopped_modifier = {
 	country_base_traditionalist_militancy_desired_value_change_produces_add = 10
 }
 
+traditionalist_speech_stopped_modifier = {
+	country_base_traditionalist_militancy_desired_value_change_produces_add = 10
+}
+
 traditionalist_riots_continue_modifier = {
 	country_base_traditionalist_militancy_desired_value_change_produces_add = 5
 }

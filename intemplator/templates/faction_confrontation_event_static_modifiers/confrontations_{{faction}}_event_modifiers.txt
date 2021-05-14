@@ -7,6 +7,10 @@
 	country_base_{{faction}}_militancy_desired_value_change_produces_add = 10
 }
 
+{{faction}}_speech_stopped_modifier = {
+	country_base_{{faction}}_militancy_desired_value_change_produces_add = 10
+}
+
 {{faction}}_riots_continue_modifier = {
 	country_base_{{faction}}_militancy_desired_value_change_produces_add = 5
 }

@@ -7,6 +7,26 @@
  confrontations_traditionalist.10.b:0 "Strike the wording from the policy."
  traditionalist_debates_stopped_modifier:0 "Traditionalist Policy Wording Rewritten"
 
+ confrontations_traditionalist.11:0 "The [Root.Leader.GetTitle]'s Spiritualist Speech"
+ confrontations_traditionalist.11.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] has given a rousing speech on behalf of the [Root.GetName], and many of our leading officials have been won over. If we don't do something, they may permanently change their faction allegiance to something more outwardly traditionalist."
+ confrontations_traditionalist.11.a:0 "Quite the moving speech."
+ confrontations_traditionalist.11.b:0 "Issue a scathing rebuttal!"
+ traditionalist_speech_stopped_modifier:0 "Traditionalist Speech Rebutted"
+
+ confrontations_traditionalist.12:0 "Rising Star among the Traditionalists"
+ confrontations_traditionalist.12.desc:0 "Several officials from [Root.GetName] have risen to prominence through cunning and connections. We can have the pick of the lot, which will we promote?"
+ confrontations_traditionalist.12.a:0 "The Governor."
+ confrontations_traditionalist.12.b:0 "The Scientist."
+ confrontations_traditionalist.12.c:0 "The Admiral."
+ confrontations_traditionalist.12.d:0 "The General."
+
+ confrontations_traditionalist.13:0 "[confronted_leader.GetName] Confronted!"
+ confrontations_traditionalist.13.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has confronted [confronted_leader.GetTitle] [confronted_leader.GetName] of the [confronted_leader_faction.GetName]. In a flurry of spiritualist based arguments, [Root.Leader.GetName] has totally destroyed [confronted_leader.GetName] in public. Do we back [confronted_leader.GetTitle] [confronted_leader.GetName] up?"
+ confrontations_traditionalist.13.a:0 "Let's see how [Root.Leader.GetName] likes it!"
+ confrontations_traditionalist.13.b:0 "Let's see how [Root.Leader.GetName] likes it!"
+ confrontations_traditionalist.13.c:0 "That's how it goes..."
+ confrontations_traditionalist.13.d:0 "That's how it goes..."
+
  confrontations_traditionalist.20:0 "Traditionalist Riots"
  confrontations_traditionalist.20.desc:0 "The traditionalists of the [Root.GetName] have taken to the streets of [Root.Owner.Capital.GetName] causing chaos and disorder. Traditionalists can be found everywhere making speeches pushing spiritualist talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Traditionalist emissaries have approached our government asking us to endorse their movement."
  confrontations_traditionalist.20.a:0 "Endorse the actions of the [Root.GetName]"

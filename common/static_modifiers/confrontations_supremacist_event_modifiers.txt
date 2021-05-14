@@ -7,6 +7,10 @@ supremacist_debates_stopped_modifier = {
 	country_base_supremacist_militancy_desired_value_change_produces_add = 10
 }
 
+supremacist_speech_stopped_modifier = {
+	country_base_supremacist_militancy_desired_value_change_produces_add = 10
+}
+
 supremacist_riots_continue_modifier = {
 	country_base_supremacist_militancy_desired_value_change_produces_add = 5
 }

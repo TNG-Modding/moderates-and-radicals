@@ -7,6 +7,10 @@ imperialist_debates_stopped_modifier = {
 	country_base_imperialist_militancy_desired_value_change_produces_add = 10
 }
 
+imperialist_speech_stopped_modifier = {
+	country_base_imperialist_militancy_desired_value_change_produces_add = 10
+}
+
 imperialist_riots_continue_modifier = {
 	country_base_imperialist_militancy_desired_value_change_produces_add = 5
 }
