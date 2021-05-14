@@ -95,6 +95,10 @@ gov_traditionalist = {
 			factor = 0.0
 			is_event_leader = yes
 		}
+		modifier = {
+			factor = 3
+			leader_class = ruler
+		}
 	}
 
 	demand = {

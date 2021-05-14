@@ -7,7 +7,7 @@ prosperity_radicals = {
 	guiding_ethic = ethic_pacifist
 
 	unique = yes
-	support_multiplier = 1
+	support_multiplier = 0
 
 	resources = {
 		category = pop_radical_factions
@@ -114,6 +114,10 @@ prosperity_radicals = {
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
+		}
+		modifier = {
+			factor = 0.0
+			leader_class = ruler
 		}
 	}
 

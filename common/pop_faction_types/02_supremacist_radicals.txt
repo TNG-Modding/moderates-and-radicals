@@ -7,7 +7,7 @@ supremacist_radicals = {
 	guiding_ethic = ethic_xenophobe
 
 	unique = yes
-	support_multiplier = 1
+	support_multiplier = 0
 
 	resources = {
 		category = pop_radical_factions
@@ -113,6 +113,10 @@ supremacist_radicals = {
 			species = {
 				has_trait = "trait_mechanical"
 			}
+		}
+		modifier = {
+			factor = 0.0
+			leader_class = ruler
 		}
 
 		modifier = {

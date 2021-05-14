@@ -7,7 +7,7 @@ technologist = {
 	guiding_ethic = ethic_materialist
 
 	unique = yes
-	support_multiplier = 1
+	support_multiplier = 0.5
 
 	resources = {
 		category = pop_factions
@@ -96,6 +96,10 @@ technologist = {
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
+		}
+		modifier = {
+			factor = 0.25
+			leader_class = ruler
 		}
 	}
 
