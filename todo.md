@@ -1,8 +1,5 @@
 ﻿# Todo
 
-- Add 10 confrontation events
-
-
 ## Luxury
 
 - Add origin interactions

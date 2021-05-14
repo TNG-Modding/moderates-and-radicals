@@ -3,4 +3,4 @@ tags={
 	"Gameplay"
 }
 name="[TNG] Factions Matter"
-supported_version="2.8.1"
+supported_version="2.8.*"
