@@ -20,12 +20,12 @@
  confrontations_traditionalist.12.c:0 "The Admiral."
  confrontations_traditionalist.12.d:0 "The General."
 
- confrontations_traditionalist.13:0 "[confronted_leader.GetName] Confronted!"
+ confrontations_traditionalist.13:0 "[confronted_leader.GetTitle] [confronted_leader.GetName] Confronted!"
  confrontations_traditionalist.13.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has confronted [confronted_leader.GetTitle] [confronted_leader.GetName] of the [confronted_leader_faction.GetName]. In a flurry of spiritualist based arguments, [Root.Leader.GetName] has totally destroyed [confronted_leader.GetName] in public. Do we back [confronted_leader.GetTitle] [confronted_leader.GetName] up?"
- confrontations_traditionalist.13.a:0 "Let's see how [Root.Leader.GetName] likes it!"
- confrontations_traditionalist.13.b:0 "Let's see how [Root.Leader.GetName] likes it!"
- confrontations_traditionalist.13.c:0 "That's how it goes..."
- confrontations_traditionalist.13.d:0 "That's how it goes..."
+ confrontations_traditionalist.13.a:0 "Let's see how [Root.Leader.GetTitle] [Root.Leader.GetName] likes it!"
+ confrontations_traditionalist.13.b:0 "Hit [Root.Leader.GetTitle] [Root.Leader.GetName] where it hurts."
+ confrontations_traditionalist.13.c:0 "Get [confronted_leader.GetTitle] [confronted_leader.GetName] some ice."
+ confrontations_traditionalist.13.d:0 "Get a body bag for [confronted_leader.GetTitle] [confronted_leader.GetName]."
 
  confrontations_traditionalist.20:0 "Traditionalist Riots"
  confrontations_traditionalist.20.desc:0 "The traditionalists of the [Root.GetName] have taken to the streets of [Root.Owner.Capital.GetName] causing chaos and disorder. Traditionalists can be found everywhere making speeches pushing spiritualist talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Traditionalist emissaries have approached our government asking us to endorse their movement."
