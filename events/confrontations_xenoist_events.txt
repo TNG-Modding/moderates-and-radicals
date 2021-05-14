@@ -772,9 +772,9 @@ pop_faction_event = {
 
 # Gift
 pop_faction_event = {
-    id = confrontations_totalitarian.16
-    title = confrontations_totalitarian.16
-    desc = confrontations_totalitarian.16.desc
+    id = confrontations_xenoist.16
+    title = confrontations_xenoist.16
+    desc = confrontations_xenoist.16.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -783,11 +783,11 @@ pop_faction_event = {
     show_sound = event_factions
 
     immediate = {
-        owner = { country_event = { id = confrontations_totalitarian.2 } }
+        owner = { country_event = { id = confrontations_xenoist.2 } }
     }
 
     option = {
-        name = confrontations_totalitarian.16.a
+        name = confrontations_xenoist.16.a
 
         owner = {
             add_monthly_resource_mult = {
