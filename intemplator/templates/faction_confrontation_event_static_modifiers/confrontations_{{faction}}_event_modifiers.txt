@@ -19,12 +19,26 @@
 	country_base_{{faction}}_militancy_desired_value_change_produces_add = 5
 }
 
+{{faction}}_gift_continue_modifier = {
+	country_base_{{faction}}_militancy_desired_value_change_produces_add = 5
+}
+
 {{faction}}_riots_continue_modifier = {
 	country_base_{{faction}}_militancy_desired_value_change_produces_add = 5
 }
 
 {{faction}}_riots_stopped_modifier = {
 	country_base_{{faction}}_militancy_desired_value_change_produces_add = 10
+}
+
+{{faction}}_corner_production_continue_modifier = {
+	country_{{resource}}_produces_mult = -0.10
+	country_base_{{faction}}_militancy_desired_value_change_produces_add = -10
+}
+
+{{faction}}_corner_production_stopped_modifier = {
+	country_{{resource}}_produces_mult = 0.10
+	country_base_{{faction}}_militancy_desired_value_change_produces_add = 15
 }
 
 {{faction}}_violent_riots_continue_modifier = {

@@ -28,7 +28,7 @@
  confrontations_prosperity.13.d:0 "Get a body bag for [confronted_leader.GetTitle] [confronted_leader.GetName]."
 
  confrontations_prosperity.14:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] Makes a Deal!"
- confrontations_prosperity.14.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has offered our administration a deal. They oversee the acquisition and production of consumer_goods for the next couple of years and in return they'll offer us consumer_goods up front for a flat fee. Do we take the deal?"
+ confrontations_prosperity.14.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has offered our administration a deal. They oversee the production of this a macro unit of Consumer Goods and they'll offer us the proceeds for a flat fee. Do we take the deal?"
  confrontations_prosperity.14.a:0 "[Root.Leader.GetName] you have a deal!"
  confrontations_prosperity.14.b:0 "Pass."
  prosperity_deal_stopped_modifier:0 "Pacifist Trade Deal Rejected"
@@ -38,6 +38,11 @@
  confrontations_prosperity.15.a:0 "Pay [Root.Leader.GetName]'s Debt"
  confrontations_prosperity.15.b:0 "We won't bail them out."
  prosperity_debt_stopped_modifier:0 "Pacifist Faction Leader in Dire Straights"
+ 
+ confrontations_prosperity.16:0 "Pacifists and their Gift"
+ confrontations_prosperity.16.desc:0 "The pacifists of the [Root.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the pacifist symbols of the [Root.GetName] litter our latest government projects. The pacifists are happy to have a place in our government."
+ confrontations_prosperity.16.a:0 "What a nice gift!"
+ prosperity_gift_continue_modifier:0 "Pacifists give gift."
 
  confrontations_prosperity.20:0 "Pacifist Riots"
  confrontations_prosperity.20.desc:0 "The pacifists of the [Root.GetName] have taken to the streets of [Root.Owner.Capital.GetName] causing chaos and disorder. Pacifists can be found everywhere making speeches pushing pacifist talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Pacifist emissaries have approached our government asking us to endorse their movement."
@@ -45,6 +50,13 @@
  prosperity_riots_continue_modifier:0 "Pacifist Riots Continue"
  confrontations_prosperity.20.b:0 "Shut them down!"
  prosperity_riots_stopped_modifier:0 "Pacifist Riots Stopped"
+
+ confrontations_prosperity.21:0 "Pacifists Take Control of Consumer Goods Market"
+ confrontations_prosperity.21.desc:0 "In a number of bold moves, the pacifists of the [Root.GetName] have achieved a choke hold on the Consumer Goods market. All shipments of Consumer Goods are hand inspected by  and their officials, and [Root.Leader.GetTitle] [Root.Leader.GetName], the  leader of the [Root.GetName], is said to have gained a large fortune in the Consumer Goods trade. How do we respond to their newfound monopoly?"
+ confrontations_prosperity.21.a:0 "We can leave it to the pacifists to handle our Consumer Goods."
+ prosperity_corner_production_continue_modifier:0 "Pacifists Control Consumer Goods"
+ confrontations_prosperity.21.b:0 "Their control represents a threat to [Root.Owner.GetName] interests."
+ prosperity_corner_production_stopped_modifier:0 "Disrupted Pacifist Control of Consumer Goods"
 
  confrontations_prosperity.30:0 "Destruction of Imperialist Propaganda"
  confrontations_prosperity.30.desc:0 "The pacifists of the [Root.GetName] have gathered on [Root.Owner.Capital.GetName] to demand we strike militarist teachings from all government curriculum. They have taken it upon themselves to destroy datalogs and holovids that contain imperialist propaganda. The fires from the destruction can be seen from the very steps of the capitol. The imperialists are understandably upset, and they are asking us to denounce the destruction."

@@ -626,7 +626,7 @@ pop_faction_event = {
     }
 }
 
-# Faction trade deal
+# Faction leader in debt
 pop_faction_event = {
     id = confrontations_{{faction}}.15
     title = confrontations_{{faction}}.15
@@ -682,6 +682,46 @@ pop_faction_event = {
     }
 }
 
+# Gift
+pop_faction_event = {
+    id = confrontations_totalitarian.16
+    title = confrontations_totalitarian.16
+    desc = confrontations_totalitarian.16.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_ship_offloading_cargo
+    show_sound = event_factions
+
+    immediate = {
+        owner = { country_event = { id = confrontations_totalitarian.2 } }
+    }
+
+    option = {
+        name = confrontations_totalitarian.16.a
+
+        owner = {
+            add_monthly_resource_mult = {
+                resource = {{resource}}
+                value = 6
+                max = 1000
+                min = 25
+            }
+            add_monthly_resource_mult = {
+                resource = energy
+                value = 6
+                max = 1000
+                min = 25
+            }
+            add_modifier = {
+                modifier = {{faction}}_gift_continue_modifier
+                years = 3
+            }
+        }
+    }
+}
+
 # Riots
 pop_faction_event = {
     id = confrontations_{{faction}}.20
@@ -724,6 +764,45 @@ pop_faction_event = {
         owner = {
             add_modifier = {
                 modifier = {{faction}}_riots_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}
+
+# Faction corners production
+pop_faction_event = {
+    id = confrontations_{{faction}}.21
+    title = confrontations_{{faction}}.21
+    desc = confrontations_{{faction}}.21.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_ship_offloading_cargo
+    show_sound = event_factions
+
+    immediate = {
+        owner = { country_event = { id = confrontations_{{faction}}.2 } }
+    }
+
+    option = {
+        name = confrontations_{{faction}}.21.a
+
+        owner = {
+            add_modifier = {
+                modifier = {{faction}}_corner_production_continue_modifier
+                years = 3
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_{{faction}}.21.b
+
+        owner = {
+            add_modifier = {
+                modifier = {{faction}}_corner_production_stopped_modifier
                 years = 3
             }
         }

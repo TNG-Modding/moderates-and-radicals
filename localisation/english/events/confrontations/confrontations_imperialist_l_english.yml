@@ -28,7 +28,7 @@
  confrontations_imperialist.13.d:0 "Get a body bag for [confronted_leader.GetTitle] [confronted_leader.GetName]."
 
  confrontations_imperialist.14:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] Makes a Deal!"
- confrontations_imperialist.14.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has offered our administration a deal. They oversee the acquisition and production of alloys for the next couple of years and in return they'll offer us alloys up front for a flat fee. Do we take the deal?"
+ confrontations_imperialist.14.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has offered our administration a deal. They oversee the production of this a macro unit of Alloys and they'll offer us the proceeds for a flat fee. Do we take the deal?"
  confrontations_imperialist.14.a:0 "[Root.Leader.GetName] you have a deal!"
  confrontations_imperialist.14.b:0 "Pass."
  imperialist_deal_stopped_modifier:0 "Imperialist Trade Deal Rejected"
@@ -38,6 +38,11 @@
  confrontations_imperialist.15.a:0 "Pay [Root.Leader.GetName]'s Debt"
  confrontations_imperialist.15.b:0 "We won't bail them out."
  imperialist_debt_stopped_modifier:0 "Imperialist Faction Leader in Dire Straights"
+ 
+ confrontations_imperialist.16:0 "Imperialists and their Gift"
+ confrontations_imperialist.16.desc:0 "The imperialists of the [Root.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the militarist symbols of the [Root.GetName] litter our latest government projects. The imperialists are happy to have a place in our government."
+ confrontations_imperialist.16.a:0 "What a nice gift!"
+ imperialist_gift_continue_modifier:0 "Imperialists give gift."
 
  confrontations_imperialist.20:0 "Imperialist Riots"
  confrontations_imperialist.20.desc:0 "The imperialists of the [Root.GetName] have taken to the streets of [Root.Owner.Capital.GetName] causing chaos and disorder. Imperialists can be found everywhere making speeches pushing militarist talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Imperialist emissaries have approached our government asking us to endorse their movement."
@@ -45,6 +50,13 @@
  imperialist_riots_continue_modifier:0 "Militarist Riots Continue"
  confrontations_imperialist.20.b:0 "Shut them down!"
  imperialist_riots_stopped_modifier:0 "Militarist Riots Stopped"
+
+ confrontations_imperialist.21:0 "Imperialists Take Control of Alloys Market"
+ confrontations_imperialist.21.desc:0 "In a number of bold moves, the imperialists of the [Root.GetName] have achieved a choke hold on the Alloys market. All shipments of Alloys are hand inspected by  and their officials, and [Root.Leader.GetTitle] [Root.Leader.GetName], the  leader of the [Root.GetName], is said to have gained a large fortune in the Alloys trade. How do we respond to their newfound monopoly?"
+ confrontations_imperialist.21.a:0 "We can leave it to the imperialists to handle our Alloys."
+ imperialist_corner_production_continue_modifier:0 "Imperialists Control Alloys"
+ confrontations_imperialist.21.b:0 "Their control represents a threat to [Root.Owner.GetName] interests."
+ imperialist_corner_production_stopped_modifier:0 "Disrupted Imperialist Control of Alloys"
 
  confrontations_imperialist.30:0 "Destruction of Prosperity Propaganda"
  confrontations_imperialist.30.desc:0 "The imperialists of the [Root.GetName] have gathered on [Root.Owner.Capital.GetName] to demand we strike pacifist teachings from all government curriculum. They have taken it upon themselves to destroy datalogs and holovids that contain pacifist propaganda. The fires from the destruction can be seen from the very steps of the capitol. The pacifists are understandably upset, and they are asking us to denounce the destruction."

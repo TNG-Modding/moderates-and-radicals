@@ -28,7 +28,7 @@
  confrontations_totalitarian.13.d:0 "Get a body bag for [confronted_leader.GetTitle] [confronted_leader.GetName]."
 
  confrontations_totalitarian.14:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] Makes a Deal!"
- confrontations_totalitarian.14.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has offered our administration a deal. They oversee the acquisition and production of alloys for the next couple of years and in return they'll offer us alloys up front for a flat fee. Do we take the deal?"
+ confrontations_totalitarian.14.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has offered our administration a deal. They oversee the production of this a macro unit of Alloys and they'll offer us the proceeds for a flat fee. Do we take the deal?"
  confrontations_totalitarian.14.a:0 "[Root.Leader.GetName] you have a deal!"
  confrontations_totalitarian.14.b:0 "Pass."
  totalitarian_deal_stopped_modifier:0 "Authoritarian Trade Deal Rejected"
@@ -38,6 +38,11 @@
  confrontations_totalitarian.15.a:0 "Pay [Root.Leader.GetName]'s Debt"
  confrontations_totalitarian.15.b:0 "We won't bail them out."
  totalitarian_debt_stopped_modifier:0 "Authoritarian Faction Leader in Dire Straights"
+ 
+ confrontations_totalitarian.16:0 "Authoritarians and their Gift"
+ confrontations_totalitarian.16.desc:0 "The authoritarians of the [Root.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the authoritarian symbols of the [Root.GetName] litter our latest government projects. The authoritarians are happy to have a place in our government."
+ confrontations_totalitarian.16.a:0 "What a nice gift!"
+ totalitarian_gift_continue_modifier:0 "Authoritarians give gift."
 
  confrontations_totalitarian.20:0 "Authoritarian Riots"
  confrontations_totalitarian.20.desc:0 "The authoritarians of the [Root.GetName] have taken to the streets of [Root.Owner.Capital.GetName] causing chaos and disorder. Authoritarians can be found everywhere making speeches pushing authoritarian talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Authoritarian emissaries have approached our government asking us to endorse their movement."
@@ -45,6 +50,13 @@
  totalitarian_riots_continue_modifier:0 "Authoritarian Riots Continue"
  confrontations_totalitarian.20.b:0 "Shut them down!"
  totalitarian_riots_stopped_modifier:0 "Authoritarian Riots Stopped"
+
+ confrontations_totalitarian.21:0 "Authoritarians Take Control of Alloys Market"
+ confrontations_totalitarian.21.desc:0 "In a number of bold moves, the authoritarians of the [Root.GetName] have achieved a choke hold on the Alloys market. All shipments of Alloys are hand inspected by  and their officials, and [Root.Leader.GetTitle] [Root.Leader.GetName], the  leader of the [Root.GetName], is said to have gained a large fortune in the Alloys trade. How do we respond to their newfound monopoly?"
+ confrontations_totalitarian.21.a:0 "We can leave it to the authoritarians to handle our Alloys."
+ totalitarian_corner_production_continue_modifier:0 "Authoritarians Control Alloys"
+ confrontations_totalitarian.21.b:0 "Their control represents a threat to [Root.Owner.GetName] interests."
+ totalitarian_corner_production_stopped_modifier:0 "Disrupted Authoritarian Control of Alloys"
 
  confrontations_totalitarian.30:0 "Destruction of Progressive Propaganda"
  confrontations_totalitarian.30.desc:0 "The authoritarians of the [Root.GetName] have gathered on [Root.Owner.Capital.GetName] to demand we strike egalitarian teachings from all government curriculum. They have taken it upon themselves to destroy datalogs and holovids that contain progressive propaganda. The fires from the destruction can be seen from the very steps of the capitol. The progressives are understandably upset, and they are asking us to denounce the destruction."
