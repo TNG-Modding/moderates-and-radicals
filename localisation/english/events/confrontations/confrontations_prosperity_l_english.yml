@@ -27,6 +27,18 @@
  confrontations_prosperity.13.c:0 "Get [confronted_leader.GetTitle] [confronted_leader.GetName] some ice."
  confrontations_prosperity.13.d:0 "Get a body bag for [confronted_leader.GetTitle] [confronted_leader.GetName]."
 
+ confrontations_prosperity.14:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] Makes a Deal!"
+ confrontations_prosperity.14.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has offered our administration a deal. They oversee the acquisition and production of consumer_goods for the next couple of years and in return they'll offer us consumer_goods up front for a flat fee. Do we take the deal?"
+ confrontations_prosperity.14.a:0 "[Root.Leader.GetName] you have a deal!"
+ confrontations_prosperity.14.b:0 "Pass."
+ prosperity_deal_stopped_modifier:0 "Pacifist Trade Deal Rejected"
+
+ confrontations_prosperity.15:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] in a Bind!"
+ confrontations_prosperity.15.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has made a number of poor financial decisions, and is now in deep debt. They have used a number of connections to make a very inconvenient mess, as many of their pacifist supporters are pulling for our government to grant them debt immunity."
+ confrontations_prosperity.15.a:0 "Pay [Root.Leader.GetName]'s Debt"
+ confrontations_prosperity.15.b:0 "We won't bail them out."
+ prosperity_debt_stopped_modifier:0 "Pacifist Faction Leader in Dire Straights"
+
  confrontations_prosperity.20:0 "Pacifist Riots"
  confrontations_prosperity.20.desc:0 "The pacifists of the [Root.GetName] have taken to the streets of [Root.Owner.Capital.GetName] causing chaos and disorder. Pacifists can be found everywhere making speeches pushing pacifist talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Pacifist emissaries have approached our government asking us to endorse their movement."
  confrontations_prosperity.20.a:0 "Endorse the actions of the [Root.GetName]"

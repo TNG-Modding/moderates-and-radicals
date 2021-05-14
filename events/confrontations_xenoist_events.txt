@@ -499,7 +499,7 @@ pop_faction_event = {
             }
         }
         owner = {
-            random_owned_leader = {
+            every_owned_leader = {
                 limit = {
                     leader_of_faction = root
                 }
@@ -524,7 +524,7 @@ pop_faction_event = {
             }
         }
         owner = {
-            random_owned_leader = {
+            every_owned_leader = {
                 limit = {
                     leader_of_faction = root
                 }
@@ -558,6 +558,126 @@ pop_faction_event = {
         }
         event_target:confronted_leader = {
             kill_leader = {}
+        }
+    }
+}
+
+# Faction trade deal
+pop_faction_event = {
+    id = confrontations_xenoist.14
+    title = confrontations_xenoist.14
+    desc = confrontations_xenoist.14.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_tradedeal
+    show_sound = event_factions
+
+    trigger = {
+        count_owned_leader = {
+            count > 0
+            limit = {
+                leader_of_faction = root
+                NOT = {
+                    has_trait = leader_trait_arrested_development
+                }
+            }                    
+        }
+    }
+
+    immediate = {
+        owner = { country_event = { id = confrontations_xenoist.2 } }
+    }
+
+    option = {
+        name = confrontations_xenoist.14.a
+
+        owner = {
+            add_monthly_resource_mult = {
+                resource = consumer_goods
+                value = 6
+                max = 1000
+                min = 30
+            }
+            export_resource_income_to_variable = { 
+                resource = energy
+                variable = temp_energy_income
+            }
+            multiply_variable = {
+                which = temp_energy_income
+                value = 9
+            }    
+            add_resource = { 
+                energy = -1
+                mult = temp_energy_income 
+            }
+        }
+    }
+    option = {
+        name = confrontations_xenoist.14.b
+
+        owner = {
+            add_modifier = {
+                modifier = xenoist_deal_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}
+
+# Faction trade deal
+pop_faction_event = {
+    id = confrontations_xenoist.15
+    title = confrontations_xenoist.15
+    desc = confrontations_xenoist.15.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_cover_blown
+    show_sound = event_factions
+
+    immediate = {
+        owner = { country_event = { id = confrontations_xenoist.2 } }
+    }
+
+    option = {
+        name = confrontations_xenoist.15.a
+
+        owner = {
+            export_resource_income_to_variable = { 
+                resource = energy
+                variable = temp_energy_income
+            }
+            multiply_variable = {
+                which = temp_energy_income
+                value = 6
+            }    
+            add_resource = { 
+                energy = -1
+                mult = temp_energy_income 
+            }
+        }
+    }
+    option = {
+        name = confrontations_xenoist.15.b
+
+        owner = {
+            every_owned_leader = {
+                limit = {
+                    leader_of_faction = root
+                    NOT = { 
+                        has_trait = leader_trait_arrested_development 
+                    }
+                }
+                add_trait = leader_trait_arrested_development
+            }
+            
+            add_modifier = {
+                modifier = xenoist_debt_stopped_modifier
+                years = 3
+            }
         }
     }
 }
