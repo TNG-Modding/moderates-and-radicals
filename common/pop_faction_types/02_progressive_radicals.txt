@@ -87,11 +87,6 @@ progressive_radicals = {
 			}
 		}
 
-		modifier = {
-			factor = 0.0
-			leader_class = ruler
-		}
-
 		# Should really check for citizenship instead
 		modifier = {
 			factor = 0.25
@@ -111,6 +106,10 @@ progressive_radicals = {
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
+		}
+		modifier = {
+			factor = 0.0
+			leader_class = ruler
 		}
 	}
 
