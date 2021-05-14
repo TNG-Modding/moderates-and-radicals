@@ -182,7 +182,7 @@ country_event = {
                         owner = {
                             check_variable = {
                                 which = current_xenoist_militancy
-                                value > 0
+                                value >= 0
                             }
                         }
                     }
