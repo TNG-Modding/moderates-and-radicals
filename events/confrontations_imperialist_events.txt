@@ -46,11 +46,11 @@ country_event = {
                     }
                     
                     random_list = {
-                        20 = {
+                        40 = {
                             # Imperialist Coup
                             pop_faction_event = { id = confrontations_imperialist.90 }
                         }
-                        80 = {
+                        60 = {
                             # Imperialist Putsch
                             pop_faction_event = { id = confrontations_imperialist.91 }
                         }                    
@@ -67,13 +67,21 @@ country_event = {
                         }
                     }
                     random_list = {
-                        0 = {
+                        40 = {
                             # Ruler Assassinated
                             pop_faction_event = { id = confrontations_imperialist.80 }
                         }
-                        50 = {
+                        40 = {
                             # Faction Leader Assassinated
                             pop_faction_event = { id = confrontations_imperialist.81 }
+                        }
+                        10 = {
+                            # Pacifist Book Burning
+                            pop_faction_event = { id = confrontations_imperialist.30 }
+                        }
+                        10 = {
+                            # Imperialist Riots and Endorse Movement
+                            pop_faction_event = { id = confrontations_imperialist.20 }
                         }
                     }
                 }
@@ -87,9 +95,41 @@ country_event = {
                         }
                     }
                     random_list = {
-                        100 = {
+                        40 = {
                             # Pacifist Book Burning
                             pop_faction_event = { id = confrontations_imperialist.30 }
+                        }
+                        25 = {
+                            # Imperialist Riots and Endorse Movement
+                            pop_faction_event = { id = confrontations_imperialist.20 }
+                        }
+                        5 = {
+                            # Imperialist Corner Market
+                            pop_faction_event = { id = confrontations_imperialist.21 }
+                        }
+                        5 = {
+                            # Militarist policy wording
+                            pop_faction_event = { id = confrontations_imperialist.10 }
+                        }
+                        5 = {
+                            # Inspiring speech
+                            pop_faction_event = { id = confrontations_imperialist.11 }
+                        }
+                        5 = {
+                            # New leader
+                            pop_faction_event = { id = confrontations_imperialist.12 }
+                        }
+                        5 = {
+                            # Leader got owned
+                            pop_faction_event = { id = confrontations_imperialist.13 }
+                        }
+                        5 = {
+                            # Faction trade deal
+                            pop_faction_event = { id = confrontations_imperialist.14 }
+                        }
+                        5 = {
+                            # Faction leader in debt
+                            pop_faction_event = { id = confrontations_imperialist.15 }
                         }
                     }
                 }
@@ -103,9 +143,37 @@ country_event = {
                         }
                     }
                     random_list = {
-                        100 = {
+                        35 = {
                             # Imperialist Riots and Endorse Movement
                             pop_faction_event = { id = confrontations_imperialist.20 }
+                        }
+                        35 = {
+                            # Imperialist Corner Market
+                            pop_faction_event = { id = confrontations_imperialist.21 }
+                        }
+                        5 = {
+                            # Militarist policy wording
+                            pop_faction_event = { id = confrontations_imperialist.10 }
+                        }
+                        5 = {
+                            # Inspiring speech
+                            pop_faction_event = { id = confrontations_imperialist.11 }
+                        }
+                        5 = {
+                            # New leader
+                            pop_faction_event = { id = confrontations_imperialist.12 }
+                        }
+                        5 = {
+                            # Leader got owned
+                            pop_faction_event = { id = confrontations_imperialist.13 }
+                        }
+                        5 = {
+                            # Faction trade deal
+                            pop_faction_event = { id = confrontations_imperialist.14 }
+                        }
+                        5 = {
+                            # Faction leader in debt
+                            pop_faction_event = { id = confrontations_imperialist.15 }
                         }
                     }
                 }
@@ -119,21 +187,33 @@ country_event = {
                         }
                     }
                     random_list = {
-                        25 = {
+                        10 = {
                             # Militarist policy wording
                             pop_faction_event = { id = confrontations_imperialist.10 }
                         }
-                        25 = {
+                        15 = {
                             # Inspiring speech
                             pop_faction_event = { id = confrontations_imperialist.11 }
                         }
-                        25 = {
+                        15 = {
                             # New leader
                             pop_faction_event = { id = confrontations_imperialist.12 }
                         }
-                        25 = {
-                            # Confronts other faction leader
+                        15 = {
+                            # Leader got owned
                             pop_faction_event = { id = confrontations_imperialist.13 }
+                        }
+                        15 = {
+                            # Faction trade deal
+                            pop_faction_event = { id = confrontations_imperialist.14 }
+                        }
+                        15 = {
+                            # Faction leader in debt
+                            pop_faction_event = { id = confrontations_imperialist.15 }
+                        }
+                        15 = {
+                            # Gift
+                            pop_faction_event = { id = confrontations_imperialist.16 }
                         }
                     }
                 }	 
