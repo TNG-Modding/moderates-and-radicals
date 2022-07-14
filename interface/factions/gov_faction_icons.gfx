@@ -1,52 +1,52 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_faction_icon_gov_militarist"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_militarists.dds"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_imperialists.dds"
 		noOfFrames = 1
 	}
 
 	spriteType = {
 		name = "GFX_faction_icon_gov_pacifist"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_pacifist.dds"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_prosperity.dds"
 		noOfFrames = 1
 	}
 
 
 	spriteType = {
 		name = "GFX_faction_icon_gov_egalitarian"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_egalitarians.dds"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_progressives.dds"
 		noOfFrames = 1
 	}
 
 	spriteType = {
 		name = "GFX_faction_icon_gov_authoritarian"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_authoritarians.dds"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
 		noOfFrames = 1
 	}
 
 
 	spriteType = {
 		name = "GFX_faction_icon_gov_xenophobe"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_xenophobes.dds"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_supremacists.dds"
 		noOfFrames = 1
 	}
 
 	spriteType = {
 		name = "GFX_faction_icon_gov_xenophile"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_xenophiles.dds"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_xenoists.dds"
 		noOfFrames = 1
 	}
 
 
 	spriteType = {
 		name = "GFX_faction_icon_gov_spiritualist"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_spiritualists.dds"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_traditionalists.dds"
 		noOfFrames = 1
 	}
 
 	spriteType = {
 		name = "GFX_faction_icon_gov_materialist"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_materialists.dds"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_technologists.dds"
 		noOfFrames = 1
 	}
 }

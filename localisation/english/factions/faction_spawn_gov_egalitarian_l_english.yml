@@ -1,0 +1,7 @@
+﻿l_english:
+
+ gov_egalitarian_spawn.1.title:0 "Government Faction Founded"
+
+ gov_egalitarian_spawn.1.desc:0 "A new faction has recently been gaining traction in the political landscape of the [Root.Owner.GetName]. Led by §H[Root.Leader.GetTitle] [Root.Leader.GetName]§!, they call themselves the §H[Root.GetName]§!.\n\nTheir members work for equality and justice for all denizens of our empire. Their egalitarian ideals are the bedrock of our government.\n\nA faction that approves of the government's actions could prove useful..."
+
+ gov_egalitarian_spawn.1.a:0 "We welcome them into our government."

@@ -1,51 +1,51 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_faction_icon_militarist_radicals"
+		name = "GFX_faction_icon_radical_militarist"
 		textureFile = "gfx/interface/icons/faction_icons/faction_icons_militarist_radicals_red.dds"
 		noOfFrames = 1
 	}
 
 	spriteType = {
-		name = "GFX_faction_icon_pacifist_radicals"
+		name = "GFX_faction_icon_radical_pacifist"
 		textureFile = "gfx/interface/icons/faction_icons/faction_icons_pacifist_radicals_red.dds"
 		noOfFrames = 1
 	}
 
 
 	spriteType = {
-		name = "GFX_faction_icon_egalitarian_radicals"
+		name = "GFX_faction_icon_radical_egalitarian"
 		textureFile = "gfx/interface/icons/faction_icons/faction_icons_egalitarian_radicals_red.dds"
 		noOfFrames = 1
 	}
 
 	spriteType = {
-		name = "GFX_faction_icon_authoritarian_radicals"
+		name = "GFX_faction_icon_radical_authoritarian"
 		textureFile = "gfx/interface/icons/faction_icons/faction_icons_authoritarian_radicals_red.dds"
 		noOfFrames = 1
 	}
 
 
 	spriteType = {
-		name = "GFX_faction_icon_xenophobe_radicals"
+		name = "GFX_faction_icon_radical_xenophobe"
 		textureFile = "gfx/interface/icons/faction_icons/faction_icons_xenophobe_radicals_red.dds"
 		noOfFrames = 1
 	}
 
 	spriteType = {
-		name = "GFX_faction_icon_xenophile_radicals"
+		name = "GFX_faction_icon_radical_xenophile"
 		textureFile = "gfx/interface/icons/faction_icons/faction_icons_xenophile_radicals_red.dds"
 		noOfFrames = 1
 	}
 
 
 	spriteType = {
-		name = "GFX_faction_icon_spiritualist_radicals"
+		name = "GFX_faction_icon_radical_spiritualist"
 		textureFile = "gfx/interface/icons/faction_icons/faction_icons_spiritualist_radicals_red.dds"
 		noOfFrames = 1
 	}
 
 	spriteType = {
-		name = "GFX_faction_icon_materialist_radicals"
+		name = "GFX_faction_icon_radical_materialist"
 		textureFile = "gfx/interface/icons/faction_icons/faction_icons_materialist_radicals_red.dds"
 		noOfFrames = 1
 	}

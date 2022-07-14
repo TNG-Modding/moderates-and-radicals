@@ -1,0 +1,2460 @@
+##############################
+# radical {{faction}} faction
+##############################
+
+radical_{{faction}} = {
+	election_header = "GFX_faction_header_yellow"
+	guiding_ethic = ethic_{{faction}}
+
+	unique = yes
+	support_multiplier = 1
+	use_guiding_ethic_as_pop_filter = yes
+
+	resources = {
+		category = pop_factions
+		produces = {
+		}
+	}
+
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+
+	is_potential = {
+		# is_faction_allowed = yes		
+        OR = { 
+            has_ethic = ethic_fanatic_{{enemyFaction}}
+			has_ethic = ethic_{{enemyFaction}}
+		}			
+	}
+	can_join_pre_triggers = {
+		is_enslaved = no
+		is_being_purged = no
+	}
+
+	can_join_faction = {
+		is_shackled_robot = no
+		NOT = { has_trait = trait_nerve_stapled }
+	}
+
+	attraction = {
+		base = 100
+
+		modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				exists = leader
+				leader = { leader_class = ruler }
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			exists = from
+			from = {
+				NOT = { exists = leader }
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			has_citizenship_rights = yes
+		}	
+	}
+
+	leader = {
+		base = 100
+
+		modifier = {
+			factor = 0.0
+			is_event_leader = yes
+		}
+		modifier = {
+			factor = 0.25
+			leader_class = ruler
+		}
+	}
+
+	on_create = {
+		pop_faction_event = { id = radical_{{faction}}_spawn.1 }
+	}
+
+	actions = {
+		embrace_{{faction}} = { title = "embrace_{{faction}}" description = "embrace_{{faction}}_desc" cost = { unity = 5000 } potential = { exists = owner owner = { OR = { is_subject = no NOT = { any_agreement = { agreement_preset = preset_dominion } } } } } valid = { custom_tooltip = { fail_text = EMBRACE_FACTION_COOLDOWN parameter:empire = { NOT = { has_modifier = embraced_faction_timer } } } support > 0.20 parameter:empire = { NOT = { has_ethic = "ethic_fanatic_{{faction}}" } } } effect = { add_modifier = { modifier = embraced_faction days = 3600 } parameter:empire = { shift_ethic = ethic_{{faction}} hidden_effect = { add_modifier = { modifier = embraced_faction_timer days = 3600 } } } hidden_effect = { save_event_target_as = TargetFaction parameter:empire = { every_relation = { limit = { is_ai = no is_country_type = default has_communications = prev has_intel_level = { who = prev category = government level >= 1 } } country_event = { id = factions.2000 } } } } } ai_weight = { base = 1 modifier = { factor = 0 support < 0.50 owner = { has_ethic = ethic_{{faction}} } } modifier = { factor = 0 owner = { has_valid_civic = civic_fanatic_purifiers } } modifier = { factor = 0 owner = { count_pop_faction = { count < 4 } } } } }
+    }
+
+	{% if faction == "authoritarian" %}
+    demand = {
+        title = "FACTION_OUTRAGED_GC"
+        unfulfilled_title = "FACTION_OUTRAGED_GC"
+        desc = "FACTION_OUTRAGED_GC_DESC"
+
+        fulfilled_effect = -20
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = faction_authoritarian_outraged_gc
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = faction_authoritarian_outraged_gc
+            }
+        }
+    }
+
+    demand = {
+        title = "TOTALITARIAN_AUTOCRACY"
+        unfulfilled_title = "TOTALITARIAN_NO_AUTOCRACY"
+        desc = "TOTALITARIAN_AUTOCRACY_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                NOT = { has_authority = auth_democratic }
+            }
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    has_authority = auth_imperial
+                    has_authority = auth_dictatorial
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "TOTALITARIAN_DEMOCRACY"
+        unfulfilled_title = "TOTALITARIAN_NO_DEMOCRACY"
+        desc = "TOTALITARIAN_DEMOCRACY_DESC"
+
+        unfulfilled_effect = -25
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                NOR = {
+                    has_authority = auth_imperial
+                    has_authority = auth_dictatorial
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = { has_authority = auth_democratic }
+            }
+        }
+    }
+
+    demand = {
+        title = "TOTALITARIAN_STRATIFICATION"
+        unfulfilled_title = "TOTALITARIAN_NO_STRATIFICATION"
+        desc = "TOTALITARIAN_STRATIFICATION_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -20
+
+        potential = {
+            exists = owner
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    NOT = {
+                        any_owned_pop = {
+                            NOR = {
+                                has_living_standard = { type = living_standard_stratified }
+                                has_living_standard = { type = living_standard_academic_privilege }
+                            }
+                        }
+                    }
+                    any_owned_species = {
+                        OR = {
+                            has_citizenship_type = { type = citizenship_slavery country = prev }
+                            has_citizenship_type = { type = citizenship_purge country = prev }
+                            has_citizenship_type = { type = citizenship_robot_servitude country = prev }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "TOTALITARIAN_ELITISM"
+        unfulfilled_title = "TOTALITARIAN_NO_ELITISM"
+        desc = "TOTALITARIAN_ELITISM_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -5
+
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_technology = tech_selected_lineages
+                    has_technology = tech_capacity_boosters
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    has_policy_flag = leader_enhancement_selected_lineages
+                    has_policy_flag = leader_enhancement_capacity_boosters
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY"
+        unfulfilled_title = "TOTALITARIAN_NO_EXTRANATIONAL_AUTHORITY"
+        desc = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 2
+            }
+        }
+
+        trigger = {
+            owner = {
+                is_overlord = yes
+            }
+        }
+    }
+
+    demand = {
+        title = "TOTALITARIAN_UNDERLING"
+        unfulfilled_title = "TOTALITARIAN_NOT_UNDERLING"
+        desc = "TOTALITARIAN_UNDERLING_DESC"
+
+        unfulfilled_effect = -10
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                is_subject = yes
+            }
+        }
+
+        trigger = {
+            owner = {
+                is_subject = yes
+            }
+        }
+    }
+    {% endif %}
+
+	{% if faction == "egalitarian" %}
+    demand = {
+        title = "FACTION_OUTRAGED_GC"
+        unfulfilled_title = "FACTION_OUTRAGED_GC"
+        desc = "FACTION_OUTRAGED_GC_DESC"
+
+        fulfilled_effect = -20
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = faction_egalitarian_outraged_gc
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = faction_egalitarian_outraged_gc
+            }
+        }
+    }
+
+    demand = {
+        title = "PROGRESSIVE_NO_AUTO"
+        unfulfilled_title = "PROGRESSIVE_AUTO"
+        desc = "PROGRESSIVE_DEMOCRATIC_GOVERNMENT_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -15
+
+        potential = {
+            exists = owner
+        }
+
+        trigger = {
+            owner = {
+                NOR = {
+                    has_authority = auth_imperial
+                    has_authority = auth_dictatorial
+                }
+            }
+        }
+    }
+
+    demand = {
+		title = "PROGRESSIVE_FREE_MOVEMENT"
+		unfulfilled_title = "PROGRESSIVE_NO_FREE_MOVEMENT"
+		desc = "PROGRESSIVE_FREE_MOVEMENT_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -10
+
+		potential = {
+			exists = owner
+			owner = { has_encountered_other_species = yes }
+		}
+
+		trigger = {
+			owner = {
+				NOR = {
+					has_policy_flag = resettlement_allowed
+					any_owned_pop = {
+						has_migration_control = { value = yes }
+						is_sapient = yes
+						is_enslaved = no
+						is_being_purged = no
+						is_shackled_robot = no
+						is_robot_pop = no
+					}
+				}
+			}
+		}
+	}
+
+    demand = {
+        title = "PROGRESSIVE_REPRODUCTIVE_FREEDOM"
+        unfulfilled_title = "PROGRESSIVE_NO_REPRODUCTIVE_FREEDOM"
+        desc = "PROGRESSIVE_REPRODUCTIVE_FREEDOM_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -20
+
+        potential = {
+            exists = owner
+        }
+
+        trigger = {
+            NOT = {
+                owner = { has_policy_flag = population_controls_allowed }
+            }
+        }
+    }
+
+    demand = {
+        title = "PROGRESSIVE_NO_STRATIFIED"
+        unfulfilled_title = "PROGRESSIVE_STRATIFIED"
+        desc = "PROGRESSIVE_NO_STRATIFIED_DESC"
+
+        unfulfilled_effect = -25
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+        }
+
+        trigger = {
+            owner = {
+                NOT = {
+                    any_owned_pop = {
+                        has_living_standard = { type = living_standard_stratified }
+                    }
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "PROGRESSIVE_NO_ELITISM"
+        unfulfilled_title = "PROGRESSIVE_ELITISM"
+        desc = "PROGRESSIVE_NO_ELITISM_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -5
+
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_technology = tech_selected_lineages
+                    has_technology = tech_capacity_boosters
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOR = {
+                    has_policy_flag = leader_enhancement_selected_lineages
+                    has_policy_flag = leader_enhancement_capacity_boosters
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "COOPERATIVE_DIPLO_STANCE"
+        unfulfilled_title = "COOPERATIVE_DIPLO_STANCE"
+        desc = "COOPERATIVE_DIPLO_STANCE_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                is_homicidal = no
+                is_country_type = default
+                has_policy_flag = diplo_stance_cooperative
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = diplo_stance_cooperative
+            }
+        }
+    }
+    {% endif %}
+
+	{% if faction == "materialist" %}
+    demand = {
+        title = "TECHNOLOGIST_ROBOTS_ALLOWED"
+        unfulfilled_title = "TECHNOLOGIST_ROBOTS_BANNED"
+        desc = "TECHNOLOGIST_ROBOTS_ALLOWED_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -30
+
+        potential = {
+            exists = owner
+        }
+
+        trigger = {
+            owner = {
+                NOR = {
+                    has_policy_flag = robots_outlawed
+                    has_policy_flag = ai_outlawed
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "FACTION_OUTRAGED_GC"
+        unfulfilled_title = "FACTION_OUTRAGED_GC"
+        desc = "FACTION_OUTRAGED_GC_DESC"
+
+        fulfilled_effect = -20
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = faction_materialist_outraged_gc
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = faction_materialist_outraged_gc
+            }
+        }
+    }
+
+    demand = {
+        title = "TECHNOLOGIST_TECH_LEAP"
+        unfulfilled_title = "TECHNOLOGIST_TECH_LAG"
+        desc = "TECHNOLOGIST_TECH_LEAP_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -20
+
+        potential = {
+            exists = owner
+            owner = {
+                any_relation = {
+                    has_communications = root.owner
+                    is_country_type = default
+                    NOT = { has_government = gov_successor_khanate }
+                }
+                NOR = {
+                    has_country_flag = primitives_can_into_space
+                    is_subject = yes
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = {
+                    any_relation = {
+                        has_communications = root.owner
+                        is_country_type = default
+                        NOT = { has_government = gov_successor_khanate }
+                        relative_power = {
+                            who = root.owner
+                            category = technology
+                            value > equivalent
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "TECHNOLOGIST_RESEARCH_TREATIES"
+        unfulfilled_title = "TECHNOLOGIST_FEW_RESEARCH_TREATIES"
+        desc = "TECHNOLOGIST_RESEARCH_TREATIES_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 2
+            }
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    AND = {
+                        has_federation = yes
+                        federation = {
+                            has_federation_perk = research_federation_passive
+                        }
+                    }
+                    count_playable_country = {
+                        count > 2
+                        limit = {
+                            exists = this
+                            root.owner = { has_research_agreement = prev }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "TECHNOLOGIST_NO_SYNTH_ENVY"
+        unfulfilled_title = "TECHNOLOGIST_SYNTH_ENVY"
+        desc = "TECHNOLOGIST_NO_SYNTH_ENVY_DESC"
+
+        unfulfilled_effect = -10
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                NOT = { has_ascension_perk = ap_synthetic_evolution }
+                any_relation = {
+                    has_communications = root.owner
+                    any_owned_pop = {
+                        OR = {
+                            pop_has_trait = trait_mechanical
+                            pop_has_trait = trait_cybernetic
+                        }
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                any_owned_pop = {
+                    OR = {
+                        pop_has_trait = trait_mechanical
+                        pop_has_trait = trait_cybernetic
+                    }
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "TECHNOLOGIST_SECRET_KNOWLEDGE"
+        unfulfilled_title = "TECHNOLOGIST_NO_SECRET_KNOWLEDGE"
+        desc = "TECHNOLOGIST_SECRET_KNOWLEDGE_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_modifier = fallen_empire_gift_databanks
+                    has_modifier = curator_insight
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    has_modifier = fallen_empire_gift_databanks
+                    has_modifier = curator_insight
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "TECHNOLOGIST_ARCANA"
+        unfulfilled_title = "TECHNOLOGIST_NO_ARCANA"
+        desc = "TECHNOLOGIST_ARCANA_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_modifier = arcane_deciphering_cooldown
+                    has_modifier = arcane_insight
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    has_modifier = arcane_deciphering_cooldown
+                    has_modifier = arcane_insight
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "TECHNOLOGIST_PRECURSOR_SECRETS"
+        unfulfilled_title = "TECHNOLOGIST_NO_PRECURSOR_SECRETS"
+        desc = "TECHNOLOGIST_PRECURSOR_SECRETS_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_modifier = artifact_cybrex_research_completed
+                    has_modifier = artifact_irassian_research_completed
+                    has_modifier = artifact_league_research_completed
+                    has_modifier = artifact_vultaum_research_completed_suppressed
+                    has_modifier = artifact_vultaum_research_completed_public
+                    has_country_flag = artifact_yuht_research_completed
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    has_modifier = artifact_cybrex_research_completed
+                    has_modifier = artifact_irassian_research_completed
+                    has_modifier = artifact_league_research_completed
+                    has_modifier = artifact_vultaum_research_completed_suppressed
+                    has_modifier = artifact_vultaum_research_completed_public
+                    has_country_flag = artifact_yuht_research_completed
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "COOPERATIVE_DIPLO_STANCE"
+        unfulfilled_title = "COOPERATIVE_DIPLO_STANCE"
+        desc = "COOPERATIVE_DIPLO_STANCE_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                is_homicidal = no
+                is_country_type = default
+                has_policy_flag = diplo_stance_cooperative
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = diplo_stance_cooperative
+            }
+        }
+    }
+
+    {% endif %}
+
+	{% if faction == "militarist" %}
+    demand = {
+        title = "FACTION_OUTRAGED_GC"
+        unfulfilled_title = "FACTION_OUTRAGED_GC"
+        desc = "FACTION_OUTRAGED_GC_DESC"
+
+        fulfilled_effect = -20
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = faction_militarist_outraged_gc
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = faction_militarist_outraged_gc
+            }
+        }
+    }
+
+    demand = {
+        title = "IMPERIALIST_PHILOSOPHY"
+        unfulfilled_title = "IMPERIALIST_NO_PHILOSOPHY"
+        desc = "IMPERIALIST_PHILOSOPHY_DESC"
+
+        unfulfilled_effect = -30
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                any_relation = {
+                    has_communications = root.owner
+                    is_country_type = default
+                    NOT = { exists = overlord }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    has_policy_flag = unrestricted_wars
+                    has_policy_flag = liberation_wars
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "IMPERIALIST_CONQUEST"
+        unfulfilled_title = "IMPERIALIST_NO_CONQUEST"
+        desc = "IMPERIALIST_CONQUEST_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                any_relation = {
+                    has_communications = root.owner
+                    is_country_type = default
+                    NOT = { exists = overlord }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = imperialist_conquest_timed_flag
+            }
+        }
+    }
+
+    demand = {
+        title = "SUPREMACIST_FANATIC_PURIFIERS"
+        unfulfilled_title = "SUPREMACIST_NOT_FANATIC_PURIFIERS"
+        desc = "SUPREMACIST_FANATIC_PURIFIERS_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_fanatic_purifiers
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_valid_civic = civic_fanatic_purifiers
+            }
+        }
+    }
+
+    demand = {
+        title = "IMPERIALIST_RIVALS1"
+        unfulfilled_title = "IMPERIALIST_FEW_RIVALS1"
+        desc = "IMPERIALIST_RIVALS_DESC1"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -5
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 2
+                NOT = { has_valid_civic = civic_fanatic_purifiers }
+                count_rival_country = {
+                    count < 2
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                any_rival_country = {
+                    exists = this
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "IMPERIALIST_RIVALS2"
+        unfulfilled_title = "IMPERIALIST_FEW_RIVALS2"
+        desc = "IMPERIALIST_RIVALS_DESC2"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 2
+                NOT = { has_valid_civic = civic_fanatic_purifiers }
+                count_rival_country = {
+                    count > 1
+                }
+                count_rival_country = {
+                    count < 3
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                count_rival_country = {
+                    count > 1
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "IMPERIALIST_RIVALS3"
+        unfulfilled_title = "IMPERIALIST_FEW_RIVALS3"
+        desc = "IMPERIALIST_RIVALS_DESC3"
+
+        fulfilled_effect = 15
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 2
+                NOT = { has_valid_civic = civic_fanatic_purifiers }
+                count_rival_country = {
+                    count > 2
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                count_rival_country = {
+                    count > 2
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "IMPERIALIST_OVERLORD" #Imperial Hegemony
+        unfulfilled_title = "IMPERIALIST_NOT_OVERLORD"
+        desc = "IMPERIALIST_OVERLORD_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 2
+                NOT = { has_valid_civic = civic_fanatic_purifiers }
+            }
+        }
+
+        trigger = {
+            OR = {
+                owner = {
+                    is_overlord = yes
+                }
+                owner = {
+                    has_federation = yes
+                    federation = {
+                        has_federation_type = hegemony_federation
+                    }
+                    is_federation_leader = yes
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "IMPERIALIST_UNDERLING"
+        unfulfilled_title = "IMPERIALIST_NOT_UNDERLING"
+        desc = "IMPERIALIST_UNDERLING_DESC"
+
+        unfulfilled_effect = -25
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                is_subject = yes
+            }
+        }
+
+        trigger = {
+            owner = {
+                is_subject = yes
+            }
+        }
+    }
+
+    demand = {
+        title = "IMPERIALIST_SLAYER"
+        unfulfilled_title = "IMPRERIALIST_NOT_SLAYER"
+        desc = "IMPERIALIST_SLAYER_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                host_has_dlc = "Leviathans Story Pack"
+                OR = {
+                    has_country_flag = killed_guardian
+                    any_country = {
+                        OR = {
+                            is_country_type = guardian
+                            is_country_type = guardian_dragon
+                            is_country_type = guardian_stellarite
+                            is_country_type = guardian_wraith #
+                            is_country_type = guardian_hiver
+                            is_country_type = guardian_horror
+                            is_country_type = guardian_fortress
+                            is_country_type = guardian_dreadnought
+                            is_country_type = guardian_sphere
+                            is_country_type = guardian_scavenger_bot
+                            is_country_type = guardian_elderly_tiyanki
+                            is_country_type = guardian_hatchling
+                        }
+                        has_communications = prev
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = killed_guardian
+            }
+        }
+    }
+
+    demand = {
+        title = "IMPERIALIST_MILITARY_APPLICATIONS"
+        unfulfilled_title = "IMPERIALIST_NO_MILITARY_APPLICATIONS"
+        desc = "IMPERIALIST_MILITARY_APPLICATIONS_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                host_has_dlc = "Ancient Relics Story Pack"
+                has_technology = tech_arcane_deciphering
+                OR = {
+                    has_modifier = artifact_find_military_application_army
+                    has_modifier = artifact_find_military_application_shield_damage
+                    has_modifier = artifact_find_military_application_armor_damage
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    has_modifier = artifact_find_military_application_army
+                    has_modifier = artifact_find_military_application_shield_damage
+                    has_modifier = artifact_find_military_application_armor_damage
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "IMPERIALIST_PEACEFUL_APPLICATIONS"
+        unfulfilled_title = "IMPERIALIST_NO_PEACEFUL_APPLICATIONS"
+        desc = "IMPERIALIST_PEACEFUL_APPLICATIONS_DESC"
+
+        unfulfilled_effect = -5
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                host_has_dlc = "Ancient Relics Story Pack"
+                has_technology = tech_arcane_deciphering
+                OR = {
+                    has_modifier = artifact_find_peaceful_application_happy_bios
+                    has_modifier = artifact_find_peaceful_application_consumer_goods
+                    has_modifier = artifact_find_peaceful_application_amenities
+                    has_modifier = artifact_find_peaceful_application_leader_improvement
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOR = {
+                    has_modifier = artifact_find_peaceful_application_happy_bios
+                    has_modifier = artifact_find_peaceful_application_consumer_goods
+                    has_modifier = artifact_find_peaceful_application_amenities
+                    has_modifier = artifact_find_peaceful_application_leader_improvement
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "STRONG_DIPLO_STANCE"
+        unfulfilled_title = "STRONG_DIPLO_STANCE"
+        desc = "STRONG_DIPLO_STANCE_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                is_homicidal = no
+                is_country_type = default
+                OR = {
+                    has_policy_flag = diplo_stance_belligerent
+                    has_policy_flag = diplo_stance_supremacist
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    has_policy_flag = diplo_stance_belligerent
+                    has_policy_flag = diplo_stance_supremacist
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "WEAK_DIPLO_STANCE"
+        unfulfilled_title = "WEAK_DIPLO_STANCE"
+        desc = "WEAK_DIPLO_STANCE_DESC"
+
+        fulfilled_effect = 0.01
+        unfulfilled_effect = -10
+
+        potential = {
+            exists = owner
+            owner = {
+                is_homicidal = no
+                is_country_type = default
+                has_policy_flag = diplo_stance_cooperative
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = { has_policy_flag = diplo_stance_cooperative }
+            }
+        }
+    }
+    {% endif %}
+
+	{% if faction == "pacifist" %}
+    demand = {
+        title = "FACTION_OUTRAGED_GC"
+        unfulfilled_title = "FACTION_OUTRAGED_GC"
+        desc = "FACTION_OUTRAGED_GC_DESC"
+
+        fulfilled_effect = -20
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = faction_pacifist_outraged_gc
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = faction_pacifist_outraged_gc
+            }
+        }
+    }
+
+    demand = {
+        title = "PROSPERITY_LIQUIDITY"
+        unfulfilled_title = "PROSPERITY_NO_LIQUIDITY"
+        desc = "PROSPERITY_LIQUIDITY_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = { # TODO get a reasonable trigger for counting colonies?
+            exists = owner
+            owner = {
+                any_owned_planet = {
+                    NOT = { is_same_value = root.capital_scope }
+                    root = {
+                        owner = {
+                            any_owned_planet = {
+                                NOR = {
+                                    is_same_value = prevprevprev
+                                    is_same_value = root.owner.capital_scope
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = { resource_stockpile_compare = { resource = energy value >= 5000 } }
+        }
+    }
+
+    demand = {
+        title = "PROSPERITY_PHILOSOPHY"
+        unfulfilled_title = "PROSPERITY_NO_PHILOSOPHY"
+        desc = "PROSPERITY_PHILOSOPHY_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -10
+
+        potential = {
+            exists = owner
+            owner = {
+                any_relation = {
+                    has_communications = root.owner
+                    is_country_type = default
+                    NOT = { exists = overlord }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = no_wars
+            }
+        }
+    }
+
+    demand = {
+        title = "PROSPERITY_PEACE"
+        unfulfilled_title = "PROSPERITY_NO_PEACE"
+        desc = "PROSPERITY_PEACE_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -10
+
+        potential = {
+            exists = owner
+        }
+
+        trigger = {
+            owner = {
+                is_at_war = no
+            }
+        }
+    }
+
+    demand = {
+        title = "PROSPERITY_NOT_AGGRESSOR"
+        unfulfilled_title = "PROSPERITY_AGGRESSOR"
+        desc = "PROSPERITY_NOT_AGGRESSOR_DESC"
+
+        unfulfilled_effect = -30
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 2
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOR = {
+                    has_country_flag = entered_war_as_attacker
+                    any_war = { is_war_participant = { who = prev side = attackers } }
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "PROSPERITY_PEACEFUL_APPLICATIONS"
+        unfulfilled_title = "PROSPERITY_NO_PEACEFUL_APPLICATIONS_APPLICATIONS"
+        desc = "PROSPERITY_PEACEFUL_APPLICATIONS_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                host_has_dlc = "Ancient Relics Story Pack"
+                has_technology = tech_arcane_deciphering
+                OR = {
+                    has_modifier = artifact_find_peaceful_application_happy_bios
+                    has_modifier = artifact_find_peaceful_application_consumer_goods
+                    has_modifier = artifact_find_peaceful_application_amenities
+                    has_modifier = artifact_find_peaceful_application_leader_improvement
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    has_modifier = artifact_find_peaceful_application_happy_bios
+                    has_modifier = artifact_find_peaceful_application_consumer_goods
+                    has_modifier = artifact_find_peaceful_application_amenities
+                    has_modifier = artifact_find_peaceful_application_leader_improvement
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "PROSPERITY_MILITARY_APPLICATIONS"
+        unfulfilled_title = "PROSPERITY_NO_MILITARY_APPLICATIONS"
+        desc = "PROSPERITY_MILITARY_APPLICATIONS_DESC"
+
+        unfulfilled_effect = -5
+        fulfilled_effect = +0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                host_has_dlc = "Ancient Relics Story Pack"
+                has_technology = tech_arcane_deciphering
+                OR = {
+                    has_modifier = artifact_find_military_application_army
+                    has_modifier = artifact_find_military_application_shield_damage
+                    has_modifier = artifact_find_military_application_armor_damage
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOR = {
+                    has_modifier = artifact_find_military_application_army
+                    has_modifier = artifact_find_military_application_shield_damage
+                    has_modifier = artifact_find_military_application_armor_damage
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "MERCANTILE_DIPLO_STANCE"
+        unfulfilled_title = "MERCANTILE_DIPLO_STANCE"
+        desc = "MERCANTILE_DIPLO_STANCE_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                is_homicidal = no
+                is_country_type = default
+                has_policy_flag = diplo_stance_mercantile
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = diplo_stance_mercantile
+            }
+        }
+    }
+
+    demand = {
+        title = "AGGRESSIVE_DIPLO_STANCE"
+        unfulfilled_title = "AGGRESSIVE_DIPLO_STANCE"
+        desc = "AGGRESSIVE_DIPLO_STANCE_DESC"
+
+        fulfilled_effect = 0.001
+        unfulfilled_effect = -10
+
+        potential = {
+            exists = owner
+            owner = {
+                is_homicidal = no
+                is_country_type = default
+                OR = {
+                    has_policy_flag = diplo_stance_belligerent
+                    has_policy_flag = diplo_stance_supremacist
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOR = {
+                    has_policy_flag = diplo_stance_belligerent
+                    has_policy_flag = diplo_stance_supremacist
+                }
+            }
+        }
+    }
+
+    {% endif %}
+
+	{% if faction == "spiritualist" %}
+    demand = {
+        title = "FACTION_OUTRAGED_GC"
+        unfulfilled_title = "FACTION_OUTRAGED_GC"
+        desc = "FACTION_OUTRAGED_GC_DESC"
+
+        fulfilled_effect = -20
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = faction_spiritualist_outraged_gc
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = faction_spiritualist_outraged_gc
+            }
+        }
+    }
+
+    demand = { # "TRADITIONALIST_NO_ROBOTS"
+        title = "TRADITIONALIST_NO_ROBOTS"
+        unfulfilled_title = "TRADITIONALIST_ROBOTS"
+        desc = "TRADITIONALIST_NO_ROBOTS_DESC"
+
+        unfulfilled_effect = -5
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = robots_outlawed
+            }
+        }
+    }
+
+    demand = { # "TRADITIONALIST_NO_ROBOT_RIGHTS"
+        title = "TRADITIONALIST_NO_ROBOT_RIGHTS"
+        unfulfilled_title = "TRADITIONALIST_ROBOT_RIGHTS"
+        desc = "TRADITIONALIST_NO_ROBOT_RIGHTS_DESC"
+
+        unfulfilled_effect = -10
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                can_set_ai_policy = yes
+                NOT = { has_policy_flag = ai_full_rights }
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = { has_policy_flag = ai_servitude }
+            }
+        }
+    }
+
+    demand = { # "TRADITIONALIST_NO_FULL_ROBOT_RIGHTS"
+        title = "TRADITIONALIST_NO_FULL_ROBOT_RIGHTS"
+        unfulfilled_title = "TRADITIONALIST_FULL_ROBOT_RIGHTS"
+        desc = "TRADITIONALIST_NO_FULL_ROBOT_RIGHTS_DESC"
+
+        unfulfilled_effect = -20
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                can_set_ai_policy = yes
+                has_policy_flag = ai_full_rights
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = { has_policy_flag = ai_full_rights }
+            }
+        }
+    }
+
+    demand = { # "TRADITIONALIST_SPIRITUALIST_GOVERNMENT"
+        title = "TRADITIONALIST_SPIRITUALIST_GOVERNMENT"
+        unfulfilled_title = "TRADITIONALIST_SECULAR_GOVERNMENT"
+        desc = "TRADITIONALIST_SPIRITUALIST_GOVERNMENT_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -5
+
+        potential = {
+            exists = owner
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    has_ethic = ethic_fanatic_spiritualist
+                    has_ethic = ethic_spiritualist
+                }
+            }
+        }
+    }
+
+    demand = { # "TRADITIONALIST_NO_TOMB_WORLDS"
+        title = "TRADITIONALIST_NO_TOMB_WORLDS"
+        unfulfilled_title = "TRADITIONALIST_TOMB_WORLDS"
+        desc = "TRADITIONALIST_NO_TOMB_WORLDS_DESC"
+
+        unfulfilled_effect = -5
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_surveyed_class = pc_nuked
+                NOR = {
+                    has_origin = origin_post_apocalyptic
+                    has_country_flag = worm_tomb_ending
+                    has_valid_civic = civic_memorialist
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOR = {
+                    any_owned_planet = {
+                        is_planet_class = pc_nuked
+                    }
+                    any_planet_within_border = {
+                        is_planet_class = pc_nuked
+                        is_terraforming = yes
+                    }
+                }
+            }
+        }
+    }
+
+    demand = { # "TRADITIONALIST_GAIA_WORLDS"
+        title = "TRADITIONALIST_GAIA_WORLDS"
+        unfulfilled_title = "TRADITIONALIST_NO_GAIA_WORLDS"
+        desc = "TRADITIONALIST_GAIA_WORLDS_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_surveyed_class = pc_gaia
+                has_ascension_perk = ap_consecrated_worlds
+            }
+        }
+
+        trigger = {
+            owner = {
+                any_planet_within_border = {
+                    is_planet_class = pc_gaia
+                    is_colony = no
+                    OR = {
+                        has_modifier = consecrated_quality_1
+                        has_modifier = consecrated_quality_2
+                        has_modifier = consecrated_quality_3
+                        has_modifier = consecrated_quality_4
+                    }
+                }
+            }
+        }
+    }
+
+    demand = { # "TRADITIONALIST_PSIONIC_PURSUIT"
+        title = "TRADITIONALIST_PSIONIC_PURSUIT"
+        unfulfilled_title = "TRADITIONALIST_NO_PSIONIC_PURSUIT"
+        desc = "TRADITIONALIST_PSIONIC_PURSUIT_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            host_has_dlc = "Utopia"
+            exists = owner
+            owner = {
+                OR = {
+                    num_ascension_perks > 0
+					num_ascension_perk_slots > 0
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_ascension_perk = ap_mind_over_matter
+            }
+        }
+    }
+
+    demand = { # "TRADITIONALIST_FLESH_IS_STRONG"
+        title = "TRADITIONALIST_FLESH_IS_STRONG"
+        unfulfilled_title = "TRADITIONALIST_FLESH_IS_WEAK"
+        desc = "TRADITIONALIST_FLESH_IS_STRONG_DESC"
+
+        unfulfilled_effect = -30
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_the_flesh_is_weak
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = {
+                    has_country_flag = flesh_weakened
+                }
+            }
+        }
+    }
+
+    demand = { # "TRADITIONALIST_SPIRITUALIST_POPS"
+		title = "TRADITIONALIST_SPIRITUALIST_POPS"
+		unfulfilled_title = "TRADITIONALIST_FEW_SPIRITUALIST_POPS"
+		desc = "TRADITIONALIST_SPIRITUALIST_POPS_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			support >= 0.1
+		}
+
+		trigger = {
+			support >= 0.25
+		}
+	}
+
+    demand = { # "TRADITIONALIST_UNSPIRITUALIST"
+    title = "TRADITIONALIST_UNSPIRITUALIST"
+    unfulfilled_title = "TRADITIONALIST_NOT_UNSPIRITUALIST"
+    desc = "TRADITIONALIST_UNSPIRITUALIST_DESC"
+
+    unfulfilled_effect = -10
+    fulfilled_effect = 0.001
+
+    potential = {
+        support < 0.25
+    }
+
+    trigger = {
+        support >= 0.1
+    }
+}
+
+    demand = { # "TRADITIONALIST_SHROUD_BOON"
+        title = "TRADITIONALIST_SHROUD_BOON"
+        unfulfilled_title = "TRADITIONALIST_NO_SHROUD_BOON"
+        desc = "TRADITIONALIST_SHROUD_BOON_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = positive_shroud_outcome
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = positive_shroud_outcome
+            }
+        }
+    }
+
+    demand = { # "TRADITIONALIST_SHROUD_CURSE"
+        title = "TRADITIONALIST_SHROUD_CURSE"
+        unfulfilled_title = "TRADITIONALIST_NO_SHROUD_CURSE"
+        desc = "TRADITIONALIST_SHROUD_CURSE_DESC"
+
+        fulfilled_effect = -5
+        unfulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = negative_shroud_outcome
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = negative_shroud_outcome
+            }
+        }
+    }
+
+    demand = {
+        title = "TRADITIONALIST_RELIGIOUS_FINDING"
+        unfulfilled_title = "TRADITIONALIST_NO_RELIGIOUS_FINDING"
+        desc = "TRADITIONALIST_RELIGIOUS_FINDING_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_modifier = proclaim_religious_finding
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_modifier = proclaim_religious_finding
+            }
+        }
+    }
+    {% endif %}
+
+	{% if faction == "xenophobe" %}
+    demand = {
+        title = "FACTION_OUTRAGED_GC"
+        unfulfilled_title = "FACTION_OUTRAGED_GC"
+        desc = "FACTION_OUTRAGED_GC_DESC"
+
+        fulfilled_effect = -20
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = faction_xenophobe_supremacist_outraged_gc
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = faction_xenophobe_supremacist_outraged_gc
+            }
+        }
+    }
+
+    demand = {
+        title = "SUPREMACIST_RULER_SAME_SPECIES"
+        unfulfilled_title = "SUPREMACIST_RULER_NOT_SAME_SPECIES"
+        desc = "SUPREMACIST_RULER_NOT_SAME_SPECIES_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -30
+
+        potential = {
+            exists = owner
+            owner = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+        }
+
+        trigger = {
+            owner = {
+                exists = ruler
+                ruler = { is_same_species = owner_species }
+            }
+        }
+    }
+
+    demand = {
+        title = "SUPREMACIST_ISOLATIONIST_NO_FEDERATION"
+        unfulfilled_title = "SUPREMACIST_ISOLATIONIST_FEDERATION"
+        desc = "SUPREMACIST_ISOLATIONIST_NO_FEDERATION_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -20
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 0
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_federation = no
+            }
+        }
+    }
+
+    demand = {
+        title = "SUPREMACIST_UNRESTRICTED_STUDY"
+        unfulfilled_title = "SUPREMACIST_NO_UNRESTRICTED_STUDY"
+        desc = "SUPREMACIST_UNRESTRICTED_STUDY_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -10
+
+        potential = {
+            exists = owner
+            owner = {
+                NOT = { has_valid_civic = civic_fanatic_purifiers }
+                any_relation = {
+                    #has_communications = root
+                    is_country_type = primitive
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = interference_full
+            }
+        }
+    }
+
+    demand = {
+        title = "SUPREMACIST_NO_FREE_ALIENS"
+        unfulfilled_title = "SUPREMACIST_HAS_FREE_ALIENS"
+        desc = "SUPREMACIST_ALIEN_SLAVES_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -10
+
+        potential = {
+            exists = owner
+            owner = {
+                NOT = { has_valid_civic = civic_fanatic_purifiers }
+                any_owned_pop = {
+                    NOT = { is_same_species = owner_species }
+                    is_robot_pop = no
+                    is_sapient = yes
+                    is_being_purged = no
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = {
+                    any_owned_pop = {
+                        NOT = {
+                            is_same_species = root.owner
+                        }
+                        is_robot_pop = no
+                        is_sapient = yes
+                        has_citizenship_type = { type = citizenship_full }
+                    }
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "SUPREMACIST_NO_MIGRATION_TREATIES"
+        unfulfilled_title = "SUPREMACIST_MIGRATION_TREATIES"
+        desc = "SUPREMACIST_NO_MIGRATION_TREATIES_DESC"
+
+        unfulfilled_effect = -10
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                NOT = { has_valid_civic = civic_fanatic_purifiers }
+                num_communications > 2
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = {
+                    any_country = {
+                        is_country_type = default
+                        has_communications = root.owner
+                        OR = {
+                            has_diplo_migration_treaty = root.owner
+                            root = {
+                                owner = {
+                                    has_diplo_migration_treaty = prevprev
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "SUPREMACIST_DOMINATION"
+        desc = "SUPREMACIST_DOMINATION_DESC"
+        unfulfilled_title = "SUPREMACIST_NO_DOMINATION"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                NOT = { has_valid_civic = civic_fanatic_purifiers }
+                any_relation = {
+                    is_country_type = default
+                    has_communications = root.owner
+                    NOT = {
+                        is_in_federation_with = root.owner
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = entered_war_as_attacker
+            }
+        }
+    }
+
+    demand = {
+        title = "SUPREMACIST_FANATIC_PURIFIERS"
+        unfulfilled_title = "SUPREMACIST_NOT_FANATIC_PURIFIERS"
+        desc = "SUPREMACIST_FANATIC_PURIFIERS_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_fanatic_purifiers
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_valid_civic = civic_fanatic_purifiers
+            }
+        }
+    }
+
+    demand = {
+        title = "SUPREMACIST_GIANT_MASSACRE"
+        unfulfilled_title = "SUPREMACIST_NO_GIANT_MASSACRE"
+        desc = "SUPREMACIST_GIANT_MASSACRE_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                host_has_dlc = "Leviathans Story Pack"
+                any_country = {
+                    OR = {
+                        is_country_type = guardian
+                        is_country_type = guardian_dragon
+                        is_country_type = guardian_stellarite
+                        is_country_type = guardian_wraith
+                        is_country_type = guardian_hiver
+                        is_country_type = guardian_horror
+                        is_country_type = guardian_fortress
+                        is_country_type = guardian_dreadnought
+                        is_country_type = guardian_sphere
+                        is_country_type = guardian_scavenger_bot
+                        is_country_type = guardian_elderly_tiyanki
+                        is_country_type = guardian_hatchling
+                    }
+                    has_communications = prev
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = killed_guardian
+            }
+        }
+    }
+
+    demand = {
+        title = "SUPREMACIST_PROCLAIM_SUPREMACY"
+        unfulfilled_title = "SUPREMACIST_NO_PROCLAIM_SUPREMACY"
+        desc = "SUPREMACIST_PROCLAIM_SUPREMACY_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_modifier = proclaim_superiority
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_modifier = proclaim_superiority
+            }
+        }
+    }
+
+    demand = {
+        title = "SUPREMACIST_CELEBRATE_DIVERSITY"
+        unfulfilled_title = "SUPREMACIST_NO_CELEBRATE_DIVERSITY"
+        desc = "SUPREMACIST_CELEBRATE_DIVERSITY_DESC"
+
+        unfulfilled_effect = -5
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_modifier = celebrate_diversity
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = { has_modifier = celebrate_diversity }
+            }
+        }
+    }
+
+    demand = {
+        title = "STRONG_DIPLO_STANCE"
+        unfulfilled_title = "STRONG_DIPLO_STANCE"
+        desc = "STRONG_DIPLO_STANCE_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                is_homicidal = no
+                is_country_type = default
+                OR = {
+                    has_policy_flag = diplo_stance_belligerent
+                    has_policy_flag = diplo_stance_supremacist
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                OR = {
+                    has_policy_flag = diplo_stance_belligerent
+                    has_policy_flag = diplo_stance_supremacist
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "WEAK_DIPLO_STANCE"
+        unfulfilled_title = "WEAK_DIPLO_STANCE"
+        desc = "WEAK_DIPLO_STANCE_DESC"
+
+        fulfilled_effect = 0.01
+        unfulfilled_effect = -10
+
+        potential = {
+            exists = owner
+            owner = {
+                is_homicidal = no
+                is_country_type = default
+                has_policy_flag = diplo_stance_cooperative
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = { has_policy_flag = diplo_stance_cooperative }
+            }
+        }
+    }
+
+    {% endif %} 
+
+	{% if faction == "xenophile" %}
+    demand = {
+        title = "FACTION_OUTRAGED_GC"
+        unfulfilled_title = "FACTION_OUTRAGED_GC"
+        desc = "FACTION_OUTRAGED_GC_DESC"
+
+        fulfilled_effect = -20
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = faction_xenophile_outraged_gc
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = faction_xenophile_outraged_gc
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_PASSIVE_STUDY"
+        unfulfilled_title = "XENOIST_NO_PASSIVE_STUDY"
+        desc = "XENOIST_PASSIVE_STUDY_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -5
+
+        potential = {
+            exists = owner
+            owner = {
+                any_relation = {
+                    is_country_type = primitive
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = interference_passive
+            }
+        }
+    }
+
+    demand = { # "XENOIST_NO_SLAVES"
+        title = "XENOIST_NO_SLAVES"
+        unfulfilled_title = "XENOIST_SLAVES"
+        desc = "XENOIST_NO_SLAVES_DESC"
+
+        unfulfilled_effect = -25
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                any_owned_pop = {
+                    NOR = {
+                        is_same_species = root.owner
+                        is_robot_pop = yes
+                        is_sapient = no
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = {
+                    #has_policy_flag = slavery_allowed
+                    any_owned_pop = {
+                        has_citizenship_type = { country = prev type = citizenship_slavery }
+                    }
+                }
+            }
+        }
+    }
+
+    demand = { # "XENOIST_NO_PURGE"
+        title = "XENOIST_NO_PURGE"
+        unfulfilled_title = "XENOIST_PURGE"
+        desc = "XENOIST_NO_PURGE_DESC"
+
+        unfulfilled_effect = -25
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+        }
+
+        trigger = {
+            owner = {
+                NOR = {
+                    has_policy_flag = purge_displacement_only
+                    has_policy_flag = purge_allowed
+                }
+            }
+        }
+    }
+
+    demand = { # "XENOIST_MULTICULTURALISM"
+        title = "XENOIST_MULTICULTURALISM"
+        unfulfilled_title = "XENOIST_NO_MULTICULTURALISM"
+        desc = "XENOIST_MULTICULTURALISM_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 3
+                any_owned_pop = {
+                    NOR = {
+                        is_same_species = root.owner
+                        has_trait = trait_mechanical
+                        has_trait = trait_machine_unit
+                        has_trait = trait_hive_mind
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                num_species > 3
+            }
+        }
+    }
+
+    demand = { # "XENOIST_REFUGEES_WELCOME"
+        title = "XENOIST_REFUGEES_WELCOME"
+        unfulfilled_title = "XENOIST_REFUGEES_UNWELCOME"
+        desc = "XENOIST_REFUGEES_WELCOME_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -10
+
+        potential = {
+            exists = owner
+            owner = {
+                any_relation = {
+                    has_communications = root.owner
+                    is_country_type = default
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = refugees_allowed
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_ENCLAVE_BORDERS"
+        unfulfilled_title = "XENOIST_NO_ENCLAVE_BORDERS"
+        desc = "XENOIST_ENCLAVE_BORDERS_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                any_country = {
+                    is_country_type = enclave
+                    has_communications = root.owner
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                any_system_within_border = {
+                    any_fleet_in_system = {
+                        exists = owner
+                        owner = { is_country_type = enclave }
+                    }
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_RECENT_UPLIFT"
+        unfulfilled_title = "XENOIST_NO_RECENT_UPLIFT"
+        desc = "XENOIST_RECENT_UPLIFT_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_epigenetic_triggers
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = recent_uplift_timed
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_RECENT_ENLIGHTENMENT"
+        unfulfilled_title = "XENOIST_NO_RECENT_ENLIGHTENMENT"
+        desc = "XENOIST_RECENT_ENLIGHTENMENT_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    any_owned_ship = { is_ship_size = observation_station }
+                    has_country_flag = recent_enlightenment_timed
+                    # fixes demand disappearing when fulfilled (station dismantles)
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = recent_enlightenment_timed
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_PRE_SAPIENT_SURVIVAL"
+        unfulfilled_title = "XENOIST_NO_PRE_SAPIENT_SURVIVAL"
+        desc = "XENOIST_PRE_SAPIENT_SURVIVAL_DESC"
+
+        unfulfilled_effect = -10
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_policy_flag = pre_sapients_allow
+                    has_policy_flag = pre_sapients_purge
+                }
+                OR = {
+                    has_country_flag = found_presapients
+                    any_planet_within_border = {
+                        any_owned_pop = {
+                            is_sapient = no
+                        }
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = pre_sapients_allow
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_NO_PRIMITIVE_INVASION" # Landgrab Opposition
+        unfulfilled_title = "XENOIST_NO_PRIMITIVE_INVASION"
+        desc = "XENOIST_NO_PRIMITIVE_INVASION_DESC"
+
+        unfulfilled_effect = -15
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = { has_country_flag = encountered_first_primitive }
+        }
+
+        trigger = {
+            owner = {
+                NOT = { has_country_flag = recent_primitive_invasion }
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_FEDERATED"
+        unfulfilled_title = "XENOIST_NOT_FEDERATED"
+        desc = "XENOIST_FEDERATED_DESC"
+
+        fulfilled_effect = 20
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 3
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_federation = yes
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_RECENT_COMMS"
+        unfulfilled_title = "XENOIST_NO_RECENT_COMMS"
+        desc = "XENOIST_RECENT_COMMS_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                any_country = {
+                    NOT = { has_communications = prev}
+                    OR = {
+                        is_country_type = default
+                        is_country_type = fallen_empire
+                        is_country_type = awakened_fallen_empire
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = recent_comms_timed
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_CELEBRATE_DIVERSITY"
+        unfulfilled_title = "XENOIST_NO_CELEBRATE_DIVERSITY"
+        desc = "XENOIST_CELEBRATE_DIVERSITY_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_modifier = celebrate_diversity
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_modifier = celebrate_diversity
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_PROCLAIM_SUPREMACY"
+        unfulfilled_title = "XENOIST_NO_PROCLAIM_SUPREMACY"
+        desc = "XENOIST_PROCLAIM_SUPREMACY_DESC"
+
+        unfulfilled_effect = -5
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_modifier = proclaim_superiority
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT= { has_modifier = proclaim_superiority }
+            }
+        }
+    }
+
+    demand = {
+        title = "COOPERATIVE_DIPLO_STANCE"
+        unfulfilled_title = "COOPERATIVE_DIPLO_STANCE"
+        desc = "COOPERATIVE_DIPLO_STANCE_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                is_homicidal = no
+                is_country_type = default
+                has_policy_flag = diplo_stance_cooperative
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = diplo_stance_cooperative
+            }
+        }
+    }
+    {% endif %}
+}

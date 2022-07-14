@@ -9,7 +9,11 @@
             "enemyFaction": "pacifist",
             "EnemyFaction": "Pacifist",
             "argumentFor": "wish to assert military dominance over the rest of the galaxy",
-            "argumentAgainst": "pacifist ideals while pushing for brutish jingoism"
+            "argumentAgainst": "champion brutish jingoism",
+            "ism": "militarism",
+            "Ism": "Militarism",
+            "enemyIsm": "pacifism",
+            "EnemyIsm": "Pacifism"
         },
         {
             "varname": "xenophobe_faction",
@@ -20,7 +24,11 @@
             "enemyFaction": "xenophile",
             "EnemyFaction": "Xenophile",
             "argumentFor": "seek to assert the primacy of the [Root.Owner.GetSpeciesAdj] species to the point of curtailing the rights of aliens where necessary",
-            "argumentAgainst": "xenophile ideals while pushing a detestable xenophobic agenda"
+            "argumentAgainst": "advance a detestable xenophobic agenda",
+            "ism": "xenophobia",
+            "Ism": "Xenophobia",
+            "enemyIsm": "xenophilia",
+            "EnemyIsm": "Xenophilia"
         },
         {
             "varname": "egalitarian_faction",
@@ -31,7 +39,11 @@
             "enemyFaction": "authoritarian",
             "EnemyFaction": "Authoritarian",
             "argumentFor": "work for equality and justice for all denizens of our empire",
-            "argumentAgainst": "authoritarian ideals while pushing for mob rule and disorder"
+            "argumentAgainst": "lead us toward mob rule and disorder",
+            "ism": "egalitarianism",
+            "Ism": "Egalitarianism",
+            "enemyIsm": "authoritarianism",
+            "EnemyIsm": "Authoritarianism"
         },
         {
             "varname": "materialist_faction",
@@ -42,7 +54,11 @@
             "enemyFaction": "spiritualist",
             "EnemyFaction": "Spiritualist",
             "argumentFor": "support the advancement of the sciences",
-            "argumentAgainst": "spiritualist ideals while pushing a simpleminded approach to Being"
+            "argumentAgainst": "espouse a simpleminded approach to Being",
+            "ism": "materialism",
+            "Ism": "Materialism",
+            "enemyIsm": "spiritualism",
+            "EnemyIsm": "Spiritualism"
         },
         {
             "varname": "pacifist_faction",
@@ -53,7 +69,11 @@
             "enemyFaction": "militarist",
             "EnemyFaction": "Militarist",
             "argumentFor": "lobby for a national focus on financial growth and stability",
-            "argumentAgainst": "militarist ideals while pushing for inaction and weakness"
+            "argumentAgainst": "advocate inaction and weakness",
+            "ism": "pacifism",
+            "Ism": "Pacifism",
+            "enemyIsm": "militarism",
+            "EnemyIsm": "Militarism"
         },
         {
             "varname": "xenophile_faction",
@@ -64,7 +84,11 @@
             "enemyFaction": "xenophobe",
             "EnemyFaction": "Xenophobe",
             "argumentFor": "advocate for friendly relations with alien species",
-            "argumentAgainst": "xenophobe ideals while pushing for the dissolution of our people and its culture"
+            "argumentAgainst": "desire the dissolution of our people and its culture",
+            "ism": "xenophilia",
+            "Ism": "Xenophilia",
+            "enemyIsm": "xenophobia",
+            "EnemyIsm": "Xenophobia"
         },
         {
             "varname": "authoritarian_faction",
@@ -75,7 +99,11 @@
             "enemyFaction": "egalitarian",
             "EnemyFaction": "Egalitarian",
             "argumentFor": "advocate for extreme centralization of political and military power",
-            "argumentAgainst": "egalitarian ideals while pushing for cronyism and tyranny"
+            "argumentAgainst": "maneuver us toward cronyism and tyranny",
+            "ism": "authoritarianism",
+            "Ism": "Authoritarianism",
+            "enemyIsm": "egalitarianism",
+            "EnemyIsm": "Egalitarianism"
         },
         {
             "varname": "spiritualist_faction",
@@ -86,7 +114,11 @@
             "enemyFaction": "materialist",
             "EnemyFaction": "Materialist",
             "argumentFor": "support spiritualist and conservative values",
-            "argumentAgainst": "materialist ideals while pushing unsubstantiated, unverifiable beliefs"
+            "argumentAgainst": "espouse unsubstantiated, unverifiable beliefs",
+            "ism": "spiritualism",
+            "Ism": "Spiritualism",
+            "enemyIsm": "materialism",
+            "EnemyIsm": "Materialism"
         }
     ]
 }

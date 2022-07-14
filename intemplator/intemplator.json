@@ -1,55 +1,46 @@
 {
     "orders": [
         {
-            "name": "Faction Confrontation Events",
+            "name": "Faction Events",
             "specFilePath": "./specs/factions.json",
-            "templateDirectoryPath": "./templates/faction_confrontation_events",
+            "templateDirectoryPath": "./templates/faction_events",
             "outputDirectoryPath": "../events",
             "disabled": false,
             "dumpContents": true,
             "isBom": false
         },
         {
-            "name": "Faction Confrontation Event Static Modifiers",
+            "name": "Faction Static Modifiers",
             "specFilePath": "./specs/factions.json",
-            "templateDirectoryPath": "./templates/faction_confrontation_event_static_modifiers",
+            "templateDirectoryPath": "./templates/faction_static_modifiers",
             "outputDirectoryPath": "../common/static_modifiers",
             "disabled": false,
             "dumpContents": true,
             "isBom": false
         },
         {
-            "name": "Faction Confrontation Event Localization",
+            "name": "Faction Localization",
             "specFilePath": "./specs/factions.json",
-            "templateDirectoryPath": "./templates/faction_confrontation_event_localization",
-            "outputDirectoryPath": "../localisation/english/events/confrontations",
+            "templateDirectoryPath": "./templates/faction_localisation",
+            "outputDirectoryPath": "../localisation/english/factions",
             "disabled": false,
             "dumpContents": true,
             "isBom": true
-        },
-        {
-            "name": "Faction spawn localisation",
-            "specFilePath": "./specs/factions.json",
-            "templateDirectoryPath": "./templates/faction_spawn_localisation",
-            "outputDirectoryPath": "../localisation/english/events/faction_spawn",
-            "disabled": false,
-            "dumpContents": true,
-            "isBom": true
-        },
-        {
-            "name": "Faction spawn event",
-            "specFilePath": "./specs/factions.json",
-            "templateDirectoryPath": "./templates/faction_spawn_event",
-            "outputDirectoryPath": "../events",
-            "disabled": false,
-            "dumpContents": true,
-            "isBom": false
         },
         {
             "name": "Faction situations",
             "specFilePath": "./specs/factions.json",
             "templateDirectoryPath": "./templates/faction_situations",
             "outputDirectoryPath": "../common/situations",
+            "disabled": false,
+            "dumpContents": true,
+            "isBom": false
+        },
+        {
+            "name": "Factions",
+            "specFilePath": "./specs/factions.json",
+            "templateDirectoryPath": "./templates/factions",
+            "outputDirectoryPath": "../common/pop_faction_types",
             "disabled": false,
             "dumpContents": true,
             "isBom": false

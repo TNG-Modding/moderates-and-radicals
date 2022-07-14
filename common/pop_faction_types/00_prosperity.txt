@@ -2,7 +2,7 @@
 # Peaceful Pacifist Faction
 ##############################
 
-pacifist = {
+prosperity = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_pacifist
 
@@ -21,20 +21,7 @@ pacifist = {
 	}
 
 	is_potential = {
-		NOR = { 
-			has_ethic = ethic_gestalt_consciousness 
-			has_ethic = ethic_fanatic_militarist
-			has_ethic = ethic_militarist
-			has_ethic = ethic_pacifist
-			has_ethic = ethic_fanatic_pacifist
-		}
-		has_modifier = politics
-		count_owned_pop = {
-			count >= 5
-			limit = {
-				has_ethic = ethic_pacifist
-			}
-		}
+		years_passed > 1000000
 	}
 
 	parameters = {

@@ -1,0 +1,513 @@
+##############################
+# radical xenophile faction
+##############################
+
+radical_xenophile = {
+	election_header = "GFX_faction_header_yellow"
+	guiding_ethic = ethic_xenophile
+
+	unique = yes
+	support_multiplier = 1
+	use_guiding_ethic_as_pop_filter = yes
+
+	resources = {
+		category = pop_factions
+		produces = {
+		}
+	}
+
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+
+	is_potential = {
+		# is_faction_allowed = yes		
+        OR = { 
+            has_ethic = ethic_fanatic_xenophobe
+			has_ethic = ethic_xenophobe
+		}			
+	}
+	can_join_pre_triggers = {
+		is_enslaved = no
+		is_being_purged = no
+	}
+
+	can_join_faction = {
+		is_shackled_robot = no
+		NOT = { has_trait = trait_nerve_stapled }
+	}
+
+	attraction = {
+		base = 100
+
+		modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				exists = leader
+				leader = { leader_class = ruler }
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			exists = from
+			from = {
+				NOT = { exists = leader }
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			has_citizenship_rights = yes
+		}	
+	}
+
+	leader = {
+		base = 100
+
+		modifier = {
+			factor = 0.0
+			is_event_leader = yes
+		}
+		modifier = {
+			factor = 0.25
+			leader_class = ruler
+		}
+	}
+
+	on_create = {
+		pop_faction_event = { id = radical_xenophile_spawn.1 }
+	}
+
+	actions = {
+		embrace_xenophile = { title = "embrace_xenophile" description = "embrace_xenophile_desc" cost = { unity = 5000 } potential = { exists = owner owner = { OR = { is_subject = no NOT = { any_agreement = { agreement_preset = preset_dominion } } } } } valid = { custom_tooltip = { fail_text = EMBRACE_FACTION_COOLDOWN parameter:empire = { NOT = { has_modifier = embraced_faction_timer } } } support > 0.20 parameter:empire = { NOT = { has_ethic = "ethic_fanatic_xenophile" } } } effect = { add_modifier = { modifier = embraced_faction days = 3600 } parameter:empire = { shift_ethic = ethic_xenophile hidden_effect = { add_modifier = { modifier = embraced_faction_timer days = 3600 } } } hidden_effect = { save_event_target_as = TargetFaction parameter:empire = { every_relation = { limit = { is_ai = no is_country_type = default has_communications = prev has_intel_level = { who = prev category = government level >= 1 } } country_event = { id = factions.2000 } } } } } ai_weight = { base = 1 modifier = { factor = 0 support < 0.50 owner = { has_ethic = ethic_xenophile } } modifier = { factor = 0 owner = { has_valid_civic = civic_fanatic_purifiers } } modifier = { factor = 0 owner = { count_pop_faction = { count < 4 } } } } }
+    }
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	 
+
+	
+    demand = {
+        title = "FACTION_OUTRAGED_GC"
+        unfulfilled_title = "FACTION_OUTRAGED_GC"
+        desc = "FACTION_OUTRAGED_GC_DESC"
+
+        fulfilled_effect = -20
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = faction_xenophile_outraged_gc
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = faction_xenophile_outraged_gc
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_PASSIVE_STUDY"
+        unfulfilled_title = "XENOIST_NO_PASSIVE_STUDY"
+        desc = "XENOIST_PASSIVE_STUDY_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -5
+
+        potential = {
+            exists = owner
+            owner = {
+                any_relation = {
+                    is_country_type = primitive
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = interference_passive
+            }
+        }
+    }
+
+    demand = { # "XENOIST_NO_SLAVES"
+        title = "XENOIST_NO_SLAVES"
+        unfulfilled_title = "XENOIST_SLAVES"
+        desc = "XENOIST_NO_SLAVES_DESC"
+
+        unfulfilled_effect = -25
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                any_owned_pop = {
+                    NOR = {
+                        is_same_species = root.owner
+                        is_robot_pop = yes
+                        is_sapient = no
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT = {
+                    #has_policy_flag = slavery_allowed
+                    any_owned_pop = {
+                        has_citizenship_type = { country = prev type = citizenship_slavery }
+                    }
+                }
+            }
+        }
+    }
+
+    demand = { # "XENOIST_NO_PURGE"
+        title = "XENOIST_NO_PURGE"
+        unfulfilled_title = "XENOIST_PURGE"
+        desc = "XENOIST_NO_PURGE_DESC"
+
+        unfulfilled_effect = -25
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+        }
+
+        trigger = {
+            owner = {
+                NOR = {
+                    has_policy_flag = purge_displacement_only
+                    has_policy_flag = purge_allowed
+                }
+            }
+        }
+    }
+
+    demand = { # "XENOIST_MULTICULTURALISM"
+        title = "XENOIST_MULTICULTURALISM"
+        unfulfilled_title = "XENOIST_NO_MULTICULTURALISM"
+        desc = "XENOIST_MULTICULTURALISM_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 3
+                any_owned_pop = {
+                    NOR = {
+                        is_same_species = root.owner
+                        has_trait = trait_mechanical
+                        has_trait = trait_machine_unit
+                        has_trait = trait_hive_mind
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                num_species > 3
+            }
+        }
+    }
+
+    demand = { # "XENOIST_REFUGEES_WELCOME"
+        title = "XENOIST_REFUGEES_WELCOME"
+        unfulfilled_title = "XENOIST_REFUGEES_UNWELCOME"
+        desc = "XENOIST_REFUGEES_WELCOME_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -10
+
+        potential = {
+            exists = owner
+            owner = {
+                any_relation = {
+                    has_communications = root.owner
+                    is_country_type = default
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = refugees_allowed
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_ENCLAVE_BORDERS"
+        unfulfilled_title = "XENOIST_NO_ENCLAVE_BORDERS"
+        desc = "XENOIST_ENCLAVE_BORDERS_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                any_country = {
+                    is_country_type = enclave
+                    has_communications = root.owner
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                any_system_within_border = {
+                    any_fleet_in_system = {
+                        exists = owner
+                        owner = { is_country_type = enclave }
+                    }
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_RECENT_UPLIFT"
+        unfulfilled_title = "XENOIST_NO_RECENT_UPLIFT"
+        desc = "XENOIST_RECENT_UPLIFT_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_epigenetic_triggers
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = recent_uplift_timed
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_RECENT_ENLIGHTENMENT"
+        unfulfilled_title = "XENOIST_NO_RECENT_ENLIGHTENMENT"
+        desc = "XENOIST_RECENT_ENLIGHTENMENT_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    any_owned_ship = { is_ship_size = observation_station }
+                    has_country_flag = recent_enlightenment_timed
+                    # fixes demand disappearing when fulfilled (station dismantles)
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = recent_enlightenment_timed
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_PRE_SAPIENT_SURVIVAL"
+        unfulfilled_title = "XENOIST_NO_PRE_SAPIENT_SURVIVAL"
+        desc = "XENOIST_PRE_SAPIENT_SURVIVAL_DESC"
+
+        unfulfilled_effect = -10
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_policy_flag = pre_sapients_allow
+                    has_policy_flag = pre_sapients_purge
+                }
+                OR = {
+                    has_country_flag = found_presapients
+                    any_planet_within_border = {
+                        any_owned_pop = {
+                            is_sapient = no
+                        }
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = pre_sapients_allow
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_NO_PRIMITIVE_INVASION" # Landgrab Opposition
+        unfulfilled_title = "XENOIST_NO_PRIMITIVE_INVASION"
+        desc = "XENOIST_NO_PRIMITIVE_INVASION_DESC"
+
+        unfulfilled_effect = -15
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = { has_country_flag = encountered_first_primitive }
+        }
+
+        trigger = {
+            owner = {
+                NOT = { has_country_flag = recent_primitive_invasion }
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_FEDERATED"
+        unfulfilled_title = "XENOIST_NOT_FEDERATED"
+        desc = "XENOIST_FEDERATED_DESC"
+
+        fulfilled_effect = 20
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications > 3
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_federation = yes
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_RECENT_COMMS"
+        unfulfilled_title = "XENOIST_NO_RECENT_COMMS"
+        desc = "XENOIST_RECENT_COMMS_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                any_country = {
+                    NOT = { has_communications = prev}
+                    OR = {
+                        is_country_type = default
+                        is_country_type = fallen_empire
+                        is_country_type = awakened_fallen_empire
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = recent_comms_timed
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_CELEBRATE_DIVERSITY"
+        unfulfilled_title = "XENOIST_NO_CELEBRATE_DIVERSITY"
+        desc = "XENOIST_CELEBRATE_DIVERSITY_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_modifier = celebrate_diversity
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_modifier = celebrate_diversity
+            }
+        }
+    }
+
+    demand = {
+        title = "XENOIST_PROCLAIM_SUPREMACY"
+        unfulfilled_title = "XENOIST_NO_PROCLAIM_SUPREMACY"
+        desc = "XENOIST_PROCLAIM_SUPREMACY_DESC"
+
+        unfulfilled_effect = -5
+        fulfilled_effect = 0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                has_modifier = proclaim_superiority
+            }
+        }
+
+        trigger = {
+            owner = {
+                NOT= { has_modifier = proclaim_superiority }
+            }
+        }
+    }
+
+    demand = {
+        title = "COOPERATIVE_DIPLO_STANCE"
+        unfulfilled_title = "COOPERATIVE_DIPLO_STANCE"
+        desc = "COOPERATIVE_DIPLO_STANCE_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                is_homicidal = no
+                is_country_type = default
+                has_policy_flag = diplo_stance_cooperative
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_policy_flag = diplo_stance_cooperative
+            }
+        }
+    }
+    
+}

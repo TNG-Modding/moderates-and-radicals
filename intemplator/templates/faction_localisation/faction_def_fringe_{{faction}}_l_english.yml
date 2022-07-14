@@ -1,0 +1,4 @@
+l_english:
+
+ pft_fringe_{{faction}}:0 "Fringe {{Faction}} Faction"
+ pft_fringe_{{faction}}_desc:0 "{{Faction}} Factions {{argumentFor}}. \n\n§L{{Faction}} Ethos§!"

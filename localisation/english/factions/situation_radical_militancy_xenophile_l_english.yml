@@ -1,0 +1,15 @@
+﻿l_english:
+ situation_radical_xenophile_militancy:0 "Radical Xenophile Militancy" 
+ situation_radical_xenophile_militancy_desc:0 "The Xenophiles desire the dissolution of our people and its culture. We can't have that. If we let them be, they will grow ever more desperate. We must take action against them and their xenophilia."
+ situation_radical_xenophile_militancy_type:0 "Radical Xenophile Militancy Type"
+ situation_radical_xenophile_militancy_monthly_change_tooltip:0 "Radical Xenophile Militancy Monthly Change Tooltip"
+
+ situation_radical_xenophile_militancy_tooltip:0 "Radical Xenophile Militancy Tooltip"
+
+ radical_xenophile_faction_militancy_complacent:0 "Complacent Faction"
+ radical_xenophile_faction_militancy_active:0 "Complacent Faction"
+ radical_xenophile_faction_militancy_desperate:0 "Desperate Faction"
+
+ approach_radical_xenophile_militancy_ambivalent:0 "Neglect"
+ approach_radical_xenophile_militancy_appeasement:0 "Appeasement"
+ approach_radical_xenophile_militancy_crackdown:0 "Crackdown"

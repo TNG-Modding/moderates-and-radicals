@@ -1,8 +1,0 @@
-﻿﻿l_english:
- radical_egalitarian_faction_spawn.1.title:0 "Radical Faction Founded"
- 
- radical_egalitarian_faction_spawn.1.desc:0 "The §H[Root.GetName]§! led by §H[Root.Leader.GetTitle] [Root.Leader.GetName]§! have taken root in the political periphery of the [Root.Owner.GetName]. Their members spit on our authoritarian ideals while pushing for mob rule and disorder.\n\nTheir methods are subversive, destructive, and destabilizing. The mind struggles to comprehend their beliefs, and the heart retaliates against all empathy. Radical factions pose an existential threat to our government, and must be dealt with..."
- 
- radical_egalitarian_faction_spawn.1.a:0 "Leave them to their egalitarian ways."
- radical_egalitarian_faction_spawn.1.b:0 "Perhaps we can work with them."
- radical_egalitarian_faction_spawn.1.c:0 "CRUSH THEM"

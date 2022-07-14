@@ -1,18 +1,6 @@
+## Xenophobes
 pop_faction_name_parts_list = {
-	key = "radical_names"
-	parts = {
-		"Guerillas of the" = 1
-		"Radicals for the" = 1
-		"Agents of the" = 1
-		"Dissidents of the" = 1
-		"Rebels of the" = 1
-		"Freethinkers of the" = 1
-	}
-}
-
-## xenophobe_radicals
-pop_faction_name_parts_list = {
-	key = "xenophobe_radicals_names_1"
+	key = "radical_xenophobe_names_1"
 	parts = {
 		"Supremacy" = 1
 		"Unity" = 1
@@ -27,7 +15,7 @@ pop_faction_name_parts_list = {
 }
 
 pop_faction_name_parts_list = {
-	key = "xenophobe_radicals_names_2"
+	key = "radical_xenophobe_names_2"
 	parts = {
 		"Vanguard" = 1
 		"Front" = 1
@@ -42,20 +30,21 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "xenophobe_radicals"
+			is_pop_faction_type = "radical_xenophobe"
 		}
 	}
-	format = "[This.Owner.GetSpeciesName] <xenophobe_radicals_names_1> <xenophobe_radicals_names_2>"
+	format = "[This.Owner.GetSpeciesName] <radical_xenophobe_names_1> <radical_xenophobe_names_2>"
 }
 
-## militarist_radicals
+## Militarists
 pop_faction_name_parts_list = {
-	key = "militarist_radicals_names"
+	key = "radical_militarist_names"
 	parts = {
 		"Military Officers Association" = 1
 		"Veterans for Victory Movement" = 1
 		"Military-Industrial Complex" = 1
 		"Strength Through Conquest Coalition" = 1
+		"Knights of the Void" = 1
 		"Patriotic Vanguard" = 1
 		"Order of the Burning Star" = 1
 		"Crimson Warrior Lodge" = 1
@@ -81,15 +70,31 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "militarist_radicals"
+			is_pop_faction_type = "radical_militarist"
 		}
 	}
-	format = "<militarist_radicals_names>"
+	format = "<radical_militarist_names>"
 }
 
-## authoritarian_radicals
+## Isolationists
 pop_faction_name_parts_list = {
-	key = "authoritarian_radicals_names_1"
+	key = "radical_isolationist_names_1"
+	parts = {
+		"Non-Interventionist" = 1
+		"No Entanglements" = 1
+		"Defense First" = 1
+		"National Preparedness" = 1
+		"Defensive Readiness" = 1
+		"Neutrality" = 1
+		"Internal Strength" = 1
+		"Closed Borders" = 1
+		"Eternal Vigilance" = 1
+	}
+}
+
+## Authoritarians
+pop_faction_name_parts_list = {
+	key = "radical_authoritarian_names_1"
 	parts = {
 		"Strength Through Unity" = 1
 		"Authoritarian" = 1
@@ -109,7 +114,7 @@ pop_faction_name_parts_list = {
 }
 
 pop_faction_name_parts_list = {
-	key = "authoritarian_radicals_names_2"
+	key = "radical_authoritarian_names_2"
 	parts = {
 		"Initiative" = 1
 		"Coalition" = 1
@@ -126,15 +131,15 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "authoritarian_radicals"
+			is_pop_faction_type = "radical_authoritarian"
 		}
 	}
-	format = "<authoritarian_radicals_names_1> <authoritarian_radicals_names_2>"
+	format = "<radical_authoritarian_names_1> <radical_authoritarian_names_2>"
 }
 
-## egalitarian_radicals
+## Egalitarians
 pop_faction_name_parts_list = {
-	key = "egalitarian_radicals_names_1"
+	key = "radical_egalitarian_names_1"
 	parts = {
 		"Democratic" = 1
 		"Freedom" = 1
@@ -157,7 +162,7 @@ pop_faction_name_parts_list = {
 }
 
 pop_faction_name_parts_list = {
-	key = "egalitarian_radicals_names_2"
+	key = "radical_egalitarian_names_2"
 	parts = {
 		"Coalition" = 1
 		"Council" = 1
@@ -185,16 +190,16 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "egalitarian_radicals"
+			is_pop_faction_type = "radical_egalitarian"
 		}
 	}
-	format = "<egalitarian_radicals_names_1> <egalitarian_radicals_names_2>"
+	format = "<radical_egalitarian_names_1> <radical_egalitarian_names_2>"
 }
 
 
-## pacifist_radicals Faction
+## Pacifist Faction
 pop_faction_name_parts_list = {
-	key = "pacifist_radicals_names_1"
+	key = "radical_pacifist_names_1"
 	parts = {
 		"Internal Development" = 1
 		"National Growth" = 1
@@ -215,7 +220,7 @@ pop_faction_name_parts_list = {
 }
 
 pop_faction_name_parts_list = {
-	key = "pacifist_radicals_names_2"
+	key = "radical_pacifist_names_2"
 	parts = {
 		"Foundation" = 1
 		"Initiative" = 1
@@ -238,15 +243,15 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "pacifist_radicals"
+			is_pop_faction_type = "radical_pacifist"
 		}
 	}
-	format = "<pacifist_radicals_names_1> <pacifist_radicals_names_2>"
+	format = "<radical_pacifist_names_1> <radical_pacifist_names_2>"
 }
 
-## materialist_radicals
+## Materialists
 pop_faction_name_parts_list = {
-	key = "materialist_radicals_names_1"
+	key = "radical_materialist_names_1"
 	parts = {
 		"Committee" = 1
 		"Academy" = 1
@@ -257,11 +262,12 @@ pop_faction_name_parts_list = {
 }
 
 pop_faction_name_parts_list = {
-	key = "materialist_radicals_names_2"
+	key = "radical_materialist_names_2"
 	parts = {
 		"of Higher Learning" = 1
 		"of United Scientists" = 1
 		"of Technological Progress" = 1
+		"of Materialists" = 1
 		"of Advanced Sciences" = 1
 		"of Scientific Scholars" = 1
 		"of Scientific Ascendancy" = 1
@@ -280,15 +286,15 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "materialist_radicals"
+			is_pop_faction_type = "radical_materialist"
 		}
 	}
-	format = "<materialist_radicals_names_1> <materialist_radicals_names_2>"
+	format = "<radical_materialist_names_1> <radical_materialist_names_2>"
 }
 
-## spiritualist_radicals
+## Spiritualists
 pop_faction_name_parts_list = {
-	key = "spiritualist_radicals_names_1"
+	key = "radical_spiritualist_names_1"
 	parts = {
 		"Union" = 1
 		"Alliance" = 1
@@ -300,7 +306,7 @@ pop_faction_name_parts_list = {
 }
 
 pop_faction_name_parts_list = {
-	key = "spiritualist_radicals_names_2"
+	key = "radical_spiritualist_names_2"
 	parts = {
 		"of Traditional Values" = 1
 		"of Spiritualists" = 1
@@ -316,6 +322,7 @@ pop_faction_name_parts_list = {
 		"of Exalted Clergy" = 1
 		"of the High Priesthood" = 1
 		"of the Sacrosanct Truths" = 1
+		"of Pious Spiritualists" = 1
 		"of Faith and Values" = 1
 	}
 }
@@ -325,15 +332,15 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "spiritualist_radicals"
+			is_pop_faction_type = "radical_spiritualist"
 		}
 	}
-	format = "<spiritualist_radicals_names_1> <spiritualist_radicals_names_2>"
+	format = "<radical_spiritualist_names_1> <radical_spiritualist_names_2>"
 }
 
-## xenophile_radicals
+## Xenophiles
 pop_faction_name_parts_list = {
-	key = "xenophile_radicals_names_1"
+	key = "radical_xenophile_names_1"
 	parts = {
 		"Alien" = 1
 		"Xeno" = 1
@@ -341,7 +348,7 @@ pop_faction_name_parts_list = {
 }
 
 pop_faction_name_parts_list = {
-	key = "xenophile_radicals_names_2"
+	key = "radical_xenophile_names_2"
 	parts = {
 		"Rights" = 1
 		"Tolerance" = 1
@@ -360,7 +367,7 @@ pop_faction_name_parts_list = {
 }
 
 pop_faction_name_parts_list = {
-	key = "xenophile_radicals_names_3"
+	key = "radical_xenophile_names_3"
 	parts = {
 		"Coalition" = 1
 		"Lobby" = 1
@@ -391,8 +398,8 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "xenophile_radicals"
+			is_pop_faction_type = "radical_xenophile"
 		}
 	}
-	format = "<xenophile_radicals_names_1> <xenophile_radicals_names_2> <xenophile_radicals_names_3>"
+	format = "<radical_xenophile_names_1> <radical_xenophile_names_2> <radical_xenophile_names_3>"
 }

@@ -1,0 +1,4 @@
+l_english:
+
+ pft_gov_{{faction}}:0 "{{Faction}} Faction"
+ pft_gov_{{faction}}_desc:0 "{{Faction}} Factions {{argumentFor}}. \n\n§L{{Faction}} Ethos§!"

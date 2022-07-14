@@ -1,0 +1,15 @@
+﻿l_english:
+ situation_radical_spiritualist_militancy:0 "Radical Spiritualist Militancy" 
+ situation_radical_spiritualist_militancy_desc:0 "The Spiritualists espouse unsubstantiated, unverifiable beliefs. We can't have that. If we let them be, they will grow ever more desperate. We must take action against them and their spiritualism."
+ situation_radical_spiritualist_militancy_type:0 "Radical Spiritualist Militancy Type"
+ situation_radical_spiritualist_militancy_monthly_change_tooltip:0 "Radical Spiritualist Militancy Monthly Change Tooltip"
+
+ situation_radical_spiritualist_militancy_tooltip:0 "Radical Spiritualist Militancy Tooltip"
+
+ radical_spiritualist_faction_militancy_complacent:0 "Complacent Faction"
+ radical_spiritualist_faction_militancy_active:0 "Complacent Faction"
+ radical_spiritualist_faction_militancy_desperate:0 "Desperate Faction"
+
+ approach_radical_spiritualist_militancy_ambivalent:0 "Neglect"
+ approach_radical_spiritualist_militancy_appeasement:0 "Appeasement"
+ approach_radical_spiritualist_militancy_crackdown:0 "Crackdown"

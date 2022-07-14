@@ -1,0 +1,15 @@
+﻿l_english:
+ situation_radical_materialist_militancy:0 "Radical Materialist Militancy" 
+ situation_radical_materialist_militancy_desc:0 "The Materialists espouse a simpleminded approach to Being. We can't have that. If we let them be, they will grow ever more desperate. We must take action against them and their materialism."
+ situation_radical_materialist_militancy_type:0 "Radical Materialist Militancy Type"
+ situation_radical_materialist_militancy_monthly_change_tooltip:0 "Radical Materialist Militancy Monthly Change Tooltip"
+
+ situation_radical_materialist_militancy_tooltip:0 "Radical Materialist Militancy Tooltip"
+
+ radical_materialist_faction_militancy_complacent:0 "Complacent Faction"
+ radical_materialist_faction_militancy_active:0 "Complacent Faction"
+ radical_materialist_faction_militancy_desperate:0 "Desperate Faction"
+
+ approach_radical_materialist_militancy_ambivalent:0 "Neglect"
+ approach_radical_materialist_militancy_appeasement:0 "Appeasement"
+ approach_radical_materialist_militancy_crackdown:0 "Crackdown"

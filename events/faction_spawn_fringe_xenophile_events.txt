@@ -1,0 +1,29 @@
+namespace = fringe_xenophile_spawn
+
+pop_faction_event = {
+	id = fringe_xenophile_spawn.1
+	title = fringe_xenophile_spawn.1.title
+	desc = fringe_xenophile_spawn.1.desc
+
+	picture = GFX_evt_galactic_senate
+	show_sound = event_factions
+
+	is_triggered_only = yes
+	
+	after = {
+		hidden_effect = { 
+			owner = { 
+				set_country_flag = first_faction 
+				every_owned_planet = {
+					every_owned_pop = {
+						force_faction_evaluation = yes
+					}
+				}
+			} 
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}

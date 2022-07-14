@@ -1,0 +1,4 @@
+﻿l_english:
+
+ pft_gov_xenophobe:0 "Xenophobe Faction"
+ pft_gov_xenophobe_desc:0 "Xenophobe Factions seek to assert the primacy of the [Root.Owner.GetSpeciesAdj] species to the point of curtailing the rights of aliens where necessary. \n\n§LXenophobe Ethos§!"

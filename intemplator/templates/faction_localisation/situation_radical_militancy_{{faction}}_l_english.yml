@@ -1,0 +1,15 @@
+l_english:
+ situation_radical_{{faction}}_militancy:0 "Radical {{Faction}} Militancy" 
+ situation_radical_{{faction}}_militancy_desc:0 "The {{Faction}}s {{argumentAgainst}}. We can't have that. If we let them be, they will grow ever more desperate. We must take action against them and their {{ism}}."
+ situation_radical_{{faction}}_militancy_type:0 "Radical {{Faction}} Militancy Type"
+ situation_radical_{{faction}}_militancy_monthly_change_tooltip:0 "Radical {{Faction}} Militancy Monthly Change Tooltip"
+
+ situation_radical_{{faction}}_militancy_tooltip:0 "Radical {{Faction}} Militancy Tooltip"
+
+ radical_{{faction}}_faction_militancy_complacent:0 "Complacent Faction"
+ radical_{{faction}}_faction_militancy_active:0 "Complacent Faction"
+ radical_{{faction}}_faction_militancy_desperate:0 "Desperate Faction"
+
+ approach_radical_{{faction}}_militancy_ambivalent:0 "Neglect"
+ approach_radical_{{faction}}_militancy_appeasement:0 "Appeasement"
+ approach_radical_{{faction}}_militancy_crackdown:0 "Crackdown"

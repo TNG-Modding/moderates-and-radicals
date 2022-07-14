@@ -1,0 +1,15 @@
+﻿l_english:
+ situation_radical_militarist_militancy:0 "Radical Militarist Militancy" 
+ situation_radical_militarist_militancy_desc:0 "The Militarists champion brutish jingoism. We can't have that. If we let them be, they will grow ever more desperate. We must take action against them and their militarism."
+ situation_radical_militarist_militancy_type:0 "Radical Militarist Militancy Type"
+ situation_radical_militarist_militancy_monthly_change_tooltip:0 "Radical Militarist Militancy Monthly Change Tooltip"
+
+ situation_radical_militarist_militancy_tooltip:0 "Radical Militarist Militancy Tooltip"
+
+ radical_militarist_faction_militancy_complacent:0 "Complacent Faction"
+ radical_militarist_faction_militancy_active:0 "Complacent Faction"
+ radical_militarist_faction_militancy_desperate:0 "Desperate Faction"
+
+ approach_radical_militarist_militancy_ambivalent:0 "Neglect"
+ approach_radical_militarist_militancy_appeasement:0 "Appeasement"
+ approach_radical_militarist_militancy_crackdown:0 "Crackdown"
