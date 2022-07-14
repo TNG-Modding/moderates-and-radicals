@@ -1,8 +1,8 @@
 ##############################
-# Progressive Faction
+# Egalitarian Faction
 ##############################
 
-gov_progressive = {
+gov_egalitarian = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_egalitarian
 
@@ -13,7 +13,7 @@ gov_progressive = {
 		category = pop_factions
 		produces = {
 			ideological_purity_desired_value_change = 50
-			# progressive_support = 4
+			# egalitarian_support = 4
 		}
 		produces = {
 			trigger = {
@@ -304,7 +304,7 @@ gov_progressive = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_progressive.3 }
+				pop_faction_event = { id = operations_egalitarian.3 }
 			}
 
 			ai_weight = {

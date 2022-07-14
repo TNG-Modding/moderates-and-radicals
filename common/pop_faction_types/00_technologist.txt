@@ -1,8 +1,8 @@
 ##############################
-# Technologist Faction
+# Materialist Faction
 ##############################
 
-technologist = {
+materialist = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_materialist
 
@@ -405,7 +405,7 @@ technologist = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_technologist.1 }
+				pop_faction_event = { id = operations_materialist.1 }
 			}
 
 			ai_weight = {

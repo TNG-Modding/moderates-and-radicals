@@ -1,8 +1,8 @@
 ##############################
-# Totalitarian Faction
+# Authoritian Faction
 ##############################
 
-gov_totalitarian = {
+gov_authoritian = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_authoritarian
 
@@ -13,7 +13,7 @@ gov_totalitarian = {
 		category = pop_factions
 		produces = {
 			ideological_purity_desired_value_change = 50
-			# totalitarian_support = 4
+			# authoritian_support = 4
 		}
 		produces = {
 			trigger = {
@@ -306,7 +306,7 @@ gov_totalitarian = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_totalitarian.3 }
+				pop_faction_event = { id = operations_authoritian.3 }
 			}
 
 			ai_weight = {

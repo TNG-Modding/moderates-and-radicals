@@ -1,8 +1,8 @@
 ##############################
-# Supremacist Faction
+# Xenophobe Faction
 ##############################
 
-gov_supremacist = {
+gov_xenophobe = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_xenophobe
 
@@ -13,7 +13,7 @@ gov_supremacist = {
 		category = pop_factions
 		produces = {
 			ideological_purity_desired_value_change = 50
-			# supremacist_support = 4
+			# xenophobe_support = 4
 		}
 		produces = {
 			trigger = {
@@ -131,13 +131,13 @@ gov_supremacist = {
 		potential = {
 			exists = owner
 			owner = {
-				has_country_flag = faction_xenophobe_supremacist_outraged_gc
+				has_country_flag = faction_xenophobe_xenophobe_outraged_gc
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_country_flag = faction_xenophobe_supremacist_outraged_gc
+				has_country_flag = faction_xenophobe_xenophobe_outraged_gc
 			}
 		}
 	}
@@ -433,7 +433,7 @@ gov_supremacist = {
 				is_country_type = default
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_xenophobe
 				}
 			}
 		}
@@ -442,7 +442,7 @@ gov_supremacist = {
 			owner = {
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_xenophobe
 				}
 			}
 		}
@@ -501,7 +501,7 @@ gov_supremacist = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_supremacist.3 }
+				pop_faction_event = { id = operations_xenophobe.3 }
 			}
 
 			ai_weight = {

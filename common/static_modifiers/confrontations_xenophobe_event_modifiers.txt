@@ -1,0 +1,48 @@
+xenophobe_debates_continue_modifier = {
+}
+
+xenophobe_debates_stopped_modifier = {
+}
+
+xenophobe_speech_stopped_modifier = {
+}
+
+xenophobe_deal_stopped_modifier = {
+	
+}
+
+xenophobe_debt_stopped_modifier = {
+}
+
+xenophobe_gift_continue_modifier = {
+}
+
+xenophobe_riots_continue_modifier = {
+}
+
+xenophobe_riots_stopped_modifier = {
+}
+
+xenophobe_corner_production_continue_modifier = {
+}
+
+xenophobe_corner_production_stopped_modifier = {
+}
+
+xenophobe_violent_riots_continue_modifier = {
+}
+
+xenophobe_violent_riots_stopped_modifier = {
+}
+
+xenophobe_faction_leader_assassination_continue_modifier = {
+}
+
+xenophobe_ruler_assassination_continue_modifier = {
+}
+
+xenophobe_coup_continue_modifier = {
+}
+
+xenophobe_putsch_continue_modifier = {
+}

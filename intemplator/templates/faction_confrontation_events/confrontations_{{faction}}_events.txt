@@ -396,9 +396,9 @@ pop_faction_event = {
         name = confrontations_{{faction}}.12.a
         trigger = {
             NOT = {
-                is_pop_faction_type = imperialist
-                is_pop_faction_type = gov_imperialist
-                is_pop_faction_type = imperialist_radicals
+                is_pop_faction_type = militarist
+                is_pop_faction_type = gov_militarist
+                is_pop_faction_type = militarist_radicals
             }
         }
         owner = {
@@ -417,9 +417,9 @@ pop_faction_event = {
         name = confrontations_{{faction}}.12.b
         trigger = {
             NOR = {
-                is_pop_faction_type = traditionalist
-                is_pop_faction_type = gov_traditionalist
-                is_pop_faction_type = traditionalist_radicals
+                is_pop_faction_type = spiritualist
+                is_pop_faction_type = gov_spiritualist
+                is_pop_faction_type = spiritualist_radicals
             }
         }
         owner = {
@@ -438,9 +438,9 @@ pop_faction_event = {
         name = confrontations_{{faction}}.12.c
         trigger = {
             NOR = {
-                is_pop_faction_type = prosperity
-                is_pop_faction_type = gov_prosperity
-                is_pop_faction_type = prosperity_radicals
+                is_pop_faction_type = pacifist
+                is_pop_faction_type = gov_pacifist
+                is_pop_faction_type = pacifist_radicals
             }
         }
         owner = {
@@ -459,9 +459,9 @@ pop_faction_event = {
         name = confrontations_{{faction}}.12.d
         trigger = {
             NOT = {
-                is_pop_faction_type = prosperity
-                is_pop_faction_type = gov_prosperity
-                is_pop_faction_type = prosperity_radicals
+                is_pop_faction_type = pacifist
+                is_pop_faction_type = gov_pacifist
+                is_pop_faction_type = pacifist_radicals
             }
         }
         owner = {
@@ -498,14 +498,14 @@ pop_faction_event = {
                         is_same_value = root
                     }
                     NOR = {
-                        is_pop_faction_type = gov_imperialist
-                        is_pop_faction_type = gov_supremacist
-                        is_pop_faction_type = gov_progressive
-                        is_pop_faction_type = gov_technologist
-                        is_pop_faction_type = gov_prosperity
-                        is_pop_faction_type = gov_xenoist
-                        is_pop_faction_type = gov_totalitarian
-                        is_pop_faction_type = gov_traditionalist
+                        is_pop_faction_type = gov_militarist
+                        is_pop_faction_type = gov_xenophobe
+                        is_pop_faction_type = gov_egalitarian
+                        is_pop_faction_type = gov_materialist
+                        is_pop_faction_type = gov_pacifist
+                        is_pop_faction_type = gov_xenophile
+                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
                         count_owned_leader = {
@@ -533,14 +533,14 @@ pop_faction_event = {
                         is_same_value = root
                     }
                     NOR = {
-                        is_pop_faction_type = gov_imperialist
-                        is_pop_faction_type = gov_supremacist
-                        is_pop_faction_type = gov_progressive
-                        is_pop_faction_type = gov_technologist
-                        is_pop_faction_type = gov_prosperity
-                        is_pop_faction_type = gov_xenoist
-                        is_pop_faction_type = gov_totalitarian
-                        is_pop_faction_type = gov_traditionalist
+                        is_pop_faction_type = gov_militarist
+                        is_pop_faction_type = gov_xenophobe
+                        is_pop_faction_type = gov_egalitarian
+                        is_pop_faction_type = gov_materialist
+                        is_pop_faction_type = gov_pacifist
+                        is_pop_faction_type = gov_xenophile
+                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
                         count_owned_leader = {
@@ -1008,14 +1008,14 @@ pop_faction_event = {
                         is_same_value = root
                     }
                     NOR = {
-                        is_pop_faction_type = gov_imperialist
-                        is_pop_faction_type = gov_supremacist
-                        is_pop_faction_type = gov_progressive
-                        is_pop_faction_type = gov_technologist
-                        is_pop_faction_type = gov_prosperity
-                        is_pop_faction_type = gov_xenoist
-                        is_pop_faction_type = gov_totalitarian
-                        is_pop_faction_type = gov_traditionalist
+                        is_pop_faction_type = gov_militarist
+                        is_pop_faction_type = gov_xenophobe
+                        is_pop_faction_type = gov_egalitarian
+                        is_pop_faction_type = gov_materialist
+                        is_pop_faction_type = gov_pacifist
+                        is_pop_faction_type = gov_xenophile
+                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
                         count_owned_leader = {
@@ -1043,14 +1043,14 @@ pop_faction_event = {
                         is_same_value = root
                     }
                     NOR = {
-                        is_pop_faction_type = gov_imperialist
-                        is_pop_faction_type = gov_supremacist
-                        is_pop_faction_type = gov_progressive
-                        is_pop_faction_type = gov_technologist
-                        is_pop_faction_type = gov_prosperity
-                        is_pop_faction_type = gov_xenoist
-                        is_pop_faction_type = gov_totalitarian
-                        is_pop_faction_type = gov_traditionalist
+                        is_pop_faction_type = gov_militarist
+                        is_pop_faction_type = gov_xenophobe
+                        is_pop_faction_type = gov_egalitarian
+                        is_pop_faction_type = gov_materialist
+                        is_pop_faction_type = gov_pacifist
+                        is_pop_faction_type = gov_xenophile
+                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
                         count_owned_leader = {
@@ -1096,17 +1096,17 @@ pop_faction_event = {
                 limit = {
                     event_target:assassinated_leader_faction = {
                         OR = {
-                            is_pop_faction_type = imperialist
-                            is_pop_faction_type = imperialist_radicals
+                            is_pop_faction_type = militarist
+                            is_pop_faction_type = militarist_radicals
                         }
                     }
                 }
                 add_resource = {
-                    imperialist_militancy_current_value = 10
-                    imperialist_support = 100
+                    militarist_militancy_current_value = 10
+                    militarist_support = 100
                 }
                 add_modifier = {
-                    modifier = imperialist_faction_leader_assassination_continue_modifier
+                    modifier = militarist_faction_leader_assassination_continue_modifier
                     years = 3
                 }
             }
@@ -1114,17 +1114,17 @@ pop_faction_event = {
                 limit = {
                     event_target:assassinated_leader_faction = {
                         OR = {
-                            is_pop_faction_type = supremacist
-                            is_pop_faction_type = supremacist_radicals
+                            is_pop_faction_type = xenophobe
+                            is_pop_faction_type = xenophobe_radicals
                         }
                     }
                 }
                 add_resource = {
-                    supremacist_militancy_current_value = 10
-                    supremacist_support = 100
+                    xenophobe_militancy_current_value = 10
+                    xenophobe_support = 100
                 }
                 add_modifier = {
-                    modifier = supremacist_faction_leader_assassination_continue_modifier
+                    modifier = xenophobe_faction_leader_assassination_continue_modifier
                     years = 3
                 }
             }
@@ -1132,17 +1132,17 @@ pop_faction_event = {
                 limit = {
                     event_target:assassinated_leader_faction = {
                         OR = {
-                            is_pop_faction_type = progressive
-                            is_pop_faction_type = progressive_radicals
+                            is_pop_faction_type = egalitarian
+                            is_pop_faction_type = egalitarian_radicals
                         }
                     }
                 }
                 add_resource = {
-                    progressive_militancy_current_value = 10
-                    progressive_support = 100
+                    egalitarian_militancy_current_value = 10
+                    egalitarian_support = 100
                 }
                 add_modifier = {
-                    modifier = progressive_faction_leader_assassination_continue_modifier
+                    modifier = egalitarian_faction_leader_assassination_continue_modifier
                     years = 3
                 }
             }
@@ -1150,17 +1150,17 @@ pop_faction_event = {
                 limit = {
                     event_target:assassinated_leader_faction = {
                         OR = {
-                            is_pop_faction_type = technologist
-                            is_pop_faction_type = technologist_radicals
+                            is_pop_faction_type = materialist
+                            is_pop_faction_type = materialist_radicals
                         }
                     }
                 }
                 add_resource = {
-                    technologist_militancy_current_value = 10
-                    technologist_support = 100
+                    materialist_militancy_current_value = 10
+                    materialist_support = 100
                 }
                 add_modifier = {
-                    modifier = technologist_faction_leader_assassination_continue_modifier
+                    modifier = materialist_faction_leader_assassination_continue_modifier
                     years = 3
                 }
             }
@@ -1168,17 +1168,17 @@ pop_faction_event = {
                 limit = {
                     event_target:assassinated_leader_faction = {
                         OR = {
-                            is_pop_faction_type = prosperity
-                            is_pop_faction_type = prosperity_radicals
+                            is_pop_faction_type = pacifist
+                            is_pop_faction_type = pacifist_radicals
                         }
                     }
                 }
                 add_resource = {
-                    prosperity_militancy_current_value = 10
-                    prosperity_support = 100
+                    pacifist_militancy_current_value = 10
+                    pacifist_support = 100
                 }
                 add_modifier = {
-                    modifier = prosperity_faction_leader_assassination_continue_modifier
+                    modifier = pacifist_faction_leader_assassination_continue_modifier
                     years = 3
                 }
             }
@@ -1186,17 +1186,17 @@ pop_faction_event = {
                 limit = {
                     event_target:assassinated_leader_faction = {
                         OR = {
-                            is_pop_faction_type = xenoist
-                            is_pop_faction_type = xenoist_radicals
+                            is_pop_faction_type = xenophile
+                            is_pop_faction_type = xenophile_radicals
                         }
                     }
                 }
                 add_resource = {
-                    xenoist_militancy_current_value = 10
-                    xenoist_support = 100
+                    xenophile_militancy_current_value = 10
+                    xenophile_support = 100
                 }
                 add_modifier = {
-                    modifier = xenoist_faction_leader_assassination_continue_modifier
+                    modifier = xenophile_faction_leader_assassination_continue_modifier
                     years = 3
                 }
             }
@@ -1204,17 +1204,17 @@ pop_faction_event = {
                 limit = {
                     event_target:assassinated_leader_faction = {
                         OR = {
-                            is_pop_faction_type = totalitarian
-                            is_pop_faction_type = totalitarian_radicals
+                            is_pop_faction_type = authoritian
+                            is_pop_faction_type = authoritian_radicals
                         }
                     }
                 }
                 add_resource = {
-                    totalitarian_militancy_current_value = 10
-                    totalitarian_support = 100
+                    authoritian_militancy_current_value = 10
+                    authoritian_support = 100
                 }
                 add_modifier = {
-                    modifier = totalitarian_faction_leader_assassination_continue_modifier
+                    modifier = authoritian_faction_leader_assassination_continue_modifier
                     years = 3
                 }
             }
@@ -1222,17 +1222,17 @@ pop_faction_event = {
                 limit = {
                     event_target:assassinated_leader_faction = {
                         OR = {
-                            is_pop_faction_type = traditionalist
-                            is_pop_faction_type = traditionalist_radicals
+                            is_pop_faction_type = spiritualist
+                            is_pop_faction_type = spiritualist_radicals
                         }
                     }
                 }
                 add_resource = {
-                    traditionalist_militancy_current_value = 10
-                    traditionalist_support = 100
+                    spiritualist_militancy_current_value = 10
+                    spiritualist_support = 100
                 }
                 add_modifier = {
-                    modifier = traditionalist_faction_leader_assassination_continue_modifier
+                    modifier = spiritualist_faction_leader_assassination_continue_modifier
                     years = 3
                 }
             }

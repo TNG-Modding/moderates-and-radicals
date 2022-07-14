@@ -1,8 +1,8 @@
 ##############################
-# Imperialist Faction
+# Militarist Faction
 ##############################
 
-gov_imperialist = {
+gov_militarist = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_militarist
 
@@ -13,7 +13,7 @@ gov_imperialist = {
 		category = pop_factions
 		produces = {
 			ideological_purity_desired_value_change = 50
-			# imperialist_support = 4
+			# militarist_support = 4
 		}
 		produces = {
 			trigger = {
@@ -173,7 +173,7 @@ gov_imperialist = {
 
 		trigger = {
 			owner = {
-				has_country_flag = imperialist_conquest_timed_flag
+				has_country_flag = militarist_conquest_timed_flag
 			}
 		}
 	}
@@ -464,7 +464,7 @@ gov_imperialist = {
 				is_country_type = default
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_xenophobe
 				}
 			}
 		}
@@ -473,7 +473,7 @@ gov_imperialist = {
 			owner = {
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_xenophobe
 				}
 			}
 		}
@@ -532,7 +532,7 @@ gov_imperialist = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_imperialist.3 }
+				pop_faction_event = { id = operations_militarist.3 }
 			}
 
 			ai_weight = {

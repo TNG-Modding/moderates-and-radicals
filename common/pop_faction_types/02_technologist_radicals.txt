@@ -1,8 +1,8 @@
 ##############################
-# Technologist_radicals Faction
+# Materialist_radicals Faction
 ##############################
 
-technologist_radicals = {
+materialist_radicals = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_materialist
 
@@ -12,8 +12,8 @@ technologist_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			# technologist_militancy = -12
-			# technologist_support = 12
+			# materialist_militancy = -12
+			# materialist_support = 12
 			# ideological_purity_desired_value_change = -50
 		}
 	}
@@ -50,7 +50,7 @@ technologist_radicals = {
 	}
 	on_destroy = {
 		# Removing faction exist static modifier
-		remove_modifier = technologist_radicals_exist 
+		remove_modifier = materialist_radicals_exist 
 	}
 
 	can_join_pre_triggers = {
@@ -392,7 +392,7 @@ technologist_radicals = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_technologist.2 }
+				pop_faction_event = { id = operations_materialist.2 }
 			}
 
 			ai_weight = {

@@ -1,52 +1,52 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_faction_icon_gov_imperialist"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_imperialists.dds"
+		name = "GFX_faction_icon_gov_militarist"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_militarists.dds"
 		noOfFrames = 1
 	}
 
 	spriteType = {
-		name = "GFX_faction_icon_gov_prosperity"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_prosperity.dds"
-		noOfFrames = 1
-	}
-
-
-	spriteType = {
-		name = "GFX_faction_icon_gov_progressive"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_progressives.dds"
-		noOfFrames = 1
-	}
-
-	spriteType = {
-		name = "GFX_faction_icon_gov_totalitarian"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
+		name = "GFX_faction_icon_gov_pacifist"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_pacifist.dds"
 		noOfFrames = 1
 	}
 
 
 	spriteType = {
-		name = "GFX_faction_icon_gov_supremacist"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_supremacists.dds"
+		name = "GFX_faction_icon_gov_egalitarian"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_egalitarians.dds"
 		noOfFrames = 1
 	}
 
 	spriteType = {
-		name = "GFX_faction_icon_gov_xenoist"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_xenoists.dds"
+		name = "GFX_faction_icon_gov_authoritian"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_authoritians.dds"
 		noOfFrames = 1
 	}
 
 
 	spriteType = {
-		name = "GFX_faction_icon_gov_traditionalist"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_traditionalists.dds"
+		name = "GFX_faction_icon_gov_xenophobe"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_xenophobes.dds"
 		noOfFrames = 1
 	}
 
 	spriteType = {
-		name = "GFX_faction_icon_gov_technologist"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_technologists.dds"
+		name = "GFX_faction_icon_gov_xenophile"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_xenophiles.dds"
+		noOfFrames = 1
+	}
+
+
+	spriteType = {
+		name = "GFX_faction_icon_gov_spiritualist"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_spiritualists.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_faction_icon_gov_materialist"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_materialists.dds"
 		noOfFrames = 1
 	}
 }

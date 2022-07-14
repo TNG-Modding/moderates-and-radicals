@@ -1,8 +1,8 @@
 ##############################
-# Progressive_radicals Faction
+# Egalitarian_radicals Faction
 ##############################
 
-progressive_radicals = {
+egalitarian_radicals = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_egalitarian
 
@@ -12,8 +12,8 @@ progressive_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			# progressive_militancy = -12
-			# progressive_support = 12
+			# egalitarian_militancy = -12
+			# egalitarian_support = 12
 			# ideological_purity_desired_value_change = -50
 		}
 	}
@@ -41,7 +41,7 @@ progressive_radicals = {
 	}
 	on_destroy = {
 		# Removing faction exist static modifier
-		remove_modifier = progressive_radicals_exist
+		remove_modifier = egalitarian_radicals_exist
 	}
 
 	parameters = {
@@ -291,7 +291,7 @@ progressive_radicals = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_progressive.2 }
+				pop_faction_event = { id = operations_egalitarian.2 }
 			}
 
 			ai_weight = {

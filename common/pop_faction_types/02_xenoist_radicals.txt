@@ -1,8 +1,8 @@
 ##############################
-# Xenoist_radicals Faction
+# Xenophile_radicals Faction
 ##############################
 
-xenoist_radicals = {
+xenophile_radicals = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_xenophile
 
@@ -12,8 +12,8 @@ xenoist_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			# xenoist_militancy = -2
-			# xenoist_support = 1
+			# xenophile_militancy = -2
+			# xenophile_support = 1
 			# ideological_purity_desired_value_change = -50
 		}
 	}
@@ -50,7 +50,7 @@ xenoist_radicals = {
 	}
 	on_destroy = {
 		# Removing faction exist static modifier
-		remove_modifier = xenoist_radicals_exist
+		remove_modifier = xenophile_radicals_exist
 	}
 
 	can_join_pre_triggers = {
@@ -527,7 +527,7 @@ xenoist_radicals = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_xenoist.2 }
+				pop_faction_event = { id = operations_xenophile.2 }
 			}
 
 			ai_weight = {

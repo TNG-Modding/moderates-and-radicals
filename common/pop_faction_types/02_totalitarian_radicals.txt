@@ -1,8 +1,8 @@
 ##############################
-# Totalitarian_radicals Faction
+# Authoritian_radicals Faction
 ##############################
 
-totalitarian_radicals = {
+authoritian_radicals = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_authoritarian
 
@@ -12,8 +12,8 @@ totalitarian_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			# totalitarian_militancy = -12
-			# totalitarian_support = 12
+			# authoritian_militancy = -12
+			# authoritian_support = 12
 			# ideological_purity_desired_value_change = -50
 		}
 	}
@@ -50,7 +50,7 @@ totalitarian_radicals = {
 	}
 	on_destroy = {
 		# Removing faction exist static modifier
-		remove_modifier = totalitarian_radicals_exist
+		remove_modifier = authoritian_radicals_exist
 	}
 
 	can_join_faction = {
@@ -292,7 +292,7 @@ totalitarian_radicals = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_totalitarian.2 }
+				pop_faction_event = { id = operations_authoritian.2 }
 			}
 
 			ai_weight = {

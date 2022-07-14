@@ -1,8 +1,8 @@
 ##############################
-# Technologist Faction
+# Materialist Faction
 ##############################
 
-gov_technologist = {
+gov_materialist = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_materialist
 
@@ -13,7 +13,7 @@ gov_technologist = {
 		category = pop_factions
 		produces = {
 			ideological_purity_desired_value_change = 50
-			# technologist_support = 4
+			# materialist_support = 4
 		}
 		produces = {
 			trigger = {
@@ -406,7 +406,7 @@ gov_technologist = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_technologist.3 }
+				pop_faction_event = { id = operations_materialist.3 }
 			}
 
 			ai_weight = {

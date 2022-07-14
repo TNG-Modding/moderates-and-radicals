@@ -1,8 +1,8 @@
 ##############################
-# Imperialist_radicals Faction
+# Militarist_radicals Faction
 ##############################
 
-imperialist_radicals = {
+militarist_radicals = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_militarist
 
@@ -12,8 +12,8 @@ imperialist_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			# imperialist_militancy = -12
-			# imperialist_support = 12
+			# militarist_militancy = -12
+			# militarist_support = 12
 			# ideological_purity_desired_value_change = -50
 		}
 	}
@@ -50,7 +50,7 @@ imperialist_radicals = {
 	}
 	on_destroy = {
 		# Removing faction exist static modifier
-		remove_modifier = imperialist_radicals_exist 
+		remove_modifier = militarist_radicals_exist 
 	}
 
 	can_join_pre_triggers = {
@@ -177,7 +177,7 @@ imperialist_radicals = {
 
 		trigger = {
 			owner = {
-				has_country_flag = imperialist_conquest_timed_flag
+				has_country_flag = militarist_conquest_timed_flag
 			}
 		}
 	}
@@ -468,7 +468,7 @@ imperialist_radicals = {
 				is_country_type = default
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_xenophobe
 				}
 			}
 		}
@@ -477,7 +477,7 @@ imperialist_radicals = {
 			owner = {
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_xenophobe
 				}
 			}
 		}
@@ -517,7 +517,7 @@ imperialist_radicals = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_imperialist.2 }
+				pop_faction_event = { id = operations_militarist.2 }
 			}
 
 			ai_weight = {

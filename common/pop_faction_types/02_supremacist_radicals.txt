@@ -1,8 +1,8 @@
 ##############################
-# Supremacist_radicals Faction
+# Xenophobe_radicals Faction
 ##############################
 
-supremacist_radicals = {
+xenophobe_radicals = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_xenophobe
 
@@ -12,8 +12,8 @@ supremacist_radicals = {
 	resources = {
 		category = pop_radical_factions
 		produces = {
-			# supremacist_militancy = -12
-			# supremacist_support = 12
+			# xenophobe_militancy = -12
+			# xenophobe_support = 12
 			# ideological_purity_desired_value_change = -50
 		}
 	}
@@ -50,7 +50,7 @@ supremacist_radicals = {
 	}
 	on_destroy = {
 		# Removing faction exist static modifier
-		remove_modifier = supremacist_radicals_exist 
+		remove_modifier = xenophobe_radicals_exist 
 	}
 
 	can_join_pre_triggers = {
@@ -136,13 +136,13 @@ supremacist_radicals = {
 		potential = {
 			exists = owner
 			owner = {
-				has_country_flag = faction_xenophobe_supremacist_outraged_gc
+				has_country_flag = faction_xenophobe_xenophobe_outraged_gc
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_country_flag = faction_xenophobe_supremacist_outraged_gc
+				has_country_flag = faction_xenophobe_xenophobe_outraged_gc
 			}
 		}
 	}
@@ -438,7 +438,7 @@ supremacist_radicals = {
 				is_country_type = default
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_xenophobe
 				}
 			}
 		}
@@ -447,7 +447,7 @@ supremacist_radicals = {
 			owner = {
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_xenophobe
 				}
 			}
 		}
@@ -486,7 +486,7 @@ supremacist_radicals = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_supremacist.2 }
+				pop_faction_event = { id = operations_xenophobe.2 }
 			}
 
 			ai_weight = {

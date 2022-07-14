@@ -1,0 +1,48 @@
+xenophile_debates_continue_modifier = {
+}
+
+xenophile_debates_stopped_modifier = {
+}
+
+xenophile_speech_stopped_modifier = {
+}
+
+xenophile_deal_stopped_modifier = {
+	
+}
+
+xenophile_debt_stopped_modifier = {
+}
+
+xenophile_gift_continue_modifier = {
+}
+
+xenophile_riots_continue_modifier = {
+}
+
+xenophile_riots_stopped_modifier = {
+}
+
+xenophile_corner_production_continue_modifier = {
+}
+
+xenophile_corner_production_stopped_modifier = {
+}
+
+xenophile_violent_riots_continue_modifier = {
+}
+
+xenophile_violent_riots_stopped_modifier = {
+}
+
+xenophile_faction_leader_assassination_continue_modifier = {
+}
+
+xenophile_ruler_assassination_continue_modifier = {
+}
+
+xenophile_coup_continue_modifier = {
+}
+
+xenophile_putsch_continue_modifier = {
+}

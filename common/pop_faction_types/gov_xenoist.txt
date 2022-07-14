@@ -1,8 +1,8 @@
 ##############################
-# Xenoist Faction
+# Xenophile Faction
 ##############################
 
-gov_xenoist = {
+gov_xenophile = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_xenophile
 
@@ -13,8 +13,8 @@ gov_xenoist = {
 		category = pop_factions
 		produces = {
 			ideological_purity_desired_value_change = 50
-			# supremacist_militancy = 3
-			# xenoist_support = 4
+			# xenophobe_militancy = 3
+			# xenophile_support = 4
 		}
 		produces = {
 			trigger = {
@@ -546,7 +546,7 @@ gov_xenoist = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_xenoist.3 }
+				pop_faction_event = { id = operations_xenophile.3 }
 			}
 
 			ai_weight = {

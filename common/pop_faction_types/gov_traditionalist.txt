@@ -1,8 +1,8 @@
 ##############################
-# Traditionalist Faction
+# Spiritualist Faction
 ##############################
 
-gov_traditionalist = {
+gov_spiritualist = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_spiritualist
 
@@ -13,7 +13,7 @@ gov_traditionalist = {
 		category = pop_factions
 		produces = {
 			ideological_purity_desired_value_change = 50
-			# traditionalist_support = 4
+			# spiritualist_support = 4
 		}
 		produces = {
 			trigger = {
@@ -479,7 +479,7 @@ gov_traditionalist = {
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_traditionalist.3 }
+				pop_faction_event = { id = operations_spiritualist.3 }
 			}
 
 			ai_weight = {
