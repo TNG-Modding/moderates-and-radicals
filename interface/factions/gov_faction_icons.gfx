@@ -19,8 +19,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_faction_icon_gov_authoritian"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_authoritians.dds"
+		name = "GFX_faction_icon_gov_authoritarian"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_authoritarians.dds"
 		noOfFrames = 1
 	}
 

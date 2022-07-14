@@ -44,13 +44,13 @@
  RADICAL_PROGRESSIVE_GALVANIZE_NO_STRATIFICATION:0 "No Stratification"
  RADICAL_PROGRESSIVE_GALVANIZE_STRATIFICATION_DESC:0 "Having economic stratification would galvanize the radical xenophiles, reducing their unhappiness drain but increasing their influence drain. If we don't have stratification, then egalitarians have nothing to complain about."
 
- # Authoritians
- pft_authoritian_radicals:0 "Radical Authoritians"
- pft_authoritian_radicals_desc:0 "The Radical Authoritian Faction is a subversive group of dissidents who spit on the egalitarian ideals that are the foundation of our government."
+ # Authoritarians
+ pft_authoritarian_radicals:0 "Radical Authoritarians"
+ pft_authoritarian_radicals_desc:0 "The Radical Authoritarian Faction is a subversive group of dissidents who spit on the egalitarian ideals that are the foundation of our government."
  
  RADICAL_TOTALITARIAN_GALVANIZE_NO_STRATIFIED:0 "Lack of Stratification Galvanizes Xenophiles"
  RADICAL_TOTALITARIAN_GALVANIZE_STRATIFIED:0 "Stratification"
- RADICAL_TOTALITARIAN_GALVANIZE_NO_STRATIFIED_DESC:0 "A lack of economic stratification would galvanize the radical authoritians, reducing their unhappiness drain but increasing their influence drain. If we have stratification, then authoritians have nothing to complain about."
+ RADICAL_TOTALITARIAN_GALVANIZE_NO_STRATIFIED_DESC:0 "A lack of economic stratification would galvanize the radical authoritarians, reducing their unhappiness drain but increasing their influence drain. If we have stratification, then authoritarians have nothing to complain about."
  
  # Materialist
  pft_materialist_radicals:0 "Radical Materialists"

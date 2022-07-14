@@ -92,9 +92,9 @@ pop_faction_name_parts_list = {
 	}
 }
 
-## Authoritians
+## Authoritarians
 pop_faction_name_parts_list = {
-	key = "gov_authoritian_names_1"
+	key = "gov_authoritarian_names_1"
 	parts = {
 		"Strength Through Unity" = 1
 		"Authoritarian" = 1
@@ -114,7 +114,7 @@ pop_faction_name_parts_list = {
 }
 
 pop_faction_name_parts_list = {
-	key = "gov_authoritian_names_2"
+	key = "gov_authoritarian_names_2"
 	parts = {
 		"Initiative" = 1
 		"Coalition" = 1
@@ -131,10 +131,10 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "gov_authoritian"
+			is_pop_faction_type = "gov_authoritarian"
 		}
 	}
-	format = "<gov_authoritian_names_1> <gov_authoritian_names_2>"
+	format = "<gov_authoritarian_names_1> <gov_authoritarian_names_2>"
 }
 
 ## Egalitarians

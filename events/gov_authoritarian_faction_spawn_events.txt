@@ -1,9 +1,9 @@
-namespace = gov_authoritian_faction_spawn
+namespace = gov_authoritarian_faction_spawn
 
 pop_faction_event = {
-	id = gov_authoritian_faction_spawn.1
-	title = gov_authoritian_faction_spawn.1.title
-	desc = gov_authoritian_faction_spawn.1.desc
+	id = gov_authoritarian_faction_spawn.1
+	title = gov_authoritarian_faction_spawn.1.title
+	desc = gov_authoritarian_faction_spawn.1.desc
 
 	picture = GFX_evt_galactic_senate
 	show_sound = event_factions

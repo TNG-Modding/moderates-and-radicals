@@ -1,10 +1,10 @@
-namespace = confrontations_authoritian
+namespace = confrontations_authoritarian
 
-# Authoritian Confrontations
+# Authoritarian Confrontations
 
 # Calculating which confrontation to use
 country_event = {
-    id = confrontations_authoritian.1
+    id = confrontations_authoritarian.1
     hide_window = yes
     is_triggered_only = yes
 
@@ -13,15 +13,15 @@ country_event = {
         has_modifier = politics
 
         check_variable = {
-            which = current_authoritian_support
+            which = current_authoritarian_support
             value > current_ideological_purity
         }
     }
 
     immediate = {
         export_resource_stockpile_to_variable = {
-            resource = authoritian_militancy_current_value
-            variable = current_authoritian_militancy
+            resource = authoritarian_militancy_current_value
+            variable = current_authoritarian_militancy
         }
         while = {
             limit = {
@@ -30,16 +30,16 @@ country_event = {
             every_pop_faction = {
                 limit = {
                     OR = {
-                        is_pop_faction_type = gov_authoritian
-                        is_pop_faction_type = authoritian_radicals
-                        is_pop_faction_type = authoritian
+                        is_pop_faction_type = gov_authoritarian
+                        is_pop_faction_type = authoritarian_radicals
+                        is_pop_faction_type = authoritarian
                     }
                 }
                 if = {
                     limit = {
                         owner = {
                             check_variable = {
-                                which = current_authoritian_militancy
+                                which = current_authoritarian_militancy
                                 value > 90
                             }
                         }
@@ -47,12 +47,12 @@ country_event = {
 
                     random_list = {
                         40 = {
-                            # Authoritian Coup
-                            pop_faction_event = { id = confrontations_authoritian.90 }
+                            # Authoritarian Coup
+                            pop_faction_event = { id = confrontations_authoritarian.90 }
                         }
                         60 = {
-                            # Authoritian Putsch
-                            pop_faction_event = { id = confrontations_authoritian.91 }
+                            # Authoritarian Putsch
+                            pop_faction_event = { id = confrontations_authoritarian.91 }
                         }
                     }
 
@@ -61,7 +61,7 @@ country_event = {
                     limit = {
                         owner = {
                             check_variable = {
-                                which = current_authoritian_militancy
+                                which = current_authoritarian_militancy
                                 value > 80
                             }
                         }
@@ -69,19 +69,19 @@ country_event = {
                     random_list = {
                         40 = {
                             # Ruler Assassinated
-                            pop_faction_event = { id = confrontations_authoritian.80 }
+                            pop_faction_event = { id = confrontations_authoritarian.80 }
                         }
                         40 = {
                             # Faction Leader Assassinated
-                            pop_faction_event = { id = confrontations_authoritian.81 }
+                            pop_faction_event = { id = confrontations_authoritarian.81 }
                         }
                         10 = {
                             # Egalitarian Book Burning
-                            pop_faction_event = { id = confrontations_authoritian.30 }
+                            pop_faction_event = { id = confrontations_authoritarian.30 }
                         }
                         10 = {
-                            # Authoritian Riots and Endorse Movement
-                            pop_faction_event = { id = confrontations_authoritian.20 }
+                            # Authoritarian Riots and Endorse Movement
+                            pop_faction_event = { id = confrontations_authoritarian.20 }
                         }
                     }
                 }
@@ -89,7 +89,7 @@ country_event = {
                     limit = {
                         owner = {
                             check_variable = {
-                                which = current_authoritian_militancy
+                                which = current_authoritarian_militancy
                                 value > 50
                             }
                         }
@@ -97,39 +97,39 @@ country_event = {
                     random_list = {
                         40 = {
                             # Egalitarian Book Burning
-                            pop_faction_event = { id = confrontations_authoritian.30 }
+                            pop_faction_event = { id = confrontations_authoritarian.30 }
                         }
                         25 = {
-                            # Authoritian Riots and Endorse Movement
-                            pop_faction_event = { id = confrontations_authoritian.20 }
+                            # Authoritarian Riots and Endorse Movement
+                            pop_faction_event = { id = confrontations_authoritarian.20 }
                         }
                         5 = {
-                            # Authoritian Corner Market
-                            pop_faction_event = { id = confrontations_authoritian.21 }
+                            # Authoritarian Corner Market
+                            pop_faction_event = { id = confrontations_authoritarian.21 }
                         }
                         5 = {
                             # Authoritarian policy wording
-                            pop_faction_event = { id = confrontations_authoritian.10 }
+                            pop_faction_event = { id = confrontations_authoritarian.10 }
                         }
                         5 = {
                             # Inspiring speech
-                            pop_faction_event = { id = confrontations_authoritian.11 }
+                            pop_faction_event = { id = confrontations_authoritarian.11 }
                         }
                         5 = {
                             # New leader
-                            pop_faction_event = { id = confrontations_authoritian.12 }
+                            pop_faction_event = { id = confrontations_authoritarian.12 }
                         }
                         5 = {
                             # Leader got owned
-                            pop_faction_event = { id = confrontations_authoritian.13 }
+                            pop_faction_event = { id = confrontations_authoritarian.13 }
                         }
                         5 = {
                             # Faction trade deal
-                            pop_faction_event = { id = confrontations_authoritian.14 }
+                            pop_faction_event = { id = confrontations_authoritarian.14 }
                         }
                         5 = {
                             # Faction leader in debt
-                            pop_faction_event = { id = confrontations_authoritian.15 }
+                            pop_faction_event = { id = confrontations_authoritarian.15 }
                         }
                     }
                 }
@@ -137,43 +137,43 @@ country_event = {
                     limit = {
                         owner = {
                             check_variable = {
-                                which = current_authoritian_militancy
+                                which = current_authoritarian_militancy
                                 value > 25
                             }
                         }
                     }
                     random_list = {
                         35 = {
-                            # Authoritian Riots and Endorse Movement
-                            pop_faction_event = { id = confrontations_authoritian.20 }
+                            # Authoritarian Riots and Endorse Movement
+                            pop_faction_event = { id = confrontations_authoritarian.20 }
                         }
                         35 = {
-                            # Authoritian Corner Market
-                            pop_faction_event = { id = confrontations_authoritian.21 }
+                            # Authoritarian Corner Market
+                            pop_faction_event = { id = confrontations_authoritarian.21 }
                         }
                         5 = {
                             # Authoritarian policy wording
-                            pop_faction_event = { id = confrontations_authoritian.10 }
+                            pop_faction_event = { id = confrontations_authoritarian.10 }
                         }
                         5 = {
                             # Inspiring speech
-                            pop_faction_event = { id = confrontations_authoritian.11 }
+                            pop_faction_event = { id = confrontations_authoritarian.11 }
                         }
                         5 = {
                             # New leader
-                            pop_faction_event = { id = confrontations_authoritian.12 }
+                            pop_faction_event = { id = confrontations_authoritarian.12 }
                         }
                         5 = {
                             # Leader got owned
-                            pop_faction_event = { id = confrontations_authoritian.13 }
+                            pop_faction_event = { id = confrontations_authoritarian.13 }
                         }
                         5 = {
                             # Faction trade deal
-                            pop_faction_event = { id = confrontations_authoritian.14 }
+                            pop_faction_event = { id = confrontations_authoritarian.14 }
                         }
                         5 = {
                             # Faction leader in debt
-                            pop_faction_event = { id = confrontations_authoritian.15 }
+                            pop_faction_event = { id = confrontations_authoritarian.15 }
                         }
                     }
                 }
@@ -181,7 +181,7 @@ country_event = {
                     limit = {
                         owner = {
                             check_variable = {
-                                which = current_authoritian_militancy
+                                which = current_authoritarian_militancy
                                 value >= 0
                             }
                         }
@@ -189,31 +189,31 @@ country_event = {
                     random_list = {
                         10 = {
                             # Authoritarian policy wording
-                            pop_faction_event = { id = confrontations_authoritian.10 }
+                            pop_faction_event = { id = confrontations_authoritarian.10 }
                         }
                         15 = {
                             # Inspiring speech
-                            pop_faction_event = { id = confrontations_authoritian.11 }
+                            pop_faction_event = { id = confrontations_authoritarian.11 }
                         }
                         15 = {
                             # New leader
-                            pop_faction_event = { id = confrontations_authoritian.12 }
+                            pop_faction_event = { id = confrontations_authoritarian.12 }
                         }
                         15 = {
                             # Leader got owned
-                            pop_faction_event = { id = confrontations_authoritian.13 }
+                            pop_faction_event = { id = confrontations_authoritarian.13 }
                         }
                         15 = {
                             # Faction trade deal
-                            pop_faction_event = { id = confrontations_authoritian.14 }
+                            pop_faction_event = { id = confrontations_authoritarian.14 }
                         }
                         15 = {
                             # Faction leader in debt
-                            pop_faction_event = { id = confrontations_authoritian.15 }
+                            pop_faction_event = { id = confrontations_authoritarian.15 }
                         }
                         15 = {
                             # Gift
-                            pop_faction_event = { id = confrontations_authoritian.16 }
+                            pop_faction_event = { id = confrontations_authoritarian.16 }
                         }
                     }
                 }
@@ -232,9 +232,9 @@ country_event = {
     }
 }
 
-# Dock authoritian_support
+# Dock authoritarian_support
 country_event = {
-    id = confrontations_authoritian.2
+    id = confrontations_authoritarian.2
     hide_window = yes
 
     is_triggered_only = yes
@@ -245,19 +245,19 @@ country_event = {
             months = 3
         }
         export_resource_income_to_variable = {
-            resource = authoritian_support
-            variable = current_authoritian_support_income
+            resource = authoritarian_support
+            variable = current_authoritarian_support_income
         }
 
         # Three years income
         multiply_variable = {
-            which = current_authoritian_support_income
+            which = current_authoritarian_support_income
             value = 36
         }
 
         add_resource = {
-            authoritian_support = -1
-            mult = current_authoritian_support_income
+            authoritarian_support = -1
+            mult = current_authoritarian_support_income
         }
     }
 }
@@ -265,9 +265,9 @@ country_event = {
 
 # Political debate
 pop_faction_event = {
-    id = confrontations_authoritian.10
-    title = confrontations_authoritian.10
-    desc = confrontations_authoritian.10.desc
+    id = confrontations_authoritarian.10
+    title = confrontations_authoritarian.10
+    desc = confrontations_authoritarian.10.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -276,11 +276,11 @@ pop_faction_event = {
     show_sound = event_factions
 
     immediate = {
-        owner = { country_event = { id = confrontations_authoritian.2 } }
+        owner = { country_event = { id = confrontations_authoritarian.2 } }
     }
 
     option = {
-        name = confrontations_authoritian.10.a
+        name = confrontations_authoritarian.10.a
 
         owner = {
             add_monthly_resource_mult = {
@@ -290,17 +290,17 @@ pop_faction_event = {
                 min = 30
             }
             add_modifier = {
-                modifier = authoritian_debates_continue_modifier
+                modifier = authoritarian_debates_continue_modifier
                 years = 3
             }
         }
     }
     option = {
-        name = confrontations_authoritian.10.b
+        name = confrontations_authoritarian.10.b
 
         owner = {
             add_modifier = {
-                modifier = authoritian_debates_stopped_modifier
+                modifier = authoritarian_debates_stopped_modifier
                 years = 3
             }
         }
@@ -309,9 +309,9 @@ pop_faction_event = {
 
 # Inspiring Speech
 pop_faction_event = {
-    id = confrontations_authoritian.11
-    title = confrontations_authoritian.11
-    desc = confrontations_authoritian.11.desc
+    id = confrontations_authoritarian.11
+    title = confrontations_authoritarian.11
+    desc = confrontations_authoritarian.11.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -331,11 +331,11 @@ pop_faction_event = {
     }
 
     immediate = {
-        owner = { country_event = { id = confrontations_authoritian.2 } }
+        owner = { country_event = { id = confrontations_authoritarian.2 } }
     }
 
     option = {
-        name = confrontations_authoritian.11.a
+        name = confrontations_authoritarian.11.a
 
         owner = {
             random_owned_pop = {
@@ -365,11 +365,11 @@ pop_faction_event = {
         }
     }
     option = {
-        name = confrontations_authoritian.11.b
+        name = confrontations_authoritarian.11.b
 
         owner = {
             add_modifier = {
-                modifier = authoritian_speech_stopped_modifier
+                modifier = authoritarian_speech_stopped_modifier
                 years = 3
             }
         }
@@ -378,9 +378,9 @@ pop_faction_event = {
 
 # New leader
 pop_faction_event = {
-    id = confrontations_authoritian.12
-    title = confrontations_authoritian.12
-    desc = confrontations_authoritian.12.desc
+    id = confrontations_authoritarian.12
+    title = confrontations_authoritarian.12
+    desc = confrontations_authoritarian.12.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -389,11 +389,11 @@ pop_faction_event = {
     show_sound = event_factions
 
     immediate = {
-        owner = { country_event = { id = confrontations_authoritian.2 } }
+        owner = { country_event = { id = confrontations_authoritarian.2 } }
     }
 
     option = {
-        name = confrontations_authoritian.12.a
+        name = confrontations_authoritarian.12.a
         trigger = {
             NOT = {
                 is_pop_faction_type = militarist
@@ -414,7 +414,7 @@ pop_faction_event = {
         }
     }
     option = {
-        name = confrontations_authoritian.12.b
+        name = confrontations_authoritarian.12.b
         trigger = {
             NOR = {
                 is_pop_faction_type = spiritualist
@@ -435,7 +435,7 @@ pop_faction_event = {
         }
     }
     option = {
-        name = confrontations_authoritian.12.c
+        name = confrontations_authoritarian.12.c
         trigger = {
             NOR = {
                 is_pop_faction_type = pacifist
@@ -456,7 +456,7 @@ pop_faction_event = {
         }
     }
     option = {
-        name = confrontations_authoritian.12.d
+        name = confrontations_authoritarian.12.d
         trigger = {
             NOT = {
                 is_pop_faction_type = pacifist
@@ -480,9 +480,9 @@ pop_faction_event = {
 
 # Leader get owned!
 pop_faction_event = {
-    id = confrontations_authoritian.13
-    title = confrontations_authoritian.13
-    desc = confrontations_authoritian.13.desc
+    id = confrontations_authoritarian.13
+    title = confrontations_authoritarian.13
+    desc = confrontations_authoritarian.13.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -504,7 +504,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -539,7 +539,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -565,12 +565,12 @@ pop_faction_event = {
                     }
                 }
             }
-            country_event = { id = confrontations_authoritian.2 }
+            country_event = { id = confrontations_authoritarian.2 }
         }
     }
 
     option = {
-        name = confrontations_authoritian.13.a
+        name = confrontations_authoritarian.13.a
         trigger = {
             owner = {
                 count_owned_leader = {
@@ -594,7 +594,7 @@ pop_faction_event = {
         }
     }
     option = {
-        name = confrontations_authoritian.13.b
+        name = confrontations_authoritarian.13.b
         trigger = {
             owner = {
                 count_owned_leader = {
@@ -620,7 +620,7 @@ pop_faction_event = {
     }
 
     option = {
-        name = confrontations_authoritian.13.c
+        name = confrontations_authoritarian.13.c
         trigger = {
             NOT = {
                 event_target:confronted_leader = {
@@ -633,7 +633,7 @@ pop_faction_event = {
         }
     }
     option = {
-        name = confrontations_authoritian.13.d
+        name = confrontations_authoritarian.13.d
         trigger = {
             event_target:confronted_leader = {
                 OR = {
@@ -650,9 +650,9 @@ pop_faction_event = {
 
 # Faction trade deal
 pop_faction_event = {
-    id = confrontations_authoritian.14
-    title = confrontations_authoritian.14
-    desc = confrontations_authoritian.14.desc
+    id = confrontations_authoritarian.14
+    title = confrontations_authoritarian.14
+    desc = confrontations_authoritarian.14.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -675,11 +675,11 @@ pop_faction_event = {
     }
 
     immediate = {
-        owner = { country_event = { id = confrontations_authoritian.2 } }
+        owner = { country_event = { id = confrontations_authoritarian.2 } }
     }
 
     option = {
-        name = confrontations_authoritian.14.a
+        name = confrontations_authoritarian.14.a
 
         owner = {
             add_monthly_resource_mult = {
@@ -703,11 +703,11 @@ pop_faction_event = {
         }
     }
     option = {
-        name = confrontations_authoritian.14.b
+        name = confrontations_authoritarian.14.b
 
         owner = {
             add_modifier = {
-                modifier = authoritian_deal_stopped_modifier
+                modifier = authoritarian_deal_stopped_modifier
                 years = 3
             }
         }
@@ -716,9 +716,9 @@ pop_faction_event = {
 
 # Faction leader in debt
 pop_faction_event = {
-    id = confrontations_authoritian.15
-    title = confrontations_authoritian.15
-    desc = confrontations_authoritian.15.desc
+    id = confrontations_authoritarian.15
+    title = confrontations_authoritarian.15
+    desc = confrontations_authoritarian.15.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -727,11 +727,11 @@ pop_faction_event = {
     show_sound = event_factions
 
     immediate = {
-        owner = { country_event = { id = confrontations_authoritian.2 } }
+        owner = { country_event = { id = confrontations_authoritarian.2 } }
     }
 
     option = {
-        name = confrontations_authoritian.15.a
+        name = confrontations_authoritarian.15.a
 
         owner = {
             export_resource_income_to_variable = {
@@ -749,7 +749,7 @@ pop_faction_event = {
         }
     }
     option = {
-        name = confrontations_authoritian.15.b
+        name = confrontations_authoritarian.15.b
 
         owner = {
             every_owned_leader = {
@@ -763,7 +763,7 @@ pop_faction_event = {
             }
 
             add_modifier = {
-                modifier = authoritian_debt_stopped_modifier
+                modifier = authoritarian_debt_stopped_modifier
                 years = 3
             }
         }
@@ -772,9 +772,9 @@ pop_faction_event = {
 
 # Gift
 pop_faction_event = {
-    id = confrontations_authoritian.16
-    title = confrontations_authoritian.16
-    desc = confrontations_authoritian.16.desc
+    id = confrontations_authoritarian.16
+    title = confrontations_authoritarian.16
+    desc = confrontations_authoritarian.16.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -783,11 +783,11 @@ pop_faction_event = {
     show_sound = event_factions
 
     immediate = {
-        owner = { country_event = { id = confrontations_authoritian.2 } }
+        owner = { country_event = { id = confrontations_authoritarian.2 } }
     }
 
     option = {
-        name = confrontations_authoritian.16.a
+        name = confrontations_authoritarian.16.a
 
         owner = {
             add_monthly_resource_mult = {
@@ -803,7 +803,7 @@ pop_faction_event = {
                 min = 25
             }
             add_modifier = {
-                modifier = authoritian_gift_continue_modifier
+                modifier = authoritarian_gift_continue_modifier
                 years = 3
             }
         }
@@ -812,9 +812,9 @@ pop_faction_event = {
 
 # Riots
 pop_faction_event = {
-    id = confrontations_authoritian.20
-    title = confrontations_authoritian.20
-    desc = confrontations_authoritian.20.desc
+    id = confrontations_authoritarian.20
+    title = confrontations_authoritarian.20
+    desc = confrontations_authoritarian.20.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -823,15 +823,15 @@ pop_faction_event = {
     show_sound = event_super_explosion
 
     immediate = {
-        owner = { country_event = { id = confrontations_authoritian.2 } }
+        owner = { country_event = { id = confrontations_authoritarian.2 } }
     }
 
     option = {
-        name = confrontations_authoritian.20.a
+        name = confrontations_authoritarian.20.a
 
         owner = {
             add_modifier = {
-                modifier = authoritian_riots_continue_modifier
+                modifier = authoritarian_riots_continue_modifier
                 years = 3
             }
 
@@ -847,11 +847,11 @@ pop_faction_event = {
     }
 
     option = {
-        name = confrontations_authoritian.20.b
+        name = confrontations_authoritarian.20.b
 
         owner = {
             add_modifier = {
-                modifier = authoritian_riots_stopped_modifier
+                modifier = authoritarian_riots_stopped_modifier
                 years = 3
             }
         }
@@ -860,9 +860,9 @@ pop_faction_event = {
 
 # Faction corners production
 pop_faction_event = {
-    id = confrontations_authoritian.21
-    title = confrontations_authoritian.21
-    desc = confrontations_authoritian.21.desc
+    id = confrontations_authoritarian.21
+    title = confrontations_authoritarian.21
+    desc = confrontations_authoritarian.21.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -871,26 +871,26 @@ pop_faction_event = {
     show_sound = event_factions
 
     immediate = {
-        owner = { country_event = { id = confrontations_authoritian.2 } }
+        owner = { country_event = { id = confrontations_authoritarian.2 } }
     }
 
     option = {
-        name = confrontations_authoritian.21.a
+        name = confrontations_authoritarian.21.a
 
         owner = {
             add_modifier = {
-                modifier = authoritian_corner_production_continue_modifier
+                modifier = authoritarian_corner_production_continue_modifier
                 years = 3
             }
         }
     }
 
     option = {
-        name = confrontations_authoritian.21.b
+        name = confrontations_authoritarian.21.b
 
         owner = {
             add_modifier = {
-                modifier = authoritian_corner_production_stopped_modifier
+                modifier = authoritarian_corner_production_stopped_modifier
                 years = 3
             }
         }
@@ -899,9 +899,9 @@ pop_faction_event = {
 
 # Book Burning
 pop_faction_event = {
-    id = confrontations_authoritian.30
-    title = confrontations_authoritian.30
-    desc = confrontations_authoritian.30.desc
+    id = confrontations_authoritarian.30
+    title = confrontations_authoritarian.30
+    desc = confrontations_authoritarian.30.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -910,25 +910,25 @@ pop_faction_event = {
     show_sound = event_air_raid_siren
 
     immediate = {
-        owner = { country_event = { id = confrontations_authoritian.2 } }
+        owner = { country_event = { id = confrontations_authoritarian.2 } }
     }
 
     option = {
-        name = confrontations_authoritian.30.a
+        name = confrontations_authoritarian.30.a
 
         owner = {
             add_modifier = {
-                modifier = authoritian_violent_riots_continue_modifier
+                modifier = authoritarian_violent_riots_continue_modifier
                 years = 3
             }
         }
     }
     option = {
-        name = confrontations_authoritian.30.b
+        name = confrontations_authoritarian.30.b
 
         owner = {
             add_modifier = {
-                modifier = authoritian_violent_riots_stopped_modifier
+                modifier = authoritarian_violent_riots_stopped_modifier
                 years = 3
             }
         }
@@ -937,9 +937,9 @@ pop_faction_event = {
 
 # Ruler assassination
 pop_faction_event = {
-    id = confrontations_authoritian.80
-    title = confrontations_authoritian.80
-    desc = confrontations_authoritian.80.desc
+    id = confrontations_authoritarian.80
+    title = confrontations_authoritarian.80
+    desc = confrontations_authoritarian.80.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -959,21 +959,21 @@ pop_faction_event = {
     }
 
     immediate = {
-        owner = { country_event = { id = confrontations_authoritian.2 } }
+        owner = { country_event = { id = confrontations_authoritarian.2 } }
     }
 
     option = {
-        name = confrontations_authoritian.80.a
+        name = confrontations_authoritarian.80.a
 
         owner = {
             add_resource = {
                 ideological_purity_current_value = -25
-                authoritian_militancy_current_value = 10
-                authoritian_support = 10
+                authoritarian_militancy_current_value = 10
+                authoritarian_support = 10
             }
 
             add_modifier = {
-                modifier = authoritian_ruler_assassination_continue_modifier
+                modifier = authoritarian_ruler_assassination_continue_modifier
                 years = 3
             }
 
@@ -988,9 +988,9 @@ pop_faction_event = {
 
 # Faction assassinated non government faction
 pop_faction_event = {
-    id = confrontations_authoritian.81
-    title = confrontations_authoritian.81
-    desc = confrontations_authoritian.81.desc
+    id = confrontations_authoritarian.81
+    title = confrontations_authoritarian.81
+    desc = confrontations_authoritarian.81.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -1014,7 +1014,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -1049,7 +1049,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -1075,7 +1075,7 @@ pop_faction_event = {
                     }
                 }
             }
-            owner = { country_event = { id = confrontations_authoritian.2 } }
+            owner = { country_event = { id = confrontations_authoritarian.2 } }
         }
 
         event_target:assassinated_faction_leader = {
@@ -1086,7 +1086,7 @@ pop_faction_event = {
     }
 
     option = {
-        name = confrontations_authoritian.81.a
+        name = confrontations_authoritarian.81.a
 
         owner = {
             add_resource = {
@@ -1204,17 +1204,17 @@ pop_faction_event = {
                 limit = {
                     event_target:assassinated_leader_faction = {
                         OR = {
-                            is_pop_faction_type = authoritian
-                            is_pop_faction_type = authoritian_radicals
+                            is_pop_faction_type = authoritarian
+                            is_pop_faction_type = authoritarian_radicals
                         }
                     }
                 }
                 add_resource = {
-                    authoritian_militancy_current_value = 10
-                    authoritian_support = 100
+                    authoritarian_militancy_current_value = 10
+                    authoritarian_support = 100
                 }
                 add_modifier = {
-                    modifier = authoritian_faction_leader_assassination_continue_modifier
+                    modifier = authoritarian_faction_leader_assassination_continue_modifier
                     years = 3
                 }
             }
@@ -1242,9 +1242,9 @@ pop_faction_event = {
 
 # Coup
 pop_faction_event = {
-    id = confrontations_authoritian.90
-    title = confrontations_authoritian.90
-    desc = confrontations_authoritian.90.desc
+    id = confrontations_authoritarian.90
+    title = confrontations_authoritarian.90
+    desc = confrontations_authoritarian.90.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -1265,12 +1265,12 @@ pop_faction_event = {
             kill_leader = {
                 type = ruler
             }
-            owner = { country_event = { id = confrontations_authoritian.2 } }
+            owner = { country_event = { id = confrontations_authoritarian.2 } }
         }
     }
 
     option = {
-        name = confrontations_authoritian.90.a
+        name = confrontations_authoritarian.90.a
 
         owner = {
 
@@ -1279,7 +1279,7 @@ pop_faction_event = {
             }
 
             add_modifier = {
-                modifier = authoritian_coup_continue_modifier
+                modifier = authoritarian_coup_continue_modifier
                 years = 3
             }
 
@@ -1353,9 +1353,9 @@ pop_faction_event = {
 
 # Putsch
 pop_faction_event = {
-    id = confrontations_authoritian.91
-    title = confrontations_authoritian.91
-    desc = confrontations_authoritian.91.desc
+    id = confrontations_authoritarian.91
+    title = confrontations_authoritarian.91
+    desc = confrontations_authoritarian.91.desc
     hide_window = no
 
     is_triggered_only = yes
@@ -1369,9 +1369,9 @@ pop_faction_event = {
             every_owned_leader = {
                 limit = {
                     OR = {
-                        leader_of_faction = gov_authoritian
-                        leader_of_faction = authoritian
-                        leader_of_faction = authoritian_radicals
+                        leader_of_faction = gov_authoritarian
+                        leader_of_faction = authoritarian
+                        leader_of_faction = authoritarian_radicals
                     }
                 }
                 save_event_target_as = putsch_leader
@@ -1492,11 +1492,11 @@ pop_faction_event = {
             }
         }
 
-        owner = { country_event = { id = confrontations_authoritian.2 } }
+        owner = { country_event = { id = confrontations_authoritarian.2 } }
     }
 
     option = {
-        name = confrontations_authoritian.91.a
+        name = confrontations_authoritarian.91.a
 
         owner = {
             add_resource = {
@@ -1504,7 +1504,7 @@ pop_faction_event = {
             }
 
             add_modifier = {
-                modifier = authoritian_putsch_continue_modifier
+                modifier = authoritarian_putsch_continue_modifier
                 years = 3
             }
         }

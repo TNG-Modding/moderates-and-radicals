@@ -19,8 +19,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_faction_icon_authoritian_radicals"
-		textureFile = "gfx/interface/icons/faction_icons/faction_icons_authoritian_radicals_red.dds"
+		name = "GFX_faction_icon_authoritarian_radicals"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_authoritarian_radicals_red.dds"
 		noOfFrames = 1
 	}
 

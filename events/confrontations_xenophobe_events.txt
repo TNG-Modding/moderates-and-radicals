@@ -504,7 +504,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -539,7 +539,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -1014,7 +1014,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -1049,7 +1049,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -1204,17 +1204,17 @@ pop_faction_event = {
                 limit = {
                     event_target:assassinated_leader_faction = {
                         OR = {
-                            is_pop_faction_type = authoritian
-                            is_pop_faction_type = authoritian_radicals
+                            is_pop_faction_type = authoritarian
+                            is_pop_faction_type = authoritarian_radicals
                         }
                     }
                 }
                 add_resource = {
-                    authoritian_militancy_current_value = 10
-                    authoritian_support = 100
+                    authoritarian_militancy_current_value = 10
+                    authoritarian_support = 100
                 }
                 add_modifier = {
-                    modifier = authoritian_faction_leader_assassination_continue_modifier
+                    modifier = authoritarian_faction_leader_assassination_continue_modifier
                     years = 3
                 }
             }

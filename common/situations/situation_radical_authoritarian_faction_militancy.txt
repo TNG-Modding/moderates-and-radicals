@@ -1,9 +1,9 @@
-situation_radical_authoritian_faction_militancy = {
+situation_radical_authoritarian_faction_militancy = {
 	picture = GFX_evt_alien_segregation
 	category = negative
 
 	desc = {
-		text = situation_radical_authoritian_faction_desc
+		text = situation_radical_authoritarian_faction_desc
 	}
 
 	fail_icon = GFX_situation_outcome_meh
@@ -25,10 +25,10 @@ situation_radical_authoritian_faction_militancy = {
 	}
 
 	on_fail = {
-		custom_tooltip = situation_radical_authoritian_faction_fail_tooltip
+		custom_tooltip = situation_radical_authoritarian_faction_fail_tooltip
 		hidden_effect = {
 			owner = {
-				# Give authoritian satiated modifier
+				# Give authoritarian satiated modifier
 			}
 			destroy_situation = this
 		}
@@ -41,7 +41,7 @@ situation_radical_authoritian_faction_militancy = {
 	abort_trigger = {
 		NOT = {
 			owner = { 
-				has_faction = authoritian_radicals
+				has_faction = authoritarian_radicals
 			}
 		}
 	}
@@ -49,13 +49,13 @@ situation_radical_authoritian_faction_militancy = {
 	start_value = 10
 
 	stages = {
-		radical_authoritian_faction_militancy_complacent = {
+		radical_authoritarian_faction_militancy_complacent = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_green
 			
 			end = 25
 		}
-		radical_authoritian_faction_militancy_active = {
+		radical_authoritarian_faction_militancy_active = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_blue
 			# on_first_enter = {
@@ -64,7 +64,7 @@ situation_radical_authoritian_faction_militancy = {
 			# }
 			end = 75
 		}
-		radical_authoritian_faction_militancy_desperate = {
+		radical_authoritarian_faction_militancy_desperate = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_red
 			end = 100

@@ -76,7 +76,7 @@ country_event = {
                             pop_faction_event = { id = confrontations_{{faction}}.81 }
                         }
                         10 = {
-                            # {{EnemyEthic}} Book Burning
+                            # {{EnemyFaction}} Book Burning
                             pop_faction_event = { id = confrontations_{{faction}}.30 }
                         }
                         10 = {
@@ -96,7 +96,7 @@ country_event = {
                     }
                     random_list = {
                         40 = {
-                            # {{EnemyEthic}} Book Burning
+                            # {{EnemyFaction}} Book Burning
                             pop_faction_event = { id = confrontations_{{faction}}.30 }
                         }
                         25 = {
@@ -108,7 +108,7 @@ country_event = {
                             pop_faction_event = { id = confrontations_{{faction}}.21 }
                         }
                         5 = {
-                            # {{Ethic}} policy wording
+                            # {{Faction}} policy wording
                             pop_faction_event = { id = confrontations_{{faction}}.10 }
                         }
                         5 = {
@@ -152,7 +152,7 @@ country_event = {
                             pop_faction_event = { id = confrontations_{{faction}}.21 }
                         }
                         5 = {
-                            # {{Ethic}} policy wording
+                            # {{Faction}} policy wording
                             pop_faction_event = { id = confrontations_{{faction}}.10 }
                         }
                         5 = {
@@ -188,7 +188,7 @@ country_event = {
                     }
                     random_list = {
                         10 = {
-                            # {{Ethic}} policy wording
+                            # {{Faction}} policy wording
                             pop_faction_event = { id = confrontations_{{faction}}.10 }
                         }
                         15 = {
@@ -345,10 +345,10 @@ pop_faction_event = {
                         is_pop_category = specialist
                     }
                     NOT = {
-                        pop_has_ethic = ethic_{{ethic}}
+                        pop_has_ethic = ethic_{{faction}}
                     }
                 }
-                pop_change_ethic = ethic_{{ethic}}
+                pop_change_ethic = ethic_{{faction}}
             }
             random_owned_pop = {
                 limit = {
@@ -357,10 +357,10 @@ pop_faction_event = {
                         is_pop_category = specialist
                     }
                     NOT = {
-                        pop_has_ethic = ethic_{{ethic}}
+                        pop_has_ethic = ethic_{{faction}}
                     }
                 }
-                pop_change_ethic = ethic_{{ethic}}
+                pop_change_ethic = ethic_{{faction}}
             }
         }
     }
@@ -504,7 +504,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -539,7 +539,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -838,10 +838,10 @@ pop_faction_event = {
             random_owned_pop = {
                 limit = {
                     NOT = {
-                        pop_has_ethic = ethic_{{ethic}}
+                        pop_has_ethic = ethic_{{faction}}
                     }
                 }
-                pop_change_ethic = ethic_{{ethic}}
+                pop_change_ethic = ethic_{{faction}}
             }
         }
     }
@@ -1014,7 +1014,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -1049,7 +1049,7 @@ pop_faction_event = {
                         is_pop_faction_type = gov_materialist
                         is_pop_faction_type = gov_pacifist
                         is_pop_faction_type = gov_xenophile
-                        is_pop_faction_type = gov_authoritian
+                        is_pop_faction_type = gov_authoritarian
                         is_pop_faction_type = gov_spiritualist
                     }
                     owner = {
@@ -1204,17 +1204,17 @@ pop_faction_event = {
                 limit = {
                     event_target:assassinated_leader_faction = {
                         OR = {
-                            is_pop_faction_type = authoritian
-                            is_pop_faction_type = authoritian_radicals
+                            is_pop_faction_type = authoritarian
+                            is_pop_faction_type = authoritarian_radicals
                         }
                     }
                 }
                 add_resource = {
-                    authoritian_militancy_current_value = 10
-                    authoritian_support = 100
+                    authoritarian_militancy_current_value = 10
+                    authoritarian_support = 100
                 }
                 add_modifier = {
-                    modifier = authoritian_faction_leader_assassination_continue_modifier
+                    modifier = authoritarian_faction_leader_assassination_continue_modifier
                     years = 3
                 }
             }
@@ -1257,10 +1257,10 @@ pop_faction_event = {
             if = {
                 limit = {
                     NOT = {
-                        has_ethic = "ethic_fanatic_{{ethic}}"
+                        has_ethic = "ethic_fanatic_{{faction}}"
                     }
                 }
-                shift_ethic = ethic_{{ethic}}
+                shift_ethic = ethic_{{faction}}
             }
             kill_leader = {
                 type = ruler
@@ -1289,28 +1289,28 @@ pop_faction_event = {
                     count_owned_pop = {
                         count >= 3
                         limit = {
-                            NOT = { pop_has_ethic = ethic_{{ethic}} }
+                            NOT = { pop_has_ethic = ethic_{{faction}} }
                             is_pop_category = ruler
                         }
                     }
                 }
                 random_owned_pop = {
                     limit = {
-                        NOT = { pop_has_ethic = ethic_{{ethic}} }
+                        NOT = { pop_has_ethic = ethic_{{faction}} }
                         is_pop_category = ruler
                     }
                     kill_pop = yes
                 }
                 random_owned_pop = {
                     limit = {
-                        NOT = { pop_has_ethic = ethic_{{ethic}} }
+                        NOT = { pop_has_ethic = ethic_{{faction}} }
                         is_pop_category	= ruler
                     }
                     kill_pop = yes
                 }
                 random_owned_pop = {
                     limit = {
-                        NOT = { pop_has_ethic = ethic_{{ethic}} }
+                        NOT = { pop_has_ethic = ethic_{{faction}} }
                         is_pop_category	= ruler
                     }
                     kill_pop = yes
@@ -1319,14 +1319,14 @@ pop_faction_event = {
             else = {
                 random_owned_pop = {
                     limit = {
-                        NOT = { pop_has_ethic = ethic_{{ethic}} }
+                        NOT = { pop_has_ethic = ethic_{{faction}} }
                         is_pop_category	= ruler
                     }
                     kill_pop = yes
                 }
                 random_owned_pop = {
                     limit = {
-                        NOT = { pop_has_ethic = ethic_{{ethic}} }
+                        NOT = { pop_has_ethic = ethic_{{faction}} }
                         is_pop_category	= ruler
                     }
                     kill_pop = yes
