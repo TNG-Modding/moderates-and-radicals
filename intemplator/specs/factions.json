@@ -15,7 +15,9 @@
             "enemyFaction": "prosperity",
             "EnemyFaction": "Prosperity",
             "enemyAdjective": "pacifist",
-            "EnemyAdjective": "Pacifist"
+            "EnemyAdjective": "Pacifist",
+            "argumentFor": "wish to assert military dominance over the rest of the galaxy",
+            "argumentAgainst": "pacifist ideals while pushing for brutish jingoism"
         },
         {
             "varname": "supremacist_faction",
@@ -32,7 +34,9 @@
             "enemyFaction": "xenoist",
             "EnemyFaction": "Xenoist",
             "enemyAdjective": "xenoist",
-            "EnemyAdjective": "Xenoist"
+            "EnemyAdjective": "Xenoist",
+            "argumentFor": "seek to assert the primacy of the [Root.Owner.GetSpeciesAdj] species to the point of curtailing the rights of aliens where necessary",
+            "argumentAgainst": "xenoist ideals while pushing a detestable xenophobic agenda"
         },
         {
             "varname": "progressive_faction",
@@ -49,7 +53,9 @@
             "enemyFaction": "totalitarian",
             "EnemyFaction": "Totalitarian",
             "enemyAdjective": "totalitarian",
-            "EnemyAdjective": "Totalitarian"
+            "EnemyAdjective": "Totalitarian",
+            "argumentFor": "work for equality and justice for all denizens of our empire",
+            "argumentAgainst": "authoritarian ideals while pushing for mob rule and disorder"
         },
         {
             "varname": "technologist_faction",
@@ -66,7 +72,9 @@
             "enemyFaction": "traditionalist",
             "EnemyFaction": "Traditionalist",
             "enemyAdjective": "traditionalist",
-            "EnemyAdjective": "Traditionalist"
+            "EnemyAdjective": "Traditionalist",
+            "argumentFor": "support the advancement of the sciences",
+            "argumentAgainst": "spiritualist ideals while pushing a simpleminded approach to Being"
         },
         {
             "varname": "prosperity_faction",
@@ -83,7 +91,9 @@
             "enemyFaction": "imperialist",
             "EnemyFaction": "Imperialist",
             "enemyAdjective": "imperialist",
-            "EnemyAdjective": "Imperialist"
+            "EnemyAdjective": "Imperialist",
+            "argumentFor": "lobby for a national focus on financial growth and stability",
+            "argumentAgainst": "militarist ideals while pushing for inaction and weakness"
         },
         {
             "varname": "xenoist_faction",
@@ -100,7 +110,9 @@
             "enemyFaction": "supremacist",
             "EnemyFaction": "Supremacist",
             "enemyAdjective": "supremacist",
-            "EnemyAdjective": "Supremacist"
+            "EnemyAdjective": "Supremacist",
+            "argumentFor": "advocate for friendly relations with alien species",
+            "argumentAgainst": "supremacist ideals while pushing for the dissolution of our people and its culture"
         },
         {
             "varname": "totalitarian_faction",
@@ -117,7 +129,9 @@
             "enemyFaction": "progressive",
             "EnemyFaction": "Progressive",
             "enemyAdjective": "progressive",
-            "EnemyAdjective": "Progressive"
+            "EnemyAdjective": "Progressive",
+            "argumentFor": "advocate for extreme centralization of political and military power",
+            "argumentAgainst": "egalitarian ideals while pushing for cronyism and tyranny"
         },
         {
             "varname": "traditionalist_faction",
@@ -134,7 +148,9 @@
             "enemyFaction": "technologist",
             "EnemyFaction": "Technologist",
             "enemyAdjective": "technologist",
-            "EnemyAdjective": "Technologist"
+            "EnemyAdjective": "Technologist",
+            "argumentFor": "support spiritualist and conservative values",
+            "argumentAgainst": "materialist ideals while pushing unsubstantiated, unverifiable beliefs"
         }
     ]
 }

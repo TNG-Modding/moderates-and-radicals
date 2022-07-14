@@ -1,0 +1,151 @@
+situation_radical_traditionalist_faction_militancy = {
+	picture = GFX_evt_alien_segregation
+	category = negative
+
+	desc = {
+		text = situation_radical_traditionalist_faction_desc
+	}
+
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_revolt
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	on_start = {
+		if = {
+			limit = { years_passed < 3 }
+			log_error = "Isn't it a bit early to have a revolt? Owner: [Owner.GetName] (Origin: [Owner.GetOriginName]), Target: [Target.GetName]."
+		}
+	}
+
+	on_progress_complete = {
+		owner = {
+			# faction event for awful something
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = situation_radical_traditionalist_faction_fail_tooltip
+		hidden_effect = {
+			owner = {
+				# Give traditionalist satiated modifier
+			}
+			destroy_situation = this
+		}
+	}
+
+	on_abort = {
+		# Fire event saying militancy is over
+	}
+
+	abort_trigger = {
+		NOT = {
+			owner = { 
+				has_faction = traditionalist_radicals
+			}
+		}
+	}
+
+	start_value = 10
+
+	stages = {
+		radical_traditionalist_faction_militancy_complacent = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			
+			end = 25
+		}
+		radical_traditionalist_faction_militancy_active = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			# on_first_enter = {
+			# 	#Characteristics of the revolt (ethics)
+			# 	situation_event = { id = unrest.100 }
+			# }
+			end = 75
+		}
+		radical_traditionalist_faction_militancy_desperate = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+		}
+	}
+
+	on_monthly = {
+		# random_events = {
+		# 	100 = 0
+		# 	3 = unrest.101
+		# 	3 = unrest.105
+		# 	3 = unrest.110
+		# }
+	}
+
+	monthly_progress = {
+		base = 0
+		# modifier = {
+		# 	add = value:deficit_situation_progress_value|RESOURCE|energy|
+		# 	desc = string_expenditures_greater_than_income_energy
+		# 	owner = { has_actual_deficit = { RESOURCE = energy } }
+		# }
+		# modifier = {
+		# 	subtract = 5
+		# 	desc = string_not_in_deficit_energy
+		# 	owner = {
+		# 		has_modifier = {
+		# 			resource = energy
+		# 			value >= 0
+		# 		}
+		# 	}
+		# }
+		# modifier = {
+		# 	subtract = 1
+		# 	desc = string_resource_reserves_energy
+		# 	owner = {
+		# 		has_negative_income_with_stockpile = { RESOURCE = energy }
+		# 	}
+		# }
+	}
+
+	approach = {
+		name = approach_faction_militancy_ambivalent
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 2
+		}
+	}
+
+	approach = {
+		name = approach_faction_militancy_appeasement
+		icon = GFX_situation_approach_handshake
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+			category = situations
+			upkeep = {
+				unity = 30
+			}
+		}
+		ai_weight = {
+			base = 2
+		}
+	}
+
+	approach = {
+		name = approach_faction_militancy_crackdown
+		icon = GFX_situation_approach_whip
+		icon_background = GFX_situation_approach_bg_red
+		resources = {
+			category = situations
+			upkeep = {
+				unity = 30
+			}
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+}
