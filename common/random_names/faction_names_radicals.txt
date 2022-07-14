@@ -1,0 +1,94 @@
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "radical_xenophile"
+		}
+	}
+	lookups = "<xenoist_names_1> <xenoist_names_2> <radical_groups>"
+	format = format.pop_faction.xenoist_radicals
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "radical_xenophobe"
+		}
+	}
+	lookups = "[This.Owner.GetSpeciesName] <supremacist_names_1> <radical_groups>"
+	format = format.pop_faction.supremacist_radicals
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "radical_militarist"
+		}
+	}
+	lookups = "<imperialist_names> <radical_groups>"
+	format = format.pop_faction.imperialist_radicals
+}
+
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "radical_authoritarian"
+		}
+	}
+	lookups = "<totalitarian_names_1> <radical_groups>"
+	format = format.pop_faction.totalitarian_radicals
+}
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "radical_egalitarian"
+		}
+	}
+	lookups = "<progressive_names_1> <radical_groups>"
+	format = format.pop_faction.progressive_radicals
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "radical_pacifist"
+		}
+	}
+	lookups = "<prosperity_names_1> <radical_groups>"
+	format = format.pop_faction.prosperity_radicals
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "radical_materialist"
+		}
+	}
+	lookups = "<technologist_names_1> <radical_groups>"
+	format = format.pop_faction.technologist_radicals
+}
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "radical_spiritualist"
+		}
+	}
+	lookups = "<radical_groups> <traditionalist_names_2>"
+	format = format.pop_faction.traditionalist_radicals
+}

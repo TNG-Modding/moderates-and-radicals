@@ -1,0 +1,94 @@
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gov_xenophile"
+		}
+	}
+	lookups = "<xenoist_names_1> <xenoist_names_2> <xenoist_names_3>"
+	format = format.pop_faction.xenoist
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gov_xenophobe"
+		}
+	}
+	lookups = "[This.Owner.GetSpeciesName] <supremacist_names_1> <supremacist_names_2>"
+	format = format.pop_faction.supremacist
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gov_militarist"
+		}
+	}
+	lookups = "<imperialist_names>"
+	format = format.pop_faction.imperialist
+}
+
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gov_authoritarian"
+		}
+	}
+	lookups = "<totalitarian_names_1> <totalitarian_names_2>"
+	format = format.pop_faction.totalitarian
+}
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gov_egalitarian"
+		}
+	}
+	lookups = "<progressive_names_1> <progressive_names_2>"
+	format = format.pop_faction.progressive
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gov_pacifist"
+		}
+	}
+	lookups = "<prosperity_names_1> <prosperity_names_2>"
+	format = format.pop_faction.prosperity
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gov_materialist"
+		}
+	}
+	lookups = "<technologist_names_1> <technologist_names_2>"
+	format = format.pop_faction.technologist
+}
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gov_spiritualist"
+		}
+	}
+	lookups = "<traditionalist_names_1> <traditionalist_names_2>"
+	format = format.pop_faction.traditionalist
+}

@@ -1,0 +1,11 @@
+pop_faction_name_parts_list = {
+	key = "radical_groups"
+	parts = {
+		Cell = 1
+		Rebellion = 1
+		Uprising = 1
+		Revolt = 1
+		Revolution = 1
+		Insurgency = 1
+	}
+}

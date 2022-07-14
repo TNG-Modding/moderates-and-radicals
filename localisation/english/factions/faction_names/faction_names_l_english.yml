@@ -1,0 +1,16 @@
+﻿l_english:
+ Cell:0 "Cell"
+ Rebellion:0 "Rebellion"
+ Uprising:0 "Uprising"
+ Revolt:0 "Revolt"
+ Revolution:0 "Revolution"
+ Insurgency:0 "Insurgency"
+
+ format.pop_faction.supremacist_radicals:0 "[This.Owner.GetSpeciesName] <supremacist_names_1> <radical_groups>"
+ format.pop_faction.imperialist_radicals:0 "<imperialist_names> <radical_groups>"
+ format.pop_faction.totalitarian_radicals:0 "<totalitarian_names_1> <radical_groups>"
+ format.pop_faction.progressive_radicals:0 "<progressive_names_1> <radical_groups>"
+ format.pop_faction.prosperity_radicals:0 "<prosperity_names_1> <radical_groups>"
+ format.pop_faction.technologist_radicals:0 "<radical_groups> <technologist_names_2>"
+ format.pop_faction.traditionalist_radicals:0 "<traditionalist_names_1> <radical_groups>"
+ format.pop_faction.xenoist_radicals:0 "<radical_groups> <xenoist_names_2> <xenoist_names_3>"
