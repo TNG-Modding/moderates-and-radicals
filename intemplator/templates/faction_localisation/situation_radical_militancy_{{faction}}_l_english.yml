@@ -8,7 +8,7 @@ l_english:
  situation_radical_{{faction}}_militancy_fail:0 "Radical {{Faction}}s Appeased"
 
  radical_{{faction}}_faction_militancy_complacent:0 "Complacent Faction"
- radical_{{faction}}_faction_militancy_active:0 "Complacent Faction"
+ radical_{{faction}}_faction_militancy_active:0 "Active Faction"
  radical_{{faction}}_faction_militancy_desperate:0 "Desperate Faction"
 
  approach_radical_{{faction}}_militancy_ambivalent:0 "Neglect"

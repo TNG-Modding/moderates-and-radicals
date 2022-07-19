@@ -2,9 +2,7 @@ situation_radical_militarist_militancy = {
 	picture = GFX_evt_alien_segregation
 	category = negative
 
-	desc = {
-		text = situation_radical_militarist_militancy_desc
-	}
+	desc = situation_radical_militarist_militancy_desc
 
 	fail_icon = GFX_situation_outcome_meh
 	fail_icon_frame = GFX_situation_outcome_frame_green
@@ -20,11 +18,12 @@ situation_radical_militarist_militancy = {
 
 	on_progress_complete = {
 		custom_tooltip = situation_radical_militarist_militancy_complete
+		situation_event = { id = confrontations_militarist.90 } # Coup
 		owner = {
-			random_events = {
-				40 = confrontations_militarist.90 # Coup
-				60 = confrontations_militarist.91 # Putch
-			}
+			# random_events = {
+			# 	40 = confrontations_militarist.90 # Coup
+			# 	60 = confrontations_militarist.91 # Putch
+			# }
 		}
 	}
 
@@ -76,10 +75,7 @@ situation_radical_militarist_militancy = {
 	}
 
 	on_monthly = {
-		random_events = {
-			1000 = 0
-			10 = confrontations_militarist.16 # Gift
-		}
+		situation_event = { id = confrontations_militarist.16 } # Gift 
 		# if = {
 		# 	limit = {
 		# 		current_stage = radical_militarist_faction_militancy_complacent
