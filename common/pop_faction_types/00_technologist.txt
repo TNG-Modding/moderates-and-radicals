@@ -1,27 +1,24 @@
 ##############################
-# Materialist Faction
+# Technologist Faction
 ##############################
 
 technologist = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_materialist
+	use_guiding_ethic_as_pop_filter = no
 
 	unique = yes
-	support_multiplier = 0.5
+	support_multiplier = 1
 
 	resources = {
 		category = pop_factions
 		produces = {
-			trigger = {
-				owner = { years_passed > 10
-				has_encountered_other_species = yes }
-			}
-			influence = 2
+			unity = 0.5
 		}
 	}
 
 	is_potential = {
-		years_passed > 1000000
+		years_passed > 20000
 	}
 
 	parameters = {
@@ -38,16 +35,14 @@ technologist = {
 	}
 
 	can_join_faction = {
-		is_shackled_robot = no
-		NOT = { has_trait = trait_nerve_stapled }
-		NOR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
-		}
 		OR = {
 			has_ethic = ethic_materialist
-			has_ethic = ethic_fanatic_materialist
 			is_robot_pop = yes
+		}
+		is_shackled_robot = no
+		can_think = yes
+		NOT = {
+			has_ethic = ethic_spiritualist
 		}
 	}
 
@@ -83,10 +78,6 @@ technologist = {
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
-		}
-		modifier = {
-			factor = 0.25
-			leader_class = ruler
 		}
 	}
 
@@ -149,6 +140,13 @@ technologist = {
 					has_communications = root.owner
 					is_country_type = default
 					NOT = { has_government = gov_successor_khanate }
+					root.owner = {
+						has_intel_level = {
+							who = prev
+							category = technology
+							level >= 1
+						}
+					}
 				}
 				NOR = {
 					has_country_flag = primitives_can_into_space
@@ -164,6 +162,13 @@ technologist = {
 						has_communications = root.owner
 						is_country_type = default
 						NOT = { has_government = gov_successor_khanate }
+						root.owner = {
+							has_intel_level = {
+								who = prev
+								category = technology
+								level >= 1
+							}
+						}
 						relative_power = {
 							who = root.owner
 							category = technology
@@ -186,7 +191,8 @@ technologist = {
 		potential = {
 			exists = owner
 			owner = {
-				num_communications > 2
+				num_communications > 3
+				NOT = { has_valid_civic = civic_inwards_perfection }
 			}
 		}
 
@@ -220,15 +226,24 @@ technologist = {
 		fulfilled_effect = 0.001
 
 		potential = {
+			years_passed >= 50 #otherwise, just a penalty for meeting Mechanists early
 			exists = owner
 			owner = {
 				NOT = { has_ascension_perk = ap_synthetic_evolution }
 				any_relation = {
 					has_communications = root.owner
-					any_owned_pop = {
+					root.owner = {
+						has_intel_level = {
+							who = prev
+							category = economy
+							level >= 1
+						}
+					}
+					is_gestalt = no
+					any_owned_species = {
 						OR = {
-							pop_has_trait = trait_mechanical
-							pop_has_trait = trait_cybernetic
+							has_trait = trait_mechanical
+							has_trait = trait_cybernetic
 						}
 					}
 				}
@@ -237,10 +252,10 @@ technologist = {
 
 		trigger = {
 			owner = {
-				any_owned_pop = {
+				any_owned_species = {
 					OR = {
-						pop_has_trait = trait_mechanical
-						pop_has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+						has_trait = trait_cybernetic
 					}
 				}
 			}
@@ -248,7 +263,7 @@ technologist = {
 	}
 
 	on_create = {
-		pop_faction_event = { id = faction_spawn.1 }
+		pop_faction_event = { id = factions.1 }
 	}
 
 	demand = {
@@ -316,17 +331,19 @@ technologist = {
 		unfulfilled_effect = -0.001
 
 		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					has_modifier = artifact_cybrex_research_completed
-					has_modifier = artifact_irassian_research_completed
-					has_modifier = artifact_league_research_completed
-					has_modifier = artifact_vultaum_research_completed_suppressed
-					has_modifier = artifact_vultaum_research_completed_public
-					has_country_flag = artifact_yuht_research_completed
-				}
-			}
+            host_has_dlc = "Ancient Relics Story Pack"
+            exists = owner
+            owner = {
+                OR = {
+                    has_country_flag = irassian_world_found
+                    has_country_flag = yuht_world_found
+                    has_country_flag = vultaum_world_found
+                    has_country_flag = cybrex_world_found
+                    has_country_flag = league_world_found
+                    has_country_flag = last_baol_system
+                    has_country_flag = last_zroni_system
+                }
+            }
 		}
 
 		trigger = {
@@ -338,6 +355,8 @@ technologist = {
 					has_modifier = artifact_vultaum_research_completed_suppressed
 					has_modifier = artifact_vultaum_research_completed_public
 					has_country_flag = artifact_yuht_research_completed
+					has_modifier = artifact_baol_research_completed
+					has_modifier = artifact_zroni_research_completed
 				}
 			}
 		}
@@ -383,16 +402,189 @@ technologist = {
 	}
 
 	actions = {
-		conduct_operation = {
-			title = "CONDUCT_OPERATION"
-			description = "CONDUCT_OPERATION_DESC"
+		embrace_faction = {
+			title = "EMBRACE_FACTION"
+			description = "EMBRACE_FACTION_DESC"
+
+			cost = {
+				unity = 5000
+			}
 
 			potential = {
 				exists = owner
+				owner = {
+					OR = {
+						is_subject = no
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
+					}
+				}
+			}
+
+			valid = {
+				custom_tooltip = {
+					fail_text = EMBRACE_FACTION_COOLDOWN
+					parameter:empire = {
+						NOT = { has_modifier = embraced_faction_timer }
+					}
+				}
+				support > 0.20
+				parameter:empire = {
+					NOT = { has_ethic = "ethic_fanatic_materialist" }
+				}
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_materialist.1 }
+				add_modifier = { modifier = embraced_faction days = 3600 }
+				parameter:empire = {
+					shift_ethic = ethic_materialist
+					hidden_effect = {
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						every_pop_faction = {
+							limit = { NOT = { is_same_value = root } }
+							add_modifier = { modifier = embraced_another_faction days = 3600 }
+						}
+					}
+				}
+				hidden_effect = {
+					save_event_target_as = TargetFaction
+					parameter:empire = {
+						every_relation = {
+							limit = {
+								is_ai = no
+								is_country_type = default
+								has_communications = prev
+								has_intel_level = {
+									who = prev
+									category = government
+									level >= 1
+								}
+							}
+							country_event = { id = factions.2000 }
+						}
+					}
+				}
+			}
+
+			ai_weight = {
+				base = 1
+				modifier = {
+					factor = 0
+					support < 0.50
+					owner = {
+						has_ethic = ethic_materialist
+					}
+				}
+				modifier = {
+					factor = 0
+					owner = { has_valid_civic = civic_fanatic_purifiers }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						owner = {
+							exists = ruler
+							ruler = {
+								leader_of_faction = technologist
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					owner = {
+						count_pop_faction = {
+							count < 4
+						}
+					}
+				}
+			}
+		}
+		promote_faction = {
+			title = "PROMOTE_FACTION"
+			description = "PROMOTE_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					NOR = {
+						has_modifier = suppressed_materialist
+						has_modifier = promoted_materialist
+					}
+				}
+			}
+
+			effect = {
+				parameter:empire = {
+					add_modifier = { modifier = promoted_materialist days = -1 }
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_promote_faction = {
+			title = "CANCEL_PROMOTE_FACTION"
+			description = "CANCEL_PROMOTE_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					has_modifier = promoted_materialist
+				}
+			}
+
+			effect = {
+				parameter:empire = {
+					remove_modifier = promoted_materialist
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		suppress_faction = {
+			title = "SUPPRESS_FACTION"
+			description = "SUPPRESS_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					NOR = {
+						has_modifier = suppressed_materialist
+						has_modifier = promoted_materialist
+					}
+				}
+			}
+
+			effect = {
+				add_modifier = { modifier = suppressed_faction days = -1 }
+				parameter:empire = {
+					add_modifier = { modifier = suppressed_materialist days = -1 }
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_suppress_faction = {
+			title = "CANCEL_SUPPRESS_FACTION"
+			description = "CANCEL_SUPPRESS_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					has_modifier = suppressed_materialist
+				}
+			}
+
+			effect = {
+				remove_modifier = suppressed_faction
+				parameter:empire = {
+					remove_modifier = suppressed_materialist
+				}
 			}
 
 			ai_weight = {

@@ -1,27 +1,24 @@
 ##############################
-# Militarist Faction
+# Imperialist Faction
 ##############################
 
 imperialist = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_militarist
+	guiding_ethic = ethic_militarist #only pops of this ethic can join the faction
 
 	unique = yes
-	support_multiplier = 0.5
+	support_multiplier = 1
 
 	resources = {
 		category = pop_factions
 		produces = {
-			trigger = {
-				owner = { years_passed > 10
-				has_encountered_other_species = yes }
-			}
-			influence = 2
+			unity = 0.5
 		}
 	}
 
+	#Note: number of potential or actual members is checked by POP_FACTION_MIN_POTENTIAL_MEMBERS define
 	is_potential = {
-		years_passed > 1000000
+		years_passed > 20000
 	}
 
 	parameters = {
@@ -40,11 +37,7 @@ imperialist = {
 
 	can_join_faction = {
 		is_shackled_robot = no
-		NOT = { has_trait = trait_nerve_stapled }
-		OR = {
-			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
-		}
+		can_think = yes
 	}
 
 	attraction = {
@@ -79,10 +72,6 @@ imperialist = {
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
-		}
-		modifier = {
-			factor = 0.25
-			leader_class = ruler
 		}
 	}
 
@@ -158,7 +147,7 @@ imperialist = {
 
 		trigger = {
 			owner = {
-				has_country_flag = militarist_conquest_timed_flag
+				has_country_flag = imperialist_conquest_timed_flag
 			}
 		}
 	}
@@ -198,17 +187,13 @@ imperialist = {
 			owner = {
 				num_communications > 2
 				NOT = { has_valid_civic = civic_fanatic_purifiers }
-				count_rival_country = {
-					count < 2
-				}
+				num_rivals < 2
 			}
 		}
 
 		trigger = {
 			owner = {
-				any_rival_country = {
-					exists = this
-				}
+				num_rivals > 0
 			}
 		}
 	}
@@ -226,20 +211,13 @@ imperialist = {
 			owner = {
 				num_communications > 2
 				NOT = { has_valid_civic = civic_fanatic_purifiers }
-				count_rival_country = {
-					count > 1
-				}
-				count_rival_country = {
-					count < 3
-				}
+				num_rivals = 2
 			}
 		}
 
 		trigger = {
 			owner = {
-				count_rival_country = {
-					count > 1
-				}
+				num_rivals > 1
 			}
 		}
 	}
@@ -257,17 +235,13 @@ imperialist = {
 			owner = {
 				num_communications > 2
 				NOT = { has_valid_civic = civic_fanatic_purifiers }
-				count_rival_country = {
-					count > 2
-				}
+				num_rivals > 2
 			}
 		}
 
 		trigger = {
 			owner = {
-				count_rival_country = {
-					count > 2
-				}
+				num_rivals > 2
 			}
 		}
 	}
@@ -315,13 +289,41 @@ imperialist = {
 		potential = {
 			exists = owner
 			owner = {
+				has_overlord_dlc = no
 				is_subject = yes
 			}
 		}
 
 		trigger = {
 			owner = {
+				is_subject = no
+			}
+		}
+	}
+
+	demand = {
+		title = "IMPERIALIST_BULWARK"
+		unfulfilled_title = "IMPERIALIST_NOT_BULWARK"
+		desc = "IMPERIALIST_BULWARK_DESC"
+
+		unfulfilled_effect = -25
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				has_overlord_dlc = yes
 				is_subject = yes
+				is_specialist_subject_type = { TYPE = bulwark }
+			}
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					is_subject = no
+					is_specialist_subject_type = { TYPE = bulwark }
+				}
 			}
 		}
 	}
@@ -341,20 +343,7 @@ imperialist = {
 				OR = {
 					has_country_flag = killed_guardian
 					any_country = {
-						OR = {
-							is_country_type = guardian
-							is_country_type = guardian_dragon
-							is_country_type = guardian_stellarite
-							is_country_type = guardian_wraith #
-							is_country_type = guardian_hiver
-							is_country_type = guardian_horror
-							is_country_type = guardian_fortress
-							is_country_type = guardian_dreadnought
-							is_country_type = guardian_sphere
-							is_country_type = guardian_scavenger_bot
-							is_country_type = guardian_elderly_tiyanki
-							is_country_type = guardian_hatchling
-						}
+						is_guardian_country = yes
 						has_communications = prev
 					}
 				}
@@ -449,7 +438,7 @@ imperialist = {
 				is_country_type = default
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_xenophobe
+					has_policy_flag = diplo_stance_supremacist
 				}
 			}
 		}
@@ -458,7 +447,7 @@ imperialist = {
 			owner = {
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_xenophobe
+					has_policy_flag = diplo_stance_supremacist
 				}
 			}
 		}
@@ -488,8 +477,54 @@ imperialist = {
 		}
 	}
 
+	demand = {
+		title = "IMPERIALIST_BENEVOLENT_SUBJUGATION_POLICY"
+		unfulfilled_title = "IMPERIALIST_NO_BENEVOLENT_SUBJUGATION_POLICY"
+		desc = "IMPERIALIST_BENEVOLENT_SUBJUGATION_POLICY_DESC"
+
+		unfulfilled_effect = -5
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				is_subject = no
+				has_policy_flag = benevolent_terms
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT = { has_policy_flag = benevolent_terms }
+			}
+		}
+	}
+
+	demand = {
+		title = "IMPERIALIST_OPPRESSIVE_SUBJUGATION_POLICY"
+		unfulfilled_title = "IMPERIALIST_ADOPT_OPPRESSIVE_SUBJUGATION_POLICY"
+		desc = "IMPERIALIST_OPPRESSIVE_SUBJUGATION_POLICY_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				is_subject = no
+				NOT = { has_policy_flag = benevolent_terms }
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_policy_flag = oppressive_terms
+			}
+		}
+	}
+
 	on_create = {
-		pop_faction_event = { id = faction_spawn.1 }
+		pop_faction_event = { id = factions.1 }
 	}
 
 	on_destroy = {
@@ -508,16 +543,185 @@ imperialist = {
 	}
 
 	actions = {
-		conduct_operation = {
-			title = "CONDUCT_OPERATION"
-			description = "CONDUCT_OPERATION_DESC"
+		embrace_faction = {
+			title = "EMBRACE_FACTION"
+			description = "EMBRACE_FACTION_DESC"
+
+			cost = {
+				unity = 5000
+			}
 
 			potential = {
 				exists = owner
+				owner = {
+					OR = {
+						is_subject = no
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
+					}
+				}
+			}
+
+			valid = {
+				custom_tooltip = {
+					fail_text = EMBRACE_FACTION_COOLDOWN
+					parameter:empire = {
+						NOT = { has_modifier = embraced_faction_timer }
+					}
+				}
+				support > 0.20
+				parameter:empire = {
+					NOT = { has_ethic = "ethic_fanatic_militarist" }
+				}
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_militarist.1 }
+				add_modifier = { modifier = embraced_faction days = 3600 }
+				parameter:empire = {
+					shift_ethic = ethic_militarist
+					hidden_effect = {
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						every_pop_faction = {
+							limit = { NOT = { is_same_value = root } }
+							add_modifier = { modifier = embraced_another_faction days = 3600 }
+						}
+					}
+				}
+				hidden_effect = {
+					save_event_target_as = TargetFaction
+					parameter:empire = {
+						every_relation = {
+							limit = {
+								is_ai = no
+								is_country_type = default
+								has_communications = prev
+								has_intel_level = {
+									who = prev
+									category = government
+									level >= 1
+								}
+							}
+							country_event = { id = factions.2000 }
+						}
+					}
+				}
+			}
+
+			ai_weight = {
+				base = 1
+				modifier = {
+					factor = 0
+					support < 0.50
+					owner = {
+						has_ethic = ethic_militarist
+					}
+				}
+				modifier = {
+					factor = 0
+					owner = { has_valid_civic = civic_fanatic_purifiers }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						owner = {
+							exists = ruler
+							ruler = {
+								leader_of_faction = imperialist
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					owner = {
+						count_pop_faction = {
+							count < 4
+						}
+					}
+				}
+			}
+		}
+		promote_faction = {
+			title = "PROMOTE_FACTION"
+			description = "PROMOTE_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					NOR = {
+						has_modifier = suppressed_militarist
+						has_modifier = promoted_militarist
+					}
+				}
+			}
+
+			effect = {
+				parameter:empire = {
+					add_modifier = { modifier = promoted_militarist days = -1 }
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_promote_faction = {
+			title = "CANCEL_PROMOTE_FACTION"
+			description = "CANCEL_PROMOTE_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = { has_modifier = promoted_militarist }
+			}
+
+			effect = {
+				parameter:empire = {
+					remove_modifier = promoted_militarist
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		suppress_faction = {
+			title = "SUPPRESS_FACTION"
+			description = "SUPPRESS_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					NOR = {
+						has_modifier = suppressed_militarist
+						has_modifier = promoted_militarist
+					}
+				}
+			}
+
+			effect = {
+				add_modifier = { modifier = suppressed_faction days = -1 }
+				parameter:empire = {
+					add_modifier = { modifier = suppressed_militarist days = -1 }
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_suppress_faction = {
+			title = "CANCEL_SUPPRESS_FACTION"
+			description = "CANCEL_SUPPRESS_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = { has_modifier = suppressed_militarist }
+			}
+
+			effect = {
+				remove_modifier = suppressed_faction
+				parameter:empire = {
+					remove_modifier = suppressed_militarist
+				}
 			}
 
 			ai_weight = {

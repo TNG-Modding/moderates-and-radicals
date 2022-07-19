@@ -12,12 +12,12 @@ isolationist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
+			unity = 0.5
 		}
 	}
 
 	is_potential = {
-		years_passed > 1000000
+		years_passed > 20000
 	}
 
 	parameters = {
@@ -36,11 +36,7 @@ isolationist = {
 
 	can_join_faction = {
 		is_shackled_robot = no
-		NOT = { has_trait = trait_nerve_stapled }
-		OR = {
-			has_ethic = ethic_xenophobe
-			has_ethic = ethic_fanatic_xenophobe
-		}
+		can_think = yes
 		OR = {
 			NOT = { is_same_species = owner_species }
 			owner = {
@@ -220,6 +216,7 @@ isolationist = {
 		trigger = {
 			owner = {
 				NOR = {
+					num_migration_pacts > 0 #doesn't check all the stuff below, but early exclude if it is true
 					any_relation = {
 						has_communications = root.owner
 						OR = {
@@ -263,11 +260,9 @@ isolationist = {
 
 		trigger = {
 			owner = {
-				any_country = {
-					OR = {
-						has_non_aggression_pact = root.owner
-						has_association_status = root.owner
-					}
+				OR = {
+					num_non_aggression_pacts > 0
+					exists = associated_federation
 				}
 			}
 		}
@@ -462,8 +457,33 @@ isolationist = {
 		}
 	}
 
+	demand = {
+		title = "ISOLATIONIST_REPEAL_PROACTIVE_FIRST_CONTACT_POLICY"
+		unfulfilled_title = "ISOLATIONIST_NO_PROACTIVE_FIRST_CONTACT_POLICY"
+		desc = "ISOLATIONIST_REPEAL_PROACTIVE_FIRST_CONTACT_POLICY_DESC"
+
+		unfulfilled_effect = -10
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					years_passed <= 75
+					has_country_flag = recent_first_contact_process_started
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT = { has_policy_flag = first_contact_proactive }
+			}
+		}
+	}
+
 	on_create = {
-		pop_faction_event = { id = faction_spawn.1 }
+		pop_faction_event = { id = factions.1 }
 	}
 
 	on_destroy = {
@@ -487,7 +507,7 @@ isolationist = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				unity = 5000
 			}
 
 			potential = {
@@ -495,7 +515,7 @@ isolationist = {
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = { is_subject_type = dominion }
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
 					}
 				}
 			}
@@ -519,7 +539,7 @@ isolationist = {
 					shift_ethic = ethic_xenophobe
 					hidden_effect = {
 						every_pop_faction = { # embraces xenophobe ethos
-							limit = { is_pop_faction_type = xenophobe }
+							limit = { is_pop_faction_type = supremacist }
 							add_modifier = { modifier = embraced_faction days = 3600 }
 						}
 						add_modifier = { modifier = embraced_faction_timer days = 3600 }
@@ -537,6 +557,11 @@ isolationist = {
 								is_ai = no
 								is_country_type = default
 								has_communications = prev
+								has_intel_level = {
+									who = prev
+									category = government
+									level >= 1
+								}
 							}
 							country_event = { id = factions.2000 }
 						}
@@ -642,7 +667,7 @@ isolationist = {
 				parameter:empire = {
 					hidden_effect = {
 						every_pop_faction = {
-							limit = { is_pop_faction_type = xenophobe }
+							limit = { is_pop_faction_type = supremacist }
 							add_modifier = { modifier = suppressed_faction days = -1 }
 						}
 					}
@@ -671,7 +696,7 @@ isolationist = {
 					remove_modifier = suppressed_xenophobe
 					hidden_effect = {
 						every_pop_faction = {
-							limit = { is_pop_faction_type = xenophobe }
+							limit = { is_pop_faction_type = supremacist }
 							remove_modifier = suppressed_faction
 						}
 					}

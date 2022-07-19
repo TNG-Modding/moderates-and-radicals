@@ -1,5 +1,5 @@
 ##############################
-# Peaceful Pacifist Faction
+# Peaceful Prosperity Faction
 ##############################
 
 prosperity = {
@@ -7,21 +7,10 @@ prosperity = {
 	guiding_ethic = ethic_pacifist
 
 	unique = yes
-	support_multiplier = 0.5
-
-	resources = {
-		category = pop_factions
-		produces = {
-			trigger = {
-				owner = { years_passed > 10
-				has_encountered_other_species = yes }
-			}
-			influence = 2
-		}
-	}
+	support_multiplier = 1
 
 	is_potential = {
-		years_passed > 1000000
+		years_passed > 20000
 	}
 
 	parameters = {
@@ -33,6 +22,13 @@ prosperity = {
 		}
 	}
 
+	resources = {
+		category = pop_factions
+		produces = {
+			unity = 0.5
+		}
+	}
+
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
@@ -40,8 +36,7 @@ prosperity = {
 
 	can_join_faction = {
 		is_shackled_robot = no
-		NOT = { has_trait = trait_nerve_stapled }
-		has_ethic = ethic_pacifist
+		can_think = yes
 	}
 
 	attraction = {
@@ -95,10 +90,6 @@ prosperity = {
 			factor = 0.0
 			is_event_leader = yes
 		}
-		modifier = {
-			factor = 0.25
-			leader_class = ruler
-		}
 	}
 
 	demand = {
@@ -131,22 +122,10 @@ prosperity = {
 		fulfilled_effect = 10
 		unfulfilled_effect = -0.001
 
-		potential = { # TODO get a reasonable trigger for counting colonies?
+		potential = {
 			exists = owner
 			owner = {
-				any_owned_planet = {
-					NOT = { is_same_value = root.capital_scope }
-					root = {
-						owner = {
-							any_owned_planet = {
-								NOR = {
-									is_same_value = prevprevprev
-									is_same_value = root.owner.capital_scope
-								}
-							}
-						}
-					}
-				}
+				num_owned_planets >= 3
 			}
 		}
 
@@ -330,7 +309,7 @@ prosperity = {
 				is_country_type = default
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_xenophobe
+					has_policy_flag = diplo_stance_supremacist
 				}
 			}
 		}
@@ -339,14 +318,14 @@ prosperity = {
 			owner = {
 				NOR = {
 					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_xenophobe
+					has_policy_flag = diplo_stance_supremacist
 				}
 			}
 		}
 	}
 
 	on_create = {
-		pop_faction_event = { id = faction_spawn.1 }
+		pop_faction_event = { id = factions.1 }
 	}
 
 	on_destroy = {
@@ -365,16 +344,189 @@ prosperity = {
 	}
 
 	actions = {
-		conduct_operation = {
-			title = "CONDUCT_OPERATION"
-			description = "CONDUCT_OPERATION_DESC"
+		embrace_faction = {
+			title = "EMBRACE_FACTION"
+			description = "EMBRACE_FACTION_DESC"
+
+			cost = {
+				unity = 5000
+			}
 
 			potential = {
 				exists = owner
+				owner = {
+					OR = {
+						is_subject = no
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
+					}
+				}
+			}
+
+			valid = {
+				custom_tooltip = {
+					fail_text = EMBRACE_FACTION_COOLDOWN
+					parameter:empire = {
+						NOT = { has_modifier = embraced_faction_timer }
+					}
+				}
+				support > 0.20
+				parameter:empire = {
+					NOT = { has_ethic = "ethic_fanatic_pacifist" }
+				}
 			}
 
 			effect = {
-				pop_faction_event = { id = operations_pacifist.1 }
+				add_modifier = { modifier = embraced_faction days = 3600 }
+				parameter:empire = {
+					shift_ethic = ethic_pacifist
+					hidden_effect = {
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						every_pop_faction = {
+							limit = { NOT = { is_same_value = root } }
+							add_modifier = { modifier = embraced_another_faction days = 3600 }
+						}
+					}
+				}
+				hidden_effect = {
+					save_event_target_as = TargetFaction
+					parameter:empire = {
+						every_relation = {
+							limit = {
+								is_ai = no
+								is_country_type = default
+								has_communications = prev
+								has_intel_level = {
+									who = prev
+									category = government
+									level >= 1
+								}
+							}
+							country_event = { id = factions.2000 }
+						}
+					}
+				}
+			}
+
+			ai_weight = {
+				base = 1
+				modifier = {
+					factor = 0
+					support < 0.50
+					owner = {
+						has_ethic = ethic_pacifist
+					}
+				}
+				modifier = {
+					factor = 0
+					owner = { has_valid_civic = civic_fanatic_purifiers }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						owner = {
+							exists = ruler
+							ruler = {
+								leader_of_faction = prosperity
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					owner = {
+						count_pop_faction = {
+							count < 4
+						}
+					}
+				}
+			}
+		}
+		promote_faction = {
+			title = "PROMOTE_FACTION"
+			description = "PROMOTE_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					NOR = {
+						has_modifier = suppressed_pacifist
+						has_modifier = promoted_pacifist
+					}
+				}
+			}
+
+			effect = {
+				parameter:empire = {
+					add_modifier = { modifier = promoted_pacifist days = -1 }
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_promote_faction = {
+			title = "CANCEL_PROMOTE_FACTION"
+			description = "CANCEL_PROMOTE_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					has_modifier = promoted_pacifist
+				}
+			}
+
+			effect = {
+				parameter:empire = {
+					remove_modifier = promoted_pacifist
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		suppress_faction = {
+			title = "SUPPRESS_FACTION"
+			description = "SUPPRESS_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					NOR = {
+						has_modifier = suppressed_pacifist
+						has_modifier = promoted_pacifist
+					}
+				}
+			}
+
+			effect = {
+				add_modifier = { modifier = suppressed_faction days = -1 }
+				parameter:empire = {
+					add_modifier = { modifier = suppressed_pacifist days = -1 }
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_suppress_faction = {
+			title = "CANCEL_SUPPRESS_FACTION"
+			description = "CANCEL_SUPPRESS_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					has_modifier = suppressed_pacifist
+				}
+			}
+
+			effect = {
+				remove_modifier = suppressed_faction
+				parameter:empire = {
+					remove_modifier = suppressed_pacifist
+				}
 			}
 
 			ai_weight = {
