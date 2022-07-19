@@ -1,0 +1,41 @@
+﻿l_english:
+
+ spiritualist_no_status:0 ", who are new to the political stage,"
+
+
+ spiritualist_debates_continue_status:0 ", that passed a policy with §HSpiritualist§! wording,"
+ spiritualist_debates_stopped_status:0 ", whose §HSpiritualist§! policy we rewrote,"
+
+ spiritualist_speech_continue_status:0 ", whose leader §B[Root.Leader.GetName]§! recently gave a resounding speech,"
+ spiritualist_speech_stopped_status:0 ", whose §HSpiritualist§! speech we rebutted,"
+
+ spiritualist_star_governor_status:0 ", from whom we recently promoted a governor,"
+ spiritualist_star_scientist_status:0 ", from whom we recently promoted a scientist,"
+ spiritualist_star_admiral_status:0 ", from whom we recently promoted an admiral,"
+ spiritualist_star_general_status:0 ", from whom we recently promoted a general,"
+ spiritualist_star_stopped_status:0 ", whose rising star we passed over,"
+
+ spiritualist_deal_continue_status:0 ", who recently secured us a deal on §YConsumer Goods§!,"
+ spiritualist_deal_stopped_status:0 ", who recently tried to cheat us out of our §YConsumer Goods§! production,"
+
+ spiritualist_debt_continue_status:0 ", whose leader we recently bailed out,"
+ spiritualist_debt_stopped_status:0 ", who are angry we didn't fund their faction,"
+ 
+ spiritualist_gift_continue_status:0 ", that recently gifted §YConsumer Goods§! to our government,"
+
+ spiritualist_riots_continue_status:0 ", whose riots we endorsed,"
+ spiritualist_riots_stopped_status:0 ", whose riots we shut down,"
+
+ spiritualist_corner_production_continue_status:0 ", whose control of the §YConsumer Goods§! market we endorsed,"
+ spiritualist_corner_production_stopped_status:0 ", whose control of the §YConsumer Goods§! market we disrupted,"
+
+ spiritualist_violent_riots_continue_status:0 ", whose §HMaterialist§! holovid burning we allowed to continue,"
+ spiritualist_violent_riots_stopped_status:0 ", whose §HMaterialist§! holovid burning we shut down,"
+
+ spiritualist_ruler_assassination_continue_status:0 ", who agents assassinated our [Root.Owner.Leader.GetTitle],"
+
+ spiritualist_faction_leader_assassination_continue_status:0 ", who agents assassinated a faction leader recently,"
+
+ spiritualist_coup_continue_status:0 ", that recently seized the government,"
+
+ spiritualist_putsch_continue_status:0 ", that recently violently seized power,"

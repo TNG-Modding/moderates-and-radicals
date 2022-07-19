@@ -1,0 +1,8 @@
+set_status = {
+	hidden_effect = {
+		set_variable = {
+			which = status
+			value = $STATUS$
+		}
+	}
+}

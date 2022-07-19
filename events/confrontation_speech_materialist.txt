@@ -1,0 +1,77 @@
+namespace = confrontations_materialist
+
+situation_event = {
+    id = confrontations_materialist.11
+    title = confrontations_materialist.11
+    desc = confrontations_materialist.11.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_assembly_fight
+    show_sound = event_factions
+
+    trigger = {
+        owner = {
+            count_owned_leader = {
+                limit = {
+                    leader_of_faction = prevprev
+                }
+                count = 1
+            }
+        }
+    }
+    
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_materialist
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_materialist.11.a
+
+        owner = {
+            random_owned_pop = {
+                limit = {
+                    OR = {
+                        is_pop_category = ruler
+                        is_pop_category = specialist
+                    }
+                    NOT = {
+                        pop_has_ethic = ethic_materialist
+                    }
+                }
+                pop_change_ethic = ethic_materialist
+            }
+            random_owned_pop = {
+                limit = {
+                    OR = {
+                        is_pop_category = ruler
+                        is_pop_category = specialist
+                    }
+                    NOT = {
+                        pop_has_ethic = ethic_materialist
+                    }
+                }
+                pop_change_ethic = ethic_materialist
+            }
+        }
+    }
+    option = {
+        name = confrontations_materialist.11.b
+
+        owner = {
+            add_modifier = {
+                modifier = materialist_speech_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

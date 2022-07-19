@@ -1,0 +1,41 @@
+﻿l_english:
+
+ pacifist_no_status:0 ", who are new to the political stage,"
+
+
+ pacifist_debates_continue_status:0 ", that passed a policy with §HPacifist§! wording,"
+ pacifist_debates_stopped_status:0 ", whose §HPacifist§! policy we rewrote,"
+
+ pacifist_speech_continue_status:0 ", whose leader §B[Root.Leader.GetName]§! recently gave a resounding speech,"
+ pacifist_speech_stopped_status:0 ", whose §HPacifist§! speech we rebutted,"
+
+ pacifist_star_governor_status:0 ", from whom we recently promoted a governor,"
+ pacifist_star_scientist_status:0 ", from whom we recently promoted a scientist,"
+ pacifist_star_admiral_status:0 ", from whom we recently promoted an admiral,"
+ pacifist_star_general_status:0 ", from whom we recently promoted a general,"
+ pacifist_star_stopped_status:0 ", whose rising star we passed over,"
+
+ pacifist_deal_continue_status:0 ", who recently secured us a deal on §YConsumer Goods§!,"
+ pacifist_deal_stopped_status:0 ", who recently tried to cheat us out of our §YConsumer Goods§! production,"
+
+ pacifist_debt_continue_status:0 ", whose leader we recently bailed out,"
+ pacifist_debt_stopped_status:0 ", who are angry we didn't fund their faction,"
+ 
+ pacifist_gift_continue_status:0 ", that recently gifted §YConsumer Goods§! to our government,"
+
+ pacifist_riots_continue_status:0 ", whose riots we endorsed,"
+ pacifist_riots_stopped_status:0 ", whose riots we shut down,"
+
+ pacifist_corner_production_continue_status:0 ", whose control of the §YConsumer Goods§! market we endorsed,"
+ pacifist_corner_production_stopped_status:0 ", whose control of the §YConsumer Goods§! market we disrupted,"
+
+ pacifist_violent_riots_continue_status:0 ", whose §HMilitarist§! holovid burning we allowed to continue,"
+ pacifist_violent_riots_stopped_status:0 ", whose §HMilitarist§! holovid burning we shut down,"
+
+ pacifist_ruler_assassination_continue_status:0 ", who agents assassinated our [Root.Owner.Leader.GetTitle],"
+
+ pacifist_faction_leader_assassination_continue_status:0 ", who agents assassinated a faction leader recently,"
+
+ pacifist_coup_continue_status:0 ", that recently seized the government,"
+
+ pacifist_putsch_continue_status:0 ", that recently violently seized power,"

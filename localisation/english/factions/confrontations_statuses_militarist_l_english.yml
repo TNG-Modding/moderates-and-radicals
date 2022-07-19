@@ -1,0 +1,41 @@
+﻿l_english:
+
+ militarist_no_status:0 ", who are new to the political stage,"
+
+
+ militarist_debates_continue_status:0 ", that passed a policy with §HMilitarist§! wording,"
+ militarist_debates_stopped_status:0 ", whose §HMilitarist§! policy we rewrote,"
+
+ militarist_speech_continue_status:0 ", whose leader §B[Root.Leader.GetName]§! recently gave a resounding speech,"
+ militarist_speech_stopped_status:0 ", whose §HMilitarist§! speech we rebutted,"
+
+ militarist_star_governor_status:0 ", from whom we recently promoted a governor,"
+ militarist_star_scientist_status:0 ", from whom we recently promoted a scientist,"
+ militarist_star_admiral_status:0 ", from whom we recently promoted an admiral,"
+ militarist_star_general_status:0 ", from whom we recently promoted a general,"
+ militarist_star_stopped_status:0 ", whose rising star we passed over,"
+
+ militarist_deal_continue_status:0 ", who recently secured us a deal on §YAlloys§!,"
+ militarist_deal_stopped_status:0 ", who recently tried to cheat us out of our §YAlloys§! production,"
+
+ militarist_debt_continue_status:0 ", whose leader we recently bailed out,"
+ militarist_debt_stopped_status:0 ", who are angry we didn't fund their faction,"
+ 
+ militarist_gift_continue_status:0 ", that recently gifted §YAlloys§! to our government,"
+
+ militarist_riots_continue_status:0 ", whose riots we endorsed,"
+ militarist_riots_stopped_status:0 ", whose riots we shut down,"
+
+ militarist_corner_production_continue_status:0 ", whose control of the §YAlloys§! market we endorsed,"
+ militarist_corner_production_stopped_status:0 ", whose control of the §YAlloys§! market we disrupted,"
+
+ militarist_violent_riots_continue_status:0 ", whose §HPacifist§! holovid burning we allowed to continue,"
+ militarist_violent_riots_stopped_status:0 ", whose §HPacifist§! holovid burning we shut down,"
+
+ militarist_ruler_assassination_continue_status:0 ", who agents assassinated our [Root.Owner.Leader.GetTitle],"
+
+ militarist_faction_leader_assassination_continue_status:0 ", who agents assassinated a faction leader recently,"
+
+ militarist_coup_continue_status:0 ", that recently seized the government,"
+
+ militarist_putsch_continue_status:0 ", that recently violently seized power,"

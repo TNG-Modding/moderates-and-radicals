@@ -1,10 +1,11 @@
 ﻿l_english:
- situation_radical_pacifist_militancy:0 "Radical Pacifist Militancy" 
+ situation_radical_pacifist_militancy:0 "Radical Pacifism" 
  situation_radical_pacifist_militancy_desc:0 "The Pacifists advocate inaction and weakness. We can't have that. If we let them be, they will grow ever more desperate. We must take action against them and their pacifism."
  situation_radical_pacifist_militancy_type:0 "Radical Pacifist Militancy Type"
  situation_radical_pacifist_militancy_monthly_change_tooltip:0 "Radical Pacifist Militancy Monthly Change Tooltip"
 
- situation_radical_pacifist_militancy_tooltip:0 "Radical Pacifist Militancy Tooltip"
+ situation_radical_pacifist_militancy_complete:0 "Radical Pacifist Seize Government"
+ situation_radical_pacifist_militancy_fail:0 "Radical Pacifists Appeased"
 
  radical_pacifist_faction_militancy_complacent:0 "Complacent Faction"
  radical_pacifist_faction_militancy_active:0 "Complacent Faction"

@@ -19,13 +19,17 @@ situation_radical_xenophile_militancy = {
 	}
 
 	on_progress_complete = {
+		custom_tooltip = situation_radical_xenophile_militancy_complete
 		owner = {
-			# faction event for awful something
+			random_events = {
+				40 = confrontations_xenophile.90 # Coup
+				60 = confrontations_xenophile.91 # Putch
+			}
 		}
 	}
 
 	on_fail = {
-		custom_tooltip = situation_radical_xenophile_militancy_tooltip
+		custom_tooltip = situation_radical_xenophile_militancy_fail
 		hidden_effect = {
 			owner = {
 				# Give xenophile satiated modifier
@@ -72,12 +76,50 @@ situation_radical_xenophile_militancy = {
 	}
 
 	on_monthly = {
-		# random_events = {
-		# 	100 = 0
-		# 	3 = unrest.101
-		# 	3 = unrest.105
-		# 	3 = unrest.110
+		random_events = {
+			1000 = 0
+			10 = confrontations_xenophile.16 # Gift
+		}
+		# if = {
+		# 	limit = {
+		# 		current_stage = radical_xenophile_faction_militancy_complacent
+		# 	}
+		# 	random_events = {
+		# 		# 1000 = 0
+		# 		10 = confrontations_xenophile.16 # Gift
+		# 		# 10 = confrontations_xenophile.12 # New leader
+		# 		# 10 = confrontations_xenophile.10 # Xenophile policy wording
+		# 		# 10 = confrontations_xenophile.14 # Faction trade deal
+		# 		# 10 = confrontations_xenophile.11 # Inspiring speech
+		# 	}
 		# }
+
+		# if = {
+		# 	limit = {
+		# 		current_stage = radical_xenophile_faction_militancy_active
+		# 	}
+		# 	random_events = {
+		# 		# 1000 = 0
+		# 		# 10 = confrontations_xenophile.30 # Xenophobe Book Burning
+		# 		# 10 = confrontations_xenophile.20 # Xenophile Riots and Endorse Movement
+		# 		# 10 = confrontations_xenophile.13 # Leader got owned
+		# 		# 10 = confrontations_xenophile.15 # Faction leader in debt
+		# 		10 = confrontations_xenophile.21 # Xenophile Corner Market 				
+		# 	}
+		# }
+
+		# if = {
+		# 	limit = {
+		# 		current_stage = radical_xenophile_faction_militancy_desperate
+		# 	}
+		# 	random_events = {
+		# 		# 1000 = 0
+		# 		10 = confrontations_xenophile.80 # Ruler Assassinated
+		# 		# 10 = confrontations_xenophile.81 # Faction Leader Assassinated
+		# 		# 10 = confrontations_xenophile.30 # Xenophobe Book Burning
+		# 		# 10 = confrontations_xenophile.20 # Xenophile Riots and Endorse Movement
+		# 	}
+		# }		
 	}
 
 	monthly_progress = {

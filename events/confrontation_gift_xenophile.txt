@@ -1,0 +1,48 @@
+namespace = confrontations_xenophile
+
+situation_event = {
+    id = confrontations_xenophile.16
+    title = confrontations_xenophile.16
+    desc = confrontations_xenophile.16.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_ship_offloading_cargo
+    show_sound = event_factions
+
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_xenophile
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_xenophile.16.a
+
+        owner = {
+            add_monthly_resource_mult = {
+                resource = consumer_goods
+                value = 6
+                max = 1000
+                min = 25
+            }
+            add_monthly_resource_mult = {
+                resource = energy
+                value = 6
+                max = 1000
+                min = 25
+            }
+            add_modifier = {
+                modifier = xenophile_gift_continue_modifier
+                years = 3
+            }
+        }
+    }
+}

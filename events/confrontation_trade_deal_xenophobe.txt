@@ -1,0 +1,75 @@
+namespace = confrontations_xenophobe
+
+situation_event = {
+    id = confrontations_xenophobe.14
+    title = confrontations_xenophobe.14
+    desc = confrontations_xenophobe.14.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_tradedeal
+    show_sound = event_factions
+
+    trigger = {
+        owner = {
+            count_owned_leader = {
+                count > 0
+                limit = {
+                    leader_of_faction = root
+                    NOT = {
+                        has_trait = leader_trait_arrested_development
+                    }
+                }
+            }
+        }
+    }
+
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_xenophobe
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+
+    option = {
+        name = confrontations_xenophobe.14.a
+
+        owner = {
+            add_monthly_resource_mult = {
+                resource = alloys
+                value = 6
+                max = 1000
+                min = 30
+            }
+            export_resource_income_to_variable = {
+                resource = energy
+                variable = temp_energy_income
+            }
+            multiply_variable = {
+                which = temp_energy_income
+                value = 9
+            }
+            add_resource = {
+                energy = -1
+                mult = temp_energy_income
+            }
+        }
+    }
+    option = {
+        name = confrontations_xenophobe.14.b
+
+        owner = {
+            add_modifier = {
+                modifier = xenophobe_deal_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

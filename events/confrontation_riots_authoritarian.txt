@@ -1,0 +1,55 @@
+namespace = confrontations_authoritarian
+
+situation_event = {
+    id = confrontations_authoritarian.20
+    title = confrontations_authoritarian.20
+    desc = confrontations_authoritarian.20.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_night_raid
+    show_sound = event_super_explosion
+    
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_authoritarian
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+    option = {
+        name = confrontations_authoritarian.20.a
+
+        owner = {
+            add_modifier = {
+                modifier = authoritarian_riots_continue_modifier
+                years = 3
+            }
+
+            random_owned_pop = {
+                limit = {
+                    NOT = {
+                        pop_has_ethic = ethic_authoritarian
+                    }
+                }
+                pop_change_ethic = ethic_authoritarian
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_authoritarian.20.b
+
+        owner = {
+            add_modifier = {
+                modifier = authoritarian_riots_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

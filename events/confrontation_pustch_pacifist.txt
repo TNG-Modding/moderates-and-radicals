@@ -1,0 +1,165 @@
+namespace = confrontations_pacifist
+
+situation_event = {
+    id = confrontations_pacifist.91
+    title = confrontations_pacifist.91
+    desc = confrontations_pacifist.91.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_alien_propaganda
+    show_sound = event_air_raid_siren
+
+    immediate = {
+        owner = {
+
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_pacifist
+                }
+                save_event_target_as = situation_faction
+            }
+
+            # Assign event_target:putsch_leader
+            every_owned_leader = {
+                limit = {
+                    OR = {
+                        leader_of_faction = gov_pacifist
+                        leader_of_faction = fringe_pacifist
+                        leader_of_faction = radical_pacifist
+                    }
+                }
+                save_event_target_as = putsch_leader
+            }
+
+            # Kill all leaders who arent the putsch leader
+            every_owned_leader = {
+                limit = { NOT = { is_same_value = event_target:putsch_leader }}
+                kill_leader = { }
+            }
+
+            # Assign event_target:putsch_leader to ruler
+            assign_leader = event_target:putsch_leader
+
+            # Governor for each sector
+            every_owned_sector = {
+                owner = {
+                    create_leader = {
+                        name = random
+                        class = governor
+                        skill = 1
+                        species = owner_main_species
+                        traits = {
+                            trait = random_trait
+                        }
+                        effect = {
+                            save_event_target_as = new_governor
+                        }
+                    }
+                }
+
+                assign_leader = event_target:new_governor
+            }
+
+            # Scientist for every science ship
+            every_owned_ship = {
+                limit = {
+                    is_ship_class = shipclass_science_ship
+                }
+                owner = {
+                    create_leader = {
+                        name = random
+                        class = scientist
+                        skill = 1
+                        species = owner_main_species
+                        traits = {
+                            trait = random_trait
+                        }
+                        effect = {
+                            save_event_target_as = new_science_ship_scientist
+                        }
+                    }
+                }
+                fleet = {
+                    assign_leader = event_target:new_science_ship_scientist
+                }
+            }
+            # Scientist for each category
+            create_leader = {
+                name = random
+                class = scientist
+                skill = 1
+                species = owner_main_species
+                traits = {
+                    trait = random_trait
+                }
+                effect = {
+                    save_event_target_as = new_scientist
+                }
+            }
+            create_leader = {
+                name = random
+                class = scientist
+                skill = 1
+                species = owner_main_species
+                traits = {
+                    trait = random_trait
+                }
+                effect = {
+                    save_event_target_as = new_scientist
+                }
+            }
+            create_leader = {
+                name = random
+                class = scientist
+                skill = 1
+                species = owner_main_species
+                traits = {
+                    trait = random_trait
+                }
+                effect = {
+                    save_event_target_as = new_scientist
+                }
+            }
+
+            # Create an admiral
+            random_owned_fleet = {
+                limit = {
+                    is_civilian = no
+                }
+                owner = {
+                    create_leader = {
+                        name = random
+                        class = admiral
+                        skill = 1
+                        species = owner_main_species
+                        traits = {
+                            trait = random_trait
+                        }
+
+                        effect = {
+                            save_event_target_as = new_admiral
+                        }
+                    }
+                }
+
+                assign_leader = event_target:new_admiral
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_pacifist.91.a
+
+        owner = {
+            # Remove ideo purity
+
+            add_modifier = {
+                modifier = pacifist_putsch_continue_modifier
+                years = 3
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+namespace = confrontations_{{faction}}
+
+situation_event = {
+    id = confrontations_{{faction}}.90
+    title = confrontations_{{faction}}.90
+    desc = confrontations_{{faction}}.90.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_open_revolt
+    show_sound = event_super_explosion
+
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_{{faction}}
+                }
+                save_event_target_as = situation_faction
+            }
+
+            if = {
+                limit = {
+                    NOT = {
+                        has_ethic = "ethic_fanatic_{{faction}}"
+                    }
+                }
+                shift_ethic = ethic_{{faction}}
+            }
+            kill_leader = {
+                type = ruler
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_{{faction}}.90.a
+
+        owner = {
+
+            # Remove ideo purity
+
+            add_modifier = {
+                modifier = {{faction}}_coup_continue_modifier
+                years = 3
+            }
+
+            # Kill rulers of wrong ethic
+            if = {
+                limit = {
+                    count_owned_pop = {
+                        count >= 3
+                        limit = {
+                            NOT = { pop_has_ethic = ethic_{{faction}} }
+                            is_pop_category = ruler
+                        }
+                    }
+                }
+                random_owned_pop = {
+                    limit = {
+                        NOT = { pop_has_ethic = ethic_{{faction}} }
+                        is_pop_category = ruler
+                    }
+                    kill_pop = yes
+                }
+                random_owned_pop = {
+                    limit = {
+                        NOT = { pop_has_ethic = ethic_{{faction}} }
+                        is_pop_category	= ruler
+                    }
+                    kill_pop = yes
+                }
+                random_owned_pop = {
+                    limit = {
+                        NOT = { pop_has_ethic = ethic_{{faction}} }
+                        is_pop_category	= ruler
+                    }
+                    kill_pop = yes
+                }
+            }
+            else = {
+                random_owned_pop = {
+                    limit = {
+                        NOT = { pop_has_ethic = ethic_{{faction}} }
+                        is_pop_category	= ruler
+                    }
+                    kill_pop = yes
+                }
+                random_owned_pop = {
+                    limit = {
+                        NOT = { pop_has_ethic = ethic_{{faction}} }
+                        is_pop_category	= ruler
+                    }
+                    kill_pop = yes
+                }
+            }
+
+            # Inform others
+            # every_relation = {
+            #     limit = {
+            #         is_ai = no
+            #         is_country_type = default
+            #         has_communications = prev
+            #         has_intel_level = {
+            #             who = prev
+            #             category = government
+            #             level >= 1
+            #         }
+            #     }
+            #     country_event = { id = factions.2000 }
+            # }
+        }
+    }
+}

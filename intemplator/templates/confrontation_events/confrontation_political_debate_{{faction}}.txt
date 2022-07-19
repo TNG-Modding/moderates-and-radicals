@@ -1,0 +1,52 @@
+namespace = confrontations_{{faction}}
+
+situation_event = {
+    id = confrontations_{{faction}}.10
+    title = confrontations_{{faction}}.10
+    desc = confrontations_{{faction}}.10.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_assembly_fight
+    show_sound = event_factions
+
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_{{faction}}
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_{{faction}}.10.a
+
+        owner = {
+            add_monthly_resource_mult = {
+                resource = {{resource}}
+                value = 6
+                max = 1000
+                min = 30
+            }
+            add_modifier = {
+                modifier = {{faction}}_debates_continue_modifier
+                years = 3
+            }
+        }
+    }
+    option = {
+        name = confrontations_{{faction}}.10.b
+
+        owner = {
+            add_modifier = {
+                modifier = {{faction}}_debates_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

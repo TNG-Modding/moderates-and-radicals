@@ -1,0 +1,55 @@
+namespace = confrontations_egalitarian
+
+situation_event = {
+    id = confrontations_egalitarian.20
+    title = confrontations_egalitarian.20
+    desc = confrontations_egalitarian.20.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_night_raid
+    show_sound = event_super_explosion
+    
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_egalitarian
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+    option = {
+        name = confrontations_egalitarian.20.a
+
+        owner = {
+            add_modifier = {
+                modifier = egalitarian_riots_continue_modifier
+                years = 3
+            }
+
+            random_owned_pop = {
+                limit = {
+                    NOT = {
+                        pop_has_ethic = ethic_egalitarian
+                    }
+                }
+                pop_change_ethic = ethic_egalitarian
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_egalitarian.20.b
+
+        owner = {
+            add_modifier = {
+                modifier = egalitarian_riots_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

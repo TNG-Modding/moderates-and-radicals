@@ -1,0 +1,47 @@
+namespace = confrontations_{{faction}}
+
+situation_event = {
+    id = confrontations_{{faction}}.21
+    title = confrontations_{{faction}}.21
+    desc = confrontations_{{faction}}.21.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_ship_offloading_cargo
+    show_sound = event_factions
+
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_{{faction}}
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_{{faction}}.21.a
+
+        owner = {
+            add_modifier = {
+                modifier = {{faction}}_corner_production_continue_modifier
+                years = 3
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_{{faction}}.21.b
+
+        owner = {
+            add_modifier = {
+                modifier = {{faction}}_corner_production_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+namespace = confrontations_authoritarian
+
+situation_event = {
+    id = confrontations_authoritarian.11
+    title = confrontations_authoritarian.11
+    desc = confrontations_authoritarian.11.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_assembly_fight
+    show_sound = event_factions
+
+    trigger = {
+        owner = {
+            count_owned_leader = {
+                limit = {
+                    leader_of_faction = prevprev
+                }
+                count = 1
+            }
+        }
+    }
+    
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_authoritarian
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_authoritarian.11.a
+
+        owner = {
+            random_owned_pop = {
+                limit = {
+                    OR = {
+                        is_pop_category = ruler
+                        is_pop_category = specialist
+                    }
+                    NOT = {
+                        pop_has_ethic = ethic_authoritarian
+                    }
+                }
+                pop_change_ethic = ethic_authoritarian
+            }
+            random_owned_pop = {
+                limit = {
+                    OR = {
+                        is_pop_category = ruler
+                        is_pop_category = specialist
+                    }
+                    NOT = {
+                        pop_has_ethic = ethic_authoritarian
+                    }
+                }
+                pop_change_ethic = ethic_authoritarian
+            }
+        }
+    }
+    option = {
+        name = confrontations_authoritarian.11.b
+
+        owner = {
+            add_modifier = {
+                modifier = authoritarian_speech_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

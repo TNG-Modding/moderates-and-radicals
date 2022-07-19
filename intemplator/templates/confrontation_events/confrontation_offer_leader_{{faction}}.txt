@@ -1,0 +1,92 @@
+namespace = confrontations_{{faction}}
+
+situation_event = {
+    id = confrontations_{{faction}}.12
+    title = confrontations_{{faction}}.12
+    desc = confrontations_{{faction}}.12.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_acquire_asset
+    show_sound = event_factions
+
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_{{faction}}
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    {% if faction != "militarist" %}
+    option = {
+        name = confrontations_{{faction}}.12.a
+        owner = {
+            create_leader = {
+                name = random
+                class = governor
+                skill = 2
+                species = owner_main_species
+                traits = {
+                    trait = random_trait
+                }
+            }
+        }
+    }
+    {% endif %}
+
+    {% if faction != "spiritualist" %}
+    option = {
+        name = confrontations_{{faction}}.12.b
+        owner = {
+            create_leader = {
+                name = random
+                class = scientist
+                skill = 2
+                species = owner_main_species
+                traits = {
+                    trait = random_trait
+                }
+            }
+        }
+    }
+    {% endif %}
+
+    {% if faction != "pacifist" %}
+    option = {
+        name = confrontations_{{faction}}.12.c
+        owner = {
+            create_leader = {
+                name = random
+                class = admiral
+                skill = 2
+                species = owner_main_species
+                traits = {
+                    trait = random_trait
+                }
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_{{faction}}.12.d
+        owner = {
+            create_leader = {
+                name = random
+                class = general
+                skill = 2
+                species = owner_main_species
+                traits = {
+                    trait = random_trait
+                }
+            }
+        }
+    }
+    {% endif %}
+}
+

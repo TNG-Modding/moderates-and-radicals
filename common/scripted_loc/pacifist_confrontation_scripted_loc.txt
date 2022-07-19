@@ -1,0 +1,475 @@
+defined_text = {
+	name = GetLastKnownPacifistStatus
+	text = {
+		trigger = {	NOT = { is_variable_set = status } }
+		localization_key = pacifist_no_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 1 } }
+		localization_key = pacifist_demonstrations_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 2 } }
+		localization_key = pacifist_diatribe_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 3 } }
+		localization_key = pacifist_background_checks_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10201 } }
+		localization_key = pacifist_debates_continue_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10202 } }
+		localization_key = pacifist_debates_stopped_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10301 } }
+		localization_key = pacifist_speech_continue_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10302 } }
+		localization_key = pacifist_speech_stopped_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10401 } }
+		localization_key = pacifist_star_governor_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10402 } }
+		localization_key = pacifist_star_scientist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10403 } }
+		localization_key = pacifist_star_admiral_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10404 } }
+		localization_key = pacifist_star_general_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10405 } }
+		localization_key = pacifist_star_stopped_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10601 } }
+		localization_key = pacifist_deal_continue_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10602 } }
+		localization_key = pacifist_deal_stopped_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10701 } }
+		localization_key = pacifist_debt_continue_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10702 } }
+		localization_key = pacifist_debt_stopped_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 10801 } }
+		localization_key = pacifist_gift_continue_status
+	}
+
+	# Upset
+	text = {
+		trigger = {	check_variable = { which = status value = 20201 } }
+		localization_key = pacifist_riots_continue_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 20202 } }
+		localization_key = pacifist_riots_stopped_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 20301 } }
+		localization_key = pacifist_corner_production_continue_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 20302 } }
+		localization_key = pacifist_corner_production_stopped_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 20401 } }
+		localization_key = pacifist_violent_riots_continue_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 20402 } }
+		localization_key = pacifist_violent_riots_stopped_status
+	}
+
+	# Furious
+	text = {
+		trigger = {	check_variable = { which = status value = 30201 } }
+		localization_key = pacifist_ruler_assassination_continue_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 30301 } }
+		localization_key = pacifist_faction_leader_assassination_continue_status
+	}
+
+	# Desperate
+	text = {
+		trigger = {	check_variable = { which = status value = 40201 } }
+		localization_key = pacifist_coup_continue_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 40301 } }
+		localization_key = pacifist_putsch_continue_status
+	}
+
+	# Policy status updates
+	text = {
+		trigger = {	check_variable = { which = status value = 910 } }
+		localization_key = ai_outlawed_technologist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 911 } }
+		localization_key = ai_outlawed_traditionalist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 912 } }
+		localization_key = ai_servitude_technologist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 913 } }
+		localization_key = ai_servitude_traditionalist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 914 } }
+		localization_key = ai_full_rights_technologist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 915 } }
+		localization_key = ai_full_rights_traditionalist_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 901 } }
+		localization_key = diplo_stance_belligerent_imperialist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 902 } }
+		localization_key = diplo_stance_belligerent_prosperity_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 903 } }
+		localization_key = diplo_stance_cooperative_xenoist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 904 } }
+		localization_key = diplo_stance_cooperative_imperialist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 905 } }
+		localization_key = diplo_stance_isolationist_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 906 } }
+		localization_key = diplo_stance_isolationist_xenoist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 907 } }
+		localization_key = diplo_stance_supremacist_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 908 } }
+		localization_key = diplo_stance_supremacist_imperialist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 909 } }
+		localization_key = diplo_stance_supremacist_prosperity_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 944 } }
+		localization_key = economic_policy_civilian_imperialist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 945 } }
+		localization_key = economic_policy_civilian_prosperity_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 946 } }
+		localization_key = economic_policy_balanced_imperialist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 947 } }
+		localization_key = economic_policy_balanced_prosperity_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 948 } }
+		localization_key = economic_policy_military_imperialist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 949 } }
+		localization_key = economic_policy_military_prosperity_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 938 } }
+		localization_key = first_contact_proactive_xenoist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 939 } }
+		localization_key = first_contact_proactive_supremacist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 940 } }
+		localization_key = first_contact_cautious_xenoist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 941 } }
+		localization_key = first_contact_cautious_supremacist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 942 } }
+		localization_key = first_contact_attack_allowed_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 943 } }
+		localization_key = first_contact_attack_allowed_xenoist_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 930 } }
+		localization_key = interference_passive_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 931 } }
+		localization_key = interference_passive_xenoist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 932 } }
+		localization_key = interference_full_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 933 } }
+		localization_key = interference_full_xenoist_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 923 } }
+		localization_key = orbital_bombardment_armageddon_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 924 } }
+		localization_key = orbital_bombardment_armageddon_imperialist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 925 } }
+		localization_key = orbital_bombardment_armageddon_prosperity_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 926 } }
+		localization_key = orbital_bombardment_indiscriminate_imperialist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 927 } }
+		localization_key = orbital_bombardment_indiscriminate_prosperity_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 928 } }
+		localization_key = orbital_bombardment_selective_prosperity_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 929 } }
+		localization_key = orbital_bombardment_selective_imperialist_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 964 } }
+		localization_key = population_controls_not_allowed_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 965 } }
+		localization_key = population_controls_not_allowed_progressive_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 966 } }
+		localization_key = population_controls_allowed_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 967 } }
+		localization_key = population_controls_allowed_progressive_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 950 } }
+		localization_key = pre_sapients_protect_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 951 } }
+		localization_key = pre_sapients_protect_xenoist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 952 } }
+		localization_key = pre_sapients_allow_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 953 } }
+		localization_key = pre_sapients_allow_xenoist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 954 } }
+		localization_key = pre_sapients_eat_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 955 } }
+		localization_key = pre_sapients_eat_xenoist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 956 } }
+		localization_key = pre_sapients_purge_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 957 } }
+		localization_key = pre_sapients_purge_xenoist_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 972 } }
+		localization_key = purge_not_allowed_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 973 } }
+		localization_key = purge_not_allowed_xenoist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 974 } }
+		localization_key = purge_displacement_only_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 975 } }
+		localization_key = purge_displacement_only_xenoist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 976 } }
+		localization_key = purge_allowed_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 978 } }
+		localization_key = purge_allowed_xenoist_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 958 } }
+		localization_key = refugees_allowed_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 959 } }
+		localization_key = refugees_allowed_xenoist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 960 } }
+		localization_key = refugees_only_citizens_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 961 } }
+		localization_key = refugees_only_citizens_xenoist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 962 } }
+		localization_key = refugees_not_allowed_supremacist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 963 } }
+		localization_key = refugees_not_allowed_xenoist_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 934 } }
+		localization_key = resettlement_not_allowed_totalitarian_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 935 } }
+		localization_key = resettlement_not_allowed_progressive_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 936 } }
+		localization_key = resettlement_allowed_totalitarian_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 937 } }
+		localization_key = resettlement_allowed_progressive_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 968 } }
+		localization_key = slavery_not_allowed_totalitarian_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 969 } }
+		localization_key = slavery_not_allowed_progressive_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 970 } }
+		localization_key = slavery_allowed_totalitarian_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 971 } }
+		localization_key = slavery_allowed_progressive_status
+	}
+	
+
+	text = {
+		trigger = {	check_variable = { which = status value = 916 } }
+		localization_key = unrestricted_wars_imperialist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 917 } }
+		localization_key = unrestricted_wars_prosperity_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 918 } }
+		localization_key = liberation_wars_prosperity_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 919 } }
+		localization_key = liberation_wars_imperialist_status
+	}
+
+	text = {
+		trigger = {	check_variable = { which = status value = 920 } }
+		localization_key = no_wars_imperialist_status
+	}
+	text = {
+		trigger = {	check_variable = { which = status value = 921 } }
+		localization_key = no_wars_prosperity_status
+	}
+}

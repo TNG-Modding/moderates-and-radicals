@@ -1,0 +1,41 @@
+﻿l_english:
+
+ authoritarian_no_status:0 ", who are new to the political stage,"
+
+
+ authoritarian_debates_continue_status:0 ", that passed a policy with §HAuthoritarian§! wording,"
+ authoritarian_debates_stopped_status:0 ", whose §HAuthoritarian§! policy we rewrote,"
+
+ authoritarian_speech_continue_status:0 ", whose leader §B[Root.Leader.GetName]§! recently gave a resounding speech,"
+ authoritarian_speech_stopped_status:0 ", whose §HAuthoritarian§! speech we rebutted,"
+
+ authoritarian_star_governor_status:0 ", from whom we recently promoted a governor,"
+ authoritarian_star_scientist_status:0 ", from whom we recently promoted a scientist,"
+ authoritarian_star_admiral_status:0 ", from whom we recently promoted an admiral,"
+ authoritarian_star_general_status:0 ", from whom we recently promoted a general,"
+ authoritarian_star_stopped_status:0 ", whose rising star we passed over,"
+
+ authoritarian_deal_continue_status:0 ", who recently secured us a deal on §YAlloys§!,"
+ authoritarian_deal_stopped_status:0 ", who recently tried to cheat us out of our §YAlloys§! production,"
+
+ authoritarian_debt_continue_status:0 ", whose leader we recently bailed out,"
+ authoritarian_debt_stopped_status:0 ", who are angry we didn't fund their faction,"
+ 
+ authoritarian_gift_continue_status:0 ", that recently gifted §YAlloys§! to our government,"
+
+ authoritarian_riots_continue_status:0 ", whose riots we endorsed,"
+ authoritarian_riots_stopped_status:0 ", whose riots we shut down,"
+
+ authoritarian_corner_production_continue_status:0 ", whose control of the §YAlloys§! market we endorsed,"
+ authoritarian_corner_production_stopped_status:0 ", whose control of the §YAlloys§! market we disrupted,"
+
+ authoritarian_violent_riots_continue_status:0 ", whose §HEgalitarian§! holovid burning we allowed to continue,"
+ authoritarian_violent_riots_stopped_status:0 ", whose §HEgalitarian§! holovid burning we shut down,"
+
+ authoritarian_ruler_assassination_continue_status:0 ", who agents assassinated our [Root.Owner.Leader.GetTitle],"
+
+ authoritarian_faction_leader_assassination_continue_status:0 ", who agents assassinated a faction leader recently,"
+
+ authoritarian_coup_continue_status:0 ", that recently seized the government,"
+
+ authoritarian_putsch_continue_status:0 ", that recently violently seized power,"

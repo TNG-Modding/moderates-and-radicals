@@ -1,0 +1,41 @@
+﻿l_english:
+
+ egalitarian_no_status:0 ", who are new to the political stage,"
+
+
+ egalitarian_debates_continue_status:0 ", that passed a policy with §HEgalitarian§! wording,"
+ egalitarian_debates_stopped_status:0 ", whose §HEgalitarian§! policy we rewrote,"
+
+ egalitarian_speech_continue_status:0 ", whose leader §B[Root.Leader.GetName]§! recently gave a resounding speech,"
+ egalitarian_speech_stopped_status:0 ", whose §HEgalitarian§! speech we rebutted,"
+
+ egalitarian_star_governor_status:0 ", from whom we recently promoted a governor,"
+ egalitarian_star_scientist_status:0 ", from whom we recently promoted a scientist,"
+ egalitarian_star_admiral_status:0 ", from whom we recently promoted an admiral,"
+ egalitarian_star_general_status:0 ", from whom we recently promoted a general,"
+ egalitarian_star_stopped_status:0 ", whose rising star we passed over,"
+
+ egalitarian_deal_continue_status:0 ", who recently secured us a deal on §YConsumer Goods§!,"
+ egalitarian_deal_stopped_status:0 ", who recently tried to cheat us out of our §YConsumer Goods§! production,"
+
+ egalitarian_debt_continue_status:0 ", whose leader we recently bailed out,"
+ egalitarian_debt_stopped_status:0 ", who are angry we didn't fund their faction,"
+ 
+ egalitarian_gift_continue_status:0 ", that recently gifted §YConsumer Goods§! to our government,"
+
+ egalitarian_riots_continue_status:0 ", whose riots we endorsed,"
+ egalitarian_riots_stopped_status:0 ", whose riots we shut down,"
+
+ egalitarian_corner_production_continue_status:0 ", whose control of the §YConsumer Goods§! market we endorsed,"
+ egalitarian_corner_production_stopped_status:0 ", whose control of the §YConsumer Goods§! market we disrupted,"
+
+ egalitarian_violent_riots_continue_status:0 ", whose §HAuthoritarian§! holovid burning we allowed to continue,"
+ egalitarian_violent_riots_stopped_status:0 ", whose §HAuthoritarian§! holovid burning we shut down,"
+
+ egalitarian_ruler_assassination_continue_status:0 ", who agents assassinated our [Root.Owner.Leader.GetTitle],"
+
+ egalitarian_faction_leader_assassination_continue_status:0 ", who agents assassinated a faction leader recently,"
+
+ egalitarian_coup_continue_status:0 ", that recently seized the government,"
+
+ egalitarian_putsch_continue_status:0 ", that recently violently seized power,"

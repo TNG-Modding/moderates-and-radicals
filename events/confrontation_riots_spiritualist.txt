@@ -1,0 +1,55 @@
+namespace = confrontations_spiritualist
+
+situation_event = {
+    id = confrontations_spiritualist.20
+    title = confrontations_spiritualist.20
+    desc = confrontations_spiritualist.20.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_night_raid
+    show_sound = event_super_explosion
+    
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_spiritualist
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+    option = {
+        name = confrontations_spiritualist.20.a
+
+        owner = {
+            add_modifier = {
+                modifier = spiritualist_riots_continue_modifier
+                years = 3
+            }
+
+            random_owned_pop = {
+                limit = {
+                    NOT = {
+                        pop_has_ethic = ethic_spiritualist
+                    }
+                }
+                pop_change_ethic = ethic_spiritualist
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_spiritualist.20.b
+
+        owner = {
+            add_modifier = {
+                modifier = spiritualist_riots_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

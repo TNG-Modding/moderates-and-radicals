@@ -1,0 +1,41 @@
+﻿l_english:
+
+ xenophobe_no_status:0 ", who are new to the political stage,"
+
+
+ xenophobe_debates_continue_status:0 ", that passed a policy with §HXenophobe§! wording,"
+ xenophobe_debates_stopped_status:0 ", whose §HXenophobe§! policy we rewrote,"
+
+ xenophobe_speech_continue_status:0 ", whose leader §B[Root.Leader.GetName]§! recently gave a resounding speech,"
+ xenophobe_speech_stopped_status:0 ", whose §HXenophobe§! speech we rebutted,"
+
+ xenophobe_star_governor_status:0 ", from whom we recently promoted a governor,"
+ xenophobe_star_scientist_status:0 ", from whom we recently promoted a scientist,"
+ xenophobe_star_admiral_status:0 ", from whom we recently promoted an admiral,"
+ xenophobe_star_general_status:0 ", from whom we recently promoted a general,"
+ xenophobe_star_stopped_status:0 ", whose rising star we passed over,"
+
+ xenophobe_deal_continue_status:0 ", who recently secured us a deal on §YAlloys§!,"
+ xenophobe_deal_stopped_status:0 ", who recently tried to cheat us out of our §YAlloys§! production,"
+
+ xenophobe_debt_continue_status:0 ", whose leader we recently bailed out,"
+ xenophobe_debt_stopped_status:0 ", who are angry we didn't fund their faction,"
+ 
+ xenophobe_gift_continue_status:0 ", that recently gifted §YAlloys§! to our government,"
+
+ xenophobe_riots_continue_status:0 ", whose riots we endorsed,"
+ xenophobe_riots_stopped_status:0 ", whose riots we shut down,"
+
+ xenophobe_corner_production_continue_status:0 ", whose control of the §YAlloys§! market we endorsed,"
+ xenophobe_corner_production_stopped_status:0 ", whose control of the §YAlloys§! market we disrupted,"
+
+ xenophobe_violent_riots_continue_status:0 ", whose §HXenophile§! holovid burning we allowed to continue,"
+ xenophobe_violent_riots_stopped_status:0 ", whose §HXenophile§! holovid burning we shut down,"
+
+ xenophobe_ruler_assassination_continue_status:0 ", who agents assassinated our [Root.Owner.Leader.GetTitle],"
+
+ xenophobe_faction_leader_assassination_continue_status:0 ", who agents assassinated a faction leader recently,"
+
+ xenophobe_coup_continue_status:0 ", that recently seized the government,"
+
+ xenophobe_putsch_continue_status:0 ", that recently violently seized power,"

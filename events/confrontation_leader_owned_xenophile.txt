@@ -1,0 +1,178 @@
+namespace = confrontations_xenophile
+
+situation_event = {
+    id = confrontations_xenophile.13
+    title = confrontations_xenophile.13
+    desc = confrontations_xenophile.13.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_acquire_asset
+    show_sound = event_factions
+
+    trigger = {
+        owner = {
+            count_pop_faction = {
+                limit = {
+                    NOT = {
+                        is_pop_faction_type = radical_xenophile
+                    }
+                    NOR = {
+                        is_pop_faction_type = gov_militarist
+                        is_pop_faction_type = gov_xenophobe
+                        is_pop_faction_type = gov_egalitarian
+                        is_pop_faction_type = gov_materialist
+                        is_pop_faction_type = gov_pacifist
+                        is_pop_faction_type = gov_xenophile
+                        is_pop_faction_type = gov_authoritarian
+                        is_pop_faction_type = gov_spiritualist
+                    }
+                    owner = {
+                        count_owned_leader = {
+                            limit = {
+                                leader_of_faction = prevprev
+                                NOT = {
+                                    leader_class = ruler
+                                }
+                            }
+
+                            count = 1
+                        }
+                    }
+                }
+                count > 0
+            }
+        }
+    }
+
+    immediate = {
+        owner = {
+
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_xenophile
+                }
+                save_event_target_as = situation_faction
+            }
+
+            random_pop_faction = {
+                limit = {
+                    NOT = {
+                        is_pop_faction_type = radical_xenophile
+                    }
+                    NOR = {
+                        is_pop_faction_type = gov_militarist
+                        is_pop_faction_type = gov_xenophobe
+                        is_pop_faction_type = gov_egalitarian
+                        is_pop_faction_type = gov_materialist
+                        is_pop_faction_type = gov_pacifist
+                        is_pop_faction_type = gov_xenophile
+                        is_pop_faction_type = gov_authoritarian
+                        is_pop_faction_type = gov_spiritualist
+                    }
+                    owner = {
+                        count_owned_leader = {
+                            limit = {
+                                NOT = {
+                                    leader_class = ruler
+                                }
+                                leader_of_faction = prevprev
+                            }
+                            count = 1
+                        }
+                    }
+                }
+                save_event_target_as = confronted_leader_faction
+
+                owner = {
+                    every_owned_leader = {
+                        limit = {
+                            leader_of_faction = event_target:confronted_leader_faction
+                        }
+                        save_event_target_as = confronted_leader
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_xenophile.13.a
+        trigger = {
+            owner = {
+                count_owned_leader = {
+                    count > 0
+                    limit = {
+                        leader_of_faction = situation_faction
+                        NOT = {
+                            has_trait = leader_trait_substance_abuser
+                        }
+                    }
+                }
+            }
+        }
+        owner = {
+            every_owned_leader = {
+                limit = {
+                    leader_of_faction = situation_faction
+                }
+                add_trait = leader_trait_substance_abuser
+            }
+        }
+    }
+    option = {
+        name = confrontations_xenophile.13.b
+        trigger = {
+            owner = {
+                count_owned_leader = {
+                    count > 0
+                    limit = {
+                        leader_of_faction = situation_faction
+                        OR = {
+                            has_trait = leader_trait_arrested_development
+                            has_trait = leader_trait_substance_abuser
+                        }
+                    }
+                }
+            }
+        }
+        owner = {
+            every_owned_leader = {
+                limit = {
+                    leader_of_faction = situation_faction
+                }
+                kill_leader = {}
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_xenophile.13.c
+        trigger = {
+            NOT = {
+                event_target:confronted_leader = {
+                    has_trait = leader_trait_arrested_development
+                }
+            }
+        }
+        event_target:confronted_leader = {
+            add_trait = leader_trait_substance_abuser
+        }
+    }
+    option = {
+        name = confrontations_xenophile.13.d
+        trigger = {
+            event_target:confronted_leader = {
+                OR = {
+                    has_trait = leader_trait_arrested_development
+                    has_trait = leader_trait_substance_abuser
+                }
+            }
+        }
+        event_target:confronted_leader = {
+            kill_leader = {}
+        }
+    }
+}

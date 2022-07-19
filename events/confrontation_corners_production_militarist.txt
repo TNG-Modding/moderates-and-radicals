@@ -1,0 +1,47 @@
+namespace = confrontations_militarist
+
+situation_event = {
+    id = confrontations_militarist.21
+    title = confrontations_militarist.21
+    desc = confrontations_militarist.21.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_ship_offloading_cargo
+    show_sound = event_factions
+
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_militarist
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_militarist.21.a
+
+        owner = {
+            add_modifier = {
+                modifier = militarist_corner_production_continue_modifier
+                years = 3
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_militarist.21.b
+
+        owner = {
+            add_modifier = {
+                modifier = militarist_corner_production_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

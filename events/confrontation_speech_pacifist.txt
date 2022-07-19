@@ -1,0 +1,77 @@
+namespace = confrontations_pacifist
+
+situation_event = {
+    id = confrontations_pacifist.11
+    title = confrontations_pacifist.11
+    desc = confrontations_pacifist.11.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_assembly_fight
+    show_sound = event_factions
+
+    trigger = {
+        owner = {
+            count_owned_leader = {
+                limit = {
+                    leader_of_faction = prevprev
+                }
+                count = 1
+            }
+        }
+    }
+    
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_pacifist
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_pacifist.11.a
+
+        owner = {
+            random_owned_pop = {
+                limit = {
+                    OR = {
+                        is_pop_category = ruler
+                        is_pop_category = specialist
+                    }
+                    NOT = {
+                        pop_has_ethic = ethic_pacifist
+                    }
+                }
+                pop_change_ethic = ethic_pacifist
+            }
+            random_owned_pop = {
+                limit = {
+                    OR = {
+                        is_pop_category = ruler
+                        is_pop_category = specialist
+                    }
+                    NOT = {
+                        pop_has_ethic = ethic_pacifist
+                    }
+                }
+                pop_change_ethic = ethic_pacifist
+            }
+        }
+    }
+    option = {
+        name = confrontations_pacifist.11.b
+
+        owner = {
+            add_modifier = {
+                modifier = pacifist_speech_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

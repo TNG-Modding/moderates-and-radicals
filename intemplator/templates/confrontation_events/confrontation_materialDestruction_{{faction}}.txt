@@ -1,0 +1,46 @@
+namespace = confrontations_{{faction}}
+
+situation_event = {
+    id = confrontations_{{faction}}.30
+    title = confrontations_{{faction}}.30
+    desc = confrontations_{{faction}}.30.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_burning_city
+    show_sound = event_air_raid_siren
+    
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_{{faction}}
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_{{faction}}.30.a
+
+        owner = {
+            add_modifier = {
+                modifier = {{faction}}_violent_riots_continue_modifier
+                years = 3
+            }
+        }
+    }
+    option = {
+        name = confrontations_{{faction}}.30.b
+
+        owner = {
+            add_modifier = {
+                modifier = {{faction}}_violent_riots_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

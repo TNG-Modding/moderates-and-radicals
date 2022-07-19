@@ -1,0 +1,52 @@
+namespace = confrontations_materialist
+
+situation_event = {
+    id = confrontations_materialist.10
+    title = confrontations_materialist.10
+    desc = confrontations_materialist.10.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_assembly_fight
+    show_sound = event_factions
+
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_materialist
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_materialist.10.a
+
+        owner = {
+            add_monthly_resource_mult = {
+                resource = alloys
+                value = 6
+                max = 1000
+                min = 30
+            }
+            add_modifier = {
+                modifier = materialist_debates_continue_modifier
+                years = 3
+            }
+        }
+    }
+    option = {
+        name = confrontations_materialist.10.b
+
+        owner = {
+            add_modifier = {
+                modifier = materialist_debates_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

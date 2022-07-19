@@ -1,0 +1,262 @@
+namespace = confrontations_pacifist
+
+situation_event = {
+    id = confrontations_pacifist.81
+    title = confrontations_pacifist.81
+    desc = confrontations_pacifist.81.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_space_funeral
+    show_sound = event_super_explosion
+
+    trigger = {
+        # Is there a non government faction that is not the same as root that has a leader
+        # This is faction infighting
+        owner = {
+            count_pop_faction = {
+                limit = {
+                    # This other faction is not the same as triggering
+                    NOT = {
+                        is_pop_faction_type = radical_pacifist
+                    }
+                    # Not a government faction
+                    NOR = {
+                        is_pop_faction_type = gov_militarist
+                        is_pop_faction_type = gov_xenophobe
+                        is_pop_faction_type = gov_egalitarian
+                        is_pop_faction_type = gov_materialist
+                        is_pop_faction_type = gov_pacifist
+                        is_pop_faction_type = gov_xenophile
+                        is_pop_faction_type = gov_authoritarian
+                        is_pop_faction_type = gov_spiritualist
+                    }
+                    
+                    # Has a leader
+                    owner = {
+                        count_owned_leader = {
+                            limit = {
+                                leader_of_faction = prevprev
+                                NOT = {
+                                    leader_class = ruler
+                                }
+                            }
+
+                            count = 1
+                        }
+                    }
+                }
+                count > 0
+            }
+        }
+    }
+
+    immediate = {
+        owner = {
+
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_pacifist
+                }
+                save_event_target_as = situation_faction
+            }
+
+            # Assign assassinated faction
+            random_pop_faction = {
+                limit = {
+                    # Is not the radicals
+                    NOT = {
+                        is_pop_faction_type = radical_pacifist
+                    }
+                    # Is not in the government
+                    NOR = {
+                        is_pop_faction_type = gov_militarist
+                        is_pop_faction_type = gov_xenophobe
+                        is_pop_faction_type = gov_egalitarian
+                        is_pop_faction_type = gov_materialist
+                        is_pop_faction_type = gov_pacifist
+                        is_pop_faction_type = gov_xenophile
+                        is_pop_faction_type = gov_authoritarian
+                        is_pop_faction_type = gov_spiritualist
+                    }
+                    # Has a leader
+                    owner = {
+                        count_owned_leader = {
+                            limit = {
+                                leader_of_faction = prevprev
+                                NOT = {
+                                    leader_class = ruler
+                                }
+                            }
+                            count = 1
+                        }
+                    }
+                }
+                save_event_target_as = assassinated_leader_faction
+
+                
+            }
+
+            # Find their leader to kill
+            every_owned_leader = {
+                limit = {
+                    leader_of_faction = event_target:assassinated_leader_faction
+                }
+                save_event_target_as = assassinated_faction_leader
+            }
+        }
+
+        # Kill the assassination target
+        event_target:assassinated_faction_leader = {
+            kill_leader = {
+                show_notification = yes
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_pacifist.81.a
+
+        owner = {
+            # Remove ideo purity
+            if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = fringe_militarist
+                            is_pop_faction_type = radical_militarist
+                        }
+                    }
+                }
+                # add_resource = {
+                #     militarist_militancy_current_value = 10
+                # }
+                add_modifier = {
+                    modifier = militarist_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = fringe_xenophobe
+                            is_pop_faction_type = radical_xenophobe
+                        }
+                    }
+                }
+                # add_resource = {
+                #     xenophobe_militancy_current_value = 10
+                # }
+                add_modifier = {
+                    modifier = xenophobe_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = fringe_egalitarian
+                            is_pop_faction_type = radical_egalitarian
+                        }
+                    }
+                }
+                # add_resource = {
+                #     egalitarian_militancy_current_value = 10
+                # }
+                add_modifier = {
+                    modifier = egalitarian_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = fringe_materialist
+                            is_pop_faction_type = radical_materialist
+                        }
+                    }
+                }
+                # add_resource = {
+                #     materialist_militancy_current_value = 10
+                # }
+                add_modifier = {
+                    modifier = materialist_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = fringe_pacifist
+                            is_pop_faction_type = radical_pacifist
+                        }
+                    }
+                }
+                # add_resource = {
+                #     pacifist_militancy_current_value = 10
+                # }
+                add_modifier = {
+                    modifier = pacifist_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = fringe_xenophile
+                            is_pop_faction_type = radical_xenophile
+                        }
+                    }
+                }
+                # add_resource = {
+                #     xenophile_militancy_current_value = 10
+                # }
+                add_modifier = {
+                    modifier = xenophile_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = fringe_authoritarian
+                            is_pop_faction_type = radical_authoritarian
+                        }
+                    }
+                }
+                # add_resource = {
+                #     authoritarian_militancy_current_value = 10
+                # }
+                add_modifier = {
+                    modifier = authoritarian_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:assassinated_leader_faction = {
+                        OR = {
+                            is_pop_faction_type = fringe_spiritualist
+                            is_pop_faction_type = radical_spiritualist
+                        }
+                    }
+                }
+                # add_resource = {
+                #     spiritualist_militancy_current_value = 10
+                # }
+                add_modifier = {
+                    modifier = spiritualist_faction_leader_assassination_continue_modifier
+                    years = 3
+                }
+            }
+        }
+    }
+}

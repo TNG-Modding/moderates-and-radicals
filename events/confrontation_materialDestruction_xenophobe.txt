@@ -1,0 +1,46 @@
+namespace = confrontations_xenophobe
+
+situation_event = {
+    id = confrontations_xenophobe.30
+    title = confrontations_xenophobe.30
+    desc = confrontations_xenophobe.30.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_burning_city
+    show_sound = event_air_raid_siren
+    
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_xenophobe
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_xenophobe.30.a
+
+        owner = {
+            add_modifier = {
+                modifier = xenophobe_violent_riots_continue_modifier
+                years = 3
+            }
+        }
+    }
+    option = {
+        name = confrontations_xenophobe.30.b
+
+        owner = {
+            add_modifier = {
+                modifier = xenophobe_violent_riots_stopped_modifier
+                years = 3
+            }
+        }
+    }
+}

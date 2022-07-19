@@ -1,0 +1,42 @@
+l_english:
+
+ {{faction}}_no_status:0 ", who are new to the political stage,"
+
+
+ {{faction}}_debates_continue_status:0 ", that passed a policy with §H{{Faction}}§! wording,"
+ {{faction}}_debates_stopped_status:0 ", whose §H{{Faction}}§! policy we rewrote,"
+
+ {{faction}}_speech_continue_status:0 ", whose leader §B[Root.Leader.GetName]§! recently gave a resounding speech,"
+ {{faction}}_speech_stopped_status:0 ", whose §H{{Faction}}§! speech we rebutted,"
+
+ {{faction}}_star_governor_status:0 ", from whom we recently promoted a governor,"
+ {{faction}}_star_scientist_status:0 ", from whom we recently promoted a scientist,"
+ {{faction}}_star_admiral_status:0 ", from whom we recently promoted an admiral,"
+ {{faction}}_star_general_status:0 ", from whom we recently promoted a general,"
+ {{faction}}_star_stopped_status:0 ", whose rising star we passed over,"
+
+ {{faction}}_deal_continue_status:0 ", who recently secured us a deal on §Y{{Resource}}§!,"
+ {{faction}}_deal_stopped_status:0 ", who recently tried to cheat us out of our §Y{{Resource}}§! production,"
+
+ {{faction}}_debt_continue_status:0 ", whose leader we recently bailed out,"
+ {{faction}}_debt_stopped_status:0 ", who are angry we didn't fund their faction,"
+ 
+ {{faction}}_gift_continue_status:0 ", that recently gifted §Y{{Resource}}§! to our government,"
+
+ {{faction}}_riots_continue_status:0 ", whose riots we endorsed,"
+ {{faction}}_riots_stopped_status:0 ", whose riots we shut down,"
+
+ {{faction}}_corner_production_continue_status:0 ", whose control of the §Y{{Resource}}§! market we endorsed,"
+ {{faction}}_corner_production_stopped_status:0 ", whose control of the §Y{{Resource}}§! market we disrupted,"
+
+ {{faction}}_violent_riots_continue_status:0 ", whose §H{{EnemyFaction}}§! holovid burning we allowed to continue,"
+ {{faction}}_violent_riots_stopped_status:0 ", whose §H{{EnemyFaction}}§! holovid burning we shut down,"
+
+ {{faction}}_ruler_assassination_continue_status:0 ", who agents assassinated our [Root.Owner.Leader.GetTitle],"
+
+ {{faction}}_faction_leader_assassination_continue_status:0 ", who agents assassinated a faction leader recently,"
+
+ {{faction}}_coup_continue_status:0 ", that recently seized the government,"
+
+ {{faction}}_putsch_continue_status:0 ", that recently violently seized power,"
+

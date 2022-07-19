@@ -1,0 +1,55 @@
+namespace = confrontations_authoritarian
+
+situation_event = {
+    id = confrontations_authoritarian.80
+    title = confrontations_authoritarian.80
+    desc = confrontations_authoritarian.80.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_crisis_declared
+    show_sound = event_super_explosion
+
+    trigger = {
+        owner = {
+            count_owned_leader = {
+                limit = {
+                    leader_class = ruler
+                }
+                count > 0
+            }
+        }
+    }
+
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_authoritarian
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+        add_situation_progress = 10
+    }
+
+    option = {
+        name = confrontations_authoritarian.80.a
+        
+        owner = {
+            # Remove ideo purity
+            add_modifier = {
+                modifier = authoritarian_ruler_assassination_continue_modifier
+                years = 3
+            }
+
+            # Kill ruler
+            kill_leader = {
+                type = ruler
+                show_notification = yes
+            }
+        }
+    }
+}

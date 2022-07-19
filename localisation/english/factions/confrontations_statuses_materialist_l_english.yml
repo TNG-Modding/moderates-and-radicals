@@ -1,0 +1,41 @@
+﻿l_english:
+
+ materialist_no_status:0 ", who are new to the political stage,"
+
+
+ materialist_debates_continue_status:0 ", that passed a policy with §HMaterialist§! wording,"
+ materialist_debates_stopped_status:0 ", whose §HMaterialist§! policy we rewrote,"
+
+ materialist_speech_continue_status:0 ", whose leader §B[Root.Leader.GetName]§! recently gave a resounding speech,"
+ materialist_speech_stopped_status:0 ", whose §HMaterialist§! speech we rebutted,"
+
+ materialist_star_governor_status:0 ", from whom we recently promoted a governor,"
+ materialist_star_scientist_status:0 ", from whom we recently promoted a scientist,"
+ materialist_star_admiral_status:0 ", from whom we recently promoted an admiral,"
+ materialist_star_general_status:0 ", from whom we recently promoted a general,"
+ materialist_star_stopped_status:0 ", whose rising star we passed over,"
+
+ materialist_deal_continue_status:0 ", who recently secured us a deal on §YAlloys§!,"
+ materialist_deal_stopped_status:0 ", who recently tried to cheat us out of our §YAlloys§! production,"
+
+ materialist_debt_continue_status:0 ", whose leader we recently bailed out,"
+ materialist_debt_stopped_status:0 ", who are angry we didn't fund their faction,"
+ 
+ materialist_gift_continue_status:0 ", that recently gifted §YAlloys§! to our government,"
+
+ materialist_riots_continue_status:0 ", whose riots we endorsed,"
+ materialist_riots_stopped_status:0 ", whose riots we shut down,"
+
+ materialist_corner_production_continue_status:0 ", whose control of the §YAlloys§! market we endorsed,"
+ materialist_corner_production_stopped_status:0 ", whose control of the §YAlloys§! market we disrupted,"
+
+ materialist_violent_riots_continue_status:0 ", whose §HSpiritualist§! holovid burning we allowed to continue,"
+ materialist_violent_riots_stopped_status:0 ", whose §HSpiritualist§! holovid burning we shut down,"
+
+ materialist_ruler_assassination_continue_status:0 ", who agents assassinated our [Root.Owner.Leader.GetTitle],"
+
+ materialist_faction_leader_assassination_continue_status:0 ", who agents assassinated a faction leader recently,"
+
+ materialist_coup_continue_status:0 ", that recently seized the government,"
+
+ materialist_putsch_continue_status:0 ", that recently violently seized power,"

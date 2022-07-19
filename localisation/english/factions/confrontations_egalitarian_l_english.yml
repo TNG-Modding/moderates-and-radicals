@@ -1,72 +1,72 @@
 ﻿l_english:
 
  confrontations_egalitarian.10:0 "Egalitarian Policy"
- confrontations_egalitarian.10.desc:0 "The egalitarians of the [Root.GetName] have caused quite a stir on the debate floor. The egalitarian language in the latest government policy plan has caused quite the debate among the factions within the [Root.Owner.GetName]."
+ confrontations_egalitarian.10.desc:0 "The egalitarians have caused quite a stir on the debate floor of [situation_faction.Owner.GetName]. What should we do with these new policies?"
  confrontations_egalitarian.10.a:0 "Support the egalitarian policy."
  egalitarian_debates_continue_modifier:0 "Egalitarian Policy Wording Used"
- confrontations_egalitarian.10.b:0 "Strike the wording from the policy."
+ confrontations_egalitarian.10.b:0 "Strike the egalitarian wording from the policy."
  egalitarian_debates_stopped_modifier:0 "Egalitarian Policy Wording Rewritten"
 
- confrontations_egalitarian.11:0 "The [Root.Leader.GetTitle]'s Egalitarian Speech"
- confrontations_egalitarian.11.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] has given a rousing speech on behalf of the [Root.GetName], and many of our ruling officials have been won over. If we don't do something, they may permanently change their faction allegiance to egalitarian."
+ confrontations_egalitarian.11:0 "The [situation_faction.Leader.GetTitle]'s Egalitarian Speech"
+ confrontations_egalitarian.11.desc:0 "[situation_faction.Leader.GetTitle] [situation_faction.Leader.GetName] has given a rousing speech on behalf of the [situation_faction.GetName], and many of our ruling officials have been won over. If we don't do something, they may permanently change their faction allegiance to egalitarian."
  confrontations_egalitarian.11.a:0 "Quite the moving speech."
  confrontations_egalitarian.11.b:0 "Issue a scathing rebuttal!"
  egalitarian_speech_stopped_modifier:0 "Egalitarian Speech Rebutted"
 
  confrontations_egalitarian.12:0 "Rising Star among the Egalitarians"
- confrontations_egalitarian.12.desc:0 "Several officials from [Root.GetName] have risen to prominence through cunning and connections. We can have the pick of the lot, which will we promote?"
+ confrontations_egalitarian.12.desc:0 "Several officials from [situation_faction.GetName] have risen to prominence through cunning and connections. We can have the pick of the lot, which will we promote?"
  confrontations_egalitarian.12.a:0 "The Governor."
  confrontations_egalitarian.12.b:0 "The Scientist."
  confrontations_egalitarian.12.c:0 "The Admiral."
  confrontations_egalitarian.12.d:0 "The General."
 
  confrontations_egalitarian.13:0 "[confronted_leader.GetTitle] [confronted_leader.GetName] Confronted!"
- confrontations_egalitarian.13.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has confronted [confronted_leader.GetTitle] [confronted_leader.GetName] of the [confronted_leader_faction.GetName]. In a flurry of egalitarian based arguments, [Root.Leader.GetName] has totally destroyed [confronted_leader.GetName] in public. Do we back [confronted_leader.GetTitle] [confronted_leader.GetName] up?"
- confrontations_egalitarian.13.a:0 "Let's see how [Root.Leader.GetTitle] [Root.Leader.GetName] likes it!"
- confrontations_egalitarian.13.b:0 "Hit [Root.Leader.GetTitle] [Root.Leader.GetName] where it hurts."
+ confrontations_egalitarian.13.desc:0 "[situation_faction.Leader.GetTitle] [situation_faction.Leader.GetName] of the [situation_faction.GetName] has confronted [confronted_leader.GetTitle] [confronted_leader.GetName] of the [confronted_leader_faction.GetName]. In a flurry of egalitarian based arguments, [situation_faction.Leader.GetName] has totally destroyed [confronted_leader.GetName] in public. Do we back [confronted_leader.GetTitle] [confronted_leader.GetName] up?"
+ confrontations_egalitarian.13.a:0 "Let's see how [situation_faction.Leader.GetTitle] [situation_faction.Leader.GetName] likes it!"
+ confrontations_egalitarian.13.b:0 "Hit [situation_faction.Leader.GetTitle] [situation_faction.Leader.GetName] where it hurts."
  confrontations_egalitarian.13.c:0 "Get [confronted_leader.GetTitle] [confronted_leader.GetName] some ice."
  confrontations_egalitarian.13.d:0 "Get a body bag for [confronted_leader.GetTitle] [confronted_leader.GetName]."
 
- confrontations_egalitarian.14:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] Makes a Deal!"
- confrontations_egalitarian.14.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has offered our administration a deal. They oversee the production of this a macro unit of Consumer Goods and they'll offer us the proceeds for a flat fee. Do we take the deal?"
- confrontations_egalitarian.14.a:0 "[Root.Leader.GetName] you have a deal!"
+ confrontations_egalitarian.14:0 "[situation_faction.Leader.GetTitle] [situation_faction.Leader.GetName] Makes a Deal!"
+ confrontations_egalitarian.14.desc:0 "[situation_faction.Leader.GetTitle] [situation_faction.Leader.GetName] of the [situation_faction.GetName] has offered our administration a deal. They oversee the production of this a macro unit of Consumer Goods and they'll offer us the proceeds for a flat fee. Do we take the deal?"
+ confrontations_egalitarian.14.a:0 "[situation_faction.Leader.GetName] you have a deal!"
  confrontations_egalitarian.14.b:0 "Pass."
  egalitarian_deal_stopped_modifier:0 "Egalitarian Trade Deal Rejected"
 
- confrontations_egalitarian.15:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] in a Bind!"
- confrontations_egalitarian.15.desc:0 "[Root.Leader.GetTitle] [Root.Leader.GetName] of the [Root.GetName] has made a number of poor financial decisions, and is now in deep debt. They have used a number of connections to make a very inconvenient mess, as many of their egalitarian supporters are pulling for our government to grant them debt immunity."
- confrontations_egalitarian.15.a:0 "Pay [Root.Leader.GetName]'s Debt"
+ confrontations_egalitarian.15:0 "[situation_faction.Leader.GetTitle] [situation_faction.Leader.GetName] in a Bind!"
+ confrontations_egalitarian.15.desc:0 "[situation_faction.Leader.GetTitle] [situation_faction.Leader.GetName] of the [situation_faction.GetName] has made a number of poor financial decisions, and is now in deep debt. They have used a number of connections to make a very inconvenient mess, as many of their egalitarian supporters are pulling for our government to grant them debt immunity."
+ confrontations_egalitarian.15.a:0 "Pay [situation_faction.Leader.GetName]'s Debt"
  confrontations_egalitarian.15.b:0 "We won't bail them out."
  egalitarian_debt_stopped_modifier:0 "Egalitarian Faction Leader in Dire Straights"
  
  confrontations_egalitarian.16:0 "The Egalitarian Gift"
- confrontations_egalitarian.16.desc:0 "The egalitarians of the [Root.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the egalitarian symbols of the [Root.GetName] litter our latest government projects. The egalitarians are happy to have a place in our government."
+ confrontations_egalitarian.16.desc:0 "The egalitarians of the [situation_faction.GetName] have come together to make a number of financial contributions to the government. Buildings, wings, and infrastructure bearing the egalitarian symbols of the [situation_faction.GetName] litter our latest government projects. The egalitarians are happy to have a place in our government."
  confrontations_egalitarian.16.a:0 "What a nice gift!"
  egalitarian_gift_continue_modifier:0 "Egalitarians give gift."
 
  confrontations_egalitarian.20:0 "Egalitarian Riots"
- confrontations_egalitarian.20.desc:0 "The egalitarians of the [Root.GetName] have taken to the streets of [Root.Owner.Capital.GetName] causing chaos and disorder. Egalitarians can be found everywhere making speeches pushing egalitarian talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Egalitarian emissaries have approached our government asking us to endorse their movement."
- confrontations_egalitarian.20.a:0 "Endorse the actions of the [Root.GetName]"
+ confrontations_egalitarian.20.desc:0 "The egalitarians of the [situation_faction.GetName] have taken to the streets of [situation_faction.Owner.Capital.GetName] causing chaos and disorder. Egalitarians can be found everywhere making speeches pushing egalitarian talking points, and many buildings have been damaged in ensuing revelry. No doubt this is all politically motivated. Egalitarian emissaries have approached our government asking us to endorse their movement."
+ confrontations_egalitarian.20.a:0 "Endorse the actions of the [situation_faction.GetName]"
  egalitarian_riots_continue_modifier:0 "Egalitarian Riots Continue"
  confrontations_egalitarian.20.b:0 "Shut them down!"
  egalitarian_riots_stopped_modifier:0 "Egalitarian Riots Stopped"
 
  confrontations_egalitarian.21:0 "Egalitarians Take Control of Consumer Goods Market"
- confrontations_egalitarian.21.desc:0 "In a number of bold moves, the egalitarians of the [Root.GetName] have achieved a choke hold on the Consumer Goods market. All shipments of Consumer Goods are hand inspected by  and their officials, and [Root.Leader.GetTitle] [Root.Leader.GetName], the  leader of the [Root.GetName], is said to have gained a large fortune in the Consumer Goods trade. How do we respond to their newfound monopoly?"
+ confrontations_egalitarian.21.desc:0 "In a number of bold moves, the egalitarians of the [situation_faction.GetName] have achieved a choke hold on the Consumer Goods market. All shipments of Consumer Goods are hand inspected by  and their officials, and [situation_faction.Leader.GetTitle] [situation_faction.Leader.GetName], the  leader of the [situation_faction.GetName], is said to have gained a large fortune in the Consumer Goods trade. How do we respond to their newfound monopoly?"
  confrontations_egalitarian.21.a:0 "We can leave it to the egalitarians to handle our Consumer Goods."
  egalitarian_corner_production_continue_modifier:0 "Egalitarians Control Consumer Goods"
- confrontations_egalitarian.21.b:0 "Their control represents a threat to [Root.Owner.GetName] interests."
+ confrontations_egalitarian.21.b:0 "Their control represents a threat to [situation_faction.Owner.GetName] interests."
  egalitarian_corner_production_stopped_modifier:0 "Disrupted Egalitarian Control of Consumer Goods"
 
  confrontations_egalitarian.30:0 "Destruction of Authoritarian Propaganda"
- confrontations_egalitarian.30.desc:0 "The egalitarians of the [Root.GetName] have gathered on [Root.Owner.Capital.GetName] to demand we strike authoritarian teachings from all government curriculum. They have taken it upon themselves to destroy datalogs and holovids that contain authoritarian propaganda. The fires from the destruction can be seen from the very steps of the capitol. The authoritarians are understandably upset, and they are asking us to denounce the destruction."
+ confrontations_egalitarian.30.desc:0 "The egalitarians of the [situation_faction.GetName] have gathered on [situation_faction.Owner.Capital.GetName] to demand we strike authoritarian teachings from all government curriculum. They have taken it upon themselves to destroy datalogs and holovids that contain authoritarian propaganda. The fires from the destruction can be seen from the very steps of the capitol. The authoritarians are understandably upset, and they are asking us to denounce the destruction."
  confrontations_egalitarian.30.a:0 "Let the fires continue."
  egalitarian_violent_riots_continue_modifier:0 "Authoritarian Holovid Burning Continues"
  confrontations_egalitarian.30.b:0 "Stop the fires!"
  egalitarian_violent_riots_stopped_modifier:0 "Authoritarian Burning Stopped"
 
- confrontations_egalitarian.80:0 "[Root.Owner.GetRulerTitle] [Root.Owner.GetRulerName] Assassinated by Egalitarians!"
- confrontations_egalitarian.80.desc:0 "The egalitarians have assassinated our [Root.Owner.GetRulerTitle]! Our empire is still reeling from the news. To push it further, the [Root.GetName] are streaming horrifying holovids on every planet that detail the many 'crimes' of the late [Root.Owner.GetRulerName] while calling for egalitarian policies and the destruction of the authoritarians."
+ confrontations_egalitarian.80:0 "[situation_faction.Owner.GetRulerTitle] [situation_faction.Owner.GetRulerName] Assassinated by Egalitarians!"
+ confrontations_egalitarian.80.desc:0 "The egalitarians have assassinated our [situation_faction.Owner.GetRulerTitle]! Our empire is still reeling from the news. To push it further, the [situation_faction.GetName] are streaming horrifying holovids on every planet that detail the many 'crimes' of the late [situation_faction.Owner.GetRulerName] while calling for egalitarian policies and the destruction of the authoritarians."
  confrontations_egalitarian.80.a:0 "Blasted egalitarians!"
  egalitarian_ruler_assassination_continue_modifier:0 "Egalitarians Assassinated Ruler"
 
@@ -76,32 +76,14 @@
  egalitarian_faction_leader_assassination_continue_modifier:0 "Egalitarian Leader Assassinated"
 
  confrontations_egalitarian.90:0 "Egalitarian Coup!"
- confrontations_egalitarian.90.desc:0 "The egalitarians of the [Root.GetName] have staged a coup within our empire! A new government has been declared that properly enshrines egalitarian ideals. This sudden change has left our empire in disorder, as many of the ruling class have been killed for holding suspiciously authoritarian views. Without the support of our ruling class, we have no choice but to accept their demands."
- confrontations_egalitarian.90.a:0 "Blasted - I mean - long live the [Root.GetName]!"
+ confrontations_egalitarian.90.desc:0 "The egalitarians of the [situation_faction.GetName] have staged a coup within our empire! A new government has been declared that properly enshrines egalitarian ideals. This sudden change has left our empire in disorder, as many of the ruling class have been killed for holding suspiciously authoritarian views. Without the support of our ruling class, we have no choice but to accept their demands."
+ confrontations_egalitarian.90.a:0 "I'm a egalitarian, my mother and father were egalitarians."
  egalitarian_coup_continue_modifier:0 "Successful Egalitarian Coup"
 
  confrontations_egalitarian.91:0 "Egalitarian Putsch!"
- confrontations_egalitarian.91.desc:0 "Egalitarians led by [putsch_leader.GetName] have staged a deadly putsch within our empire! All of the major leaders of our government have been assassinated in a string of violent and often public murders. \n\n[putsch_leader.GetName] has assured the citizenry that they will govern as [root.owner.GetName] rulers always have, but with specific accommodations for their egalitarian viewpoints. Many of [putsch_leader.GetName]'s cronies such as Governor [new_governor.GetName] and Admiral [new_admiral.GetName] have been promoted to high ranking government positions in the wake of this violent event. Their inexperience is palpable, but we will have to make the best of the situation."
+ confrontations_egalitarian.91.desc:0 "Egalitarians led by [putsch_leader.GetName] have staged a deadly putsch within our empire! All of the major leaders of our government have been assassinated in a string of violent and often public murders. \n\n[putsch_leader.GetName] has assured the citizenry that they will govern as [situation_faction.owner.GetName] rulers always have, but with specific accommodations for their egalitarian viewpoints. Many of [putsch_leader.GetName]'s cronies such as Governor [new_governor.GetName] and Admiral [new_admiral.GetName] have been promoted to high ranking government positions in the wake of this violent event. Their inexperience is palpable, but we will have to make the best of the situation."
  confrontations_egalitarian.91.a:0 "Great, [putsch_leader.GetName]'s lackeys running things..."
  egalitarian_putsch_continue_modifier:0 "Successful Egalitarian Putsch"
-
- # Normal Egalitarian Operations
- operations_egalitarian.1:0 "Launch an Operation"
- operations_egalitarian.1.desc:0 "We cannot leave the political future of [Root.Owner.GetName] up to chance. We must take action regarding the §H[Root.GetName]§! in order to safeguard our ideals. As an official faction within our government, the §H[Root.GetName]§! has many officials, delegates, and stress points that we might use to our advantage."
-
- # Radical Egalitarian operations
- operations_egalitarian.2:0 "Launch an Operation"
- operations_egalitarian.2.desc:0 "We cannot leave the political future of [Root.Owner.GetName] up to chance. We must take action against the §H[Root.GetName]§! in order to safeguard our ideals. While acting against radicals is never easy, we nevertheless have many tools that might be used to subvert the influence."
-
- # Government Egalitarian operation
- operations_egalitarian.3:0 "Launch an Operation"
- operations_egalitarian.3.desc:0 "We rely on the §H[Root.GetName]§! to spearhead the political future of [Root.Owner.GetName]. We can wield this faction as an extension of our government apparatus."
-
- # Ops
- operations_egalitarian.radicalRoundUp:0 "Egalitarian Radical Round-Up"
- egalitarian_radical_roundup_continue_modifier:0 "Egalitarian Radical Round-Up"
- operations_egalitarian.diatribe:0 "Anti-Egalitarian Diatribe"
- anti_egalitarian_diatribe_modifier:0 "Anti-Egalitarian Diatribe"
 
  # Faction effects
  egalitarian_effects_powerful_happy:0 "Happy Influential Egalitarians"

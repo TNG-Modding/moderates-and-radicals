@@ -1,0 +1,76 @@
+namespace = confrontations_spiritualist
+
+situation_event = {
+    id = confrontations_spiritualist.12
+    title = confrontations_spiritualist.12
+    desc = confrontations_spiritualist.12.desc
+    hide_window = no
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_acquire_asset
+    show_sound = event_factions
+
+    immediate = {
+        owner = {
+            # Assign radical faction
+            random_pop_faction = {
+                limit = {
+                    is_pop_faction_type = radical_spiritualist
+                }
+                save_event_target_as = situation_faction
+            }
+        }
+    }
+
+    
+    option = {
+        name = confrontations_spiritualist.12.a
+        owner = {
+            create_leader = {
+                name = random
+                class = governor
+                skill = 2
+                species = owner_main_species
+                traits = {
+                    trait = random_trait
+                }
+            }
+        }
+    }
+    
+
+    
+
+    
+    option = {
+        name = confrontations_spiritualist.12.c
+        owner = {
+            create_leader = {
+                name = random
+                class = admiral
+                skill = 2
+                species = owner_main_species
+                traits = {
+                    trait = random_trait
+                }
+            }
+        }
+    }
+
+    option = {
+        name = confrontations_spiritualist.12.d
+        owner = {
+            create_leader = {
+                name = random
+                class = general
+                skill = 2
+                species = owner_main_species
+                traits = {
+                    trait = random_trait
+                }
+            }
+        }
+    }
+    
+}
